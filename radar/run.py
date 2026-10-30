@@ -22,6 +22,7 @@ DATA = ROOT / "data"
 SEEN = DATA / "seen.json"
 JOBS = DATA / "jobs.json"
 DECISIONS = DATA / "decisions.json"
+BODIES = DATA / "bodies.json"
 RAW = DATA / "raw.json"
 BODY_CAP = 12_000
 
@@ -230,6 +231,12 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
     # Newly shortlisted = tier A/B that has no issue-worthy predecessor.
     newly = [j for j in scored
              if order.get(j["tier"], 9) <= 1 and j["id"] not in previous]
+
+    # The prepare endpoint reads the advert text, which jobs.json deliberately
+    # leaves out. Publish it for the bands worth applying to and no further.
+    body_tiers = set(profile.get("publish_bodies_for") or ["A", "B", "C"])
+    _save(BODIES, {j["id"]: (j.get("body") or "")[:BODY_CAP]
+                   for j in scored if j["tier"] in body_tiers})
 
     payload = {
         "generated_at": now_iso(),

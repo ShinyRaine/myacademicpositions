@@ -5,3 +5,9 @@ __pycache__/
 .vercel/
 cache/
 .DS_Store
+node_modules/
+
+# build artefacts: vercel.json copies these from data/ at build time
+public/jobs.json
+public/decisions.json
+public/bodies.json

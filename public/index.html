@@ -15,8 +15,25 @@
       <h1>Position Radar</h1>
       <p class="sub" id="meta">载入中…</p>
     </div>
+    <button id="cvtoggle" class="chip">基础简历</button>
   </div>
 </header>
+
+<section class="wrap" id="cvpanel">
+  <div class="cvbox">
+    <h2>基础简历</h2>
+    <p class="cvhint">
+      决定投递某个岗位时，这份简历会连同广告原文一起交给 Gemini，
+      生成一份针对该岗位的定制稿，放进对应的 GitHub Issue。
+      PDF 原样送过去，不做文本抽取，所以排版和你自己的措辞都保得住。
+    </p>
+    <label class="cvpick">
+      <input type="file" id="cvfile" accept=".pdf,.md,.txt,.docx">
+      <span>选择文件</span>
+    </label>
+    <p class="cvstate" id="cvstate">载入中…</p>
+  </div>
+</section>
 
 <nav class="controls">
   <div class="wrap">

@@ -1,0 +1,9 @@
+{
+  "name": "position-radar",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@neondatabase/serverless": "0.10.4"
+  }
+}

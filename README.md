@@ -56,6 +56,37 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
 | `scan` | 每天 06:10 UTC，工作日加 15:10 UTC；改 `profile.yaml` 时；手动 | 抓新岗位、打分、研判、开 Issue、提交 `data/` |
 | `triage-sync` | 给带 `radar` 标签的 Issue 打/撤 label、关闭、重开 | 把 label 读成 `data/decisions.json` |
 
+## 决策之后：准备投递
+
+面板上每张卡展开后有「开始准备投递」。点一下会：
+
+1. 读这则广告，列出它**实际要求**的每份材料（不是学术申请通常要的那套，广告没提就不列），
+   每份带「广告要求什么」和「你该怎么准备」两句。
+2. 把你上传的基础简历连同广告原文交给 Gemini，生成一份针对该岗位的定制稿
+   —— 只许重排、改写、取舍，不许添加简历里没有的事实；补不上的写进 GAPS 一节。
+3. 建（或更新）这个岗位的 GitHub Issue，把材料清单和定制简历都放进去，打上 `decision:apply`。
+
+材料的准备进度在面板上勾，会同步回 Issue 的 checklist——只改两个标记之间那一段，
+你手写进 Issue 的东西不会被覆盖。
+
+**基础简历**从顶部「基础简历」按钮上传，存在数据库里。PDF 原样送给 Gemini，
+不做文本抽取，排版和你自己的措辞都保得住。
+
+这部分需要后端：`api/` 下的 Vercel Functions + 一个 Neon Postgres。
+
+| 接口 | 做什么 |
+|---|---|
+| `GET/POST /api/cv` | 基础简历的元数据 / 上传 |
+| `POST /api/prepare` | `{ jobId }` → 两次 Gemini 调用 → 写库 + 建 Issue |
+| `GET/PATCH /api/application` | 单个岗位的清单 / 改一份材料的状态 |
+| `GET /api/applications` | 所有在准备的岗位，面板用它画进度 |
+
+表结构在 `api/_lib/db.mjs`，首次调用时自动建，没有迁移步骤。
+
+**写接口默认不鉴权**（按要求）。代码里的检查挂在 `RADAR_API_KEY` 上：
+不设这个环境变量就是开放的，哪天想关只要在 Vercel 上加一个变量，不用改代码。
+在那之前，拿到站点 URL 的人都能触发 Gemini 调用和开 Issue。
+
 ## 决策怎么做
 
 「对口」和「值得细看」两档的岗位会各开一个 Issue，正文里有截止日、规则分构成、Gemini 的研判（匹配点 / 保留意见 / 硬性障碍 / 投前要准备什么）。你只要打一个 label：
@@ -118,6 +149,7 @@ cp data/jobs.json data/decisions.json public/ && \
 | `data/raw.json` | 抓下来的广告原文（正文截断到 12k 字符），id 形如 `kth:973983` | `scan` |
 | `data/jobs.json` | 打完分、合并完语言版本、带研判的岗位列表，网站读这个（含档位显示名） | `scan` / `rescore` |
 | `data/decisions.json` | 从 Issue label 读回来的决策 | `triage-sync` |
+| `data/bodies.json` | 前三档岗位的广告正文，`/api/prepare` 要读它 | `scan` / `rescore` |
 
 ## 部署要配的东西
 
@@ -127,6 +159,15 @@ cp data/jobs.json data/decisions.json public/ && \
    否则 workflow 提交不了 `data/`，也开不了 Issue。
 3. Vercel 导入这个仓库，框架选 **Other**。`vercel.json` 已经写好了 build 命令和输出目录，
    不需要在界面上改。每次 Actions 提交 `data/` 都会触发重新部署。
+4. Vercel 项目 → **Storage** → 加一个 **Neon** Postgres。连接串会自动注入成
+   `DATABASE_URL`，代码会自己找（也认 `POSTGRES_URL` 等几个常见名字）。
+5. Vercel 项目 → Settings → Environment Variables，加三个：
+   - `GEMINI_API_KEY` —— 和 GitHub Secrets 里那个同一个值
+   - `GITHUB_TOKEN` —— **一个 fine-grained PAT**，对本仓库有 Issues 读写权限。
+     Actions 自带的那个 token 只在 Actions 里有效，Vercel 用不了，必须单独建一个。
+   - `GITHUB_REPOSITORY` —— `ShinyRaine/myacademicpositions`
+   
+   可选：`GEMINI_MODEL` 换研判/生成用的模型，`RADAR_API_KEY` 打开写接口鉴权。
 
 ## 几个实现上的坑
 
@@ -143,6 +184,12 @@ cp data/jobs.json data/decisions.json public/ && \
   两边都有 "control" 就搭了桥，但微分几何/连续体力学和 DS 运动策略不是一回事。
   现在 prompt 要求每条匹配点必须同时点出「广告要什么」和「你有什么」，
   只靠共用词汇的联系必须写进保留意见，并明说是哪两个学科被混了。
+- **Neon 的 driver 走 HTTP，本地起个 Postgres 顶不上。** 数据库那条路径只能部署后才跑得到；
+  本地能验的是 Issue 正文的标记替换、材料归一化、鉴权和请求体解析（`node --test tests/`），
+  以及用打桩的 `/api` 在浏览器里跑完整个交互。
+- **改材料状态时要把投递方式一起写回去。** Issue 的清单是整块重建的，
+  重建时漏了 `how_to_submit`，第一次勾选就会把投递方式悄悄擦掉——所以它存在
+  `application` 表里，每次重建都读回来。
 - **裸日期不能用 `astimezone()`。** `2026-11-27` 解析出来是 naive 的，
   直接转 UTC 会按本机时区偏移，截止日变成 11-26。naive 一律当成站点自己的时间，补 23:59:59。
 - **瑞典语重复广告。** KTH 和 Chalmers 同一个岗位会发英文和瑞典语两条，

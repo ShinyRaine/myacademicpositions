@@ -1,14 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cp data/jobs.json data/decisions.json public/",
+  "buildCommand": "cp data/jobs.json data/decisions.json data/bodies.json public/",
   "outputDirectory": "public",
   "framework": null,
   "headers": [
     {
-      "source": "/(jobs|decisions).json",
+      "source": "/(jobs|decisions|bodies).json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/prepare.mjs": {
+      "maxDuration": 60
+    }
+  }
 }
