@@ -8,10 +8,14 @@
   --line: #e3e2dd;
   --line-2: #d2d1ca;
   --accent: #1d5fd0;
-  --a: #0d3b8c;
-  --b: #1766c8;
-  --c: #3d7fa8;
-  --d: #8b8a83;
+  --a: #06245e;
+  --b: #2a72d4;
+  --c: #9fc6ea;
+  --d: #c9c8c2;
+  --a-ink: #06245e;
+  --b-ink: #1b57a8;
+  --c-ink: #4d7190;
+  --d-ink: #8b8a83;
   --apply: #0b6b3a;
   --skip: #8b8a83;
   --maybe: #6b3fa0;
@@ -33,10 +37,14 @@
     --line: #2e2e37;
     --line-2: #3d3d48;
     --accent: #78a9ff;
-    --a: #8ab4ff;
-    --b: #6a9fe8;
-    --c: #6f93b5;
-    --d: #78766f;
+    --a: #cadcff;
+    --b: #6f9fe0;
+    --c: #3f5a7a;
+    --d: #3a3a44;
+    --a-ink: #cadcff;
+    --b-ink: #89b2e8;
+    --c-ink: #7d94ae;
+    --d-ink: #78766f;
     --apply: #6ddba0;
     --skip: #78766f;
     --maybe: #c0a3f0;
@@ -46,7 +54,8 @@
 :root[data-theme="dark"] {
   --bg: #15151a; --panel: #1d1d23; --panel-2: #22222a; --ink: #ecEAe6;
   --ink-2: #a8a6a0; --ink-3: #78766f; --line: #2e2e37; --line-2: #3d3d48;
-  --accent: #78a9ff; --a: #8ab4ff; --b: #6a9fe8; --c: #6f93b5; --d: #78766f;
+  --accent: #78a9ff; --a: #cadcff; --b: #6f9fe0; --c: #3f5a7a; --d: #3a3a44;
+  --a-ink: #cadcff; --b-ink: #89b2e8; --c-ink: #7d94ae; --d-ink: #78766f;
   --apply: #6ddba0; --skip: #78766f; --maybe: #c0a3f0; --urgent: #ff8a80;
 }
 
@@ -76,8 +85,8 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 .tally { text-align: right; }
 .tally b { display: block; font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .tally span { font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
-.tally.t-a b { color: var(--a); }
-.tally.t-b b { color: var(--b); }
+.tally.t-a b { color: var(--a-ink); }
+.tally.t-b b { color: var(--b-ink); }
 .tally.t-urgent b { color: var(--urgent); }
 .tally.t-apply b { color: var(--apply); }
 
@@ -117,7 +126,7 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 
 .card {
   background: var(--panel); border: 1px solid var(--line);
-  border-left: 3px solid var(--d);
+  border-left: 5px solid var(--d);
   border-radius: var(--radius); margin-bottom: 10px; overflow: hidden;
 }
 .card.tier-A { border-left-color: var(--a); }
@@ -134,13 +143,17 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 
 .scorebox { text-align: center; padding-top: 2px; }
 .scorebox .n { font: 600 19px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.card.tier-A .scorebox .n { color: var(--a-ink); }
+.card.tier-B .scorebox .n { color: var(--b-ink); }
+.card.tier-C .scorebox .n { color: var(--c-ink); }
+.card.tier-D .scorebox .n { color: var(--d-ink); }
 .scorebox .t {
   display: block; margin-top: 4px; font: 600 11px/1.2 var(--sans);
   letter-spacing: .02em; color: var(--ink-3); white-space: nowrap;
 }
-.card.tier-A .scorebox .t { color: var(--a); }
-.card.tier-B .scorebox .t { color: var(--b); }
-.card.tier-C .scorebox .t { color: var(--c); }
+.card.tier-A .scorebox .t { color: var(--a-ink); }
+.card.tier-B .scorebox .t { color: var(--b-ink); }
+.card.tier-C .scorebox .t { color: var(--c-ink); }
 
 .title { font-size: 15.5px; font-weight: 600; margin: 0 0 3px; line-height: 1.35; }
 .where { font-size: 13px; color: var(--ink-2); }
