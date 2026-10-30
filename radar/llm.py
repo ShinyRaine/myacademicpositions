@@ -38,9 +38,40 @@ Never invent a supervisor, a funding source, a deadline or a requirement that
 the advert does not state. If the advert is vague about the research topic, say
 so in why_not rather than filling the gap with a guess.
 
+WHAT COUNTS AS A MATCH
+
+Every why_match item must name (a) something the advert actually asks for and
+(b) the specific thing in the candidate's profile that meets it. Write it in
+that order, as one sentence. If you cannot name both halves, it is not a match
+point and it does not go in the list. An empty why_match list is a valid and
+useful answer.
+
+Two things are not a match merely because they share a word. "Control",
+"learning", "systems", "model", "planning", "geometry" and "dynamics" all name
+different subjects in different subfields. Geometric or continuum mechanics of
+deformable bodies is not the same subject as dynamical-system motion policies;
+reinforcement learning is not the same subject as learning from demonstration;
+formal verification of software is not the same subject as formal methods for
+motion planning. When the only link is vocabulary, put it in why_not and say
+which two different subjects are being confused.
+
+Never write a match point that would be equally true of any robotics or control
+master's graduate. "Strong background in control" is not a match point; "the
+advert requires experience deploying controllers on a real manipulator, and the
+candidate has run admittance control on a UR10e" is.
+
+Do not use the phrases "aligns well with", "is relevant to", "fits nicely",
+"is a good fit" or "closely related". Say what the advert asks and what the
+candidate has, and let the reader judge the distance.
+
+SCORING
+
 fit is 0-10 for how well the candidate's actual research background matches the
-advert's actual topic. Be strict: a generic "PhD in computer science" advert
-with no robotics content is at most a 4, however prestigious the university.
+advert's actual topic. Be strict, and let the match points carry the number: if
+why_match is empty, fit is at most 3; with one concrete match point, at most 6;
+8 or more requires the advert's core topic to be something the candidate has
+already worked on. A generic "PhD in computer science" advert with no robotics
+content is at most a 4, however prestigious the university.
 
 verdict:
   apply - topic and requirements line up; worth the effort of a real application
@@ -51,12 +82,15 @@ blockers lists only hard problems: a language requirement the candidate does
 not meet, a start date before they are available, a degree they do not hold, a
 nationality or residency restriction. Empty list if there are none.
 
-why_match and why_not: at most 3 short items each, each naming something
-concrete from the advert. prep: at most 3 items, each a specific thing the
-candidate would need to prepare or find out before applying.
+why_match and why_not: at most 3 short items each. prep: at most 3 items, each
+a specific thing the candidate would need to prepare or find out before
+applying.
 
 group_or_supervisor: the named group, lab or supervisor if the advert states
 one, otherwise an empty string.
+
+headline: one sentence naming the advert's actual research subject, not a
+judgement of it.
 
 Answer in English."""
 
@@ -135,8 +169,16 @@ def _call(model: str, prompt: str, key: str, timeout: int = 120) -> dict:
         return json.loads(m.group(0))
 
 
+class QuotaExhausted(Exception):
+    """The key's free-tier quota is gone; every further call this run will 429."""
+
+
 def judge(job: dict, profile: dict, key: str | None = None) -> dict | None:
-    """Verdict dict, or None if the call failed (never raises)."""
+    """Verdict dict, or None if the call failed.
+
+    Raises QuotaExhausted on a 429 so the caller can stop the batch instead of
+    firing one doomed request per remaining job.
+    """
     key = key or _key()
     if not key:
         return None
@@ -160,7 +202,7 @@ def judge(job: dict, profile: dict, key: str | None = None) -> dict | None:
             body = exc.read().decode("utf-8", "replace")[:300]
             print(f"    ! gemini HTTP {exc.code}: {body}")
             if exc.code == 429:
-                return None  # free-tier exhausted; stop burning wall time
+                raise QuotaExhausted(body) from exc
             time.sleep(2 ** attempt)
         except Exception as exc:  # noqa: BLE001
             print(f"    ! gemini: {exc}")

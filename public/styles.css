@@ -73,22 +73,9 @@ a { color: var(--accent); }
 
 /* ---------- header ---------- */
 .top { border-bottom: 1px solid var(--line); background: var(--panel); }
-.top .wrap {
-  display: flex; flex-wrap: wrap; gap: 16px;
-  align-items: flex-end; justify-content: space-between;
-  padding-top: 20px; padding-bottom: 18px;
-}
+.top .wrap { padding-top: 20px; padding-bottom: 18px; }
 h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 .sub { margin: 4px 0 0; color: var(--ink-3); font-size: 12.5px; font-family: var(--mono); }
-
-.tallies { display: flex; gap: 18px; flex-wrap: wrap; }
-.tally { text-align: right; }
-.tally b { display: block; font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.tally span { font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
-.tally.t-a b { color: var(--a-ink); }
-.tally.t-b b { color: var(--b-ink); }
-.tally.t-urgent b { color: var(--urgent); }
-.tally.t-apply b { color: var(--apply); }
 
 /* ---------- controls ---------- */
 .controls {
@@ -209,5 +196,35 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
   .badges { grid-column: 1 / -1; justify-content: flex-start; max-width: none; margin-top: 2px; }
   .cols { grid-template-columns: 1fr; gap: 0; }
   .sortbox { margin-left: 0; }
-  .top .wrap { align-items: flex-start; }
 }
+
+.where .src {
+  display: inline-block; margin-left: 6px; padding: 1px 6px;
+  border: 1px solid var(--line-2); border-radius: 4px;
+  font: 500 11px/1.4 var(--mono); color: var(--ink-3); vertical-align: 1px;
+}
+
+/* ---------- verdict block ---------- */
+.verdict {
+  border: 1px solid var(--line-2); border-left-width: 3px;
+  border-radius: 9px; padding: 11px 13px; margin: 0 0 15px;
+  background: var(--panel);
+}
+.verdict.v-apply { border-left-color: var(--apply); }
+.verdict.v-maybe { border-left-color: var(--maybe); }
+.verdict.v-skip  { border-left-color: var(--skip); }
+.verdict.v-none  { border-left-color: var(--line-2); }
+.verdict .vhead {
+  margin: 0 0 5px; font: 600 11px/1 var(--mono);
+  letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3);
+}
+.verdict .vmain { margin: 0; font-size: 15px; }
+.verdict.v-apply .vmain b { color: var(--apply); }
+.verdict.v-maybe .vmain b { color: var(--maybe); }
+.verdict.v-skip  .vmain b { color: var(--skip); }
+.verdict .vfit {
+  margin-left: 8px; font: 500 12.5px var(--mono); color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+.verdict .vsay { margin: 6px 0 0; font-size: 13.5px; color: var(--ink); }
+.verdict .vnote { margin: 8px 0 0; font-size: 12.5px; color: var(--ink-3); line-height: 1.5; }

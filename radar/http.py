@@ -31,7 +31,8 @@ def _decode(resp) -> str:
     return raw.decode(charset, errors="replace")
 
 
-def get(url: str, *, timeout: int = 40, retries: int = 3) -> str:
+def get(url: str, *, timeout: int = 40, retries: int = 3,
+        headers: dict | None = None) -> str:
     """Fetch a URL as text, throttled and retried. Raises on final failure."""
     global _last_request
 
@@ -41,16 +42,15 @@ def get(url: str, *, timeout: int = 40, retries: int = 3) -> str:
         if gap < MIN_DELAY:
             time.sleep(MIN_DELAY - gap)
 
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": UA,
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.9",
-                "Accept-Encoding": "gzip, deflate",
-                "Connection": "close",
-            },
-        )
+        hdrs = {
+            "User-Agent": UA,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "gzip, deflate",
+            "Connection": "close",
+        }
+        hdrs.update(headers or {})
+        req = urllib.request.Request(url, headers=hdrs)
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 _last_request = time.monotonic()

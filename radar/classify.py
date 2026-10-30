@@ -196,3 +196,62 @@ def merge_translations(jobs: list[dict]) -> tuple[list[dict], int]:
                 merged += 1
 
     return kept, merged
+
+
+def source_key(job: dict) -> tuple:
+    """Group one vacancy seen through more than one source.
+
+    The aggregator and the university copy the same English title verbatim, so
+    employer plus normalised title identifies the pair; the deadline is not in
+    the key because the two sites round it differently.
+    """
+    title = re.sub(r"[^a-z0-9]+", " ", fold(job.get("title", ""))).strip()
+    return ((job.get("employer") or "").strip().lower(), title)
+
+
+def merge_sources(jobs: list[dict], priority: list[str]) -> tuple[list[dict], int]:
+    """Keep one record per vacancy seen through more than one source.
+
+    Only records from *different* sources are ever merged, and only when each
+    source contributes exactly one record to the group. Within one source a
+    shared title means nothing: Graz lists four separate vacancies as
+    "Universitatsassistent:in ohne Doktorat" with four different deadlines, and
+    Luxembourg reuses "Doctoral Researcher in Economics" across intakes. A
+    source's own true duplicates are already handled by merge_translations,
+    which keys on the posting timestamp.
+
+    `priority` is the source order from the profile; a university's own advert
+    beats the aggregator's copy because it carries the hiring contact, the
+    start date and the full body. The loser's URL is kept so the dashboard can
+    still link to both.
+    """
+    rank = {name: i for i, name in enumerate(priority)}
+    groups: dict[tuple, list[dict]] = {}
+    for job in jobs:
+        groups.setdefault(source_key(job), []).append(job)
+
+    kept, merged = [], 0
+    for members in groups.values():
+        by_source: dict[str, list[dict]] = {}
+        for job in members:
+            by_source.setdefault(job.get("source", ""), []).append(job)
+
+        # One source, or any source listing the title more than once: leave it
+        # alone rather than guess which record pairs with which.
+        if len(by_source) < 2 or any(len(v) > 1 for v in by_source.values()):
+            kept.extend(members)
+            continue
+
+        members = sorted(members, key=lambda j: rank.get(j.get("source", ""), -1), reverse=True)
+        winner, losers = members[0], members[1:]
+        for loser in losers:
+            # Carry over anything the winner is missing rather than losing it.
+            for field in ("summary", "posted", "deadline", "city", "country",
+                          "employment_type", "contact", "employer_blurb"):
+                if not winner.get(field) and loser.get(field):
+                    winner[field] = loser[field]
+            winner.setdefault("also_listed_on", []).append(
+                {"source": loser.get("source"), "url": loser.get("url"), "id": loser.get("id")})
+            merged += 1
+        kept.append(winner)
+    return kept, merged

@@ -14,6 +14,7 @@ const DECISION_LABEL = {
   new: '未决策', maybe: '待定', apply: '要投', applied: '已投', skip: '跳过',
 };
 const VERDICT_LABEL = { apply: '建议投', maybe: '可考虑', skip: '不建议' };
+const SOURCE_LABEL = { ap: 'Academic Positions', kth: 'KTH 官网', chalmers: 'Chalmers 官网' };
 
 const state = {
   jobs: [],
@@ -68,6 +69,7 @@ function visible() {
     const hay = [
       job.title, job.employer, job.city, job.country, job.summary,
       job.llm && job.llm.headline, job.llm && job.llm.group_or_supervisor,
+      job.contact, job.department, job.source,
       ...(job.breakdown || []).flatMap((b) => b.hits || []),
     ].join(' ').toLowerCase();
     return hay.includes(q);
@@ -97,16 +99,16 @@ function sorted(jobs) {
 }
 
 /* ---------------------------------------------------------------- render */
+// The collapsed card shows only facts — when it closes and what you decided.
+// The rule band on the left and Gemini's recommendation are two different
+// judgements; putting both in one row made them look like one contradictory
+// score, so the recommendation lives inside the card.
 function badges(job) {
-  const out = [];
-  out.push(`<span class="badge deadline${job.urgent ? ' urgent' : ''}">${esc(deadlineText(job))}</span>`);
-  if (job.llm) {
-    out.push(`<span class="badge v-${esc(job.llm.verdict)}">${
-      esc(VERDICT_LABEL[job.llm.verdict] || job.llm.verdict)} ${job.llm.fit}/10</span>`);
-  }
   const dec = decisionOf(job);
-  out.push(`<span class="badge d-${esc(dec.decision)}">${esc(DECISION_LABEL[dec.decision] || dec.decision)}</span>`);
-  return out.join('');
+  return [
+    `<span class="badge deadline${job.urgent ? ' urgent' : ''}">${esc(deadlineText(job))}</span>`,
+    `<span class="badge d-${esc(dec.decision)}">${esc(DECISION_LABEL[dec.decision] || dec.decision)}</span>`,
+  ].join('');
 }
 
 function list(title, items, cls = '') {
@@ -121,12 +123,25 @@ function detail(job) {
   const hits = (job.breakdown || []).filter((b) => (b.hits || []).length);
   const gate = (job.breakdown || []).find((b) => b.kind === 'gate');
 
-  const left = v
-    ? list('匹配点', v.why_match) + list('保留意见', v.why_not)
-    : '<h4>研判</h4><p class="summary">这条没有 LLM 研判（低于阈值，或调用失败）。</p>';
-  const right = v
-    ? list('硬性障碍', v.blockers, 'blockers') + list('投之前要准备', v.prep)
-    : '';
+  const left = v ? list('匹配点', v.why_match) + list('保留意见', v.why_not) : '';
+  const right = v ? list('硬性障碍', v.blockers, 'blockers') + list('投之前要准备', v.prep) : '';
+
+  const tierName = esc(job.tier_name || TIER_NAME[job.tier] || job.tier);
+  const verdict = v
+    ? `<div class="verdict v-${esc(v.verdict)}">
+         <p class="vhead">${esc(v.model || 'Gemini')} 读完整篇广告后的建议</p>
+         <p class="vmain"><b>${esc(VERDICT_LABEL[v.verdict] || v.verdict)}</b>
+            <span class="vfit">与你的背景匹配 ${v.fit}/10</span></p>
+         ${v.headline ? `<p class="vsay">“${esc(v.headline)}”</p>` : ''}
+         <p class="vnote">左边的「${tierName} ${job.score}」是另一回事：那是关键词命中加机构、
+            国家权重算出来的规则分，只用来决定这条值不值得花钱细读。两者不一致很正常，
+            以这里的理由为准——但理由本身也要自己核对。</p>
+       </div>`
+    : `<div class="verdict v-none">
+         <p class="vhead">没有 LLM 研判</p>
+         <p class="vnote">这条的规则分「${tierName} ${job.score}」没到研判阈值，
+            或者调用失败、免费额度用完了。下面的规则分构成是它得分的全部依据。</p>
+       </div>`;
 
   const issueBtn = dec.issue_url
     ? `<a class="btn" href="${esc(dec.issue_url)}" target="_blank" rel="noreferrer">在 Issue #${dec.issue} 上决策</a>`
@@ -139,11 +154,26 @@ function detail(job) {
       `<a href="${esc(a.url)}" target="_blank" rel="noreferrer">${esc(a.language)}</a>`).join('、')}</p>`
     : '';
 
+  const dup = (job.also_listed_on || []).length
+    ? `<p class="alt">也出现在：${job.also_listed_on.map((a) =>
+      `<a href="${esc(a.url)}" target="_blank" rel="noreferrer">${
+        esc(SOURCE_LABEL[a.source] || a.source)}</a>`).join('、')}</p>`
+    : '';
+
+  const contactMail = (job.contact || '').match(/[\w.+-]+@[\w.-]+\.\w+/);
+  const contact = job.contact
+    ? `<p class="summary"><b>招聘联系人：</b>${esc(job.contact.replace(/\s+/g, ' '))}${
+        contactMail ? ` <a href="mailto:${esc(contactMail[0])}">写信</a>` : ''}</p>`
+    : '';
+
   return `
     <div class="detail">
       ${job.summary ? `<p class="summary">${esc(job.summary)}</p>` : ''}
       ${v && v.group_or_supervisor ? `<p class="summary"><b>组 / 导师：</b>${esc(v.group_or_supervisor)}</p>` : ''}
-      <div class="cols"><div>${left}</div><div>${right}</div></div>
+      ${contact}
+      ${job.department ? `<p class="summary"><b>部门：</b>${esc(job.department)}</p>` : ''}
+      ${verdict}
+      ${left || right ? `<div class="cols"><div>${left}</div><div>${right}</div></div>` : ''}
       ${hits.length ? `<h4>规则分构成</h4><div class="hits">${hits.map((b) => {
         const applied = b.applied ?? b.weight;
         const scaled = b.factor !== undefined && b.factor !== 1 && b.weight > 0;
@@ -158,6 +188,7 @@ function detail(job) {
         ${issueBtn}
       </div>
       ${alt}
+      ${dup}
     </div>`;
 }
 
@@ -171,7 +202,8 @@ function card(job) {
         <div>
           <p class="title">${esc(job.title)}</p>
           <p class="where"><b>${esc(job.employer)}</b> · ${esc(job.city)}${
-            job.country ? `, ${esc(job.country)}` : ''}</p>
+            job.country ? `, ${esc(job.country)}` : ''}${
+            job.source ? ` <span class="src">${esc(SOURCE_LABEL[job.source] || job.source)}</span>` : ''}</p>
           ${job.llm && job.llm.headline
             ? `<p class="verdictline"><span class="vq">“${esc(job.llm.headline)}”</span></p>` : ''}
         </div>
@@ -198,22 +230,6 @@ function render() {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
     });
   });
-}
-
-function renderTallies(data) {
-  const decided = Object.values(state.decisions);
-  const apply = decided.filter((d) => d.decision === 'apply' || d.decision === 'applied').length;
-  const undecided = state.jobs.filter((j) => decisionOf(j).decision === 'new'
-    && TIER_ORDER[j.tier] <= 1).length;
-  const c = data.counts || {};
-  $('#tallies').innerHTML = [
-    ['t-a', c.tier_A ?? 0, TIER_NAME.A],
-    ['t-b', c.tier_B ?? 0, TIER_NAME.B],
-    ['t-urgent', c.urgent ?? 0, '快截止'],
-    ['', undecided, '待决策'],
-    ['t-apply', apply, '决定要投'],
-  ].map(([cls, n, label]) =>
-    `<div class="tally ${cls}"><b>${n}</b><span>${label}</span></div>`).join('');
 }
 
 /* ------------------------------------------------------------------ init */
@@ -245,8 +261,6 @@ function renderTallies(data) {
       `仓库 <a href="https://github.com/${esc(state.repo)}" rel="noreferrer">${esc(state.repo)}</a> · ` +
       `<a href="https://github.com/${esc(state.repo)}/issues?q=is%3Aopen+label%3Aradar" rel="noreferrer">待决策的 Issue</a>`;
   }
-
-  renderTallies(data);
 
   $('#q').addEventListener('input', (e) => { state.q = e.target.value; render(); });
   $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; render(); });

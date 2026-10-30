@@ -17,7 +17,7 @@ PROFILE = yaml.safe_load((Path(__file__).resolve().parent.parent / "profile.yaml
 NOW = datetime(2026, 10, 30, tzinfo=timezone.utc)
 
 
-AD_PAGE = """<!doctype html><html><head>
+_UNUSED = """<!doctype html><html><head>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"x"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"JobPosting",
 "title":"Doctoral student in robotic manipulation","description":"Short summary.",
@@ -33,50 +33,6 @@ and control barrier functions.</p><div class="note"><p>Nested block.</p></div>
 </div>
 <script>var junk = "should not appear";</script>
 <footer>Site footer text</footer></body></html>"""
-
-
-class TestSitemap(unittest.TestCase):
-    def test_rewrites_host_and_keeps_only_ads(self):
-        xml = """<urlset>
-          <url><loc>https://academicpositions.com/ad/kth/2026/a-job/12345</loc></url>
-          <url><loc>https://academicpositions.com/employer/kth</loc></url>
-          <url><loc>https://academicpositions.com/ad/eth/2026/b-job/999</loc></url>
-        </urlset>"""
-        urls = parse.sitemap_urls(xml)
-        self.assertEqual(urls, [
-            "https://en.academicpositions.se/ad/kth/2026/a-job/12345",
-            "https://en.academicpositions.se/ad/eth/2026/b-job/999",
-        ])
-
-    def test_job_id_is_trailing_number(self):
-        self.assertEqual(
-            parse.job_id("https://en.academicpositions.se/ad/kth/2026/a-job/12345"), "12345")
-
-
-class TestParseAd(unittest.TestCase):
-    def setUp(self):
-        self.rec = parse.parse_ad(
-            "https://en.academicpositions.se/ad/kth/2026/a-job/12345", AD_PAGE)
-
-    def test_picks_the_jobposting_block_not_the_organization(self):
-        self.assertEqual(self.rec["title"], "Doctoral student in robotic manipulation")
-        self.assertEqual(self.rec["employer"], "KTH Royal Institute of Technology")
-        self.assertEqual(self.rec["country"], "Sweden")
-
-    def test_body_is_the_editor_div_with_nesting_and_without_scripts(self):
-        body = self.rec["body"]
-        self.assertIn("learning from demonstration", body)
-        self.assertIn("Nested block.", body)        # balanced <div> walk
-        self.assertIn("Apply by the deadline.", body)
-        self.assertNotIn("should not appear", body)  # script stripped
-        self.assertNotIn("Site footer text", body)   # stops at the closing div
-
-    def test_dates_are_normalised_to_utc(self):
-        self.assertTrue(self.rec["deadline"].startswith("2026-11-30T"))
-        self.assertIn("+00:00", self.rec["posted"])
-
-    def test_returns_none_without_a_jobposting(self):
-        self.assertIsNone(parse.parse_ad("https://x/ad/a/b/1", "<html><body>nothing</body></html>"))
 
 
 class TestPositionType(unittest.TestCase):

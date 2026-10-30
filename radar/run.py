@@ -15,7 +15,7 @@ from pathlib import Path
 
 import yaml
 
-from . import classify, http, issues as gh, llm, parse, score
+from . import classify, issues as gh, llm, score, sources
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -59,79 +59,93 @@ def cmd_scan(args) -> int:
 
     if args.reconsider_skipped:
         dropped = [k for k, v in seen.items()
-                   if str(v.get("skipped", "")).startswith("slug-type:")]
+                   if str(v.get("skipped", "")).startswith(("slug-type:", "listed-type:"))]
         for k in dropped:
             seen.pop(k)
-        print(f"  reconsidering {len(dropped)} advert(s) skipped on slug type")
+        print(f"  reconsidering {len(dropped)} advert(s) skipped on their listed type")
 
-    print(f"[{now_iso()}] fetching sitemap")
-    urls = parse.sitemap_urls(http.get(parse.SITEMAP))
-    print(f"  {len(urls)} live adverts listed")
-    if not urls:
-        print("  ! empty sitemap, aborting without touching stored data")
+    wanted = set(profile.get("hard_filters", {}).get("position_types") or [])
+    live: dict[str, dict] = {}
+    budget = args.limit or 0
+    fetched = failures = 0
+
+    for src in sources.active(profile):
+        print(f"[{now_iso()}] {src.LABEL}: listing")
+        try:
+            ads = src.list_ads()
+        except Exception as exc:  # noqa: BLE001 - one bad source must not sink the run
+            print(f"  ! listing failed, keeping previous data for this source: {exc}")
+            failures += 1
+            # Keep this source's stored adverts alive so they are not pruned.
+            for jid, rec in raw.items():
+                if rec.get("source") == src.NAME:
+                    live[jid] = {"url": rec["url"]}
+            continue
+        print(f"  {len(ads)} live advert(s)")
+
+        todo = []
+        for ad in ads:
+            jid = sources.key(src.NAME, ad["id"])
+            live[jid] = ad
+            if jid in seen:
+                continue
+            # The listing already names the position type (Chalmers) or spells
+            # it in the title (KTH, and the AP slug), so a type we would drop
+            # anyway never costs a request.
+            guess = ad.get("position_hint") or classify.position_type(ad.get("title", ""))
+            if not args.no_prefilter and wanted and guess != "other" and guess not in wanted:
+                seen[jid] = {"first_seen": now_iso(), "url": ad["url"],
+                             "source": src.NAME, "skipped": f"listed-type:{guess}"}
+            else:
+                todo.append((jid, ad))
+
+        print(f"  {len(todo)} to fetch")
+        if budget:
+            todo = todo[:budget]
+            print(f"  limited to {len(todo)} this run")
+
+        for n, (jid, ad) in enumerate(todo, 1):
+            try:
+                rec = src.fetch(ad)
+            except Exception as exc:  # noqa: BLE001
+                print(f"  [{n}/{len(todo)}] FAIL {ad['url']}: {exc}")
+                continue
+            if not rec:
+                print(f"  [{n}/{len(todo)}] unparseable: {ad['url']}")
+                seen[jid] = {"first_seen": now_iso(), "url": ad["url"],
+                             "source": src.NAME, "skipped": "unparseable"}
+                continue
+            rec["id"] = jid
+            rec["body"] = (rec.get("body") or "")[:BODY_CAP]
+            rec["language"] = classify.language(rec["title"], rec["body"])
+            rec["position_type"] = (ad.get("position_hint")
+                                    or classify.position_type(rec["title"], rec["body"]))
+            rec["first_seen"] = now_iso()
+            raw[jid] = rec
+            seen[jid] = {"first_seen": rec["first_seen"], "url": ad["url"], "source": src.NAME}
+            fetched += 1
+            if n % 20 == 0 or n == len(todo):
+                # Checkpoint: the first run walks several hundred adverts over a
+                # quarter of an hour, and a timeout must not throw that away.
+                _save(RAW, raw)
+                _save(SEEN, seen)
+                print(f"  [{n}/{len(todo)}] fetched")
+
+        if budget:
+            budget = max(0, budget - len(todo))
+
+    if failures == len(sources.active(profile)):
+        print("  ! every source failed, leaving stored data untouched")
         return 1
 
-    live_ids = {parse.job_id(u): u for u in urls}
-    new_ids = [i for i in live_ids if i not in seen]
-    print(f"  {len(new_ids)} not seen before")
+    print(f"  parsed {fetched} new advert(s) across all sources")
 
-    # The URL slug is the advert title, so the position type can be read before
-    # spending a request. Types that could never pass the hard filter are
-    # recorded as skipped and never fetched: that is ~40% of the board.
-    if not args.no_prefilter:
-        wanted = set(profile.get("hard_filters", {}).get("position_types") or [])
-        keep = []
-        for jid in new_ids:
-            slug_title = live_ids[jid].rsplit("/", 2)[-2].replace("-", " ")
-            guess = classify.position_type(slug_title)
-            if wanted and guess != "other" and guess not in wanted:
-                seen[jid] = {"first_seen": now_iso(), "url": live_ids[jid],
-                             "skipped": f"slug-type:{guess}"}
-            else:
-                keep.append(jid)
-        print(f"  {len(new_ids) - len(keep)} skipped on slug type, {len(keep)} to fetch")
-        new_ids = keep
-
-    if args.limit:
-        new_ids = new_ids[: args.limit]
-        print(f"  limited to {len(new_ids)} this run")
-
-    fetched = 0
-    for n, jid in enumerate(new_ids, 1):
-        url = live_ids[jid]
-        try:
-            rec = parse.parse_ad(url, http.get(url))
-        except Exception as exc:  # noqa: BLE001
-            print(f"  [{n}/{len(new_ids)}] FAIL {url}: {exc}")
-            continue
-        if not rec:
-            print(f"  [{n}/{len(new_ids)}] no JobPosting on {url}")
-            seen[jid] = {"first_seen": now_iso(), "url": url, "skipped": "no-jsonld"}
-            continue
-        # Cap the stored body: the LLM reads 9k chars and scoring needs less,
-        # so keeping the whole advert would only bloat the committed history.
-        rec["body"] = rec["body"][:BODY_CAP]
-        rec["language"] = classify.language(rec["title"], rec["body"])
-        rec["position_type"] = classify.position_type(rec["title"], rec["body"])
-        rec["first_seen"] = now_iso()
-        raw[jid] = rec
-        seen[jid] = {"first_seen": rec["first_seen"], "url": url}
-        fetched += 1
-        if n % 20 == 0 or n == len(new_ids):
-            # Checkpoint: the first run walks ~800 adverts over a quarter of an
-            # hour, and a timeout or a runner eviction must not throw that away.
-            _save(RAW, raw)
-            _save(SEEN, seen)
-            print(f"  [{n}/{len(new_ids)}] fetched")
-
-    print(f"  parsed {fetched} new adverts")
-
-    # Drop records whose advert has left the sitemap (filled or expired).
-    gone = [jid for jid in raw if jid not in live_ids]
+    # Drop records whose advert has left every listing (filled or expired).
+    gone = [jid for jid in raw if jid not in live]
     for jid in gone:
         raw.pop(jid, None)
     if gone:
-        print(f"  dropped {len(gone)} adverts no longer listed")
+        print(f"  dropped {len(gone)} advert(s) no longer listed")
 
     _save(RAW, raw)
     _save(SEEN, seen)
@@ -166,8 +180,11 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
 
     # Collapse EN/SV (and other) translations of the same vacancy.
     scored, duplicates = classify.merge_translations(scored)
+    # Then the same vacancy seen through two sources: KTH and Chalmers adverts
+    # appear both on their own site and on the aggregator.
+    scored, cross = classify.merge_sources(scored, sources.DEFAULT)
     print(f"  filtered out {dropped['position_type']} by type, {dropped['expired']} expired, "
-          f"{duplicates} translation duplicates")
+          f"{duplicates} translation duplicates, {cross} cross-source duplicates")
 
     # Carry over verdicts already paid for; only judge what is new.
     cfg = profile.get("llm", {})
@@ -192,7 +209,13 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
             print("  ! no GEMINI_API_KEY, skipping verdicts")
         else:
             for n, job in enumerate(todo, 1):
-                verdict = llm.judge(job, profile, key)
+                try:
+                    verdict = llm.judge(job, profile, key)
+                except llm.QuotaExhausted:
+                    left = len(todo) - n + 1
+                    print(f"    ! free-tier quota gone, {left} job(s) left unjudged; "
+                          f"the next scan picks them up")
+                    break
                 if verdict:
                     job["llm"] = verdict
                     print(f"    [{n}/{len(todo)}] {verdict['verdict']:5s} fit {verdict['fit']}/10  "
@@ -210,7 +233,7 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
 
     payload = {
         "generated_at": now_iso(),
-        "source": parse.SITEMAP,
+        "sources": [s.LABEL for s in sources.active(profile)],
         # Lets the static dashboard link back to the issues without hardcoding
         # the repository name in the front-end.
         "repo": os.environ.get("GITHUB_REPOSITORY"),
@@ -231,7 +254,8 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
 
 
 # The body is kept out of the published JSON: it is megabytes of prose, the
-# dashboard never shows it, and the advert is one click away.
+# dashboard never shows it, and the advert is one click away. Everything else,
+# including the hiring contact the university listings give us, is kept.
 _SLIM_DROP = ("body", "employer_blurb")
 
 
