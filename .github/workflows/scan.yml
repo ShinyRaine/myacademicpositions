@@ -1,0 +1,91 @@
+name: scan
+
+# Twice a day on weekdays, once at the weekend. Academic Positions publishes in
+# European office hours, so 06:10 UTC catches the overnight batch and 15:10 UTC
+# catches the afternoon one.
+on:
+  schedule:
+    - cron: "10 6 * * *"
+    - cron: "10 15 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Cap how many new adverts to fetch (0 = no cap)"
+        required: false
+        default: "0"
+      rescore_all:
+        description: "Re-apply profile.yaml to everything already stored"
+        type: boolean
+        required: false
+        default: false
+      forget_llm:
+        description: "Also discard cached Gemini verdicts (costs quota)"
+        type: boolean
+        required: false
+        default: false
+  push:
+    paths:
+      - "profile.yaml"   # editing the profile re-scores the whole board
+
+concurrency:
+  group: radar-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Scan for new adverts
+        if: github.event_name != 'push' && inputs.rescore_all != true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python -m radar.run scan --limit "${{ inputs.limit || 0 }}"
+
+      - name: Re-score everything against profile.yaml
+        if: github.event_name == 'push' || inputs.rescore_all == true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python -m radar.run rescore --open-issues \
+            ${{ inputs.forget_llm == true && '--forget-llm' || '' }}
+
+      - name: Sync triage labels back
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python -m radar.run sync
+
+      - name: Commit data
+        run: |
+          git config user.name "position-radar[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "no data changes"
+          else
+            git commit -m "radar: scan $(date -u +%Y-%m-%dT%H:%MZ)"
+            # The schedule and the label-sync workflow both write data/, so a
+            # push can lose a race; rebase onto whatever landed first.
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+              sleep 5
+            done
+            exit 1
+          fi

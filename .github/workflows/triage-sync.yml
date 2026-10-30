@@ -1,0 +1,56 @@
+name: triage-sync
+
+# Labelling an issue is the decision. This reads the labels back into
+# data/decisions.json, which is what the dashboard renders, so the site catches
+# up a minute or two after you decide.
+on:
+  issues:
+    types: [labeled, unlabeled, closed, reopened, deleted]
+  workflow_dispatch:
+
+concurrency:
+  group: radar-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    # Ignore issues that are not the radar's own.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      contains(join(github.event.issue.labels.*.name, ','), 'radar')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Read labels into decisions.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python -m radar.run sync
+
+      - name: Commit decisions
+        run: |
+          git config user.name "position-radar[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/decisions.json
+          if git diff --cached --quiet; then
+            echo "no decision changes"
+          else
+            git commit -m "radar: triage $(date -u +%Y-%m-%dT%H:%MZ)"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+              sleep 5
+            done
+            exit 1
+          fi

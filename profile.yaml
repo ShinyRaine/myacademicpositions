@@ -1,0 +1,376 @@
+# ============================================================================
+# 候选人画像与打分权重 —— 这是整个系统唯一需要你手动维护的文件
+# 改完 push，下一次 scan 就按新规则重新打分（所有在招岗位都会重算，不只是新岗）
+# ============================================================================
+
+candidate:
+  name: Xinyu Cheng
+  # 送给 LLM 研判时用的自我介绍。写实，不要写成求职信。
+  summary: |
+    MSc student in Complex Adaptive Systems (MPCAS) at Chalmers University of
+    Technology, Gothenburg, Sweden (enrolled 2025, graduating 2027). Master's
+    thesis in Karinne Ramirez-Amaro's group on neuro-symbolic task and motion
+    planning: learning symbolic preconditions/effects of manipulation actions
+    from demonstrations, and executing them with dynamical-system (DS) motion
+    policies that carry stability and safety guarantees.
+
+    Hands-on experience: Universal Robots UR10e on real hardware (ROS, RTDE,
+    gripper + force/torque sensing), Unity/AGX simulation, learning from
+    demonstration, Gaussian-mixture DS fitting, obstacle modulation, control
+    barrier functions in joint space, admittance control and passivity for
+    physical human-robot interaction, execution-time condition monitoring and
+    failure recovery.
+
+    Looking for a PhD position (or a research-assistant position leading to
+    one) in robot learning, manipulation, task and motion planning, safe or
+    verifiable control, or neuro-symbolic AI for robotics. Formally eligible
+    for Swedish third-cycle studies (second-cycle degree / 240 hp route).
+    Working languages: English (research), Chinese (native). No Swedish.
+
+  # 申请硬约束，LLM 研判时会检查
+  constraints:
+    earliest_start: "2027-06"       # 毕设结束后才能全职入职
+    degree_at_start: "MSc"
+    needs_visa_sponsorship: true
+    swedish_required_is_blocker: true
+
+# ----------------------------------------------------------------------------
+# 1. 硬门槛：不满足直接丢弃，连面板都不进
+# ----------------------------------------------------------------------------
+hard_filters:
+  # 只保留这些岗位类型（按标题 + 正文判定，支持瑞典语/德语/荷兰语标题）
+  position_types: [phd, research_assistant]
+  # 截止日已过的丢弃；还剩不到这么多天的标记为 urgent 但仍显示
+  drop_if_expired: true
+  urgent_days: 14
+
+# ----------------------------------------------------------------------------
+# 2. 主题匹配：命中关键词累加，有上限。权重是我按你的方向给的，随时改。
+# ----------------------------------------------------------------------------
+topics:
+  cap: 46          # 主题分最高 46 分
+  groups:
+    # ---- 你毕设的正中心 ----
+    - weight: 12
+      label: core-tamp
+      terms:
+        - task and motion planning
+        - tamp
+        - neuro-symbolic
+        - neurosymbolic
+        - symbolic planning
+        - symbol grounding
+        - pddl
+        - action model learning
+        - precondition
+        - skill learning
+        - learning from demonstration
+        - imitation learning
+        - programming by demonstration
+        - robot skill
+
+    # ---- DS / 安全控制，毕设的另一半 ----
+    - weight: 10
+      label: core-safe-control
+      terms:
+        - dynamical system
+        - dynamical systems
+        - motion primitive
+        - movement primitive
+        - control barrier function
+        - safe control
+        - safety guarantee
+        - formal verification
+        - formal methods
+        - temporal logic
+        - ltl
+        - signal temporal logic
+        - reactive synthesis
+        - correct-by-construction
+        - passivity
+        - impedance control
+        - admittance control
+        - compliant control
+
+    # ---- 机器人学一般方向 ----
+    - weight: 8
+      label: robotics
+      terms:
+        - robot
+        - robotic
+        - robotics
+        - manipulation
+        - manipulator
+        - grasping
+        - motion planning
+        - mobile manipulation
+        - embodied
+        - human-robot interaction
+        - physical human-robot
+        - teleoperation
+        - autonomous system
+        - autonomous systems
+
+    # ---- 邻接：会用到但不是你的定位 ----
+    - weight: 5
+      label: adjacent-ai
+      terms:
+        - reinforcement learning
+        - machine learning
+        - deep learning
+        - representation learning
+        - foundation model
+        - vision-language
+        - explainable
+        - interpretable
+        - trustworthy ai
+        - knowledge representation
+        - automated planning
+        - computer vision
+        - sim-to-real
+        - digital twin
+
+    # ---- 弱邻接：只够把岗位从 0 分拉起来 ----
+    - weight: 2
+      label: weak
+      terms:
+        - control theory
+        - optimization
+        - optimal control
+        - estimation
+        - sensor fusion
+        - cyber-physical
+        - mechatronics
+        - automation
+        - industrial
+
+# ----------------------------------------------------------------------------
+# 3. 排除：命中即扣分（扣到 0 分以下就会被 tier D 吃掉）
+#    这些是 academicpositions 上的大宗噪音
+# ----------------------------------------------------------------------------
+exclusions:
+  penalty: -14
+  terms:
+    - proteomic
+    - genomic
+    - immunolog
+    - oncolog
+    - clinical trial
+    - nursing
+    - epidemiolog
+    - pharmac
+    - molecular biology
+    - cell biology
+    - microbiolog
+    - neuroscience of
+    - plant science
+    - veterinar
+    - dentistry
+    - organic chemistry
+    - medicinal chemistry
+    - catalysis
+    - polymer chemistry
+    - theology
+    - literature
+    - linguistics
+    - musicology
+    - art history
+    - archaeolog
+    - anthropolog
+    - sociolog
+    - criminolog
+    - political science
+    - public health
+    - accounting
+    - marketing
+    - finance and
+    - civil engineering
+    - structural engineering
+    - architecture
+    - geolog
+    - hydrolog
+    - astronom
+    - astrophys
+    - particle physics
+    - quantum comput
+    - photonic
+    - semiconductor device
+    - antenna
+    - wireless network
+    - battery
+    - fuel cell
+
+# ----------------------------------------------------------------------------
+# 4. 机构与地理权重
+# ----------------------------------------------------------------------------
+employers:
+  cap: 22
+  # 关键词对机构名做包含匹配（小写）
+  tiers:
+    - weight: 22
+      label: target
+      terms: [kth royal institute, kth]
+    - weight: 18
+      label: home
+      terms: [chalmers]
+    - weight: 15
+      label: nordic-strong
+      terms:
+        - lund university
+        - uppsala university
+        - linkoping
+        - linköping
+        - umea
+        - umeå
+        - stockholm university
+        - aalto
+        - dtu
+        - technical university of denmark
+        - aarhus
+        - norwegian university of science
+        - ntnu
+        - university of oslo
+    - weight: 14
+      label: euro-robotics
+      terms:
+        - eth zurich
+        - epfl
+        - delft university of technology
+        - tu delft
+        - technical university of munich
+        - karlsruhe institute
+        - rwth aachen
+        - university of edinburgh
+        - imperial college
+        - university of oxford
+        - university of freiburg
+        - university of stuttgart
+        - istituto italiano di tecnologia
+        - idiap
+        - inria
+        - max planck
+        - university of bonn
+        - heidelberg
+    - weight: 8
+      label: eu-general
+      terms:
+        - ku leuven
+        - ghent university
+        - eindhoven university
+        - university of twente
+        - university of luxembourg
+        - catholique de louvain
+        - leiden university
+        - university of amsterdam
+        - university of groningen
+        - aalborg
+
+countries:
+  cap: 10
+  tiers:
+    - weight: 10
+      terms: [sweden]
+    - weight: 6
+      terms: [denmark, norway, finland, iceland]
+    - weight: 4
+      terms:
+        - switzerland
+        - netherlands
+        - germany
+        - united kingdom
+        - france
+        - belgium
+        - austria
+        - italy
+        - spain
+        - luxembourg
+        - ireland
+        - portugal
+        - czech
+
+# ----------------------------------------------------------------------------
+# 5. 加分信号：点名你盯的人/组，或明显对口的措辞
+# ----------------------------------------------------------------------------
+bonuses:
+  cap: 22
+  signals:
+    - weight: 14
+      label: named-supervisor
+      terms:
+        - tumova
+        - jaquier
+        - kragic
+        - dimarogonas
+        - ramirez-amaro
+        - billard
+        - calinon
+        - asfour
+        - toussaint
+        - kaelbling
+        - lozano-perez
+    - weight: 10
+      label: named-group
+      terms:
+        - robotics perception and learning
+        - rpl
+        - wasp
+        - wallenberg ai
+        - division of robotics
+        - robotics, perception and learning
+    - weight: 6
+      label: good-signals
+      terms:
+        - fully funded
+        - four-year
+        - 4-year
+        - employed as a doctoral student
+        - doctoral student position
+    - weight: -10
+      label: language-blocker
+      terms:
+        - fluency in swedish
+        - swedish is required
+        - proficiency in swedish
+        - good knowledge of swedish
+        - german language skills
+        - fluent in german
+        - fluent in french
+        - fluent in dutch
+
+# ----------------------------------------------------------------------------
+# 6. 分档：总分 -> tier。只有 A/B 会自动开 GitHub Issue。
+# ----------------------------------------------------------------------------
+tiers:
+  A: 62      # 强匹配：开 issue，LLM 研判，面板置顶
+  B: 38      # 值得看：开 issue，LLM 研判（境外 robotics PhD 大多落这里）
+  C: 22      # 面板里可见，不开 issue，不花 LLM
+  # 低于 C 的是 D，默认在面板里折叠
+
+# ----------------------------------------------------------------------------
+# 7. LLM 研判
+# ----------------------------------------------------------------------------
+llm:
+  enabled: true
+  model: gemini-3.5-flash     # 2-6 s/次；想更准可换 gemini-3.8-flash（50 s-5 min/次）
+  max_jobs_per_run: 25        # 单次 scan 最多研判多少个新岗位，防止免费额度被打爆
+  min_tier: B                 # 只研判 A/B
+  body_chars: 9000            # 送进去的正文截断长度
+
+# ----------------------------------------------------------------------------
+# 8. GitHub Issue
+# ----------------------------------------------------------------------------
+issues:
+  max_per_run: 30   # 首次 bootstrap 可能一次命中几十个，分批开，免得刷屏
+
+# ----------------------------------------------------------------------------
+# 9. 主题闸门
+#    机构分 + 国家分最高能到 32，比大多数岗位的主题分还高。没有闸门的话，
+#    Chalmers 的纺织复合材料 PhD 会排在 ETH 的 robot learning PhD 前面。
+#    主题分够不到 topic_gate 时，机构/国家/加分信号按比例打折。
+# ----------------------------------------------------------------------------
+scoring:
+  topic_gate: 14          # 主题分到这个数，上下文分才全额计入
+  partial_factor: 0.5     # 主题分在 gate/2 ~ gate 之间，打五折
+  off_topic_factor: 0.15  # 主题分低于 gate/2，基本只剩主题分本身
+  ungated_labels:         # 这些信号太具体，不受闸门影响
+    - named-supervisor

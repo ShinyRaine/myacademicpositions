@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Position Radar</title>
+<meta name="description" content="Academic Positions 岗位雷达：新发布岗位、匹配打分与投递决策">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='52' font-size='52'>📡</text></svg>">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>Position Radar</h1>
+      <p class="sub" id="meta">载入中…</p>
+    </div>
+    <div class="tallies" id="tallies"></div>
+  </div>
+</header>
+
+<nav class="controls">
+  <div class="wrap">
+    <input type="search" id="q" placeholder="搜索标题、机构、课题、导师…" autocomplete="off" spellcheck="false">
+    <div class="chips" id="filters">
+      <button class="chip on" data-filter="tier" data-value="A">A</button>
+      <button class="chip on" data-filter="tier" data-value="B">B</button>
+      <button class="chip on" data-filter="tier" data-value="C">C</button>
+      <button class="chip" data-filter="tier" data-value="D">D</button>
+      <span class="sep"></span>
+      <button class="chip" data-filter="flag" data-value="urgent">⏱ 快截止</button>
+      <button class="chip" data-filter="flag" data-value="undecided">未决策</button>
+      <button class="chip" data-filter="flag" data-value="sweden">🇸🇪 瑞典</button>
+      <span class="sep"></span>
+      <label class="sortbox">排序
+        <select id="sort">
+          <option value="tier">分档 → 匹配度</option>
+          <option value="score">规则分</option>
+          <option value="fit">LLM 匹配度</option>
+          <option value="deadline">截止日最近</option>
+          <option value="new">最新发现</option>
+        </select>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="board" aria-live="polite"></main>
+
+<footer class="wrap foot">
+  <p>
+    数据源 <a href="https://en.academicpositions.se" rel="noreferrer">Academic Positions</a> 的
+    jobs sitemap；打分规则在仓库 <code>profile.yaml</code>，研判由 Gemini 生成。
+    决策在 GitHub Issue 上打 label，站点几分钟后同步。
+  </p>
+  <p id="repolink"></p>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
