@@ -68,7 +68,7 @@ class GitHub:
         because issues already carry it.
         """
         defs = list(LABEL_DEFS)
-        shades = ("b60205", "d93f0b", "e99695", "f9d0c4")
+        shades = ("0d3b8c", "1766c8", "5b93c4", "a8c7e8")
         for i, name in enumerate(tier_labels or []):
             defs.append((name, shades[i % len(shades)], "Rule-score band"))
         for name, color, desc in defs:
