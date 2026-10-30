@@ -7,7 +7,7 @@
   "tier_D": 77,
   "urgent": 30
  },
- "generated_at": "2026-10-30T10:36:25+00:00",
+ "generated_at": "2026-10-30T10:52:24+00:00",
  "jobs": [
   {
    "also_posted_as": [
@@ -6257,7 +6257,7 @@
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-3d-printing-the-next-generation-battery-by-additive-manufacturing/254407"
   }
  ],
- "repo": null,
+ "repo": "ShinyRaine/myacademicpositions",
  "source": "https://en.academicpositions.se/sitemaps/en/jobs-0-xml",
  "tiers": {
   "A": {
