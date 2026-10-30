@@ -8,6 +8,8 @@
  */
 
 const TIER_ORDER = { A: 0, B: 1, C: 2, D: 3 };
+// Overwritten from jobs.json, so renaming a tier in profile.yaml renames it here.
+let TIER_NAME = { A: '对口', B: '值得细看', C: '擦边', D: '不相关' };
 const DECISION_LABEL = {
   new: '未决策', maybe: '待定', apply: '要投', applied: '已投', skip: '跳过',
 };
@@ -164,7 +166,8 @@ function card(job) {
   return `
     <article class="card tier-${esc(job.tier)} decided-${esc(dec.decision)}" data-id="${esc(job.id)}">
       <div class="head" role="button" tabindex="0">
-        <div class="scorebox"><span class="n">${job.score}</span><span class="t">${esc(job.tier)}</span></div>
+        <div class="scorebox"><span class="n">${job.score}</span><span class="t">${
+            esc(job.tier_name || TIER_NAME[job.tier] || job.tier)}</span></div>
         <div>
           <p class="title">${esc(job.title)}</p>
           <p class="where"><b>${esc(job.employer)}</b> · ${esc(job.city)}${
@@ -204,10 +207,10 @@ function renderTallies(data) {
     && TIER_ORDER[j.tier] <= 1).length;
   const c = data.counts || {};
   $('#tallies').innerHTML = [
-    ['t-a', c.tier_A ?? 0, 'A 档'],
-    ['t-b', c.tier_B ?? 0, 'B 档'],
+    ['t-a', c.tier_A ?? 0, TIER_NAME.A],
+    ['t-b', c.tier_B ?? 0, TIER_NAME.B],
     ['t-urgent', c.urgent ?? 0, '快截止'],
-    ['', undecided, 'A/B 待决策'],
+    ['', undecided, '待决策'],
     ['t-apply', apply, '决定要投'],
   ].map(([cls, n, label]) =>
     `<div class="tally ${cls}"><b>${n}</b><span>${label}</span></div>`).join('');
@@ -223,6 +226,13 @@ function renderTallies(data) {
   state.jobs = data.jobs || [];
   state.decisions = dec.decisions || {};
   state.repo = data.repo || null;
+  if (data.tiers) {
+    TIER_NAME = Object.fromEntries(
+      Object.entries(data.tiers).map(([k, v]) => [k, v.name || k]));
+  }
+  document.querySelectorAll('.chip[data-filter="tier"]').forEach((chip) => {
+    chip.textContent = TIER_NAME[chip.dataset.value] || chip.dataset.value;
+  });
 
   const when = data.generated_at
     ? new Date(data.generated_at).toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' })

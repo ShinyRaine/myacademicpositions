@@ -126,7 +126,7 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 .card.decided-skip { opacity: .5; }
 
 .head {
-  display: grid; grid-template-columns: 54px 1fr auto;
+  display: grid; grid-template-columns: 68px 1fr auto;
   gap: 14px; padding: 13px 15px; align-items: start;
   cursor: pointer;
 }
@@ -135,8 +135,8 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 .scorebox { text-align: center; padding-top: 2px; }
 .scorebox .n { font: 600 19px/1 var(--mono); font-variant-numeric: tabular-nums; }
 .scorebox .t {
-  display: block; margin-top: 3px; font: 600 10px/1 var(--mono);
-  letter-spacing: .08em; color: var(--ink-3);
+  display: block; margin-top: 4px; font: 600 11px/1.2 var(--sans);
+  letter-spacing: .02em; color: var(--ink-3); white-space: nowrap;
 }
 .card.tier-A .scorebox .t { color: var(--a); }
 .card.tier-B .scorebox .t { color: var(--b); }
@@ -192,7 +192,7 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 .foot code { font-family: var(--mono); }
 
 @media (max-width: 700px) {
-  .head { grid-template-columns: 44px 1fr; }
+  .head { grid-template-columns: 60px 1fr; }
   .badges { grid-column: 1 / -1; justify-content: flex-start; max-width: none; margin-top: 2px; }
   .cols { grid-template-columns: 1fr; gap: 0; }
   .sortbox { margin-left: 0; }

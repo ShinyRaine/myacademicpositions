@@ -196,7 +196,7 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
                 if verdict:
                     job["llm"] = verdict
                     print(f"    [{n}/{len(todo)}] {verdict['verdict']:5s} fit {verdict['fit']}/10  "
-                          f"{job['title'][:60]}")
+                          f"{job['tier_name']} {job['score']:3d}  {job['title'][:52]}")
                 else:
                     print(f"    [{n}/{len(todo)}] no verdict  {job['title'][:60]}")
 
@@ -222,6 +222,9 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
             "tier_D": sum(1 for j in scored if j["tier"] == "D"),
             "urgent": sum(1 for j in scored if j.get("urgent")),
         },
+        # The dashboard labels its filters from this, so renaming a tier in
+        # profile.yaml renames it on the site too.
+        "tiers": score.tier_table(profile),
         "jobs": [_slim(j) for j in scored],
     }
     return payload, newly
@@ -250,7 +253,8 @@ def open_issues(jobs: list[dict], profile: dict) -> None:
         print("  no new tier A/B jobs, no issues to open")
         return
 
-    client.ensure_labels()
+    table = score.tier_table(profile)
+    client.ensure_labels([t["github"] for t in table.values() if t.get("github")])
     existing = {gh.job_id_of(i) for i in client.radar_issues()}
     cap = int(profile.get("issues", {}).get("max_per_run", 30))
     opened = 0
@@ -261,10 +265,13 @@ def open_issues(jobs: list[dict], profile: dict) -> None:
             print(f"  hit the {cap}-issue cap; the rest stay on the dashboard "
                   f"and get issues next run")
             break
-        labels = ["radar", f"tier:{job['tier']}"]
+        tier = table[job["tier"]]
+        labels = ["radar"]
+        if tier.get("github"):
+            labels.append(tier["github"])
         if job.get("urgent"):
             labels.append("urgent")
-        title = f"[{job['tier']}·{job['score']}] {job['title']} — {job['employer']}"
+        title = f"[{tier['name']}·{job['score']}] {job['title']} — {job['employer']}"
         client.create_issue(title[:250], gh.issue_body(job), labels)
         opened += 1
         print(f"  issue opened: {title[:90]}")

@@ -194,7 +194,7 @@ class TestScoring(unittest.TestCase):
             employer="Chalmers University of Technology", country="Sweden")
         self.assertGreater(on_topic["score"], off_topic["score"])
         # The off-topic one must not survive on employer weight alone.
-        self.assertLess(off_topic["score"], PROFILE["tiers"]["C"])
+        self.assertLess(off_topic["score"], PROFILE["tiers"]["C"]["min"])
 
     def test_topic_relevance_outranks_institution_weight(self):
         abroad = self._score(
@@ -240,11 +240,44 @@ class TestScoring(unittest.TestCase):
         self.assertFalse(ok)
 
 
+class TestTiers(unittest.TestCase):
+    def test_score_carries_the_display_name_not_just_the_letter(self):
+        job = score.score_job(
+            {"title": "PhD in robot manipulation and task and motion planning",
+             "summary": "", "body": "learning from demonstration",
+             "employer": "KTH Royal Institute of Technology", "country": "Sweden",
+             "deadline": None}, PROFILE, NOW)
+        self.assertIn(job["tier"], score.TIER_KEYS)
+        self.assertEqual(job["tier_name"], PROFILE["tiers"][job["tier"]]["name"])
+
+    def test_tier_of_falls_through_to_the_bottom_band(self):
+        key, name = score.tier_of(0, PROFILE)
+        self.assertEqual(key, "D")
+        self.assertEqual(name, PROFILE["tiers"]["D"]["name"])
+
+    def test_tier_table_accepts_a_bare_threshold(self):
+        table = score.tier_table({"tiers": {"A": 50, "B": 30, "C": 10, "D": 0}})
+        self.assertEqual(table["A"]["min"], 50)
+        self.assertEqual(table["A"]["name"], "A")
+        self.assertIsNone(table["A"]["github"])
+
+    def test_only_the_banded_tiers_get_a_github_label(self):
+        table = score.tier_table(PROFILE)
+        self.assertTrue(table["A"]["github"])
+        self.assertTrue(table["B"]["github"])
+        self.assertIsNone(table["C"]["github"])
+
+
 class TestProfileIntegrity(unittest.TestCase):
     def test_tier_thresholds_descend(self):
-        t = PROFILE["tiers"]
-        self.assertGreater(t["A"], t["B"])
-        self.assertGreater(t["B"], t["C"])
+        t = score.tier_table(PROFILE)
+        self.assertGreater(t["A"]["min"], t["B"]["min"])
+        self.assertGreater(t["B"]["min"], t["C"]["min"])
+
+    def test_every_tier_has_a_readable_name(self):
+        for key, entry in score.tier_table(PROFILE).items():
+            self.assertTrue(entry["name"])
+            self.assertNotEqual(entry["name"], key, f"tier {key} still shows its letter")
 
     def test_every_weighted_group_has_terms(self):
         groups = (PROFILE["topics"]["groups"] + PROFILE["employers"]["tiers"]

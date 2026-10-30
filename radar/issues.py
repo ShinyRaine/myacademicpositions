@@ -23,8 +23,6 @@ DECISION_LABELS = {
 
 LABEL_DEFS = [
     ("radar", "0e8a16", "Opened by the Academic Positions radar"),
-    ("tier:A", "b60205", "Rule score in the top band"),
-    ("tier:B", "d93f0b", "Rule score in the second band"),
     ("urgent", "fbca04", "Deadline within the urgency window"),
     ("decision:apply", "0052cc", "Decided: write an application"),
     ("decision:maybe", "5319e7", "Undecided: needs a closer look"),
@@ -62,8 +60,18 @@ class GitHub:
             return json.loads(raw) if raw else None
 
     # -- labels ------------------------------------------------------------
-    def ensure_labels(self) -> None:
-        for name, color, desc in LABEL_DEFS:
+    def ensure_labels(self, tier_labels: list[str] | None = None) -> None:
+        """Create the fixed labels, plus one per tier that opens issues.
+
+        Tier label names come from profile.yaml, so renaming a tier there adds
+        the new label here; the old one is left in place rather than deleted,
+        because issues already carry it.
+        """
+        defs = list(LABEL_DEFS)
+        shades = ("b60205", "d93f0b", "e99695", "f9d0c4")
+        for i, name in enumerate(tier_labels or []):
+            defs.append((name, shades[i % len(shades)], "Rule-score band"))
+        for name, color, desc in defs:
             try:
                 self._request("POST", f"/repos/{self.repo}/labels",
                               {"name": name, "color": color, "description": desc})
@@ -102,7 +110,7 @@ def issue_body(job: dict) -> str:
         + (f" (**{job['days_left']} days left**)" if job.get("days_left") is not None else ""),
         f"- **Posted:** {(job.get('posted') or '')[:10]}",
         f"- **Type:** {job.get('position_type')}",
-        f"- **Rule score:** {job.get('score')} (tier {job.get('tier')})",
+        f"- **Rule score:** {job.get('score')} — {job.get('tier_name', job.get('tier'))}",
         f"- **Advert:** {job.get('url')}",
         "",
     ]

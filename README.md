@@ -19,9 +19,9 @@ en.academicpositions.se/sitemaps/en/jobs-0-xml   ← 全部在招岗位的 URL�
           ▼
      规则打分 (profile.yaml)  ← 课题关键词 / 排除词 / 机构 / 国家 / 点名导师 + 主题闸门
           │
-          ├── 分档 C/D → 只进网站列表，不花钱
+          ├── 「擦边 / 不相关」 → 只进网站列表，不花钱
           │
-          └── 分档 A/B → Gemini 研判 → 开 GitHub Issue
+          └── 「对口 / 值得细看」 → Gemini 研判 → 开 GitHub Issue
                                           │
                                  你打 decision:* label
                                           │
@@ -39,7 +39,7 @@ en.academicpositions.se/sitemaps/en/jobs-0-xml   ← 全部在招岗位的 URL�
 
 ## 决策怎么做
 
-每个 A/B 岗位会开一个 Issue，正文里有截止日、规则分构成、Gemini 的研判（匹配点 / 保留意见 / 硬性障碍 / 投前要准备什么）。你只要打一个 label：
+「对口」和「值得细看」两档的岗位会各开一个 Issue，正文里有截止日、规则分构成、Gemini 的研判（匹配点 / 保留意见 / 硬性障碍 / 投前要准备什么）。你只要打一个 label：
 
 | label | 含义 |
 |---|---|
@@ -61,7 +61,9 @@ en.academicpositions.se/sitemaps/en/jobs-0-xml   ← 全部在招岗位的 URL�
 - `exclusions.terms` —— 噪音学科。Academic Positions 上生物医学占大头。
 - `employers.tiers` / `countries.tiers` —— 机构和国家权重。
 - `scoring.topic_gate` —— 主题闸门。课题分够不到它，机构分和国家分就按比例打折；没有它，Chalmers 的纺织复合材料 PhD 会排在 ETH 的 robot learning PhD 前面。
-- `tiers` —— A/B/C 的分数线。只有 A/B 会开 Issue 和花 Gemini 额度。
+- `tiers` —— 四档的分数线和**显示名**。A/B/C/D 只是内部排序键，面板上的筛选按钮、
+  Issue 标题和 GitHub label 都用 `name`，改了就跟着改。只有带 `github:` 的两档会开 Issue、
+  花 Gemini 额度。
 
 手动触发 `scan` 时有三个开关：`limit`（限制本次抓多少条）、`rescore_all`（只重算不抓）、`forget_llm`（连缓存的研判一起重来，会耗额度）。
 
@@ -87,7 +89,7 @@ cp data/jobs.json data/decisions.json public/ && \
 |---|---|---|
 | `data/seen.json` | 见过的每个广告 id，含跳过原因 | `scan` |
 | `data/raw.json` | 抓下来的广告原文（正文截断到 12k 字符） | `scan` |
-| `data/jobs.json` | 打完分、合并完语言版本、带研判的岗位列表，网站读这个 | `scan` / `rescore` |
+| `data/jobs.json` | 打完分、合并完语言版本、带研判的岗位列表，网站读这个（含档位显示名） | `scan` / `rescore` |
 | `data/decisions.json` | 从 Issue label 读回来的决策 | `triage-sync` |
 
 ## 部署要配的东西

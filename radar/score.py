@@ -62,6 +62,34 @@ def _capped(groups, haystack: str, cap: int, kind: str) -> tuple[int, list[dict]
     return total, detail
 
 
+# A/B/C/D stay as the internal sort keys; the name is what anyone reads.
+TIER_KEYS = ("A", "B", "C", "D")
+
+
+def tier_table(profile: dict) -> dict:
+    """{key: {min, name, github}} with defaults filled in."""
+    raw = profile.get("tiers", {}) or {}
+    out = {}
+    for key in TIER_KEYS:
+        entry = raw.get(key)
+        if isinstance(entry, dict):
+            out[key] = {"min": int(entry.get("min", 0)),
+                        "name": str(entry.get("name", key)),
+                        "github": entry.get("github")}
+        else:  # a bare threshold, the older shape
+            out[key] = {"min": int(entry) if entry is not None else 0,
+                        "name": key, "github": None}
+    return out
+
+
+def tier_of(total: int, profile: dict) -> tuple[str, str]:
+    table = tier_table(profile)
+    for key in TIER_KEYS:
+        if total >= table[key]["min"]:
+            return key, table[key]["name"]
+    return "D", table["D"]["name"]
+
+
 def score_job(job: dict, profile: dict, now: datetime | None = None) -> dict:
     """Return the job with score, tier, breakdown and gating flags attached."""
     title = _norm(job.get("title", ""))
@@ -142,15 +170,7 @@ def score_job(job: dict, profile: dict, now: datetime | None = None) -> dict:
 
     total = max(0, total)
 
-    thresholds = profile.get("tiers", {})
-    if total >= int(thresholds.get("A", 62)):
-        tier = "A"
-    elif total >= int(thresholds.get("B", 42)):
-        tier = "B"
-    elif total >= int(thresholds.get("C", 24)):
-        tier = "C"
-    else:
-        tier = "D"
+    tier, tier_name = tier_of(total, profile)
 
     left = days_left(job.get("deadline"), now)
     urgent_days = int(profile.get("hard_filters", {}).get("urgent_days", 14))
@@ -158,6 +178,7 @@ def score_job(job: dict, profile: dict, now: datetime | None = None) -> dict:
     job = dict(job)
     job["score"] = total
     job["tier"] = tier
+    job["tier_name"] = tier_name
     job["breakdown"] = breakdown
     job["days_left"] = left
     job["urgent"] = left is not None and 0 <= left <= urgent_days

@@ -7,7 +7,7 @@
   "tier_D": 77,
   "urgent": 30
  },
- "generated_at": "2026-10-30T10:13:51+00:00",
+ "generated_at": "2026-10-30T10:36:25+00:00",
  "jobs": [
   {
    "also_posted_as": [
@@ -138,6 +138,7 @@
    "slug": "doctoral-student-in-robotic-manipulation-of-deformable-objects",
    "summary": "PhD research on geometric, ML-based manipulation of deformable objects: perception, planning & control. Seek MSc, Python/C++, robotics/ML; diff geometry/real robots a plus. Stockholm.",
    "tier": "A",
+   "tier_name": "对口",
    "title": "Doctoral student in robotic manipulation of deformable objects",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-in-robotic-manipulation-of-deformable-objects/253622"
@@ -271,6 +272,7 @@
    "slug": "doctoral-student-in-game-theoretic-methods-for-multi-agent-autonomous-systems",
    "summary": "PhD: hybrid dynamic games & control for multi-agent robots. Model human–robot interaction, design efficient controllers, validate on multi-robot and underwater platforms.",
    "tier": "A",
+   "tier_name": "对口",
    "title": "Doctoral student in Game-Theoretic Methods for Multi-Agent Autonomous Systems",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-in-game-theoretic-methods-for-multi-agent-autonomous-systems/253620"
@@ -387,6 +389,7 @@
    "slug": "robotx-phd-fellowship-2027",
    "summary": "Fully funded PhD fellowship in robotics (2027 start). Apply once, reviewed by multiple labs; choose up to 3 supervisors. MSc by Aug 2027; strong coding & research.",
    "tier": "B",
+   "tier_name": "值得细看",
    "title": "RobotX PhD Fellowship 2027",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/robotx-phd-fellowship-2027/253810"
@@ -514,6 +517,7 @@
    "slug": "doctoral-positions-in-robot-learning-and-soft-musculoskeletal-and-biohybrid-robotics",
    "summary": "PhD positions in soft & musculoskeletal robotics, biohybrid systems, and robot learning. Design, build, and validate contact-rich robots; rapid prototyping, experiments, top publications.",
    "tier": "B",
+   "tier_name": "值得细看",
    "title": "Doctoral Positions in Robot Learning and Soft, Musculoskeletal, and Biohybrid Robotics",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-positions-in-robot-learning-and-soft-musculoskeletal-and-biohybrid-robotics/252189"
@@ -615,6 +619,7 @@
    "slug": "phd-position-in-modeling-and-control-of-nonlinear-dynamical-systems-from-data",
    "summary": "100% PhD on data-driven nonlinear model reduction/control via spectral submanifold methods. Topics: fluid-structure, soft robotics, turbulence. MSc in ME/applied math/physics.",
    "tier": "B",
+   "tier_name": "值得细看",
    "title": "PhD position in Modeling and Control of Nonlinear Dynamical Systems from Data",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/phd-position-in-modeling-and-control-of-nonlinear-dynamical-systems-from-data/250904"
@@ -733,6 +738,7 @@
    "slug": "doctoral-student-in-neuromotor-interfaces-for-dexterous-robot-teleoperation-multimodal-egocentric-vision-emg",
    "summary": "Fully funded PhD: build neuromotor interfaces for dexterous robot teleoperation using wrist/forearm sEMG + egocentric vision; develop ML, signal processing & CV.",
    "tier": "B",
+   "tier_name": "值得细看",
    "title": "Doctoral Student in Neuromotor Interfaces for Dexterous Robot Teleoperation (multimodal egocentric vision + EMG)",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-in-neuromotor-interfaces-for-dexterous-robot-teleoperation-multimodal-egocentric-vision-emg/252614"
@@ -824,6 +830,7 @@
    "slug": "phd-in-control-theory-for-learned-operators-in-dynamical-systems",
    "summary": "4-year PhD (Eindhoven): develop control theory for learned operator models of dynamical systems—stability/robustness analysis and feedback/predictive controller design; theory + numerics.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "PhD in Control Theory for Learned Operators in Dynamical Systems",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-in-control-theory-for-learned-operators-in-dynamical-systems/253054"
@@ -905,6 +912,7 @@
    "slug": "doctoral-student-in-web-and-emerging-applications-security",
    "summary": "Fully funded PhD in web & emerging app security (crawling/scanning, extensions, sandboxing, AI). Requires MSc, strong English, cyber/privacy interest; ~20% teaching.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "Doctoral student in Web and Emerging Applications Security",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-web-and-emerging-applications-security/254440"
@@ -974,6 +982,7 @@
    "slug": "phd-fellow-in-trustworthy-generative-ai-with-knowledge-verification",
    "summary": "PhD fellowship: build neuro-symbolic verification to reduce GenAI hallucinations; develop reasoning algorithms; validate on Sámi language platform. Oslo, 3–4 yrs.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "PhD Fellow in Trustworthy Generative AI with Knowledge Verification",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/oslo-metropolitan-university/2026/phd-fellow-in-trustworthy-generative-ai-with-knowledge-verification/254642"
@@ -1041,6 +1050,7 @@
    "slug": "phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors",
    "summary": "Funded PhD in computational neuroscience: model large-scale neural recordings during natural behaviors using ML, graph theory & dynamical systems. Python/MATLAB/Julia. Stockholm.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536"
@@ -1121,6 +1131,7 @@
    "slug": "the-aithyra-international-phd-call-in-ai-for-biomedicine-all-genders",
    "summary": "Fully funded PhD in Vienna on AI/ML for biomedicine—work at intersection of ML, experimental biology, chemistry & medicine. Open to ML or life science grads. €40k/yr, start Sep 2027.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "The AITHYRA International PhD Call in AI for Biomedicine (all genders)",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/aithyra/2026/the-aithyra-international-phd-call-in-ai-for-biomedicine-all-genders/252658"
@@ -1203,6 +1214,7 @@
    "slug": "doctoral-student-in-machine-learning-for-quantum-error-correction",
    "summary": "Fully funded PhD researching low-latency ML decoders for quantum error correction (surface/LDPC codes). Join EU network with training, collaborations and research visits abroad.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "Doctoral Student in Machine Learning for Quantum Error Correction",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-machine-learning-for-quantum-error-correction/253525"
@@ -1285,6 +1297,7 @@
    "slug": "doctoral-student-in-explainable-machine-learning-for-nuclear-safeguards",
    "summary": "Fully funded PhD researching explainable AI for spent nuclear fuel safeguards. Develop transparent ANN models in Python. MSc in physics/math/CS + ML/XAI or reactor/safeguards.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "Doctoral student in Explainable Machine Learning for Nuclear Safeguards",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-explainable-machine-learning-for-nuclear-safeguards/254389"
@@ -1367,6 +1380,7 @@
    "slug": "doctoral-student-in-ai-powered-asset-health-indices-for-smart-maintenance",
    "summary": "Fully funded PhD: build transparent AI Asset Health Index models for smart maintenance, prognostics/RUL & decision support using industrial data; real-world pilot validation; up to 20% teaching.",
    "tier": "C",
+   "tier_name": "擦边",
    "title": "Doctoral student in AI-powered Asset Health Indices for Smart Maintenance",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-ai-powered-asset-health-indices-for-smart-maintenance/254521"
@@ -1446,6 +1460,7 @@
    "slug": "doctoral-position-in-generative-ai-based-computational-design-methods-for-engineering-design",
    "summary": "Fully funded PhD researching generative AI for engineering design: combine LLMs with design grammars, build tools for design reasoning/generation. MS ME, strong Python; some teaching.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Position in Generative AI-Based, Computational Design Methods for Engineering Design",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-generative-ai-based-computational-design-methods-for-engineering-design/253733"
@@ -1515,6 +1530,7 @@
    "slug": "phd-position-control-capacity-of-active-matter-using-activity-landscapes",
    "summary": "PhD researching light-controlled active matter: design Janus microswimmer experiments, microfluidics, ML particle tracking, thermodynamic control limits. MSc Physics; optics/Python.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Position: Control Capacity of Active Matter Using Activity Landscapes",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-leipzig/2026/phd-position-control-capacity-of-active-matter-using-activity-landscapes/254186"
@@ -1584,6 +1600,7 @@
    "slug": "doctoral-position-in-risk-based-inspection-and-maintenance-planning-of-tunnels",
    "summary": "PhD: risk-based tunnel inspection & maintenance planning—Bayesian networks, probabilistic updating, Value of Information, optimisation. Strong Python; field work.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Position in Risk-Based Inspection and Maintenance Planning of Tunnels",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-risk-based-inspection-and-maintenance-planning-of-tunnels/253946"
@@ -1664,6 +1681,7 @@
    "slug": "phd-position-in-bidirectional-power-converter-design-and-control-for-data-centers",
    "summary": "Research PhD on DC-DC converters for solid-state transformers in data centers: design & advanced control/modulation, simulation, prototyping and experimental validation to boost efficiency, power density & grid stability",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Position in Bidirectional Power Converter Design and Control for Data Centers",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-position-in-bidirectional-power-converter-design-and-control-for-data-centers/254165"
@@ -1748,6 +1766,7 @@
    "slug": "time-series-representation-learning-for-industrial-process-characterization",
    "summary": "Funded 4-year PhD: learn explainable motif-based representations from multivariate industrial sensor time series; validate for anomaly detection/diagnosis & root-cause analysis.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Time Series Representation Learning for Industrial Process Characterization",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/time-series-representation-learning-for-industrial-process-characterization/254336"
@@ -1819,6 +1838,7 @@
    "slug": "doctoral-researcher-in-advanced-communications",
    "summary": "Contribute to research in radio frequency, optical, quantum communications, or system-level design. M.Sc./M.Eng. required. Strong programming and publication record preferred. 3-year contract.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Researcher in Advanced Communications",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-advanced-communications/244142"
@@ -1890,6 +1910,7 @@
    "slug": "doctoral-researcher-in-computer-vision-for-deepfake-detection",
    "summary": "PhD position in Computer Vision focused on media forensics & deepfake detection. Research, implement and validate solutions; publish results. Requires Master’s, strong CV/DL skills (PyTorch/TensorFlow), English.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in Computer Vision for Deepfake Detection",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-computer-vision-for-deepfake-detection/245107"
@@ -1960,6 +1981,7 @@
    "slug": "doctoral-researcher-in-machine-learning-security-testing",
    "summary": "PhD research on secure, trustworthy ML: define quality/security principles, build testing & benchmarking tools for AI/agents with industry partners. MSc CS, strong coding, English.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in Machine Learning Security & Testing",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-machine-learning-security-testing/250501"
@@ -2031,6 +2053,7 @@
    "slug": "doctoral-researcher-in-ai-systems",
    "summary": "PhD research on reliable, explainable multi-agent LLM systems in regulated energy operations. Build/evaluate prototypes, publish. MSc CS; strong Python/C++.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in AI Systems",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-ai-systems/252087"
@@ -2101,6 +2124,7 @@
    "slug": "doctoral-researcher-in-learning-ai-agents",
    "summary": "PhD: build and evaluate LLM-based agents with calibrated initiative + drift detection in industry. MSc CS/eng; Python/C++; HAI, RLHF, monitoring.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in Learning AI Agents",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-learning-ai-agents/252092"
@@ -2170,6 +2194,7 @@
    "slug": "doctoral-researcher-in-digital-business-agentic-ai",
    "summary": "3-year funded PhD on agentic AI platforms in regulated energy retail: governance, digital sovereignty, human-AI collaboration, security/privacy. Full-time, €44,531/yr.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Researcher in Digital Business & Agentic AI",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-digital-business-agentic-ai/253522"
@@ -2239,6 +2264,7 @@
    "slug": "phd-physics-informed-machine-learning-for-semiconductor-metrology",
    "summary": "Develop physics-informed ML to recover nanoscale chip parameters from noisy, low-res metrology; optimize measurement setups. 4-year full-time PhD in Amsterdam; MSc in ML/CS/math/physics.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD: Physics-Informed Machine Learning for Semiconductor Metrology",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/advanced-research-center-for-nanolithography-arcnl/2026/phd-physics-informed-machine-learning-for-semiconductor-metrology/252329"
@@ -2298,6 +2324,7 @@
    "slug": "phd-ai-assisted-discovery-of-chiral-perovskites-in-nanophotonic-environments",
    "summary": "PhD project using AI-driven closed-loop synthesis and optical screening to optimize chiral perovskite (quantum) emitters on nanophotonic metasurfaces; ~1M parallel experiments.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD: AI-assisted discovery of chiral perovskites in nanophotonic environments",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/amolf/2026/phd-ai-assisted-discovery-of-chiral-perovskites-in-nanophotonic-environments/254540"
@@ -2377,6 +2404,7 @@
    "slug": "doctoral-student-in-non-newtonian-fluid-mechanics-and-ai",
    "summary": "PhD: use AI, HPC & experiments to model non-Newtonian flows and build a digital-twin rheometer. Stockholm; MSc in engineering/maths/physics (fluids) required.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in non-Newtonian fluid mechanics and AI",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-in-non-newtonian-fluid-mechanics-and-ai/253619"
@@ -2417,6 +2445,7 @@
    "slug": "phd-for-nuclear-physics-theory",
    "summary": "Join a research group focused on symmetries and algebraic methods in nuclear physics. Requires strong background in quantum physics, Lie algebras, group theory, and computational skills.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD for Nuclear Physics Theory",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/the-hebrew-university-of-jerusalem/2026/phd-for-nuclear-physics-theory/231411"
@@ -2506,6 +2535,7 @@
    "slug": "doctoral-student-in-adaptive-antenna-systems-for-6g-wireless-networks",
    "summary": "PhD: develop adaptive 6G antenna arrays (6–24 GHz/FR3) for spectrum sharing; hybrid analog–digital beamforming & over-the-air tests. MSc EE/Physics; MATLAB/Python.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in adaptive antenna systems for 6G wireless networks",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-adaptive-antenna-systems-for-6g-wireless-networks/250348"
@@ -2557,6 +2587,7 @@
    "slug": "phd-position-in-the-development-of-life-like-materials-that-learn-remember-and-forget-for-use-in-soft-robotics",
    "summary": "PhD: Synthesize multi-switch polyurethane elastomers showing learning/memory for soft robotics; use NMR, UV-Vis, DSC/DMA and spectroscopy; collaborate internationally.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD position in the development of life-like materials that learn, remember, and forget for use in soft robotics",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/empa/2026/phd-position-in-the-development-of-life-like-materials-that-learn-remember-and-forget-for-use-in-soft-robotics/252819"
@@ -2628,6 +2659,7 @@
    "slug": "doctoral-student-in-perovskite-materials-for-hydrogen-production-by-redox-reactions",
    "summary": "Fully funded PhD researching perovskite redox oxides for H2 via chemical looping with CO2 capture. Use ML/active learning, synthesize & characterize materials; MSc required.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in perovskite materials for hydrogen production by redox reactions",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-perovskite-materials-for-hydrogen-production-by-redox-reactions/254580"
@@ -2688,6 +2720,7 @@
    "slug": "biostatistician-to-the-clinical-memory-research-group",
    "summary": "PhD biostatistician for Alzheimer’s biomarker research: R analyses (ROC, mixed models), dataset QC, figures/tables, stats support for papers. Permanent full-time, on-site Lund.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Biostatistician to the Clinical Memory Research group",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/lund-university/2026/biostatistician-to-the-clinical-memory-research-group/254042"
@@ -2766,6 +2799,7 @@
    "slug": "phd-researcher-pdtx",
    "summary": "PhD role developing LLM-based mobile app to boost post-stroke home rehab adherence; integrate with soft robotic hand exoskeleton, collect data, run 6-week clinical trial.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Researcher - PDTx",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/phd-researcher-pdtx/248018"
@@ -2837,6 +2871,7 @@
    "slug": "phd-position-in-cognitive-digital-twins-knowledge-graphs-edge-computing-and-artificial-intelligence",
    "summary": "PhD scholarship: build cognitive digital twin for offshore infrastructure. Research knowledge graphs, stream processing, logic, edge/cloud & AI; theory + prototypes. Kortrijk.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Position in Cognitive Digital Twins, Knowledge Graphs, Edge Computing and Artificial Intelligence",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-position-in-cognitive-digital-twins-knowledge-graphs-edge-computing-and-artificial-intelligence/253282"
@@ -2907,6 +2942,7 @@
    "slug": "phd-position-in-virtual-knowledge-graphs-edge-computing-and-artificial-intelligence",
    "summary": "PhD scholarship researching virtual/materialized knowledge graphs for edge AI/stream reasoning. Master’s in CS/AI/Math; interest in logic, ML, DB/stream processing; prototyping in Kortrijk.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Position in Virtual Knowledge Graphs, Edge Computing and Artificial Intelligence",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-position-in-virtual-knowledge-graphs-edge-computing-and-artificial-intelligence/253463"
@@ -2977,6 +3013,7 @@
    "slug": "phd-in-data-and-ai-based-solutions-to-improve-child-health-and-outcomes-through-housing",
    "summary": "PhD: use Python, big data, computer vision & AI to predict and optimise child health impacts of housing upgrades; build digital tool with interdisciplinary team.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD in Data- and AI-based solutions to improve child health and outcomes through housing",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-in-data-and-ai-based-solutions-to-improve-child-health-and-outcomes-through-housing/254166"
@@ -3038,6 +3075,7 @@
    "slug": "student-research-assistant-in-bridge-monitoring-computer-vision-data-science",
    "summary": "Assist bridge monitoring research: preprocess multimodal sensor/video data, apply deep-learning CV for vehicle tracking, fuse with B-WIM loads & condition metrics. 15h/week; Python.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Student Research Assistant in Bridge Monitoring, Computer Vision & Data Science",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/student-research-assistant-in-bridge-monitoring-computer-vision-data-science/254246"
@@ -3108,6 +3146,7 @@
    "slug": "phd-in-physics-informed-generative-ai-for-dynamic-cardiac-mri",
    "summary": "PhD: Develop physics-informed generative AI for trustworthy low-dose cardiac MRI reconstruction with uncertainty; validate on clinical data; 6 months in Munich. Python/PyTorch.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD in Physics-informed generative AI for dynamic cardiac MRI",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-in-physics-informed-generative-ai-for-dynamic-cardiac-mri/254333"
@@ -3169,6 +3208,7 @@
    "slug": "doctoral-student-in-machine-learning-and-medical-data-science",
    "summary": "PhD: develop novel ML/AI for healthcare (foundation models, generative AI, explainability, time-series, multimodal). Requires MSc in CS/ML + strong Python.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Student in Machine Learning and Medical Data Science",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-in-machine-learning-and-medical-data-science/254338"
@@ -3239,6 +3279,7 @@
    "slug": "phd-position-in-virtual-knowledge-graphs-edge-computing-and-artificial-intelligence",
    "summary": "PhD scholarship: hybrid virtual/materialized knowledge graphs at the edge. MS in CS/AI/Math; interests in logic, ML, streams & DB; build prototypes. Kortrijk.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Position in Virtual Knowledge Graphs, Edge Computing and Artificial Intelligence",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-position-in-virtual-knowledge-graphs-edge-computing-and-artificial-intelligence/254405"
@@ -3299,6 +3340,7 @@
    "slug": "doctoral-researcher-in-machine-learning-for-official-statistics",
    "summary": "PhD project applying ML/LLMs to structured data for official statistics (data-to-text, report generation, semantic search). 36‑month full-time in Luxembourg; €43,445/yr.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in Machine Learning for Official Statistics",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-machine-learning-for-official-statistics/250500"
@@ -3371,6 +3413,7 @@
    "slug": "doctoral-student-in-regenerative-and-circular-manufacturing",
    "summary": "Fully funded doctoral position on regenerative & circular manufacturing. Develop methods/models, collaborate with industry/academia, publish & teach 20%. MSc + LCA courses required.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in Regenerative and Circular Manufacturing",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-regenerative-and-circular-manufacturing/252721"
@@ -3442,6 +3485,7 @@
    "slug": "doctoral-student-in-sustainable-antifouling-strategies-evaluation-of-ultrasound-as-antifouling-method-from-environmental-and-economical-perspective",
    "summary": "Fully funded PhD (4 yrs) researching ultrasound to prevent ship biofouling; assess environmental & economic impacts vs alternatives. MSc in env/marine sciences; lab/field & stats.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in Sustainable Antifouling strategies -evaluation of ultrasound as antifouling method from environmental and economical perspective",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-sustainable-antifouling-strategies-evaluation-of-ultrasound-as-antifouling-method-from-environmental-and-economical-perspective/253737"
@@ -3503,6 +3547,7 @@
    "slug": "doctoral-student-in-computer-science-with-a-focus-on-secure-coordination-and-interaction-in-distributed-ai",
    "summary": "PhD in Computer Science on secure coordination in distributed/agentic AI. Develop interaction protocols & execution guards; test in sandbox/real settings. 4-year fully funded, SEK 32,300/mo.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in Computer Science with a focus on Secure Coordination and Interaction in Distributed AI",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/orebro-university/2026/doctoral-student-in-computer-science-with-a-focus-on-secure-coordination-and-interaction-in-distributed-ai/253834"
@@ -3574,6 +3619,7 @@
    "slug": "doctoral-student-in-thermomechanical-fatigue-of-textile-composites",
    "summary": "PhD: study thermomechanical fatigue of textile carbon composites for aeroengines via experiments + FE simulations; strong mechanics/programming. Fully funded 4 years, Gothenburg.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in Thermomechanical fatigue of textile composites",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-thermomechanical-fatigue-of-textile-composites/253913"
@@ -3645,6 +3691,7 @@
    "slug": "doctoral-student-in-fabrication-and-design-of-superconducting-quantum-processors",
    "summary": "Fully funded PhD: build next-gen superconducting quantum processors. Focus on nanofabrication or circuit design/microwave simulation; MSc in Physics/Nano required.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in fabrication and design of superconducting quantum processors",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-fabrication-and-design-of-superconducting-quantum-processors/253963"
@@ -3708,6 +3755,7 @@
    "slug": "phd-position-in-ai-and-multimodal-digital-liver-pathology",
    "summary": "PhD: develop multimodal AI for liver disease/cancer by integrating whole-slide pathology with omics/MRI. Python/ML skills; work with clinicians, publish and present.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD position in AI and multimodal digital liver pathology",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-position-in-ai-and-multimodal-digital-liver-pathology/253989"
@@ -3770,6 +3818,7 @@
    "slug": "phd-in-machine-learning-for-quantum-systems-10-fte",
    "summary": "PhD: interpretable, reliable ML for quantum many-body physics; deep learning research, publications/conferences, some teaching. MSc physics/CS, Python, English.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD in Machine Learning for Quantum Systems (1.0 FTE)",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/leiden-university/2026/phd-in-machine-learning-for-quantum-systems-10-fte/254106"
@@ -3840,6 +3889,7 @@
    "slug": "doctoral-student-in-material-science-enable-predictive-design-of-3d-shaped-products-based-on-pulp-fibres",
    "summary": "Fully funded PhD: develop predictive design rules for 3D forming of pulp fibres via experiments, mechanics & multiscale characterisation; publish, collaborate, teach up to 20%.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in Material Science - Enable predictive design of 3D-shaped products based on pulp fibres",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-material-science-enable-predictive-design-of-3d-shaped-products-based-on-pulp-fibres/254216"
@@ -3903,6 +3953,7 @@
    "slug": "doctoral-researcher-in-ai-for-science",
    "summary": "PhD research: build foundation models for LC‑HRMS contaminant ID, GNN toxicity prediction & causal transformation modelling. MSc CS, strong AI/ML coding; HPC, 3‑yr contract.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in AI for Science",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-ai-for-science/254260"
@@ -3964,6 +4015,7 @@
    "slug": "lektor-i-informationssystem-for-produktionsutveckling",
    "summary": "Forskning och undervisning i informationssystem för produktionsutveckling: leda projekt, söka externa medel, handleda doktorander och samverka med industri. Doktorsexamen krävs.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Lektor i informationssystem för produktionsutveckling",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/lektor-i-informationssystem-for-produktionsutveckling/254495"
@@ -4034,6 +4086,7 @@
    "slug": "doctoral-students-in-networked-systems-security",
    "summary": "PhD in security & privacy: research on trustworthy networked systems, incl. resilient positioning/GNSS. Requires MSc/240 credits, strong English, independent teamwork.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral students in Networked Systems Security",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-students-in-networked-systems-security/249734"
@@ -4086,6 +4139,7 @@
    "slug": "doctoral-researcher-phd-student-3-positions-development-of-data-science-and-ai-for-spatial-data",
    "summary": "3 väitöskirjatutkijaa Kuopioon: tekoäly- ja data science -menetelmät satelliitti- ja paikkatiedolle kaivostoiminnan kartoitukseen. Vaatii maisterin, Python/R, englanti.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Researcher (PhD Student), 3 positions, Development of Data Science and AI for Spatial Data",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-eastern-finland/2026/doctoral-researcher-phd-student-3-positions-development-of-data-science-and-ai-for-spatial-data/254387"
@@ -4157,6 +4211,7 @@
    "slug": "phd-position-in-ic-design-group",
    "summary": "4-year fully funded PhD in analog/RF IC design (advanced CMOS, test-chip lab). MSc EE (Analog/RF) with excellent grades; creative, independent researcher. €3,059–€3,881/mo.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD position in IC Design group",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-twente/2022/phd-position-in-ic-design-group/188333"
@@ -4227,6 +4282,7 @@
    "slug": "phd-4-years-on-numerical-simulation-of-composite-hydrogen-tanks",
    "summary": "4-year PhD on FE simulation/design of pressurized composite H2 tanks (pressurization, depletion, thermo-mech loads) with automotive partners. Master’s + strong English. Net €2600+/mo.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD (4 years) on numerical simulation of composite hydrogen tanks",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ghent-university/2026/phd-4-years-on-numerical-simulation-of-composite-hydrogen-tanks/248126"
@@ -4297,6 +4353,7 @@
    "slug": "phd-4-years-on-experimental-characterization-of-snap-fit-joints",
    "summary": "4-year PhD developing experimental tests for complex snap-fit joints using DIC/high-speed imaging; study engagement & long-term creep under temperature. Master’s in mechanics; industry–academia.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD (4 years) on experimental characterization of snap fit joints",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ghent-university/2026/phd-4-years-on-experimental-characterization-of-snap-fit-joints/248129"
@@ -4367,6 +4424,7 @@
    "slug": "phd-in-dynamic-space-time-interfaces-for-high-speed-thz-beam-control",
    "summary": "PhD: model, design, fabricate & test dynamic sub‑THz space–time interfaces (MEMS/metasurfaces) enabling GHz beam steering, frequency conversion & nonreciprocal propagation.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD in Dynamic Space–Time Interfaces for High-Speed THz Beam Control",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-in-dynamic-space-time-interfaces-for-high-speed-thz-beam-control/252866"
@@ -4428,6 +4486,7 @@
    "slug": "doctoral-student-in-design-and-analysis-of-human-ai-systems",
    "summary": "PhD: design/analyze human‑AI systems for high‑stakes decisions; mainly theory with experiments. Publish top OM journals + teaching. MSc math/econ/OR; strong optimization.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Student in Design and Analysis of Human-AI Systems",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-in-design-and-analysis-of-human-ai-systems/253292"
@@ -4490,6 +4549,7 @@
    "slug": "doctoral-student-in-nutritional-multiomics-for-health",
    "summary": "Fully funded 4-year PhD in nutrition, multi-omics & precision health (Gothenburg). Master’s required; skills in computational metabolomics, microbiome, OMICS stats and R.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in Nutritional MultiOMICs For Health",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-nutritional-multiomics-for-health/254059"
@@ -4542,6 +4602,7 @@
    "slug": "forskare-i-berakningsbaserad-magnetism-och-spinntronik",
    "summary": "Forskning i kvantmaterial: magnetism/spinntronik med DFT, atomistisk spinndynamik och mikromagnetiska simuleringar. Utveckla AI-stödda beräkningsflöden, samarbeta och handleda. Stockholm.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Forskare i beräkningsbaserad magnetism och spinntronik",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/forskare-i-berakningsbaserad-magnetism-och-spinntronik/254497"
@@ -4603,6 +4664,7 @@
    "slug": "fully-funded-doctoral-positions-at-the-international-max-planck-research-school-for-epigenetics-biophysics-and-metabolism-imprs-ebm",
    "summary": "Fully funded PhD program with lab rotations, personalized mentoring, interdisciplinary research, and access to advanced facilities in epigenetics, biophysics, metabolism, and related fields.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Fully funded doctoral positions at the International Max Planck Research School for Epigenetics, Biophysics and Metabolism (IMPRS-EBM)",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/max-planck-institute-immunobiology-epigenetics/2026/fully-funded-doctoral-positions-at-the-international-max-planck-research-school-for-epigenetics-biophysics-and-metabolism-imprs-ebm/241108"
@@ -4664,6 +4726,7 @@
    "slug": "phd-positions-at-international-max-planck-research-school-on-cellular-biophysics",
    "summary": "Fully funded PhD program in cellular biophysics with interdisciplinary research, lab rotations, expert supervision, and state-of-the-art facilities in Frankfurt/Mainz, Germany.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Positions at International Max Planck Research School on Cellular Biophysics",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/international-max-planck-research-school-on-cellular-biophysics-imprs-cbp/2026/phd-positions-at-international-max-planck-research-school-on-cellular-biophysics/242409"
@@ -4725,6 +4788,7 @@
    "slug": "fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors",
    "summary": "Fully funded PhD positions in neuroscience and translational psychiatry with integrated Residency/PhD track for medical doctors. No tuition fees. Open to MSc or MD graduates worldwide.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Fully funded PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078"
@@ -4786,6 +4850,7 @@
    "slug": "doctoral-researcher-in-ai-for-cybersecurity",
    "summary": "Join a multidisciplinary team to research AI for cybersecurity, collaborate with industry, and contribute to teaching. MSc in Cybersecurity/CS required. Only applicants from eligible countries considered.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in AI for Cybersecurity",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-ai-for-cybersecurity/243589"
@@ -4847,6 +4912,7 @@
    "slug": "doctoral-student-position-evaluating-novel-mineral-sources-for-treatment-of-micronutrient-deficiencies-in-humans",
    "summary": "Conduct research on absorption and bioavailability of novel mineral sources in clinical trials. MSc in relevant field required. Passion for nutrition, sustainability, and teamwork essential.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student position – Evaluating novel mineral sources for treatment of micronutrient deficiencies in humans",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-position-evaluating-novel-mineral-sources-for-treatment-of-micronutrient-deficiencies-in-humans/244092"
@@ -4907,6 +4973,7 @@
    "slug": "doctoral-researcher-in-optical-satellite-communications",
    "summary": "Industrial PhD on coherent optical ground-to-satellite feeder links: model atmospheric impairments, develop mitigation & simulations. MSc in EE/Telecom/Photonics; MATLAB/Python/C++. Full-time, 36–48 months.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher in Optical Satellite Communications",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-optical-satellite-communications/246380"
@@ -4968,6 +5035,7 @@
    "slug": "doctoral-researcher-in-smart-energy-system-modelling",
    "summary": "Design and implement a cutting-edge Energy System Model using stochastic optimization; develop energy transition scenarios, policy/tech analyses. Master’s + strong quantitative methods, Python, B2 thesis language.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Researcher in Smart energy system modelling",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-smart-energy-system-modelling/246546"
@@ -5029,6 +5097,7 @@
    "slug": "upcoming-phd-positions-at-the-international-max-planck-research-school-for-molecules-of-life-in-summer-2027",
    "summary": "Paid, fully funded PhD in Munich in biochemistry, biophysics, structural, cell, systems & computational biology. English program, mentoring, no tuition. MSc or 4-yr BSc hons.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Upcoming PhD Positions at the International Max Planck Research School for Molecules of Life in Summer 2027",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/international-max-planck-research-school-for-molecules-of-life-imprs-ml/2026/upcoming-phd-positions-at-the-international-max-planck-research-school-for-molecules-of-life-in-summer-2027/248271"
@@ -5090,6 +5159,7 @@
    "slug": "2-phd-positions-in-ultrafast-optical-control-of-topological-magnetic-textures",
    "summary": "2 PhD roles: femtosecond laser control of skyrmions/topological textures; time‑resolved magneto‑optics & imaging, thin‑film growth, nanolithography. Eindhoven.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "2 PhD positions in Ultrafast optical control of topological magnetic textures",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/2-phd-positions-in-ultrafast-optical-control-of-topological-magnetic-textures/253025"
@@ -5140,6 +5210,7 @@
    "slug": "doctoral-scholarship-holder-mathematical-modelling-and-optimal-design-of-mechatronic-systems",
    "summary": "Full-time PhD scholarship on mathematical modelling & optimal design of mechatronic mechanisms. Requires MSc (mech/math/physics), strong optimisation skills, English C1.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral scholarship holder mathematical modelling and optimal design of mechatronic systems",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/doctoral-scholarship-holder-mathematical-modelling-and-optimal-design-of-mechatronic-systems/253436"
@@ -5190,6 +5261,7 @@
    "slug": "doctoral-position-fmx-emerging-groups-point-configurations-and-quantizations-wiss2610-01-department-of-mathematics-and-computer-science-division-of-mathematics",
    "summary": "PhD position in math: research on Christoffel functions & geometric inference. MSc in Mathematics; background in complex geometry/global analysis/approximation/optimization. Part-time, E13 TV-L.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Position (f/m/x) - Emerging Groups: Point Configurations and Quantizations   Wiss2610-01 | Department of Mathematics and Computer Science | Division of Mathematics",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/doctoral-position-fmx-emerging-groups-point-configurations-and-quantizations-wiss2610-01-department-of-mathematics-and-computer-science-division-of-mathematics/253856"
@@ -5241,6 +5313,7 @@
    "slug": "upcoming-fully-funded-phd-positions-in-life-sciences",
    "summary": "Join an international team for fully funded PhD positions in molecular life sciences. Open to diverse STEM backgrounds; interdisciplinary training and mentoring provided across multiple European sites.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Upcoming Fully Funded PhD Positions in Life Sciences",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/european-molecular-biology-laboratory-embl/2026/upcoming-fully-funded-phd-positions-in-life-sciences/243569"
@@ -5292,6 +5365,7 @@
    "slug": "doctoral-researcher-positions-in-finance",
    "summary": "Join a top-ranked, international finance department for a PhD with rigorous coursework, research opportunities, and competitive salary. Strong quantitative skills and English required.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral researcher positions in Finance",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-positions-in-finance/243620"
@@ -5343,6 +5417,7 @@
    "slug": "international-fully-funded-phd-positions-in-the-life-sciences-in-switzerland",
    "summary": "Over 100 fully funded life sciences PhD positions in Zurich; 17 programs, English-taught (4 years). Master’s required. Cutting-edge research in top groups with mentoring and SNSF salary.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "International Fully Funded PhD Positions in the Life Sciences in Switzerland",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/life-science-zurich-graduate-school-1/2026/international-fully-funded-phd-positions-in-the-life-sciences-in-switzerland/244808"
@@ -5394,6 +5469,7 @@
    "slug": "apply-for-insead-s-online-pre-doctoral-and-doctoral-summer-camps-may-june-2026-and-phd-in-management-mid-august-2027-intake",
    "summary": "Online summer camps for early-stage researchers/PhD students: AI for Organisation Science + Complex Adaptive Systems in Strategy. Pathway to fully funded PhD in Management with France–Singapore experience.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Apply for a fully funded doctoral degree in management at INSEAD for the Fall 2027 intake",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/insead/2026/apply-for-insead-s-online-pre-doctoral-and-doctoral-summer-camps-may-june-2026-and-phd-in-management-mid-august-2027-intake/246501"
@@ -5445,6 +5521,7 @@
    "slug": "doctoral-researcher-in-molecular-and-cellular-cancer-immunology",
    "summary": "36‑month PhD in cancer immunology: wet‑lab with mouse/patient samples, patient‑derived 3D & immune co‑cultures, EVs; analyze omics in R. €43,445/yr, Belval.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral Researcher in Molecular and Cellular Cancer Immunology",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-molecular-and-cellular-cancer-immunology/247410"
@@ -5497,6 +5574,7 @@
    "slug": "phd-specialisation-in-communication-emanaire-project-futureproofing-employee-careers-in-the-age-of-generative-ai",
    "summary": "4-year funded PhD in Oslo on how generative AI reshapes employee careers—risk/resilience, reskilling & mobility. Join MSCA EMANAIRE network; quant/mixed methods; 25% teaching.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Specialisation in Communication - EMANAIRE project: Futureproofing Employee Careers in the Age of Generative AI",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/bi-norwegian-business-school/2026/phd-specialisation-in-communication-emanaire-project-futureproofing-employee-careers-in-the-age-of-generative-ai/253531"
@@ -5549,6 +5627,7 @@
    "slug": "phd-specialisation-in-communication-emanaire-project-managing-team-communication-in-ai-augmented-teams",
    "summary": "Funded 4-year PhD (Oslo) on communication & leadership in AI-augmented teams. Build/validate measures, field/team studies, 6‑month secondment; 25% teaching.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD specialisation in Communication - EMANAIRE project: Managing Team Communication in AI-Augmented Teams",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/bi-norwegian-business-school/2026/phd-specialisation-in-communication-emanaire-project-managing-team-communication-in-ai-augmented-teams/253532"
@@ -5601,6 +5680,7 @@
    "slug": "phd-scholarship-in-regulatory-delearning-in-eu-technology-governance",
    "summary": "4-year funded PhD in Oslo on regulatory delearning for EU/EEA tech governance (AI, standards, soft law). Join MSCA network with training, secondment; teaching 25%.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD scholarship in Regulatory Delearning in EU Technology Governance",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/bi-norwegian-business-school/2026/phd-scholarship-in-regulatory-delearning-in-eu-technology-governance/253680"
@@ -5642,6 +5722,7 @@
    "slug": "doktorand-i-datavetenskap-med-inriktning-p-s-ker-koordinering-och-interaktion-i-distribuerad-ai",
    "summary": "Örebro universitet söker en doktorand till utbildning på forskarnivå till doktorsexamen i datavetenskap vid Institutionen för naturvetenskap och teknik.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doktorand i datavetenskap med inriktning på säker koordinering och interaktion i distribuerad AI",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/orebro-university/2026/doktorand-i-datavetenskap-med-inriktning-p-s-ker-koordinering-och-interaktion-i-distribuerad-ai/253833"
@@ -5693,6 +5774,7 @@
    "slug": "inclusive-digital-learning-for-frontline-health-and-agriculture-extension-in-southern-ethiopia",
    "summary": "PhD on inclusive low-bandwidth blended micro-certifications for health & agriculture extension in Southern Ethiopia. Mixed-method design-based research; funded research stays in Belgium.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Inclusive Digital Learning for Frontline Health and Agriculture Extension in Southern Ethiopia",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/inclusive-digital-learning-for-frontline-health-and-agriculture-extension-in-southern-ethiopia/253925"
@@ -5734,6 +5816,7 @@
    "slug": "phd-candidate-for-identifying-ocean-cos-and-cs2-sources-by-sulfur-stable-isotopes",
    "summary": "Join a fully funded PhD project exploring ocean COS and CS2 sources using stable isotopes. Fieldwork, lab work, and advanced analytical techniques. MSc (with thesis) required.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD Candidate for: \"Identifying ocean COS and CS2 sources by sulfur stable isotopes “",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/the-hebrew-university-of-jerusalem/2026/phd-candidate-for-identifying-ocean-cos-and-cs2-sources-by-sulfur-stable-isotopes/240240"
@@ -5776,6 +5859,7 @@
    "slug": "ai-enabled-drone-survey-workflows-to-support-construction-process-lifecycle",
    "summary": "Fully funded 4-year PhD: develop AI workflows for drone surveys to monitor construction lifecycle & material reuse/BIM. MSc civil/construction, programming & AI, drone ops; €2300/mo.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "AI-enabled drone survey workflows to support construction process lifecycle",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/tallinn-university-of-technology/2026/ai-enabled-drone-survey-workflows-to-support-construction-process-lifecycle/253691"
@@ -5817,6 +5901,7 @@
    "slug": "when-the-mundane-becomes-transformational-everyday-self-provisioning-practices-as-form-of-prefiguration-for-a-degrowth-future",
    "summary": "Funded 4-year PhD on self-provisioning (food, sharing, repair, DIY) and degrowth in Estonia. Qualitative fieldwork/case studies. Master’s required; English+Estonian. €2300+ gross.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "When the Mundane Becomes Transformational. Everyday self-provisioning practices as form of prefiguration for a degrowth future",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/tallinn-university-of-technology/2026/when-the-mundane-becomes-transformational-everyday-self-provisioning-practices-as-form-of-prefiguration-for-a-degrowth-future/254170"
@@ -5858,6 +5943,7 @@
    "slug": "phd-position-optical-metasurfaces-controlling-quantum-electron-wavepackets",
    "summary": "PhD: Control quantum electron wavepackets with PINEM in an ultrafast SEM; design/fabricate optical metasurfaces; explore coherence & entanglement. MSc Physics.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD position: Optical metasurfaces controlling quantum electron wavepackets",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/amolf/2026/phd-position-optical-metasurfaces-controlling-quantum-electron-wavepackets/254583"
@@ -5918,6 +6004,7 @@
    "slug": "upcoming-10-fully-funded-phd-positions-at-the-imprs-for-molecular-organ-biology",
    "summary": "Fully funded PhD positions in an international program exploring genetics, development, regeneration, stem cell biology, cancer, and cardiopulmonary research. MSc required by Oct 2026.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Upcoming 10+ fully funded PhD positions at the IMPRS for Molecular Organ Biology",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/imprs-for-molecular-organ-biology/2026/upcoming-10-fully-funded-phd-positions-at-the-imprs-for-molecular-organ-biology/241039"
@@ -5949,6 +6036,7 @@
    "slug": "phd-for-atmospheric-sciences-environmental",
    "summary": "Conduct research on ozone dry deposition using field data, programming, and atmospheric models. Annual stipend 72,000–84,000 NIS. Requires degree in exact sciences and programming skills.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "PhD for Atmospheric Sciences- Environmental",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/the-hebrew-university-of-jerusalem/2026/phd-for-atmospheric-sciences-environmental/241812"
@@ -6039,6 +6127,7 @@
    "slug": "doctoral-student-in-circular-battery-materials-lfp-from-recovered-phosphorus",
    "summary": "PhD: Make battery-grade LFP from recovered wastewater phosphorus. Hands-on synthesis, hydrometallurgy, characterization (PXRD) and coin-cell testing; assess impurity effects.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in circular battery materials: LFP from recovered phosphorus",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-circular-battery-materials-lfp-from-recovered-phosphorus/254058"
@@ -6090,6 +6179,7 @@
    "slug": "research-assistant-at-the-division-of-psychology",
    "summary": "Join a perception lab studying smell: run EEG and olfactory tests, assist MRI sessions, manage data. Bachelor’s required; strong English. Bonus: MATLAB/Python, Swedish.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Research Assistant at the Division of Psychology",
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/research-assistant-at-the-division-of-psychology/254121"
@@ -6161,11 +6251,34 @@
    "slug": "doctoral-student-in-3d-printing-the-next-generation-battery-by-additive-manufacturing",
    "summary": "Fully funded doctoral research on 3D‑printed batteries: develop AM processes, electrode design & test components. Requires MSc, strong English, and AM/battery/3D printing experience.",
    "tier": "D",
+   "tier_name": "不相关",
    "title": "Doctoral student in 3D printing the next-generation battery by additive manufacturing",
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-3d-printing-the-next-generation-battery-by-additive-manufacturing/254407"
   }
  ],
  "repo": null,
- "source": "https://en.academicpositions.se/sitemaps/en/jobs-0-xml"
+ "source": "https://en.academicpositions.se/sitemaps/en/jobs-0-xml",
+ "tiers": {
+  "A": {
+   "github": "tier:对口",
+   "min": 62,
+   "name": "对口"
+  },
+  "B": {
+   "github": "tier:值得细看",
+   "min": 38,
+   "name": "值得细看"
+  },
+  "C": {
+   "github": null,
+   "min": 22,
+   "name": "擦边"
+  },
+  "D": {
+   "github": null,
+   "min": 0,
+   "name": "不相关"
+  }
+ }
 }
