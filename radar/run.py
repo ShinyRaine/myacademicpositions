@@ -164,15 +164,50 @@ def cmd_scan(args) -> int:
 # ---------------------------------------------------------------------------
 # scoring + dedup + LLM, shared by scan and rescore
 # ---------------------------------------------------------------------------
-def issue_worthy(job: dict, profile: dict) -> bool:
-    """Does this job's band open a GitHub issue?
+def verdict_index(jobs) -> dict:
+    """id -> verdict, under every id each record has answered to.
 
-    The tier table already says so: a band with a `github:` label is one worth
-    the issue and the Gemini spend. Reading it from there means renaming or
-    re-banding in profile.yaml needs no change here.
+    A vacancy changes id when the winner of a merge changes: Academic
+    Positions lists it first and it is judged as `ap:252189`, then KTH's own
+    page is scraped and the university record takes over as `kth:970256`
+    because the profile ranks the university higher. Keyed on the surviving
+    id alone, the cache missed and the same advert was judged and paid for
+    twice. Indexing the absorbed ids as well makes the carry-over work in
+    either direction, including when the record that won last time is the one
+    that is gone now.
+    """
+    index: dict[str, dict] = {}
+    for job in jobs:
+        verdict = job.get("llm")
+        if not verdict:
+            continue
+        for jid in (job.get("id"), *classify.merged_ids(job)):
+            if jid:
+                index.setdefault(jid, verdict)
+    return index
+
+
+def issue_worthy(job: dict, profile: dict) -> bool:
+    """Should a scan open a GitHub issue for this job by itself?
+
+    Two gates, in order. The band decides who is worth the Gemini spend: a
+    tier carrying a `github:` label, read from the table so that renaming or
+    re-banding in profile.yaml needs no change here. Then the verdict decides
+    who is worth an issue, because the rules match vocabulary and the model
+    reads the advert — an ETH position on spectral-submanifold model reduction
+    scored 36 on the word "dynamical systems" and came back fit 2/10.
+
+    No verdict means no issue, not an issue by default: the job stays on the
+    shortlist and gets one on a later run once the verdict lands. Anything the
+    gate turns down is still one click away on the dashboard, where "开始准备
+    投递" opens the issue on demand.
     """
     band = score.tier_table(profile).get(job.get("tier"))
-    return bool(band and band.get("github"))
+    if not (band and band.get("github")):
+        return False
+    min_fit = int(profile.get("issues", {}).get("min_fit", 6))
+    fit = (job.get("llm") or {}).get("fit")
+    return fit is not None and fit >= min_fit
 
 
 def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[dict]]:
@@ -204,11 +239,13 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
     order = {"A": 0, "B": 1, "C": 2, "D": 3}
     budget = int(cfg.get("max_jobs_per_run", 25))
 
+    paid_for = verdict_index(previous.values())
     todo = []
     for job in scored:
-        old = previous.get(job["id"])
-        if old and old.get("llm"):
-            job["llm"] = old["llm"]
+        verdict = next((paid_for[i] for i in (job["id"], *classify.merged_ids(job))
+                        if i in paid_for), None)
+        if verdict:
+            job["llm"] = verdict
         elif order.get(job["tier"], 9) <= order.get(min_tier, 1):
             todo.append(job)
 
@@ -297,7 +334,8 @@ def open_issues(jobs: list[dict], profile: dict) -> None:
         print("  (no GITHUB_TOKEN/GITHUB_REPOSITORY, not opening issues)")
         return
     if not jobs:
-        print("  nothing in an issue-opening band")
+        print("  nothing cleared the issue gate "
+              f"(band + Gemini fit >= {profile.get('issues', {}).get('min_fit', 6)})")
         return
 
     table = score.tier_table(profile)

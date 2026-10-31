@@ -2,6 +2,7 @@
 
 Run: python -m unittest discover -s tests -v
 """
+import json
 import sys
 import tempfile
 import unittest
@@ -15,7 +16,8 @@ import yaml  # noqa: E402
 
 from radar import classify, parse, run, score  # noqa: E402
 
-PROFILE = yaml.safe_load((Path(__file__).resolve().parent.parent / "profile.yaml").read_text())
+ROOT = Path(__file__).resolve().parent.parent
+PROFILE = yaml.safe_load((ROOT / "profile.yaml").read_text())
 NOW = datetime(2026, 10, 30, tzinfo=timezone.utc)
 
 
@@ -293,6 +295,56 @@ class TestProfileIntegrity(unittest.TestCase):
                                 score.tier_table(PROFILE)["A"]["min"])
 
 
+class TestVerdictCarryOver(unittest.TestCase):
+    """A verdict is paid for once; a merge must not throw it away.
+
+    Academic Positions lists a KTH vacancy first and it is judged as
+    ap:252189; days later KTH's own page is scraped and wins the merge, so
+    the record on the board is kth:970256. Keyed on the surviving id alone,
+    the cache missed and the advert was judged again.
+    """
+
+    V = {"verdict": "apply", "fit": 7, "headline": "x"}
+
+    def test_the_winner_inherits_the_verdict_of_the_record_it_absorbed(self):
+        previous = [{"id": "ap:252189", "llm": self.V}]
+        winner = {"id": "kth:970256",
+                  "also_listed_on": [{"source": "ap", "id": "ap:252189"}]}
+        index = run.verdict_index(previous)
+        found = next((index[i] for i in (winner["id"], *classify.merged_ids(winner))
+                      if i in index), None)
+        self.assertEqual(found, self.V)
+
+    def test_it_works_the_other_way_round_too(self):
+        # Last run the university record won and absorbed the aggregator's;
+        # this run the university listing is gone and only ap: is left.
+        previous = [{"id": "kth:970256", "llm": self.V,
+                     "also_listed_on": [{"source": "ap", "id": "ap:252189"}]}]
+        index = run.verdict_index(previous)
+        self.assertEqual(index["ap:252189"], self.V)
+
+    def test_a_translation_pairing_that_flips_keeps_the_verdict(self):
+        previous = [{"id": "kth:973983", "llm": self.V}]
+        winner = {"id": "kth:973984",
+                  "also_posted_as": [{"id": "kth:973983", "language": "sv"}]}
+        index = run.verdict_index(previous)
+        found = next((index[i] for i in (winner["id"], *classify.merged_ids(winner))
+                      if i in index), None)
+        self.assertEqual(found, self.V)
+
+    def test_an_unjudged_record_adds_nothing_to_the_index(self):
+        self.assertEqual(run.verdict_index([{"id": "ap:1"}, {"id": "ap:2", "llm": None}]), {})
+
+    def test_the_records_own_verdict_wins_over_an_absorbed_one(self):
+        own = {"verdict": "skip", "fit": 2, "headline": "y"}
+        previous = [{"id": "kth:1", "llm": own},
+                    {"id": "ap:1", "llm": self.V}]
+        job = {"id": "kth:1", "also_listed_on": [{"source": "ap", "id": "ap:1"}]}
+        index = run.verdict_index(previous)
+        found = next(index[i] for i in (job["id"], *classify.merged_ids(job)) if i in index)
+        self.assertEqual(found, own)
+
+
 class TestShortlist(unittest.TestCase):
     """Which jobs get a GitHub issue.
 
@@ -322,13 +374,18 @@ class TestShortlist(unittest.TestCase):
     def setUp(self):
         self.previous = None
 
+    @staticmethod
+    def _judged(job, fit):
+        return {**job, "llm": {"verdict": "apply", "fit": fit, "headline": ""}}
+
     def test_an_advert_already_on_the_board_is_still_shortlisted(self):
         raw = {"kth:1": self._raw()}
         board, _ = self._build(raw)
         job = board["jobs"][0]
-        self.assertTrue(run.issue_worthy(job, PROFILE), job["score"])
+        self.assertTrue(run.issue_worthy(self._judged(job, 8), PROFILE), job["score"])
 
-        self.previous = {"jobs": [job]}          # it was there last run too
+        # It was on the board last run, with a verdict that carries over.
+        self.previous = {"jobs": [self._judged(job, 8)]}
         _, shortlist = self._build(raw)
         self.assertEqual([j["id"] for j in shortlist], ["kth:1"])
 
@@ -337,13 +394,35 @@ class TestShortlist(unittest.TestCase):
                                   summary="")}
         board, shortlist = self._build(raw)
         self.assertEqual(shortlist, [])
-        self.assertFalse(run.issue_worthy(board["jobs"][0], PROFILE))
+        self.assertFalse(run.issue_worthy(self._judged(board["jobs"][0], 10), PROFILE))
 
     def test_the_band_comes_from_the_tier_table_not_a_hardcoded_letter(self):
-        # Only the bands carrying a github label are worth an issue.
+        # Only the bands carrying a github label can reach the second gate.
         for key, band in score.tier_table(PROFILE).items():
-            self.assertEqual(run.issue_worthy({"tier": key}, PROFILE),
-                             bool(band.get("github")))
+            self.assertEqual(
+                run.issue_worthy({"tier": key, "llm": {"fit": 10}}, PROFILE),
+                bool(band.get("github")))
+
+    def test_a_poor_verdict_keeps_the_issue_shut(self):
+        # The rules match vocabulary; the model read the whole advert.
+        cutoff = PROFILE["issues"]["min_fit"]
+        in_band = next(k for k, b in score.tier_table(PROFILE).items() if b.get("github"))
+        self.assertFalse(run.issue_worthy(
+            {"tier": in_band, "llm": {"fit": cutoff - 1}}, PROFILE))
+        self.assertTrue(run.issue_worthy(
+            {"tier": in_band, "llm": {"fit": cutoff}}, PROFILE))
+
+    def test_an_unjudged_job_waits_rather_than_opening_an_issue(self):
+        in_band = next(k for k, b in score.tier_table(PROFILE).items() if b.get("github"))
+        self.assertFalse(run.issue_worthy({"tier": in_band}, PROFILE))
+        self.assertFalse(run.issue_worthy({"tier": in_band, "llm": {}}, PROFILE))
+
+    def test_the_gate_lets_the_current_board_through_as_expected(self):
+        # Guards the cutoff against the live data: today only fit >= 6 opens.
+        board = json.loads((ROOT / "data" / "jobs.json").read_text())
+        opened = [j for j in board["jobs"] if run.issue_worthy(j, PROFILE)]
+        for j in opened:
+            self.assertGreaterEqual(j["llm"]["fit"], PROFILE["issues"]["min_fit"])
 
 
 if __name__ == "__main__":

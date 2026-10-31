@@ -198,6 +198,18 @@ def merge_translations(jobs: list[dict]) -> tuple[list[dict], int]:
     return kept, merged
 
 
+def merged_ids(job: dict) -> list[str]:
+    """The ids of the records this one absorbed in a merge.
+
+    Both merges keep the loser's id — `also_posted_as` for a translation,
+    `also_listed_on` for the same vacancy seen through a second source — so a
+    caller holding the survivor can still find whatever was filed under the
+    id that lost.
+    """
+    absorbed = (job.get("also_posted_as") or []) + (job.get("also_listed_on") or [])
+    return [m["id"] for m in absorbed if m.get("id")]
+
+
 def source_key(job: dict) -> tuple:
     """Group one vacancy seen through more than one source.
 
