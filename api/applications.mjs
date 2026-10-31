@@ -9,6 +9,7 @@ export default async function handler(req, res) {
     await init();
     const rows = await sql()`
       select a.job_id, a.status, a.issue_number, a.issue_url, a.updated_at, a.error,
+             a.cv_status, a.cv_model, a.cv_error,
              count(m.key)                                    as total,
              count(*) filter (where m.status = 'done')       as done
         from application a
@@ -24,6 +25,7 @@ export default async function handler(req, res) {
         total: Number(r.total),
         done: Number(r.done),
         error: r.error || null,
+        cv: { status: r.cv_status || null, model: r.cv_model || null, error: r.cv_error || null },
         updated_at: r.updated_at,
       };
     }

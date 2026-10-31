@@ -8,9 +8,23 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
 import {
-  checklist, cvBlock, MARKER, withChecklist, withCvSection,
+  checklist, cvBlock, MARKER, updateIssueCv, withChecklist, withCvSection,
 } from '../api/_lib/github.mjs';
+import { CV_MODEL, DEFAULT_MODEL, tailorCv } from '../api/_lib/gemini.mjs';
 import { authorised, readJson } from '../api/_lib/http.mjs';
+
+/** Swap in a fake fetch for one call and always put the real one back. */
+async function withFetch(fake, fn) {
+  const real = globalThis.fetch;
+  globalThis.fetch = fake;
+  try {
+    return await fn();
+  } finally {
+    globalThis.fetch = real;
+  }
+}
+
+const reply = (payload, status = 200) => new Response(JSON.stringify(payload), { status });
 
 const mats = [
   { key: 'cv', name: 'CV', required: true, what: 'Max two pages.', advice: 'Lead with the UR10e work.', status: 'done' },
@@ -91,6 +105,99 @@ test('checklist and CV blocks do not clobber each other', () => {
   assert.match(body, /cv one/);
   assert.match(body, /- \[x\] \*\*CV\*\*/);
   assert.doesNotMatch(body, /Cover letter/);
+});
+
+// -------------------------------------------------------------- the CV call
+
+test('the CV runs on a different model from the checklist', () => {
+  // If these ever become the same string, one of the two calls is paying the
+  // other's latency: the checklist request has 60 s, the CV request has 300.
+  assert.notEqual(CV_MODEL, DEFAULT_MODEL);
+});
+
+const job = { title: 'PhD in robotics', employer: 'KTH', deadline: '2026-11-30' };
+
+test('the CV call leaves maxOutputTokens unset and asks for thinking', async () => {
+  process.env.GEMINI_API_KEY = 'test-key';
+  let sent = null;
+  const out = await withFetch(async (url, opts) => {
+    sent = { url, body: JSON.parse(opts.body) };
+    return reply({ candidates: [{ content: { parts: [{ text: '## Tailored CV\nreal' }] } }] });
+  }, () => tailorCv({ job, body: 'advert text', profile: 'candidate', cv: null }));
+
+  assert.match(sent.url, new RegExp(`${CV_MODEL.replace('.', '\\.')}:generateContent`));
+  // Thinking tokens come out of this budget, so capping it truncates the answer
+  // before it starts.
+  assert.equal(sent.body.generationConfig.maxOutputTokens, undefined);
+  assert.ok(['minimal', 'low', 'medium', 'high'].includes(
+    sent.body.generationConfig.thinkingConfig.thinkingLevel,
+  ));
+  assert.match(out, /Tailored CV/);
+});
+
+test('a model that rejects thinkingConfig is asked again without it', async () => {
+  process.env.GEMINI_API_KEY = 'test-key';
+  const bodies = [];
+  const out = await withFetch(async (url, opts) => {
+    bodies.push(JSON.parse(opts.body));
+    return bodies.length === 1
+      ? reply({ error: { message: 'Thinking level is not supported for this model' } }, 400)
+      : reply({ candidates: [{ content: { parts: [{ text: 'plain answer' }] } }] });
+  }, () => tailorCv({ job, body: 'advert text', profile: 'candidate', cv: null }));
+
+  assert.equal(bodies.length, 2);
+  assert.ok(bodies[0].generationConfig.thinkingConfig);
+  assert.equal(bodies[1].generationConfig.thinkingConfig, undefined);
+  assert.equal(out, 'plain answer');
+});
+
+test('a 503 from an overloaded model is retried, a 429 is not', async () => {
+  process.env.GEMINI_API_KEY = 'test-key';
+  let calls = 0;
+  const out = await withFetch(async () => {
+    calls += 1;
+    return calls === 1
+      ? reply({ error: { message: 'This model is currently experiencing high demand.' } }, 503)
+      : reply({ candidates: [{ content: { parts: [{ text: 'second try' }] } }] });
+  }, () => tailorCv({ job, body: 'advert text', profile: 'candidate', cv: null }));
+  assert.equal(calls, 2);
+  assert.equal(out, 'second try');
+
+  let quotaCalls = 0;
+  await withFetch(async () => {
+    quotaCalls += 1;
+    return reply({ error: { message: 'quota' } }, 429);
+  }, async () => {
+    await assert.rejects(
+      tailorCv({ job, body: 'advert', profile: 'candidate', cv: null }),
+      /429.*quota/s,
+    );
+  });
+  assert.equal(quotaCalls, 1);
+});
+
+test('updateIssueCv replaces the placeholder and keeps the checklist', async () => {
+  process.env.GITHUB_REPOSITORY = 'me/radar';
+  process.env.GITHUB_TOKEN = 'test-token';
+  const before = withCvSection(
+    withChecklist('scan preamble', checklist(mats)),
+    cvBlock('_定制简历正在生成…_', CV_MODEL),
+  );
+  try {
+    const updated = await withFetch(async (url, opts) => (
+      (opts.method || 'GET') === 'GET'
+        ? reply({ number: 7, body: before })
+        : reply({ number: 7, body: JSON.parse(opts.body).body })
+    ), () => updateIssueCv(7, cvBlock('## Tailored CV\nthe real thing', CV_MODEL)));
+
+    assert.match(updated.body, /the real thing/);
+    assert.doesNotMatch(updated.body, /正在生成/);
+    assert.match(updated.body, /- \[x\] \*\*CV\*\*/);
+    assert.match(updated.body, /scan preamble/);
+  } finally {
+    delete process.env.GITHUB_REPOSITORY;
+    delete process.env.GITHUB_TOKEN;
+  }
 });
 
 // ------------------------------------------------------------------ auth

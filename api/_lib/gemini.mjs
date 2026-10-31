@@ -9,23 +9,29 @@ const API = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 export const DEFAULT_MODEL = 'gemini-3.5-flash';
 
+// The CV is the one output here a person actually reads line by line, so it is
+// worth the strongest model this key can reach — which thinks for 50 s to 5
+// minutes and cannot share a request with the checklist. It runs on its own in
+// api/tailor.mjs.
+export const CV_MODEL = 'gemini-3.8-flash';
+// Measured on one KTH advert with no PDF attached: high 248 s, medium 195 s,
+// against a 300 s function ceiling that the attached CV PDF eats further into.
+// medium is the default because the margin is worth more here than the last
+// slice of quality; 'high' is a one-word change when an advert deserves it.
+const CV_THINKING = 'medium';
+
 function key() {
   const k = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
   if (!k) throw new Error('GEMINI_API_KEY is not set on this deployment');
   return k;
 }
 
-async function call(model, { system, parts, schema, maxTokens = 4096, timeoutMs = 55_000 }) {
-  const body = {
-    contents: [{ role: 'user', parts }],
-    generationConfig: {
-      temperature: 0.2,
-      maxOutputTokens: maxTokens,
-      ...(schema ? { responseMimeType: 'application/json', responseSchema: schema } : {}),
-    },
-  };
-  if (system) body.systemInstruction = { parts: [{ text: system }] };
+// "This model is currently experiencing high demand" comes back as a 503 and
+// is usually over in seconds. 429 is the daily quota and is not retried.
+const TRANSIENT = new Set([500, 502, 503, 504]);
+const sleep = (ms) => new Promise((done) => { setTimeout(done, ms); });
 
+async function post(model, body, timeoutMs) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   let res;
@@ -36,11 +42,53 @@ async function call(model, { system, parts, schema, maxTokens = 4096, timeoutMs 
       body: JSON.stringify(body),
       signal: ctrl.signal,
     });
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      throw new Error(`${model} did not answer within ${Math.round(timeoutMs / 1000)}s`);
+    }
+    throw err;
   } finally {
     clearTimeout(timer);
   }
+  return { res, text: await res.text() };
+}
 
-  const text = await res.text();
+async function call(model, {
+  system, parts, schema, maxTokens = 4096, timeoutMs = 55_000, thinking = null,
+}) {
+  const body = {
+    contents: [{ role: 'user', parts }],
+    generationConfig: {
+      temperature: 0.2,
+      // Thinking tokens are spent out of maxOutputTokens, so a budget sized for
+      // the answer alone comes back empty with finishReason MAX_TOKENS. The CV
+      // call passes null and takes the model's own ceiling instead.
+      ...(maxTokens ? { maxOutputTokens: maxTokens } : {}),
+      ...(thinking ? { thinkingConfig: { thinkingLevel: thinking } } : {}),
+      ...(schema ? { responseMimeType: 'application/json', responseSchema: schema } : {}),
+    },
+  };
+  if (system) body.systemInstruction = { parts: [{ text: system }] };
+
+  // timeoutMs is the budget for the whole call, retries included, so a slow
+  // model cannot turn three attempts into three times the function's ceiling.
+  const deadline = Date.now() + timeoutMs;
+  let res;
+  let text;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const left = deadline - Date.now();
+    if (left <= 0) throw new Error(`${model} ran out of time after ${attempt} attempts`);
+    ({ res, text } = await post(model, body, left));
+
+    if (res.status === 400 && body.generationConfig.thinkingConfig) {
+      // Models older than 3.x reject thinkingConfig outright; they can still
+      // answer, so ask again without it rather than failing the request.
+      delete body.generationConfig.thinkingConfig;
+      continue;
+    }
+    if (!TRANSIENT.has(res.status)) break;
+    await sleep(Math.min(4000 * (attempt + 1), Math.max(0, deadline - Date.now())));
+  }
   if (!res.ok) {
     const hint = res.status === 429
       ? 'the free-tier daily quota is gone; try again after it resets'
@@ -182,7 +230,9 @@ plainly if nothing does. Empty section if there are no gaps.
 
 Write the CV in English.`;
 
-export async function tailorCv({ job, body, profile, cv, model = DEFAULT_MODEL }) {
+export async function tailorCv({
+  job, body, profile, cv, model = CV_MODEL, timeoutMs = 280_000, thinking = CV_THINKING,
+}) {
   const parts = [];
   if (cv) {
     // Gemini reads the PDF itself, which keeps the layout and the wording the
@@ -209,5 +259,5 @@ ${cv ? 'Rewrite the attached CV for this advert.'
        + 'notes alone, and say in Gaps that the CV itself was not available.'}`,
   });
 
-  return call(model, { system: CV_SYSTEM, parts, maxTokens: 6144 });
+  return call(model, { system: CV_SYSTEM, parts, maxTokens: null, timeoutMs, thinking });
 }

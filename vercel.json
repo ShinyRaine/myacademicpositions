@@ -17,6 +17,9 @@
   "functions": {
     "api/prepare.mjs": {
       "maxDuration": 60
+    },
+    "api/tailor.mjs": {
+      "maxDuration": 300
     }
   }
 }

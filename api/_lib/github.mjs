@@ -146,6 +146,18 @@ export function withCvSection(body, block) {
   return `${body.trimEnd()}\n\n${block}\n`;
 }
 
+/**
+ * Write the CV section into an issue that already exists, leaving the
+ * checklist and anything hand-written alone. The CV arrives minutes after the
+ * checklist does, so it cannot ride along with ensureIssue.
+ */
+export async function updateIssueCv(number, cvSection) {
+  const issue = await gh('GET', `/issues/${number}`);
+  const body = withCvSection(issue.body || '', cvSection);
+  if (body === (issue.body || '')) return issue;
+  return gh('PATCH', `/issues/${number}`, { body });
+}
+
 export async function addLabel(number, label) {
   try {
     await gh('POST', `/issues/${number}/labels`, { labels: [label] });

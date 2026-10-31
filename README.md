@@ -58,13 +58,25 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
 
 ## 决策之后：准备投递
 
-面板上每张卡展开后有「开始准备投递」。点一下会：
+面板上每张卡展开后有「开始准备投递」。点一下会分两步跑：
+
+**第一步（`/api/prepare`，`gemini-3.5-flash`，几秒）**
 
 1. 读这则广告，列出它**实际要求**的每份材料（不是学术申请通常要的那套，广告没提就不列），
    每份带「广告要求什么」和「你该怎么准备」两句。
-2. 把你上传的基础简历连同广告原文交给 Gemini，生成一份针对该岗位的定制稿
+2. 建（或更新）这个岗位的 GitHub Issue，把材料清单放进去，打上 `decision:apply`，
+   简历的位置先占一个「正在生成」的块。
+
+**第二步（`/api/tailor`，`gemini-3.8-flash`，1-5 分钟）**
+
+3. 把你上传的基础简历连同广告原文交给最强的那个模型，生成一份针对该岗位的定制稿
    —— 只许重排、改写、取舍，不许添加简历里没有的事实；补不上的写进 GAPS 一节。
-3. 建（或更新）这个岗位的 GitHub Issue，把材料清单和定制简历都放进去，打上 `decision:apply`。
+   写完替换掉 Issue 里那个占位块，同时存进数据库。
+
+分两步是因为两件事的时间尺度差两个数量级：清单是结构化的小输出、马上就想看到，
+简历是给人逐行读的长文、值得用慢模型。合在一个请求里，清单要陪着简历一起等，
+而且整个请求卡在 `/api/prepare` 的 60 秒上限里。面板会在第一步回来后自己发第二步，
+中途关页面只会断掉简历那一步，清单和 Issue 都已经落盘。
 
 材料的准备进度在面板上勾，会同步回 Issue 的 checklist——只改两个标记之间那一段，
 你手写进 Issue 的东西不会被覆盖。
@@ -77,7 +89,9 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
 | 接口 | 做什么 |
 |---|---|
 | `GET/POST /api/cv` | 基础简历的元数据 / 上传 |
-| `POST /api/prepare` | `{ jobId }` → 两次 Gemini 调用 → 写库 + 建 Issue |
+| `POST /api/prepare` | `{ jobId }` → 读广告列材料清单 → 写库 + 建 Issue（60 s 上限） |
+| `POST /api/tailor` | `{ jobId }` → 生成定制简历 → 写库 + 补进 Issue（300 s 上限，`?force=1` 重算） |
+| `GET /api/tailor` | `?jobId=` 读回存着的定制简历正文（吐的是简历本身，所以和写接口一样认 `RADAR_API_KEY`） |
 | `GET/PATCH /api/application` | 单个岗位的清单 / 改一份材料的状态 |
 | `GET /api/applications` | 所有在准备的岗位，面板用它画进度 |
 
@@ -167,7 +181,8 @@ cp data/jobs.json data/decisions.json public/ && \
      Actions 自带的那个 token 只在 Actions 里有效，Vercel 用不了，必须单独建一个。
    - `GITHUB_REPOSITORY` —— `ShinyRaine/myacademicpositions`
    
-   可选：`GEMINI_MODEL` 换研判/生成用的模型，`RADAR_API_KEY` 打开写接口鉴权。
+   可选：`GEMINI_MODEL` 换材料清单那一步的模型（简历那步固定用 `CV_MODEL`，
+   在 `api/_lib/gemini.mjs` 里改），`RADAR_API_KEY` 打开写接口鉴权。
 
 ## 几个实现上的坑
 

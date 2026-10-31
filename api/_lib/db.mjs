@@ -74,6 +74,13 @@ export async function init() {
   // Added after the first deploy; harmless when they already exist.
   await q`alter table application add column if not exists how_to_submit text`;
   await q`alter table application add column if not exists deadline_note text`;
+  // The CV moved out of /api/prepare into its own slow request, so its state is
+  // tracked apart from the checklist's: one can be ready while the other runs.
+  await q`alter table application add column if not exists cv_status text`;
+  await q`alter table application add column if not exists cv_model text`;
+  await q`alter table application add column if not exists cv_error text`;
+  await q`alter table application add column if not exists cv_markdown text`;
+  await q`alter table application add column if not exists cv_updated_at timestamptz`;
   ready = true;
 }
 
@@ -91,9 +98,23 @@ export async function materialsOf(jobId) {
 }
 
 export async function applicationOf(jobId) {
+  // cv_markdown is left out on purpose: it is a few pages of text that every
+  // caller of this would carry around and none of them render.
   const rows = await sql()`
     select job_id, title, employer, url, deadline, issue_number, issue_url,
-           status, model, error, how_to_submit, deadline_note, created_at, updated_at
+           status, model, error, how_to_submit, deadline_note,
+           cv_status, cv_model, cv_error, cv_updated_at, created_at, updated_at
       from application where job_id = ${jobId}`;
   return rows[0] || null;
+}
+
+/** The stored tailored CV, so a failed issue write does not lose five minutes. */
+export async function cvTextOf(jobId) {
+  const rows = await sql()`
+    select cv_markdown, cv_model, cv_updated_at
+      from application where job_id = ${jobId}`;
+  const row = rows[0];
+  return row?.cv_markdown
+    ? { markdown: row.cv_markdown, model: row.cv_model, updated_at: row.cv_updated_at }
+    : null;
 }

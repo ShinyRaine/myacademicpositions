@@ -17,13 +17,16 @@ const VERDICT_LABEL = { apply: '建议投', maybe: '可考虑', skip: '不建议
 const SOURCE_LABEL = { ap: 'Academic Positions', kth: 'KTH 官网', chalmers: 'Chalmers 官网' };
 
 const MATERIAL_STATUS = { todo: '待办', doing: '进行中', done: '完成', na: '不适用' };
+// Only for the waiting text before the server has said which model it used.
+const CV_MODEL = 'gemini-3.8-flash';
 
 const state = {
   jobs: [],
   decisions: {},
-  applications: {},   // jobId -> { status, done, total, issue_url, error }
+  applications: {},   // jobId -> { status, done, total, issue_url, error, cv }
   details: {},        // jobId -> { application, materials } once expanded
   busy: new Set(),
+  cvBusy: new Set(),  // the CV is a second, much slower call; it has its own
   repo: null,
   q: '',
   tiers: new Set(['A', 'B', 'C']),
@@ -174,6 +177,35 @@ function materialRow(jobId, m) {
     </li>`;
 }
 
+// The CV is written by a model that thinks for minutes, so it gets its own
+// line here rather than being folded into the checklist's state: the checklist
+// is usable long before the CV lands.
+function cvLine(jobId, cv = {}) {
+  if (state.cvBusy.has(jobId)) {
+    return `<p class="summary">定制简历生成中…（${esc(cv.model || CV_MODEL)}，一次 1-5 分钟，
+      关掉页面这次就断了，材料清单不受影响）</p>`;
+  }
+  if (cv.status === 'running') {
+    // Written when the call started and never updated: the page went away
+    // before the answer came back, or the function hit its ceiling.
+    return '<p class="mwarn">上一次简历生成没等到结果（页面关了，或者超过 5 分钟）。'
+      + '点「重新生成简历」再来一次。</p>';
+  }
+  if (cv.status === 'ready') {
+    return `<p class="summary">定制简历已写进 Issue${cv.model ? `（${esc(cv.model)} 生成）` : ''}。</p>`;
+  }
+  if (cv.status === 'failed') {
+    return `<p class="mwarn">定制简历没生成成：${esc(cv.error || '原因不明')}</p>`;
+  }
+  if (!cv.status) {
+    // Prepared before the CV moved into its own call: whatever is in the issue
+    // came from the checklist model, and nothing here recorded it.
+    return '<p class="summary">这条记录比两步流程早，简历状态没记下来——'
+      + 'Issue 里那份是旧模型写的。点「重新生成简历」换成新的。</p>';
+  }
+  return '<p class="summary">还没有定制简历。</p>';
+}
+
 function prepPane(job) {
   const app = state.applications[job.id];
   const loaded = state.details[job.id];
@@ -181,14 +213,15 @@ function prepPane(job) {
 
   if (busy) {
     return `<div class="prep"><h4>准备投递</h4>
-      <p class="summary">正在读广告、生成材料清单和定制简历…（两次 Gemini 调用，约 10-30 秒）</p></div>`;
+      <p class="summary">正在读广告、生成材料清单…（约 5-15 秒，定制简历随后单独生成）</p></div>`;
   }
 
   if (!app) {
     return `<div class="prep"><h4>准备投递</h4>
-      <p class="summary">点下面这个按钮会：读这则广告列出它要求的每份材料、
-        用你的基础简历生成一份针对本岗位的定制稿、然后建一个 GitHub Issue 把两样都放进去，
-        并打上 <code>decision:apply</code>。材料的准备进度在这里勾。</p>
+      <p class="summary">点下面这个按钮会：读这则广告列出它要求的每份材料、建一个 GitHub Issue
+        把清单放进去并打上 <code>decision:apply</code>，然后用你的基础简历生成一份针对本岗位的
+        定制稿补进同一个 Issue。清单几秒就有，简历用的是慢模型，要 1-5 分钟。
+        材料的准备进度在这里勾。</p>
       <div class="actions">
         <button class="btn primary act-prepare" data-job="${esc(job.id)}">开始准备投递</button>
       </div></div>`;
@@ -205,10 +238,13 @@ function prepPane(job) {
         ${app.issue_url ? `<a href="${esc(app.issue_url)}" target="_blank" rel="noreferrer">Issue #${app.issue} ↗</a>（定制简历在里面）` : ''}
       </p>
       ${app.error ? `<p class="mwarn">上次有一步没成：${esc(app.error)}</p>` : ''}
+      ${cvLine(job.id, app.cv || {})}
       ${mats.length ? `<ul class="materials">${mats.map((m) => materialRow(job.id, m)).join('')}</ul>`
         : '<p class="summary">展开时会载入清单…</p>'}
       <div class="actions">
-        <button class="btn act-prepare" data-job="${esc(job.id)}">重新生成清单和简历</button>
+        <button class="btn act-prepare" data-job="${esc(job.id)}">重新生成清单</button>
+        <button class="btn act-tailor" data-job="${esc(job.id)}"
+          ${state.cvBusy.has(job.id) ? 'disabled' : ''}>重新生成简历</button>
         ${app.issue_url ? `<a class="btn" href="${esc(app.issue_url)}" target="_blank" rel="noreferrer">打开 Issue</a>` : ''}
       </div>
     </div>`;
@@ -343,17 +379,24 @@ async function prepare(jobId) {
   if (state.busy.has(jobId)) return;
   state.busy.add(jobId);
   rerender(jobId);
+  let cvStatus = null;
   try {
     const data = await api('prepare', { method: 'POST', body: { jobId } });
     state.details[jobId] = data;
     const total = (data.materials || []).length;
+    cvStatus = data.application?.cv_status || null;
     state.applications[jobId] = {
       status: data.application?.status || 'ready',
       issue: data.application?.issue_number,
       issue_url: data.application?.issue_url,
       total,
       done: (data.materials || []).filter((m) => m.status === 'done').length,
-      error: data.issue_error || data.cv_failed || data.application?.error || null,
+      error: data.issue_error || data.application?.error || null,
+      cv: {
+        status: cvStatus,
+        model: data.application?.cv_model || null,
+        error: data.application?.cv_error || null,
+      },
     };
   } catch (err) {
     state.applications[jobId] = {
@@ -361,6 +404,34 @@ async function prepare(jobId) {
     };
   } finally {
     state.busy.delete(jobId);
+    rerender(jobId);
+  }
+  // Second stage: a CV already written for this vacancy is kept, anything else
+  // is (re)generated now that the checklist is on screen.
+  if (cvStatus && cvStatus !== 'ready') tailor(jobId);
+}
+
+async function tailor(jobId, force = false) {
+  const app = state.applications[jobId];
+  if (!app || state.cvBusy.has(jobId)) return;
+  state.cvBusy.add(jobId);
+  app.cv = { ...(app.cv || {}), status: 'running', error: null };
+  rerender(jobId);
+  try {
+    const data = await api(`tailor${force ? '?force=1' : ''}`, { method: 'POST', body: { jobId } });
+    app.cv = {
+      status: data.application?.cv_status || 'ready',
+      model: data.model || data.application?.cv_model || null,
+      error: data.issue_error || data.application?.cv_error || null,
+    };
+    if (data.application?.issue_url) {
+      app.issue = data.application.issue_number;
+      app.issue_url = data.application.issue_url;
+    }
+  } catch (err) {
+    app.cv = { ...(app.cv || {}), status: 'failed', error: String(err.message || err) };
+  } finally {
+    state.cvBusy.delete(jobId);
     rerender(jobId);
   }
 }
@@ -395,6 +466,9 @@ function wireBoard() {
   board.addEventListener('click', (e) => {
     const prep = e.target.closest('.act-prepare');
     if (prep) { prepare(prep.dataset.job); return; }
+
+    const tail = e.target.closest('.act-tailor');
+    if (tail) { tailor(tail.dataset.job, true); return; }
 
     const mbtn = e.target.closest('.mbtn');
     if (mbtn) { setMaterial(mbtn.dataset.job, mbtn.dataset.key, mbtn.dataset.status); return; }

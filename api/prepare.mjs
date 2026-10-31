@@ -1,27 +1,20 @@
 // POST /api/prepare { jobId }
 //
-// The one action the dashboard was missing: decide to apply, and get the work
-// laid out. It reads the advert, asks Gemini for the material checklist and a
-// CV tailored to this vacancy, stores the checklist so progress can be ticked
-// off, and opens (or updates) the GitHub issue with both.
-import { applicationOf, currentCv, init, materialsOf, sql } from './_lib/db.mjs';
-import { extractMaterials, DEFAULT_MODEL, tailorCv } from './_lib/gemini.mjs';
+// Stage one of two: decide to apply, and get the checklist. It reads the
+// advert, asks Gemini what the advert actually demands, stores that so progress
+// can be ticked off, and opens (or updates) the GitHub issue with it.
+//
+// The tailored CV used to be generated in this same request. It is not any
+// more: it runs on a model that thinks for minutes (api/tailor.mjs), and
+// waiting for it held the checklist — the part that is wanted immediately —
+// hostage to it, inside a 60 s function. The dashboard calls the two in turn.
+import { applicationOf, init, materialsOf, sql } from './_lib/db.mjs';
+import { extractMaterials, CV_MODEL, DEFAULT_MODEL } from './_lib/gemini.mjs';
 import { checklist, cvBlock, ensureIssue } from './_lib/github.mjs';
 import { authorised, fail, json, readJson, siteFile } from './_lib/http.mjs';
+import { PROFILE } from './_lib/profile.mjs';
 
 export const config = { maxDuration: 60 };
-
-const PROFILE = `MSc student in Complex Adaptive Systems at Chalmers University of
-Technology, Gothenburg (2025-2027). Master's thesis in Karinne Ramirez-Amaro's
-group on neuro-symbolic task and motion planning: learning symbolic
-preconditions and effects of manipulation actions from demonstrations, executed
-with dynamical-system motion policies carrying stability and safety guarantees.
-Hands-on with a real UR10e (ROS, RTDE, gripper and force/torque sensing),
-Unity/AGX simulation, learning from demonstration, Gaussian-mixture DS fitting,
-obstacle modulation, joint-space control barrier functions, admittance control
-and passivity for physical human-robot interaction, and execution-time
-condition monitoring with failure recovery. Available from June 2027. English
-for research, Chinese native, no Swedish.`;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return fail(res, 405, 'POST only');
@@ -56,32 +49,31 @@ export default async function handler(req, res) {
     if (!job) return fail(res, 404, `no vacancy ${jobId} on the current board`);
     const body = bodies[jobId] || job.summary || '';
 
-    const cv = await currentCv();
     const model = process.env.GEMINI_MODEL || DEFAULT_MODEL;
+    // A CV already written for this vacancy survives a re-run of the checklist.
+    const cvDone = existing?.cv_status === 'ready';
 
     await sql()`
-      insert into application (job_id, title, employer, url, deadline, status, model, cv_id, error)
+      insert into application (job_id, title, employer, url, deadline, status, model, error, cv_status)
       values (${jobId}, ${job.title}, ${job.employer}, ${job.url},
-              ${job.deadline || null}, 'preparing', ${model}, ${cv?.id || null}, null)
+              ${job.deadline || null}, 'preparing', ${model}, null, 'pending')
       on conflict (job_id) do update
-        set status = 'preparing', model = ${model}, cv_id = ${cv?.id || null},
-            error = null, updated_at = now()`;
+        set status = 'preparing', model = ${model}, error = null,
+            cv_status = coalesce(application.cv_status, 'pending'),
+            updated_at = now()`;
 
-    // Independent calls, so pay for one round trip rather than two.
-    const [matsResult, cvResult] = await Promise.allSettled([
-      extractMaterials({ job, body, profile: PROFILE, model }),
-      tailorCv({ job, body, profile: PROFILE, cv, model }),
-    ]);
-
-    if (matsResult.status === 'rejected') {
-      const message = String(matsResult.reason?.message || matsResult.reason);
+    let extracted;
+    try {
+      extracted = await extractMaterials({ job, body, profile: PROFILE, model });
+    } catch (err) {
+      const message = String(err.message || err);
       await sql()`
         update application set status = 'failed', error = ${message}, updated_at = now()
          where job_id = ${jobId}`;
       return fail(res, 502, `could not read the advert's material list: ${message}`);
     }
 
-    const { materials, how_to_submit, deadline_note } = matsResult.value;
+    const { materials, how_to_submit, deadline_note } = extracted;
 
     // Replace the list wholesale, but keep the status and notes of any
     // material that survives a re-run.
@@ -97,13 +89,13 @@ export default async function handler(req, res) {
 
     const stored = await materialsOf(jobId);
     const block = checklist(stored, { how_to_submit, deadline_note });
-    const cvSection = cvResult.status === 'fulfilled'
-      ? cvBlock(cvResult.value, model)
-      : cvBlock(
-        `_定制简历生成失败：${String(cvResult.reason?.message || cvResult.reason)}_\n\n`
-          + '_材料清单不受影响。在面板上再点一次「重新生成」可以重试。_',
-        model,
-      );
+    // Park a placeholder so the issue says what is still coming; /api/tailor
+    // replaces exactly this block when the CV lands. An existing CV is left be.
+    const cvSection = cvDone ? null : cvBlock(
+      `_定制简历正在用 ${CV_MODEL} 生成，通常 1-5 分钟。_\n\n`
+        + '_没出现就是那一步失败了，在面板上点「重新生成简历」。_',
+      CV_MODEL,
+    );
 
     let issue = null;
     let issueError = null;
@@ -120,10 +112,7 @@ export default async function handler(req, res) {
              deadline_note = ${deadline_note || null},
              issue_number = ${issue?.number || null},
              issue_url  = ${issue?.html_url || null},
-             error      = ${issueError
-                            || (cvResult.status === 'rejected'
-                              ? `CV: ${String(cvResult.reason?.message || cvResult.reason)}`
-                              : null)},
+             error      = ${issueError},
              updated_at = now()
        where job_id = ${jobId}`;
 
@@ -132,9 +121,6 @@ export default async function handler(req, res) {
       materials: stored,
       how_to_submit,
       deadline_note,
-      cv_used: cv ? { filename: cv.filename, uploaded_at: cv.uploaded_at } : null,
-      cv_failed: cvResult.status === 'rejected'
-        ? String(cvResult.reason?.message || cvResult.reason) : null,
       issue_error: issueError,
     });
   } catch (err) {
