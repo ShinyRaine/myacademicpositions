@@ -7,7 +7,7 @@
   "tier_D": 330,
   "urgent": 99
  },
- "generated_at": "2026-10-31T16:55:34+00:00",
+ "generated_at": "2026-10-31T16:56:05+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -15460,7 +15460,7 @@
    "url": "https://en.academicpositions.se/ad/university-neuchatel/2026/assistant-e-doctorant-e-75/254715"
   }
  ],
- "repo": null,
+ "repo": "ShinyRaine/myacademicpositions",
  "sources": [
   "Academic Positions",
   "Chalmers (own listing)",
