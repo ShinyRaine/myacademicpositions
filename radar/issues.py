@@ -31,6 +31,23 @@ LABEL_DEFS = [
 ]
 
 MARKER = "<!-- radar:job-id="
+# One issue per vacancy, written by three hands: the scan owns the match
+# block, /api/prepare the material checklist, /api/tailor the CV. Each is
+# delimited so the others can be replaced without touching it, and whichever
+# gets to the vacancy first writes the skeleton the rest slot into.
+MATCH_OPEN = "<!-- radar:match -->"
+MATCH_CLOSE = "<!-- /radar:match -->"
+
+# The first line of the footer doubles as the end marker of the unsplit match
+# section in issues opened before the blocks existed.
+FOOTER_HEAD = "---\n**Decide by labelling this issue:**"
+FOOTER = (
+    "---\n"
+    "**Decide by labelling this issue:** `decision:apply` · `decision:maybe` · "
+    "`decision:skip` · `decision:applied`\n\n"
+    "Closing the issue without a decision label counts as `skip`. "
+    "The dashboard refreshes a few minutes after you label."
+)
 
 
 class GitHub:
@@ -96,14 +113,25 @@ class GitHub:
         return self._request("POST", f"/repos/{self.repo}/issues",
                              {"title": title, "body": body, "labels": labels})
 
+    def update_body(self, number: int, body: str) -> None:
+        self._request("PATCH", f"/repos/{self.repo}/issues/{number}", {"body": body})
+
     def update_labels(self, number: int, labels: list[str]) -> None:
         self._request("PUT", f"/repos/{self.repo}/issues/{number}/labels", {"labels": labels})
 
 
-def issue_body(job: dict) -> str:
+def match_block(job: dict) -> str:
+    """Everything the radar knows about the vacancy, as one replaceable block.
+
+    This is the half of the issue that goes stale: the deadline counts down,
+    a re-score moves the number, a verdict arrives later than the issue did.
+    So the scan rewrites it in place on every run rather than only at the
+    moment the issue is opened.
+    """
     v = job.get("llm") or {}
     lines = [
-        f"{MARKER}{job['id']} -->",
+        MATCH_OPEN,
+        "",
         f"**{job.get('employer', '?')}** — {job.get('city', '')}, {job.get('country', '')}",
         "",
         f"- **Deadline:** {(job.get('deadline') or 'not stated')[:10]}"
@@ -152,15 +180,34 @@ def issue_body(job: dict) -> str:
         lines += ["<details><summary>Topic match breakdown</summary>", ""] \
                  + [f"- {h}" for h in hits] + ["", "</details>", ""]
 
-    lines += [
-        "---",
-        "**Decide by labelling this issue:** `decision:apply` · `decision:maybe` · "
-        "`decision:skip` · `decision:applied`",
-        "",
-        "Closing the issue without a decision label counts as `skip`. "
-        "The dashboard refreshes a few minutes after you label.",
-    ]
+    lines += [MATCH_CLOSE]
     return "\n".join(lines)
+
+
+def with_match(body: str, block: str) -> str:
+    """Replace the match block, leaving the checklist and the CV alone.
+
+    Three shapes turn up. One already has the block. One was opened from the
+    dashboard and has none, so the match goes directly under the id marker,
+    above the checklist: it is the context for everything below it. And one
+    was opened by a scan from before the markers existed, where the match ran
+    unsplit from the marker to the decision footer — that whole stretch is
+    what the block replaces, or the issue would show its match twice.
+    """
+    start, end = body.find(MATCH_OPEN), body.find(MATCH_CLOSE)
+    if start != -1 and end > start:
+        return body[:start] + block + body[end + len(MATCH_CLOSE):]
+
+    head, sep, rest = body.partition("-->")
+    if not sep:
+        return f"{block}\n\n{body}"
+    legacy = rest.find(FOOTER_HEAD)
+    rest = rest[legacy:] if legacy != -1 else rest.lstrip("\n")
+    return f"{head}{sep}\n\n{block}\n\n{rest}"
+
+
+def issue_body(job: dict) -> str:
+    return "\n".join([f"{MARKER}{job['id']} -->", "", match_block(job), "", FOOTER])
 
 
 def decision_from(issue: dict) -> str:

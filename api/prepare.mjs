@@ -100,7 +100,10 @@ export default async function handler(req, res) {
     let issue = null;
     let issueError = null;
     try {
-      issue = await ensureIssue({ jobId, job, block, cvSection });
+      // The band labels live in jobs.json next to the jobs, so an issue
+      // opened from here gets the same label the scan would have given it.
+      const tierLabel = (jobsFile.tiers || {})[job.tier]?.github || null;
+      issue = await ensureIssue({ jobId, job, block, cvSection, tierLabel });
     } catch (err) {
       issueError = String(err.message || err);
     }

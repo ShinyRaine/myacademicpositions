@@ -5,10 +5,12 @@
 // exercised locally; what is covered here is everything around it — the issue
 // body surgery, the material normalisation, and the auth and body helpers.
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 
 import {
-  checklist, cvBlock, MARKER, updateIssueCv, withChecklist, withCvSection,
+  checklist, cvBlock, MARKER, matchBlock, updateIssueCv, withChecklist, withCvSection,
 } from '../api/_lib/github.mjs';
 import { CV_MODEL, DEFAULT_MODEL, tailorCv } from '../api/_lib/gemini.mjs';
 import { authorised, readJson } from '../api/_lib/http.mjs';
@@ -240,4 +242,43 @@ test('readJson accepts a body the platform already parsed', async () => {
 
 test('an empty body is an empty object, not a crash', async () => {
   assert.deepEqual(await readJson(fakeReq([])), {});
+});
+
+/* ------------------------------------------------------- the match block */
+// One issue per vacancy, written by two sides: the scan (radar/issues.py) and
+// the dashboard (api/_lib/github.mjs). The dashboard opens most of them now,
+// so what it writes has to be what the scan would have written — otherwise
+// the scan's refresh pass rewrites every issue on every run.
+test('matchBlock renders exactly what radar/issues.py renders', () => {
+  const root = new URL('..', import.meta.url).pathname;
+  const board = JSON.parse(readFileSync(`${root}/data/jobs.json`, 'utf8')).jobs;
+  // A judged one, an unjudged one, one with flags and one with a penalty.
+  const sample = [
+    board.find((j) => j.llm),
+    board.find((j) => !j.llm && (j.flags || []).length),
+    board.find((j) => (j.breakdown || []).some((b) => b.label === 'off-field')),
+    board[board.length - 1],
+  ].filter(Boolean);
+
+  const expected = execFileSync('python3', ['-c', `
+import json, sys
+sys.path.insert(0, ${JSON.stringify(root)})
+from radar import issues
+ids = json.load(sys.stdin)
+board = {j["id"]: j for j in json.load(open(${JSON.stringify(`${root}/data/jobs.json`)}))["jobs"]}
+print("\\n#####\\n".join(issues.match_block(board[i]) for i in ids), end="")
+`], { input: JSON.stringify(sample.map((j) => j.id)), encoding: 'utf8' });
+
+  assert.equal(sample.map(matchBlock).join('\n#####\n'), expected);
+});
+
+test('the dashboard opens an issue the scan can keep updating', () => {
+  const job = { id: 'ap:1', employer: 'ETH', city: 'Zurich', country: 'Switzerland',
+    score: 41, tier: 'B', tier_name: '值得细看', url: 'u', breakdown: [], flags: [] };
+  const block = matchBlock(job);
+  assert.ok(block.startsWith('<!-- radar:match -->'));
+  assert.ok(block.endsWith('<!-- /radar:match -->'));
+  // The checklist block must survive a later rewrite of the match block.
+  const body = `${MARKER}ap:1 -->\n\n${block}\n\n${checklist(mats)}`;
+  assert.ok(withChecklist(body, checklist(mats)).includes('<!-- radar:match -->'));
 });

@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yaml  # noqa: E402
 
-from radar import classify, parse, run, score  # noqa: E402
+from radar import classify, issues, parse, run, score  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PROFILE = yaml.safe_load((ROOT / "profile.yaml").read_text())
@@ -293,6 +293,75 @@ class TestProfileIntegrity(unittest.TestCase):
         best = sum(g["weight"] for g in PROFILE["topics"]["groups"])
         self.assertGreaterEqual(min(best, PROFILE["topics"]["cap"]),
                                 score.tier_table(PROFILE)["A"]["min"])
+
+
+class TestIssueBody(unittest.TestCase):
+    """One issue per vacancy, written by three hands.
+
+    The scan owns the match block, /api/prepare the checklist, /api/tailor the
+    CV. Whoever opens the issue writes the skeleton; nobody may clobber a
+    block that is not theirs.
+    """
+
+    JOB = {"id": "ap:1", "employer": "ETH", "city": "Zurich", "country": "Switzerland",
+           "score": 41, "tier": "B", "tier_name": "值得细看", "url": "u",
+           "deadline": "2026-11-03", "days_left": 3, "posted": "2026-08-25",
+           "position_type": "phd", "breakdown": [], "flags": []}
+
+    # What /api/prepare used to leave behind: a checklist and nothing else.
+    DASHBOARD = ("<!-- radar:job-id=ap:1 -->\n**ETH** — Zurich\n\n---\n\n"
+                 "<!-- radar:materials -->\n### 申请材料\n- [ ] CV\n"
+                 "<!-- /radar:materials -->\n")
+
+    def test_the_scan_fills_in_an_issue_the_dashboard_opened(self):
+        out = issues.with_match(self.DASHBOARD, issues.match_block(self.JOB))
+        self.assertIn("Topic match:** 41/100", out)
+        self.assertIn("### 申请材料", out)          # the checklist survives
+        self.assertIn("- [ ] CV", out)
+
+    def test_the_match_block_goes_under_the_id_marker(self):
+        out = issues.with_match(self.DASHBOARD, issues.match_block(self.JOB))
+        self.assertLess(out.index(issues.MARKER), out.index(issues.MATCH_OPEN))
+        self.assertLess(out.index(issues.MATCH_OPEN), out.index("### 申请材料"))
+
+    def test_rewriting_the_match_block_is_idempotent(self):
+        once = issues.with_match(self.DASHBOARD, issues.match_block(self.JOB))
+        self.assertEqual(issues.with_match(once, issues.match_block(self.JOB)), once)
+
+    def test_a_rescore_replaces_the_block_rather_than_stacking_another(self):
+        once = issues.with_match(self.DASHBOARD, issues.match_block(self.JOB))
+        moved = issues.with_match(once, issues.match_block({**self.JOB, "score": 58,
+                                                            "tier_name": "对口"}))
+        self.assertEqual(moved.count(issues.MATCH_OPEN), 1)
+        self.assertIn("58/100", moved)
+        self.assertNotIn("41/100", moved)
+        self.assertIn("- [ ] CV", moved)
+
+    def test_an_issue_from_before_the_markers_is_converted_not_doubled(self):
+        # Issue #1 on the live repo: a scan wrote the match unsplit, straight
+        # from the id marker to the decision footer.
+        legacy = (f"{issues.MARKER}ap:1 -->\n**ETH** — Zurich, Switzerland\n\n"
+                  "- **Topic match:** 41/100 — 值得细看\n\n"
+                  "### Gemini verdict: `maybe` — fit 6/10\n\n"
+                  f"{issues.FOOTER}")
+        judged = {**self.JOB, "score": 58, "tier_name": "对口",
+                  "llm": {"verdict": "apply", "fit": 8, "headline": "h"}}
+        out = issues.with_match(legacy, issues.match_block(judged))
+        self.assertEqual(out.count("Topic match:**"), 1)
+        self.assertEqual(out.count("Decide by labelling"), 1)
+        # The block is replaced from current data, so the stale numbers go.
+        self.assertEqual(out.count("Gemini verdict"), 1)
+        self.assertIn("fit 8/10", out)
+        self.assertNotIn("fit 6/10", out)
+        self.assertNotIn("41/100", out)
+        self.assertEqual(issues.with_match(out, issues.match_block(judged)), out)
+
+    def test_a_scan_opened_issue_has_the_same_blocks(self):
+        body = issues.issue_body(self.JOB)
+        self.assertIn(issues.MATCH_OPEN, body)
+        self.assertIn(issues.MATCH_CLOSE, body)
+        self.assertTrue(body.startswith(f"{issues.MARKER}ap:1 -->"))
+        self.assertIn("decision:apply", body)
 
 
 class TestVerdictCarryOver(unittest.TestCase):

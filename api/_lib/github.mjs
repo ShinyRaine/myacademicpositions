@@ -9,6 +9,8 @@ const API = 'https://api.github.com';
 export const MARKER = '<!-- radar:job-id=';
 const MAT_OPEN = '<!-- radar:materials -->';
 const MAT_CLOSE = '<!-- /radar:materials -->';
+const MATCH_OPEN = '<!-- radar:match -->';
+const MATCH_CLOSE = '<!-- /radar:match -->';
 
 function config() {
   const repo = process.env.GITHUB_REPOSITORY;
@@ -89,7 +91,80 @@ export function withChecklist(body, block) {
   return `${body.trimEnd()}\n\n---\n\n${block}\n`;
 }
 
-export async function ensureIssue({ jobId, job, block, cvSection }) {
+/**
+ * The radar's own half of the issue, rendered here so that an issue opened
+ * from the dashboard looks like one opened by the scan.
+ *
+ * It mirrors `match_block` in radar/issues.py, which owns the format and
+ * rewrites this block on every scan. That is also why nothing here touches it
+ * on an issue that already exists: two renderers taking turns on one block
+ * would rewrite each other's wording on every run.
+ */
+export function matchBlock(job) {
+  const v = job.llm || {};
+  const mark = { blocker: '⛔', good: '✅' };
+  const lines = [
+    MATCH_OPEN,
+    '',
+    `**${job.employer || '?'}** — ${job.city || ''}, ${job.country || ''}`,
+    '',
+    `- **Deadline:** ${(job.deadline || 'not stated').slice(0, 10)}`
+      + (job.days_left === null || job.days_left === undefined
+        ? '' : ` (**${job.days_left} days left**)`),
+    `- **Posted:** ${(job.posted || '').slice(0, 10)}`,
+    `- **Type:** ${job.position_type}`,
+    `- **Topic match:** ${job.score}/100 — ${job.tier_name || job.tier}`
+      + ' (research content only; employer, country and supervisor score nothing)',
+    `- **Advert:** ${job.url}`,
+    '',
+  ];
+
+  const flags = job.flags || [];
+  if (flags.length) {
+    lines.push('**Context (not scored):** ' + flags.map(
+      (f) => `${mark[f.severity] || '·'} ${f.name} (${(f.hits || []).join(', ')})`,
+    ).join(' · '), '');
+  }
+
+  if (v.verdict) {
+    lines.push(`### Gemini verdict: \`${v.verdict}\` — fit ${v.fit}/10`, '',
+      `> ${v.headline || ''}`, '');
+    if (v.group_or_supervisor) lines.push(`**Group / supervisor:** ${v.group_or_supervisor}`, '');
+    for (const [heading, key] of [['Why it matches', 'why_match'],
+      ['Why it might not', 'why_not'], ['Blockers', 'blockers'], ['To prepare', 'prep']]) {
+      const items = v[key] || [];
+      if (items.length) lines.push(`**${heading}**`, ...items.map((x) => `- ${x}`), '');
+    }
+  } else {
+    lines.push('_No LLM verdict for this one (below threshold, or the call failed)._', '');
+  }
+
+  // Python prints a whole factor as "1.0"; keep that, so the block this
+  // writes is byte-identical to the one the scan writes and the scan's first
+  // pass over it is a no-op rather than a pointless PATCH.
+  const factor = (f) => (Number.isInteger(f) ? `${f}.0` : `${f}`);
+  const hits = (job.breakdown || []).filter((b) => (b.hits || []).length).map(
+    (b) => `\`${b.label}\` ${b.applied >= 0 ? '+' : ''}${b.applied ?? b.weight}`
+      + ` = ${b.weight >= 0 ? '+' : ''}${b.weight} × ${factor(b.factor ?? 1)}`
+      + ` (${b.note || b.where || ''}): ${(b.hits || []).join(', ')}`,
+  );
+  if (hits.length) {
+    lines.push('<details><summary>Topic match breakdown</summary>', '',
+      ...hits.map((h) => `- ${h}`), '', '</details>', '');
+  }
+
+  lines.push(MATCH_CLOSE);
+  return lines.join('\n');
+}
+
+const FOOTER = ['---',
+  '**Decide by labelling this issue:** `decision:apply` · `decision:maybe` · '
+    + '`decision:skip` · `decision:applied`',
+  '',
+  'Closing the issue without a decision label counts as `skip`. '
+    + 'The dashboard refreshes a few minutes after you label.'].join('\n');
+
+export async function ensureIssue({ jobId, job, block, cvSection, tierLabel }) {
   const existing = await findIssue(jobId);
 
   if (existing) {
@@ -100,21 +175,16 @@ export async function ensureIssue({ jobId, job, block, cvSection }) {
     return updated;
   }
 
-  const head = [
-    `${MARKER}${jobId} -->`,
-    `**${job.employer || '?'}** — ${job.city || ''}${job.country ? `, ${job.country}` : ''}`,
-    '',
-    `- **Deadline:** ${(job.deadline || 'not stated').slice(0, 10)}`,
-    `- **Advert:** ${job.url}`,
-    '',
-    '---',
-    '',
-  ].join('\n');
-
-  const body = cvSection ? `${head}${block}\n\n${cvSection}\n` : `${head}${block}\n`;
-  const title = `[准备投递] ${job.title} — ${job.employer}`.slice(0, 250);
+  // The scan is not guaranteed to have been here first — with the fit gate it
+  // usually has not — so write the whole skeleton, in the shape the scan
+  // writes it, and let the scan keep the match block current from then on.
+  const parts = [`${MARKER}${jobId} -->`, '', matchBlock(job), '', FOOTER, '', block];
+  if (cvSection) parts.push('', cvSection);
+  const title = `[${job.tier_name || job.tier}·${job.score}] ${job.title} — ${job.employer}`;
   const created = await gh('POST', '/issues', {
-    title, body, labels: ['radar', 'decision:apply'],
+    title: title.slice(0, 250),
+    body: `${parts.join('\n')}\n`,
+    labels: ['radar', 'decision:apply', ...(tierLabel ? [tierLabel] : [])],
   });
   return created;
 }

@@ -155,7 +155,7 @@ def cmd_scan(args) -> int:
     _save(JOBS, jobs)
 
     if not args.no_issues:
-        open_issues(shortlist, profile)
+        sync_issues(jobs["jobs"], shortlist, profile)
 
     print(f"[{now_iso()}] scan done: {len(jobs['jobs'])} jobs on the board")
     return 0
@@ -276,7 +276,7 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
                                -(j.get("llm", {}).get("fit", 0)),
                                -j["score"]))
 
-    # Everything in a band that opens issues. open_issues() skips whatever
+    # Everything in a band that opens issues. sync_issues() skips whatever
     # already has one, open or closed, so dedup does not belong here — and the
     # `id not in previous` test this used to do was not dedup but a permanent
     # exclusion: the board was bootstrapped locally and committed with its
@@ -328,22 +328,49 @@ def _slim(job: dict) -> dict:
 # ---------------------------------------------------------------------------
 # issues
 # ---------------------------------------------------------------------------
-def open_issues(jobs: list[dict], profile: dict) -> None:
+def sync_issues(board: list[dict], shortlist: list[dict], profile: dict) -> None:
+    """Keep the issues in step with the board, then open the ones that are due.
+
+    One issue per vacancy, whoever opens it. The dashboard opens most of them
+    now — the gate is deliberately strict and "开始准备投递" works on anything
+    — and the issue it writes carries the checklist but knows nothing about
+    the match. So every issue we already have gets its match block rewritten
+    from the current board first: that fills in the ones the dashboard opened,
+    and keeps the rest from going stale as the deadline counts down and a
+    re-score moves the number.
+    """
     client = gh.from_env()
     if not client:
-        print("  (no GITHUB_TOKEN/GITHUB_REPOSITORY, not opening issues)")
-        return
-    if not jobs:
-        print("  nothing cleared the issue gate "
-              f"(band + Gemini fit >= {profile.get('issues', {}).get('min_fit', 6)})")
+        print("  (no GITHUB_TOKEN/GITHUB_REPOSITORY, not touching issues)")
         return
 
     table = score.tier_table(profile)
     client.ensure_labels([t["github"] for t in table.values() if t.get("github")])
-    existing = {gh.job_id_of(i) for i in client.radar_issues()}
+
+    issues = {gh.job_id_of(i): i for i in client.radar_issues()}
+    issues.pop(None, None)
+    refreshed = 0
+    for job in board:
+        issue = issues.get(job["id"])
+        if not issue:
+            continue
+        before = issue.get("body") or ""
+        after = gh.with_match(before, gh.match_block(job))
+        if after != before:
+            client.update_body(issue["number"], after)
+            refreshed += 1
+    if refreshed:
+        print(f"  refreshed the match block on {refreshed} issue(s)")
+
+    if not shortlist:
+        print("  nothing new cleared the issue gate "
+              f"(band + Gemini fit >= {profile.get('issues', {}).get('min_fit', 6)})")
+        return
+
+    existing = set(issues)
     cap = int(profile.get("issues", {}).get("max_per_run", 30))
     opened = 0
-    for job in jobs:
+    for job in shortlist:
         if job["id"] in existing:
             continue
         if opened >= cap:
@@ -406,7 +433,7 @@ def cmd_rescore(args) -> int:
     jobs, shortlist = build_jobs(raw, profile, run_llm=not args.no_llm)
     _save(JOBS, jobs)
     if args.open_issues:
-        open_issues(shortlist, profile)
+        sync_issues(jobs["jobs"], shortlist, profile)
     print(f"rescored {len(jobs['jobs'])} jobs")
     return 0
 
