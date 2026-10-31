@@ -613,6 +613,12 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/phd-positions-in-neurotechnology-next-generation-non-invasive-neurotechnologies-brain-therapies/251016"
  },
+ "ap:251027": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/virtual-platform-r-d-engineer/251027"
+ },
  "ap:251052": {
   "first_seen": "2026-10-30T09:51:10+00:00",
   "skipped": "slug-type:postdoc",
@@ -7712,6 +7718,39 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/whitecliffe-university-of-applied-sciences/2026/professor-of-computer-engineering-f-m-d/254620"
  },
+ "ap:254621": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/postdoctoral-position-in-science-technology-and-society-sts/254621"
+ },
+ "ap:254622": {
+  "first_seen": "2026-10-31T12:22:36+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-magnetic-resonance-applications-in-porous-media/254622"
+ },
+ "ap:254624": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/postdoctoral-researcher-in-pharmacometrics/254624"
+ },
+ "ap:254625": {
+  "first_seen": "2026-10-31T12:22:38+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/research-assistant-in-psychoneuroimmunology/254625"
+ },
+ "ap:254626": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/postdoktor-i-farmakometri/254626"
+ },
+ "ap:254627": {
+  "first_seen": "2026-10-31T12:22:40+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/forskningsassistent-i-psykoneuroimmunologi/254627"
+ },
  "ap:254629": {
   "first_seen": "2026-10-30T11:14:55+00:00",
   "source": "ap",
@@ -7721,6 +7760,11 @@
   "first_seen": "2026-10-30T11:14:56+00:00",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/swiss-federal-institute-for-forest-snow-and-landscape-research-wsl/2026/phd-student-100-fmd/254630"
+ },
+ "ap:254631": {
+  "first_seen": "2026-10-31T12:22:42+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/algorithms-for-eigenvalue-problems-with-eigenvector-nonlinearity/254631"
  },
  "ap:254637": {
   "first_seen": "2026-10-30T09:51:10+00:00",
@@ -7733,6 +7777,12 @@
   "skipped": "slug-type:professor",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/mohammed-vi-polytechnic-university/2026/fgses-assistant-or-associate-professor-of-political-science/254638"
+ },
+ "ap:254639": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-bern/2026/tenure-track-assistant-professor-of-information-systems-with-a-focus-on-the-design-and-application-of-artificial-intelligence-in-organizations-80-100/254639"
  },
  "ap:254640": {
   "first_seen": "2026-10-30T11:14:58+00:00",
@@ -7755,6 +7805,23 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/oslo-metropolitan-university/2026/associate-professor-in-transport-infrastrucutre-engineering/254643"
  },
+ "ap:254644": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/senior-researcher-co-design-methodologies-for-inclusive-urban-spaces/254644"
+ },
+ "ap:254645": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:management",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/research-director-sports-and-exercise-laboratory/254645"
+ },
+ "ap:254646": {
+  "first_seen": "2026-10-31T12:22:44+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/tutkimusjohtaja-liikuntalaboratorio/254646"
+ },
  "ap:254647": {
   "first_seen": "2026-10-30T09:51:10+00:00",
   "skipped": "slug-type:postdoc",
@@ -7773,6 +7840,12 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/st-polten-university-applied-sciences/2026/junior-professur-elementarp-dagogik-w-m-d/254649"
  },
+ "ap:254650": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/tu-wien/2026/university-assistant-post-doc-all-genders-mid-ir-gas-sensing-coe-microplanet-40-hoursweek-limited-institute-of-chemical-technologies-and-analytics/254650"
+ },
  "ap:254651": {
   "first_seen": "2026-10-30T09:51:10+00:00",
   "skipped": "slug-type:professor",
@@ -7784,6 +7857,11 @@
   "skipped": "listed-type:professor",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/st-polten-university-applied-sciences/2026/junior-professur-gesundheits-und-krankenpflege-plus-w-m-d/254652"
+ },
+ "ap:254653": {
+  "first_seen": "2026-10-31T12:22:45+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-zurich/2026/phd-student-and-postdoc-position-in-high-throughput-vibrational-spectroscopy-of-protein-dynamics/254653"
  },
  "ap:254654": {
   "first_seen": "2026-10-30T11:15:02+00:00",
@@ -7825,6 +7903,289 @@
   "skipped": "slug-type:postdoc",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-in-geometry-aware-predictive-maintenance/254660"
+ },
+ "ap:254661": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoctoral-position-in-techno-economic-analysis-of-resilient-urban-energy-systems/254661"
+ },
+ "ap:254662": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoc-in-agentic-ai-for-spatial-biology-of-the-human-gut/254662"
+ },
+ "ap:254663": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoktor-inom-teknoekonomisk-analys-av-resilienta-urbana-energisystem/254663"
+ },
+ "ap:254664": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoktor-i-ai-driven-spatial-biologi-i-den-manskliga-tarmen/254664"
+ },
+ "ap:254665": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoktor-i-psykologi/254665"
+ },
+ "ap:254666": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/postdoctoral-position-100-in-leukemia-immunology-and-metabolism/254666"
+ },
+ "ap:254667": {
+  "first_seen": "2026-10-31T12:22:47+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/research-assistantlab-technician-position-in-blood-cancer-biology-and-immunotherapy-70-100/254667"
+ },
+ "ap:254668": {
+  "first_seen": "2026-10-31T12:22:49+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/phd-position-in-atmospheric-sciences/254668"
+ },
+ "ap:254669": {
+  "first_seen": "2026-10-31T12:22:51+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/phd-position-in-machine-learning-for-preterm-lung-health-100/254669"
+ },
+ "ap:254670": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/postdoc-in-optimization-driven-verification-and-validation-of-precision-machines/254670"
+ },
+ "ap:254671": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/postdoc-in-multi-user-multi-access-optical-satellite-communications-theory-and-architectures-mosc/254671"
+ },
+ "ap:254672": {
+  "first_seen": "2026-10-31T12:22:52+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-gender-and-sexualities/254672"
+ },
+ "ap:254673": {
+  "first_seen": "2026-10-31T12:22:54+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/full-time-academic-position-in-immunology-microbiology-or-host-microorganism-interactions-faculty-of-sciences/254673"
+ },
+ "ap:254674": {
+  "first_seen": "2026-10-31T12:22:56+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/poste-acad-mique-temps-plein-en-immunologie-microbiologie-ou-interactions-h-te-microorganismes-facult-des-sciences/254674"
+ },
+ "ap:254675": {
+  "first_seen": "2026-10-31T12:22:58+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/full-time-academic-position-in-developmental-biology-faculty-of-sciences/254675"
+ },
+ "ap:254676": {
+  "first_seen": "2026-10-31T12:22:59+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/poste-acad-mique-temps-plein-en-biologie-d-veloppementale-facult-des-sciences/254676"
+ },
+ "ap:254677": {
+  "first_seen": "2026-10-31T12:23:01+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/full-time-academic-position-in-behavioural-ecology-faculty-of-sciences-department-of-organismal-biology/254677"
+ },
+ "ap:254678": {
+  "first_seen": "2026-10-31T12:23:03+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/poste-acad-mique-temps-plein-en-cologie-comportementale-facult-des-sciences-d-partement-de-biologie-des-organismes/254678"
+ },
+ "ap:254679": {
+  "first_seen": "2026-10-31T12:23:05+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/full-time-academic-position-in-regulations-tourisme-et-societe-faculty-of-sciences/254679"
+ },
+ "ap:254680": {
+  "first_seen": "2026-10-31T12:23:06+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-libre-de-bruxelles/2026/poste-acad-mique-temps-plein-en-r-gulations-tourisme-et-soci-t-facult-des-sciences/254680"
+ },
+ "ap:254681": {
+  "first_seen": "2026-10-31T12:23:08+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/tutkijatohtori/254681"
+ },
+ "ap:254682": {
+  "first_seen": "2026-10-31T12:23:10+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/doctoral-researcher-in-psychology/254682"
+ },
+ "ap:254683": {
+  "first_seen": "2026-10-31T12:23:11+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/vaitoskirjatutkija-psykologia/254683"
+ },
+ "ap:254684": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/unidistance-suisse/2026/postdoc-in-experimental-and-behavioral-economics-80-100/254684"
+ },
+ "ap:254685": {
+  "first_seen": "2026-10-31T12:23:13+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/unidistance-suisse/2026/doctoral-student-in-business-economics-80-100/254685"
+ },
+ "ap:254686": {
+  "first_seen": "2026-10-31T12:23:15+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/nova-ims/2026/faculty-positions-all-ranks-risk-analysis-and-management/254686"
+ },
+ "ap:254687": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/nova-ims/2026/faculty-position-assistant-professor-data-driven-marketing-data-science-for-marketing/254687"
+ },
+ "ap:254688": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/nova-ims/2026/faculty-position-assistant-professor-data-driven-marketing-marketing-intelligence-analytics/254688"
+ },
+ "ap:254689": {
+  "first_seen": "2026-10-31T12:23:16+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/oslo-metropolitan-university/2026/f-rsteamanuensis-ii-i-kunstterapi/254689"
+ },
+ "ap:254692": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/oslo-metropolitan-university/2026/f-rsteamanuensis-universitetslektor-i-informasjonsvitenskap-med-vekt-p-ki-og-digitale-metoder/254692"
+ },
+ "ap:254693": {
+  "first_seen": "2026-10-31T12:23:18+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/vid-specialized-university/2026/prorektor-for-utdanning/254693"
+ },
+ "ap:254694": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-british-columbia/2026/assistant-professor-in-high-temperature-metals-processing/254694"
+ },
+ "ap:254695": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/helmholtz-zentrum-hereon/2026/postdoctoral-researcher-localized-electrochemistry-secm-for-unraveling-degradation-of-light-metals/254695"
+ },
+ "ap:254696": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/researcher-splendor-30482/254696"
+ },
+ "ap:254697": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/senior-researcher-in-nano-and-micro-fluidics-physics/254697"
+ },
+ "ap:254698": {
+  "first_seen": "2026-10-31T12:23:20+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/undergraduate-assistent-kth-library/254698"
+ },
+ "ap:254699": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoc-in-acoustics-based-traffic-sensing/254699"
+ },
+ "ap:254700": {
+  "first_seen": "2026-10-31T12:23:22+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/amanuens-kth-biblioteket/254700"
+ },
+ "ap:254701": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoktor-inom-akustikbaserad-trafikmatning/254701"
+ },
+ "ap:254702": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/senior-lecturer-in-business-administration-with-a-specialisation-in-accounting/254702"
+ },
+ "ap:254703": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/universitetslektor-i-foretagsekonomi-med-inriktning-redovisning/254703"
+ },
+ "ap:254704": {
+  "first_seen": "2026-10-31T12:23:24+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-neuchatel/2026/post-doctoral-researcher-4-years-100-fte-part-time-possible/254704"
+ },
+ "ap:254705": {
+  "first_seen": "2026-10-31T12:23:25+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/emlyon-business-school-campus-france/2026/full-time-faculty-position-at-emlyon-business-school-france/254705"
+ },
+ "ap:254706": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/process-engineer-thin-film-and-wafer-metrology/254706"
+ },
+ "ap:254707": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/tallinn-university-of-technology/2026/postdoctoral-researcher-in-risc-v-hardware-design-and-ai-accelerators/254707"
+ },
+ "ap:254708": {
+  "first_seen": "2026-10-31T12:22:34+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-in-industrial-application-of-humanoid-robots/254708"
+ },
+ "ap:254709": {
+  "first_seen": "2026-10-31T12:23:27+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-synthesis-and-processing-of-solid-state-electrolyte-for-battery/254709"
+ },
+ "ap:254710": {
+  "first_seen": "2026-10-31T12:23:29+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/undergraduate-assistant-support-hardware-startups-at-kth-innovation/254710"
+ },
+ "ap:254711": {
+  "first_seen": "2026-10-31T12:23:31+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/amanuens-hjalp-startups-i-kth-innovations-makerspace/254711"
+ },
+ "ap:254712": {
+  "first_seen": "2026-10-31T12:23:33+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/doctoral-scholarship-holder-neuroimmunology/254712"
+ },
+ "ap:254714": {
+  "first_seen": "2026-10-31T12:23:34+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/project-lead-equipment-installation/254714"
+ },
+ "ap:254715": {
+  "first_seen": "2026-10-31T12:23:36+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-neuchatel/2026/assistant-e-doctorant-e-75/254715"
  },
  "chalmers:14972": {
   "first_seen": "2026-10-30T11:15:13+00:00",
