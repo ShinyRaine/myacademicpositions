@@ -7,7 +7,7 @@
   "tier_D": 330,
   "urgent": 99
  },
- "generated_at": "2026-10-31T17:08:43+00:00",
+ "generated_at": "2026-10-31T17:13:25+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -107,6 +107,26 @@
    ],
    "id": "ap:252189",
    "language": "en",
+   "llm": {
+    "blockers": [],
+    "fit": 6,
+    "group_or_supervisor": "Soft Robotics Lab, Institute of Robotics and Intelligent Systems, ETH Zurich",
+    "headline": "The Soft Robotics Lab at ETH Zurich is offering doctoral positions across soft robotics, biohybrid systems, dexterous manipulation learning, and embodied AI simulation.",
+    "model": "gemini-3.5-flash",
+    "prep": [
+     "Contact the Soft Robotics Lab to ask whether a start date of June 2027 aligns with their recruitment timeline.",
+     "Draft a concise research outline explaining how your experience in task and motion planning or dynamical systems could apply to soft or dexterous hardware such as ORCA."
+    ],
+    "verdict": "maybe",
+    "why_match": [
+     "The advert asks for candidates who develop policies that run on real hardware, and the candidate has deployed dynamical-system motion policies and admittance control on a real UR10e manipulator.",
+     "The advert asks for experience in imitation learning for robot control, and the candidate has implemented Gaussian-mixture learning from demonstration on physical hardware."
+    ],
+    "why_not": [
+     "The advert emphasizes real-world reinforcement learning, diffusion policies, and tactile sensing for soft or dexterous hands, whereas the candidate's background focuses on neuro-symbolic task and motion planning with dynamical systems on a rigid UR10e manipulator.",
+     "The advert text is truncated at the end and does not specify an application deadline or start date, making it unclear whether a June 2027 start is expected."
+    ]
+   },
    "position_type": "phd",
    "posted": "2026-08-25T07:05:07+00:00",
    "score": 41,
@@ -119,78 +139,6 @@
    "topic_score": 41,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-positions-in-robot-learning-and-soft-musculoskeletal-and-biohybrid-robotics/252189"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": 19.5,
-     "factor": 0.75,
-     "hits": [
-      "dynamical system"
-     ],
-     "kind": "topic",
-     "label": "core-safe-control",
-     "note": "标题；robotics 语境 ×0.75",
-     "weight": 26,
-     "where": "title"
-    },
-    {
-     "applied": 15.0,
-     "factor": 0.75,
-     "hits": [
-      "robotic"
-     ],
-     "kind": "topic",
-     "label": "robotics",
-     "note": "摘要",
-     "weight": 20,
-     "where": "summary"
-    },
-    {
-     "applied": 1.5,
-     "factor": 0.15,
-     "hits": [
-      "interpretable"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "正文仅 1 次",
-     "weight": 10,
-     "where": "body"
-    }
-   ],
-   "city": "Zurich",
-   "country": "Switzerland",
-   "days_left": null,
-   "deadline": null,
-   "employer": "ETH Zürich",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-30T10:07:01+00:00",
-   "flags": [
-    {
-     "hits": [
-      "eth zurich"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    }
-   ],
-   "id": "ap:250904",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-07-06T13:05:07+00:00",
-   "score": 36,
-   "slug": "phd-position-in-modeling-and-control-of-nonlinear-dynamical-systems-from-data",
-   "source": "ap",
-   "summary": "100% PhD on data-driven nonlinear model reduction/control via spectral submanifold methods. Topics: fluid-structure, soft robotics, turbulence. MSc in ME/applied math/physics.",
-   "tier": "B",
-   "tier_name": "值得细看",
-   "title": "PhD position in Modeling and Control of Nonlinear Dynamical Systems from Data",
-   "topic_score": 36,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/phd-position-in-modeling-and-control-of-nonlinear-dynamical-systems-from-data/250904"
   },
   {
    "also_listed_on": [
@@ -279,6 +227,26 @@
    ],
    "id": "kth:970256",
    "language": "en",
+   "llm": {
+    "blockers": [],
+    "fit": 4,
+    "group_or_supervisor": "Assistant Prof. Giuseppe Belgioioso and Prof. Dimos Dimarogonas",
+    "headline": "PhD position at KTH focused on game-theoretic methods and computational tools for control of multi-agent autonomous systems.",
+    "model": "gemini-3.5-flash",
+    "prep": [
+     "Contact Assistant Prof. Giuseppe Belgioioso to ask if a start date as late as June 2027 is compatible with project funding.",
+     "Clarify how much background in formal methods or game theory is expected prior to starting."
+    ],
+    "verdict": "skip",
+    "why_match": [
+     "The advert lists prior hands-on experience with robotic platforms as beneficial, and the candidate has hardware experience deploying admittance control and dynamical-system policies on a UR10e arm."
+    ],
+    "why_not": [
+     "The advert requires research in game theory and hybrid games for multi-agent systems, whereas the candidate's focus is on single-robot neuro-symbolic task and motion planning.",
+     "The advert asks for a strong background in optimization and lists formal methods as advantageous, which are not demonstrated in the candidate's thesis on dynamical-system motion policies.",
+     "The application deadline is November 2026, which is seven months before the candidate's earliest start date of June 2027."
+    ]
+   },
    "position_type": "phd",
    "posted": "2026-10-01T23:59:59+00:00",
    "score": 34,
@@ -290,6 +258,95 @@
    "topic_score": 34,
    "urgent": true,
    "url": "https://www.kth.se/lediga-jobb/970256?l=en"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 19.5,
+     "factor": 0.75,
+     "hits": [
+      "dynamical system"
+     ],
+     "kind": "topic",
+     "label": "core-safe-control",
+     "note": "标题；robotics 语境 ×0.75",
+     "weight": 26,
+     "where": "title"
+    },
+    {
+     "applied": 15.0,
+     "factor": 0.75,
+     "hits": [
+      "robotic"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "摘要",
+     "weight": 20,
+     "where": "summary"
+    },
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "interpretable"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    }
+   ],
+   "city": "Zurich",
+   "country": "Switzerland",
+   "days_left": null,
+   "deadline": null,
+   "employer": "ETH Zürich",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-10-30T10:07:01+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eth zurich"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:250904",
+   "language": "en",
+   "llm": {
+    "blockers": [],
+    "fit": 2,
+    "group_or_supervisor": "Chair in Nonlinear Dynamics (Prof. George Haller)",
+    "headline": "PhD position at ETH Zürich on spectral submanifold methods and data-driven nonlinear model reduction for physical dynamics.",
+    "model": "gemini-3.5-flash",
+    "prep": [
+     "Contact Prof. George Haller to check whether a start date in June 2027 can be accommodated.",
+     "Read recent publications from the Chair in Nonlinear Dynamics on SSM-based model reduction to understand the mathematical focus of the group."
+    ],
+    "verdict": "skip",
+    "why_match": [],
+    "why_not": [
+     "The advert focuses on spectral submanifold (SSM) methods and nonlinear model reduction for continuum physics and structural dynamics, which differs from the candidate's focus on dynamical-system motion policies for robotic manipulation.",
+     "The advert states that an early start is preferred relative to its July 2026 posting date, whereas the candidate cannot start until June 2027."
+    ]
+   },
+   "position_type": "phd",
+   "posted": "2026-07-06T13:05:07+00:00",
+   "score": 36,
+   "slug": "phd-position-in-modeling-and-control-of-nonlinear-dynamical-systems-from-data",
+   "source": "ap",
+   "summary": "100% PhD on data-driven nonlinear model reduction/control via spectral submanifold methods. Topics: fluid-structure, soft robotics, turbulence. MSc in ME/applied math/physics.",
+   "tier": "B",
+   "tier_name": "值得细看",
+   "title": "PhD position in Modeling and Control of Nonlinear Dynamical Systems from Data",
+   "topic_score": 36,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/phd-position-in-modeling-and-control-of-nonlinear-dynamical-systems-from-data/250904"
   },
   {
    "breakdown": [
@@ -15460,7 +15517,7 @@
    "url": "https://en.academicpositions.se/ad/university-neuchatel/2026/assistant-e-doctorant-e-75/254715"
   }
  ],
- "repo": "ShinyRaine/myacademicpositions",
+ "repo": null,
  "sources": [
   "Academic Positions",
   "Chalmers (own listing)",
