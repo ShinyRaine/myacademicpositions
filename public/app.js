@@ -286,9 +286,6 @@ function detail(job) {
          <p class="vmain"><b>${esc(VERDICT_LABEL[v.verdict] || v.verdict)}</b>
             <span class="vfit">与你的背景匹配 ${v.fit}/10</span></p>
          ${v.headline ? `<p class="vsay">“${esc(v.headline)}”</p>` : ''}
-         <p class="vnote">左边的「${tierName} ${job.score}」是另一回事：那是关键词算出来的
-            课题重合度，只看广告写的研究内容，不看学校、地区、导师和经费，只用来决定这条
-            值不值得花钱细读。两者不一致很正常，以这里的理由为准——但理由本身也要自己核对。</p>
        </div>`
     : `<div class="verdict v-none">
          <p class="vhead">没有 LLM 研判</p>
