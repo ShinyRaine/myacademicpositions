@@ -3,7 +3,9 @@
 Run: python -m unittest discover -s tests -v
 """
 import sys
+import tempfile
 import unittest
+from unittest import mock
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -11,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yaml  # noqa: E402
 
-from radar import classify, parse, score  # noqa: E402
+from radar import classify, parse, run, score  # noqa: E402
 
 PROFILE = yaml.safe_load((Path(__file__).resolve().parent.parent / "profile.yaml").read_text())
 NOW = datetime(2026, 10, 30, tzinfo=timezone.utc)
@@ -289,6 +291,59 @@ class TestProfileIntegrity(unittest.TestCase):
         best = sum(g["weight"] for g in PROFILE["topics"]["groups"])
         self.assertGreaterEqual(min(best, PROFILE["topics"]["cap"]),
                                 score.tier_table(PROFILE)["A"]["min"])
+
+
+class TestShortlist(unittest.TestCase):
+    """Which jobs get a GitHub issue.
+
+    No issue was ever opened: the board was bootstrapped locally and
+    committed with its scores, so from the first scan that had a token every
+    advert was already in the previous jobs.json, and the shortlist was
+    "tier A/B *and* not seen before".
+    """
+
+    def _raw(self, **kw):
+        rec = {"id": "kth:1", "title": "Doctoral student in robot manipulation",
+               "summary": "learning from demonstration with dynamical systems",
+               "body": "", "employer": "KTH", "country": "Sweden", "city": "Stockholm",
+               "deadline": None, "posted": "2026-10-01T00:00:00+00:00",
+               "language": "en", "position_type": "phd", "source": "kth"}
+        rec.update(kw)
+        return rec
+
+    def _build(self, raw):
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(run, "JOBS", Path(tmp) / "jobs.json"), \
+                 mock.patch.object(run, "BODIES", Path(tmp) / "bodies.json"):
+                if self.previous is not None:
+                    run._save(Path(tmp) / "jobs.json", self.previous)
+                return run.build_jobs(raw, PROFILE, run_llm=False)
+
+    def setUp(self):
+        self.previous = None
+
+    def test_an_advert_already_on_the_board_is_still_shortlisted(self):
+        raw = {"kth:1": self._raw()}
+        board, _ = self._build(raw)
+        job = board["jobs"][0]
+        self.assertTrue(run.issue_worthy(job, PROFILE), job["score"])
+
+        self.previous = {"jobs": [job]}          # it was there last run too
+        _, shortlist = self._build(raw)
+        self.assertEqual([j["id"] for j in shortlist], ["kth:1"])
+
+    def test_a_low_band_advert_is_not_shortlisted(self):
+        raw = {"kth:1": self._raw(title="Doctoral student in medieval theology",
+                                  summary="")}
+        board, shortlist = self._build(raw)
+        self.assertEqual(shortlist, [])
+        self.assertFalse(run.issue_worthy(board["jobs"][0], PROFILE))
+
+    def test_the_band_comes_from_the_tier_table_not_a_hardcoded_letter(self):
+        # Only the bands carrying a github label are worth an issue.
+        for key, band in score.tier_table(PROFILE).items():
+            self.assertEqual(run.issue_worthy({"tier": key}, PROFILE),
+                             bool(band.get("github")))
 
 
 if __name__ == "__main__":

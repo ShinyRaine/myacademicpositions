@@ -151,11 +151,11 @@ def cmd_scan(args) -> int:
     _save(RAW, raw)
     _save(SEEN, seen)
 
-    jobs, newly_shortlisted = build_jobs(raw, profile, run_llm=not args.no_llm)
+    jobs, shortlist = build_jobs(raw, profile, run_llm=not args.no_llm)
     _save(JOBS, jobs)
 
     if not args.no_issues:
-        open_issues(newly_shortlisted, profile)
+        open_issues(shortlist, profile)
 
     print(f"[{now_iso()}] scan done: {len(jobs['jobs'])} jobs on the board")
     return 0
@@ -164,6 +164,17 @@ def cmd_scan(args) -> int:
 # ---------------------------------------------------------------------------
 # scoring + dedup + LLM, shared by scan and rescore
 # ---------------------------------------------------------------------------
+def issue_worthy(job: dict, profile: dict) -> bool:
+    """Does this job's band open a GitHub issue?
+
+    The tier table already says so: a band with a `github:` label is one worth
+    the issue and the Gemini spend. Reading it from there means renaming or
+    re-banding in profile.yaml needs no change here.
+    """
+    band = score.tier_table(profile).get(job.get("tier"))
+    return bool(band and band.get("github"))
+
+
 def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[dict]]:
     now = datetime.now(timezone.utc)
     previous = {j["id"]: j for j in _load(JOBS, {}).get("jobs", [])}
@@ -228,9 +239,14 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
                                -(j.get("llm", {}).get("fit", 0)),
                                -j["score"]))
 
-    # Newly shortlisted = tier A/B that has no issue-worthy predecessor.
-    newly = [j for j in scored
-             if order.get(j["tier"], 9) <= 1 and j["id"] not in previous]
+    # Everything in a band that opens issues. open_issues() skips whatever
+    # already has one, open or closed, so dedup does not belong here — and the
+    # `id not in previous` test this used to do was not dedup but a permanent
+    # exclusion: the board was bootstrapped locally and committed with its
+    # scores, so by the first scan that had a token every advert was already
+    # in the previous jobs.json and no issue was ever opened. An advert that
+    # climbs into the band later was shut out the same way.
+    shortlist = [j for j in scored if issue_worthy(j, profile)]
 
     # The prepare endpoint reads the advert text, which jobs.json deliberately
     # leaves out. Publish it for the bands worth applying to and no further.
@@ -257,7 +273,7 @@ def build_jobs(raw: dict, profile: dict, *, run_llm: bool) -> tuple[dict, list[d
         "tiers": score.tier_table(profile),
         "jobs": [_slim(j) for j in scored],
     }
-    return payload, newly
+    return payload, shortlist
 
 
 # The body is kept out of the published JSON: it is megabytes of prose, the
@@ -281,7 +297,7 @@ def open_issues(jobs: list[dict], profile: dict) -> None:
         print("  (no GITHUB_TOKEN/GITHUB_REPOSITORY, not opening issues)")
         return
     if not jobs:
-        print("  no new tier A/B jobs, no issues to open")
+        print("  nothing in an issue-opening band")
         return
 
     table = score.tier_table(profile)
@@ -349,10 +365,10 @@ def cmd_rescore(args) -> int:
         return 1
     if args.forget_llm:
         _save(JOBS, {"jobs": []})   # build_jobs reads cached verdicts from here
-    jobs, newly = build_jobs(raw, profile, run_llm=not args.no_llm)
+    jobs, shortlist = build_jobs(raw, profile, run_llm=not args.no_llm)
     _save(JOBS, jobs)
     if args.open_issues:
-        open_issues(newly, profile)
+        open_issues(shortlist, profile)
     print(f"rescored {len(jobs['jobs'])} jobs")
     return 0
 
