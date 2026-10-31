@@ -36,7 +36,7 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
           ▼
      每条广告页               ← 服务端渲染，不需要无头浏览器
           │
-     规则打分 (profile.yaml)  ← 课题关键词 / 排除词 / 机构 / 国家 / 点名导师 + 主题闸门
+     课题打分 (profile.yaml)  ← 只看广告写的研究内容：关键词 + 命中位置 + 排除词
           │
           ├── 「擦边 / 不相关」 → 只进网站列表，不花钱
           │
@@ -103,7 +103,7 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
 
 ## 决策怎么做
 
-「对口」和「值得细看」两档的岗位会各开一个 Issue，正文里有截止日、规则分构成、Gemini 的研判（匹配点 / 保留意见 / 硬性障碍 / 投前要准备什么）。你只要打一个 label：
+「对口」和「值得细看」两档的岗位会各开一个 Issue，正文里有截止日、课题匹配构成、上下文标签、Gemini 的研判（匹配点 / 保留意见 / 硬性障碍 / 投前要准备什么）。你只要打一个 label：
 
 | label | 含义 |
 |---|---|
@@ -114,6 +114,28 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
 
 不打 label 直接关闭 Issue = `skip`。网站一两分钟后跟上。
 
+## 分数是什么
+
+**分数只衡量一件事：这则广告写的研究内容，和我在做的研究内容重合多少。满分 100。**
+学校、国家、导师名字、经费条件一概不计分——它们决定我投不投，不决定这条广告和我的课题有多像。
+以前它们计分，结果是 Chalmers 的 web security PhD（本校 +18、瑞典 +10、WASP +5）得 32 分，
+压过了一半真正的 robotics 岗；ETH 的半导体纳米晶 PhD 靠「院系介绍里出现过一次 robotics」
+拿到 33 分。现在这两条分别是 2 分和 6 分。
+
+这些事实没有消失，它们变成**标签**：卡片上一眼能看到「点名导师 / 本校 / 目标机构 / 全奖四年 /
+要求当地语言」，可以筛、可以搜，就是不加分。配置在 `profile.yaml` 的 `context.flags`。
+
+三条规则撑起这个分：
+
+1. **命中位置决定吃到几成权重**（`scoring.evidence`）。标题里命中＝广告自己宣称它干这个，全额；
+   摘要 0.75；正文里只出现一次 0.15——一万两千字的正文里孤零零一个词，多半是
+   「本系涵盖 XX、YY、机器人学……」的院系套话，不是课题。
+2. **专业词汇要配对语境**（组上的 `requires` + `scoring.context_floor`）。
+   "dynamical systems" 在非线性控制广告里、"formal methods" 在 web security 广告里、
+   "precondition" 在编译器广告里，都和我的课题不是一回事。带 `requires: robotics` 的组
+   按 robotics 的命中强度缩放，没有机器人语境时只剩 `context_floor`（0.4）那一成。
+3. **排除学科直接扣分**（`exclusions`，只看标题和摘要）。
+
 ## 调它
 
 打分规则全在 [`profile.yaml`](profile.yaml)，改完 push 就会自动重算**全部**在招岗位（不只是新的），已经花过的 Gemini 研判会复用，不重复计费。
@@ -121,15 +143,16 @@ AP 那份的摘要和发布日会被补进来，URL 也保留。
 几个常动的地方：
 
 - `candidate.summary` —— 送给 Gemini 的自我介绍。方向变了就改这里，比改关键词有效得多。
-- `topics.groups` —— 课题关键词和权重。
-- `exclusions.terms` —— 噪音学科。Academic Positions 上生物医学占大头。
-- `employers.tiers` / `countries.tiers` —— 机构和国家权重。
-- `scoring.topic_gate` —— 主题闸门。课题分够不到它，机构分和国家分就按比例打折；没有它，Chalmers 的纺织复合材料 PhD 会排在 ETH 的 robot learning PhD 前面。
+- `topics.groups` —— 课题关键词和权重，分数的全部来源。关键词写单数、不用管连字符。
+- `exclusions.terms` —— 噪音学科，按**词干**写（`pharmac` 命中 pharmacology）。
+  Academic Positions 上生物医学占大头。
+- `context.flags` —— 学校、地区、导师、经费、语言要求。只显示，不计分。
+- `scoring.evidence` / `scoring.context_floor` —— 上面那三条规则的旋钮。
 - `sources` —— 开哪些源、以及同岗位撞车时谁胜出（顺序靠后的赢）。
 - `llm.model` —— 研判用哪个模型。免费层有每日配额，打满会 429；
   scan 会记一行「额度用尽，还剩 N 条未研判」然后停掉这一批，
   没拿到研判的岗位下次 scan 会自动重排队，不会永久空着。
-- `tiers` —— 四档的分数线和**显示名**。A/B/C/D 只是内部排序键，面板上的筛选按钮、
+- `tiers` —— 四档的分数线（对着 0-100 的内容分）和**显示名**。A/B/C/D 只是内部排序键，面板上的筛选按钮、
   Issue 标题和 GitHub label 都用 `name`，改了就跟着改。只有带 `github:` 的两档会开 Issue、
   花 Gemini 额度。
 
@@ -194,11 +217,36 @@ cp data/jobs.json data/decisions.json public/ && \
   但你得回那个 js 里重新抄一遍。
 - **KTH 的联系人单元格嵌套了 div。** 非贪婪正则会停在内层 `</div>`，把邮箱丢掉；
   要按配对的 div 走。
+- **机构权重会把分数变成「我喜欢哪所学校」的排名。** 这是最初版本最大的设计错误：
+  机构分 22 + 国家分 10 + 经费信号，加起来比大多数广告的课题分还高，于是排序排的是学校不是课题。
+  加「主题闸门」（课题分不够就把机构分打折）只是把症状压住——本校的 web security 岗照样
+  靠半价的 18 分进到「擦边」。最后把它们整个从分数里拿掉，变成标签。
+- **关键词表里的词干和复数，有一半是不生效的。** 匹配用的是全词边界，
+  所以排除表里 `pharmac`、`geolog`、`immunolog` 这些词干从来没命中过任何东西，
+  主题表里的 `robot` 也命中不了 "Autonomous Robots"。现在排除词按前缀匹配、
+  主题词自动带复数（短词和已经以 s 结尾的除外，免得 `ros` 命中 "roses"），
+  连字符和斜杠在两边都折成空格。
+- **重叠的关键词会把「证据」刷上去。** `robotic` 和 `robotics` 都在表里，
+  加上自动复数，正文里一个 "robotics" 会被数成三个不同的词，证据等级从
+  「正文仅 1 次」跳到「多种说法」，权重从 0.15 变 0.5。所以计数按合并后的
+  命中区间算，不按表里的词条算。
 - **研判的 prompt 必须禁掉"看起来相关"。** 早期版本给 deformable objects 的广告写过
   "dynamical systems and safe control aligns well with continuum/geometric control goals"——
   两边都有 "control" 就搭了桥，但微分几何/连续体力学和 DS 运动策略不是一回事。
   现在 prompt 要求每条匹配点必须同时点出「广告要什么」和「你有什么」，
   只靠共用词汇的联系必须写进保留意见，并明说是哪两个学科被混了。
+- **thinking 的 token 从 `maxOutputTokens` 里扣。** 3.x 系列的 thinking 关不掉，
+  给简历那次调用按答案长度设预算，模型会先把预算想完，回来一个空 candidate、
+  `finishReason: MAX_TOKENS`。所以简历那次干脆不设 `maxOutputTokens`。
+- **Hobby 的函数上限是 300 秒（fluid compute 默认开着）。** `gemini-3.8-flash`
+  一次 50 秒到 5 分钟，正好卡在上限边上：代码里 280 秒就主动 abort，
+  这样还来得及把失败原因写进库和 Issue，而不是被平台直接掐断、状态永远停在 `running`。
+  面板上再点「重新生成简历」就是重来。
+  本机拿一则 KTH 广告实测过（没附 PDF）：`thinkingLevel: high` 248 秒、`medium` 195 秒，
+  所以默认取 `medium`（`api/_lib/gemini.mjs` 的 `CV_THINKING`）。附上简历 PDF 还会更慢。
+- **模型过载返回 503，不是 429。** 文案是 "experiencing high demand"，几秒就过去；
+  跑实测时第一次就撞上了。503/500/502/504 重试三次（共用同一个 280 秒预算），
+  429 是日配额用完，不重试。
 - **Neon 的 driver 走 HTTP，本地起个 Postgres 顶不上。** 数据库那条路径只能部署后才跑得到；
   本地能验的是 Issue 正文的标记替换、材料归一化、鉴权和请求体解析（`node --test tests/`），
   以及用打桩的 `/api` 在浏览器里跑完整个交互。

@@ -57,14 +57,24 @@ hard_filters:
   urgent_days: 14
 
 # ----------------------------------------------------------------------------
-# 2. 主题匹配：命中关键词累加，有上限。权重是我按你的方向给的，随时改。
+# 2. 主题匹配 —— 分数的全部来源
+#    一条广告的分 = 它的研究内容和你的研究内容重合多少，满分 100。
+#    学校、国家、导师名字、经费条件一律不计分（见第 4 节），因为那不是内容。
+#
+#    关键词一律写单数、不用管连字符：复数自动匹配（robot 命中 "Robots"），
+#    连字符和斜杠两边都折成空格（dynamical system 命中 "dynamical-system"）。
+#
+#    每组的权重要不要吃满，取决于关键词出现在哪儿（见第 8 节 evidence）：
+#    标题里 = 广告自己说它是干这个的，全额；只在正文里出现一次，多半是
+#    「本系涵盖 XX、YY、机器人学……」这类院系套话，只给一点点。
 # ----------------------------------------------------------------------------
 topics:
-  cap: 46          # 主题分最高 46 分
+  cap: 100
   groups:
     # ---- 你毕设的正中心 ----
-    - weight: 12
+    - weight: 34
       label: core-tamp
+      requires: robotics      # 没有机器人语境时只拿 context_floor 那一成
       terms:
         - task and motion planning
         - tamp
@@ -82,11 +92,11 @@ topics:
         - robot skill
 
     # ---- DS / 安全控制，毕设的另一半 ----
-    - weight: 10
+    - weight: 26
       label: core-safe-control
+      requires: robotics      # "dynamical systems" 在纯控制论广告里不是你的课题
       terms:
         - dynamical system
-        - dynamical systems
         - motion primitive
         - movement primitive
         - control barrier function
@@ -105,12 +115,11 @@ topics:
         - compliant control
 
     # ---- 机器人学一般方向 ----
-    - weight: 8
+    - weight: 20
       label: robotics
       terms:
         - robot
         - robotic
-        - robotics
         - manipulation
         - manipulator
         - grasping
@@ -121,10 +130,32 @@ topics:
         - physical human-robot
         - teleoperation
         - autonomous system
-        - autonomous systems
+
+    # ---- 真机/仿真的动手经验，你有而多数申请者没有 ----
+    - weight: 10
+      label: hands-on
+      terms:
+        - universal robots
+        - ur5
+        - ur10
+        - franka
+        - panda arm
+        - ros
+        - ros2
+        - moveit
+        - rtde
+        - force/torque
+        - force-torque
+        - gazebo
+        - mujoco
+        - pybullet
+        - isaac sim
+        - real robot
+        - real-world experiments
+        - hardware experiments
 
     # ---- 邻接：会用到但不是你的定位 ----
-    - weight: 5
+    - weight: 10
       label: adjacent-ai
       terms:
         - reinforcement learning
@@ -143,7 +174,7 @@ topics:
         - digital twin
 
     # ---- 弱邻接：只够把岗位从 0 分拉起来 ----
-    - weight: 2
+    - weight: 4
       label: weak
       terms:
         - control theory
@@ -157,11 +188,11 @@ topics:
         - industrial
 
 # ----------------------------------------------------------------------------
-# 3. 排除：命中即扣分（扣到 0 分以下就会被 tier D 吃掉）
-#    这些是 academicpositions 上的大宗噪音
+# 3. 排除：命中即扣分。只看标题和摘要——广告在那儿说明自己是干什么的，
+#    正文里出现一次和主题词一样可能只是院系套话。
 # ----------------------------------------------------------------------------
 exclusions:
-  penalty: -14
+  penalty: -30
   terms:
     - proteomic
     - genomic
@@ -213,21 +244,56 @@ exclusions:
     - fuel cell
 
 # ----------------------------------------------------------------------------
-# 4. 机构与地理权重
+# 4. 上下文标记：**一分不加**，只在面板上显示成标签、可以筛、可以搜。
+#    学校、地区、导师、经费条件都在这儿。它们决定你投不投，不决定这条广告
+#    和你的课题有多像——以前它们计分，结果 Chalmers 的 web security PhD
+#    （本校 +18、瑞典 +10）压过了一半真正的 robotics 岗。
+#
+#    field: 在哪个字段里找（title / summary / body / employer / country /
+#    text＝标题+摘要+正文）。severity: good 绿标，blocker 红标，note 灰标。
 # ----------------------------------------------------------------------------
-employers:
-  cap: 22
-  # 关键词对机构名做包含匹配（小写）
-  tiers:
-    - weight: 22
-      label: target
-      terms: [kth royal institute, kth]
-    - weight: 18
-      label: home
-      terms: [chalmers]
-    - weight: 15
-      label: nordic-strong
+context:
+  flags:
+    - label: named-supervisor
+      name: 点名导师
+      field: text
+      severity: good
       terms:
+        - tumova
+        - jaquier
+        - kragic
+        - dimarogonas
+        - ramirez-amaro
+        - billard
+        - calinon
+        - asfour
+        - toussaint
+        - kaelbling
+        - lozano-perez
+
+    - label: named-group
+      name: 目标组
+      field: text
+      severity: good
+      terms:
+        - robotics perception and learning
+        - robotics, perception and learning
+        - rpl
+        - wasp
+        - wallenberg ai
+        - division of robotics
+
+    - label: home
+      name: 本校
+      field: employer
+      terms: [chalmers]
+
+    - label: target-institution
+      name: 目标机构
+      field: employer
+      terms:
+        - kth
+        - royal institute of technology
         - lund university
         - uppsala university
         - linkoping
@@ -242,9 +308,6 @@ employers:
         - norwegian university of science
         - ntnu
         - university of oslo
-    - weight: 14
-      label: euro-robotics
-      terms:
         - eth zurich
         - epfl
         - delft university of technology
@@ -263,82 +326,25 @@ employers:
         - max planck
         - university of bonn
         - heidelberg
-    - weight: 8
-      label: eu-general
-      terms:
         - ku leuven
-        - ghent university
-        - eindhoven university
         - university of twente
-        - university of luxembourg
-        - catholique de louvain
-        - leiden university
-        - university of amsterdam
-        - university of groningen
-        - aalborg
+        - eindhoven university
 
-countries:
-  cap: 10
-  tiers:
-    - weight: 10
-      terms: [sweden]
-    - weight: 6
-      terms: [denmark, norway, finland, iceland]
-    - weight: 4
-      terms:
-        - switzerland
-        - netherlands
-        - germany
-        - united kingdom
-        - france
-        - belgium
-        - austria
-        - italy
-        - spain
-        - luxembourg
-        - ireland
-        - portugal
-        - czech
-
-# ----------------------------------------------------------------------------
-# 5. 加分信号：点名你盯的人/组，或明显对口的措辞
-# ----------------------------------------------------------------------------
-bonuses:
-  cap: 22
-  signals:
-    - weight: 14
-      label: named-supervisor
-      terms:
-        - tumova
-        - jaquier
-        - kragic
-        - dimarogonas
-        - ramirez-amaro
-        - billard
-        - calinon
-        - asfour
-        - toussaint
-        - kaelbling
-        - lozano-perez
-    - weight: 10
-      label: named-group
-      terms:
-        - robotics perception and learning
-        - rpl
-        - wasp
-        - wallenberg ai
-        - division of robotics
-        - robotics, perception and learning
-    - weight: 6
-      label: good-signals
+    - label: funding
+      name: 全奖/四年
+      field: text
+      severity: good
       terms:
         - fully funded
         - four-year
         - 4-year
         - employed as a doctoral student
         - doctoral student position
-    - weight: -10
-      label: language-blocker
+
+    - label: language-blocker
+      name: 要求当地语言
+      field: text
+      severity: blocker
       terms:
         - fluency in swedish
         - swedish is required
@@ -350,27 +356,32 @@ bonuses:
         - fluent in dutch
 
 # ----------------------------------------------------------------------------
-# 6. 分档：总分 -> 档位。只有前两档会开 GitHub Issue、花 Gemini 额度。
-#    A/B/C/D 只是内部排序用的键，面板和 Issue 上显示的是 name。
+# 5. 分档：内容匹配分（0-100）-> 档位。只有前两档会开 GitHub Issue、
+#    花 Gemini 额度。A/B/C/D 只是内部排序用的键，面板和 Issue 上显示的是 name。
+#
+#    对着 evidence 表读这几条线：
+#    58 = 核心课题写在标题里，或者两个核心组都在摘要里；
+#    34 = 广告标题是 robotics，核心课题只在正文里提到；
+#    16 = 只有邻接词，或者核心词只在正文里露过一两次。
 # ----------------------------------------------------------------------------
 tiers:
   A:
-    min: 62
-    name: 对口            # 课题、机构、人都对上了
+    min: 58
+    name: 对口            # 广告自己说的研究内容就是你在做的
     github: tier:对口
   B:
-    min: 38
-    name: 值得细看        # 境外 robotics PhD 大多落这里
+    min: 34
+    name: 值得细看        # 内容有实质重合，但不是正中心
     github: tier:值得细看
   C:
-    min: 22
+    min: 16
     name: 擦边            # 面板里可见，不开 issue，不花 LLM
   D:
     min: 0
     name: 不相关          # 默认在面板里折叠
 
 # ----------------------------------------------------------------------------
-# 7. LLM 研判
+# 6. LLM 研判
 # ----------------------------------------------------------------------------
 llm:
   enabled: true
@@ -380,20 +391,25 @@ llm:
   body_chars: 9000            # 送进去的正文截断长度
 
 # ----------------------------------------------------------------------------
-# 8. GitHub Issue
+# 7. GitHub Issue
 # ----------------------------------------------------------------------------
 issues:
   max_per_run: 30   # 首次 bootstrap 可能一次命中几十个，分批开，免得刷屏
 
+
 # ----------------------------------------------------------------------------
-# 9. 主题闸门
-#    机构分 + 国家分最高能到 32，比大多数岗位的主题分还高。没有闸门的话，
-#    Chalmers 的纺织复合材料 PhD 会排在 ETH 的 robot learning PhD 前面。
-#    主题分够不到 topic_gate 时，机构/国家/加分信号按比例打折。
+# 8. 命中位置的折算
+#    关键词在哪儿出现，决定这组权重吃到几成。标题 = 广告自己宣称的课题；
+#    正文里孤零零一次 = 多半是院系介绍里的套话，别当成课题。
 # ----------------------------------------------------------------------------
 scoring:
-  topic_gate: 14          # 主题分到这个数，上下文分才全额计入
-  partial_factor: 0.5     # 主题分在 gate/2 ~ gate 之间，打五折
-  off_topic_factor: 0.15  # 主题分低于 gate/2，基本只剩主题分本身
-  ungated_labels:         # 这些信号太具体，不受闸门影响
-    - named-supervisor
+  # 带 requires 的组，在缺少那个语境时还能拿几成权重。
+  # 0 = 完全不给（太狠：neuro-symbolic 的 NLP 岗会掉到 0）；
+  # 1 = 关掉这条规则（web security 的 formal methods 又会满额）。
+  context_floor: 0.4
+  evidence:
+    title: 1.0            # 命中在标题里
+    summary: 0.75         # 命中在摘要里
+    body_strong: 0.5      # 正文里命中 2 个以上不同词，或同一个词 ≥3 次
+    body_repeated: 0.3    # 正文里同一个词出现 2 次
+    body_once: 0.15       # 正文里只出现 1 次

@@ -110,10 +110,18 @@ def issue_body(job: dict) -> str:
         + (f" (**{job['days_left']} days left**)" if job.get("days_left") is not None else ""),
         f"- **Posted:** {(job.get('posted') or '')[:10]}",
         f"- **Type:** {job.get('position_type')}",
-        f"- **Rule score:** {job.get('score')} — {job.get('tier_name', job.get('tier'))}",
+        f"- **Topic match:** {job.get('score')}/100 — {job.get('tier_name', job.get('tier'))}"
+        " (research content only; employer, country and supervisor score nothing)",
         f"- **Advert:** {job.get('url')}",
         "",
     ]
+
+    flags = job.get("flags") or []
+    if flags:
+        mark = {"blocker": "⛔", "good": "✅"}
+        lines += ["**Context (not scored):** " + " · ".join(
+            f"{mark.get(f.get('severity'), '·')} {f['name']} ({', '.join(f['hits'])})"
+            for f in flags), ""]
 
     if v:
         lines += [
@@ -134,10 +142,14 @@ def issue_body(job: dict) -> str:
     else:
         lines += ["_No LLM verdict for this one (below threshold, or the call failed)._", ""]
 
-    hits = [f"`{d['label']}` {d['weight']:+d} ({', '.join(d['hits'])})"
+    # Each line says what was matched, where, and what the position of the
+    # match did to the weight — the whole number is re-derivable from it.
+    hits = [f"`{d['label']}` {d.get('applied', d['weight']):+g}"
+            f" = {d['weight']:+d} × {d.get('factor', 1)}"
+            f" ({d.get('note') or d.get('where') or ''}): {', '.join(d['hits'])}"
             for d in job.get("breakdown", []) if d.get("hits")]
     if hits:
-        lines += ["<details><summary>Rule score breakdown</summary>", ""] \
+        lines += ["<details><summary>Topic match breakdown</summary>", ""] \
                  + [f"- {h}" for h in hits] + ["", "</details>", ""]
 
     lines += [

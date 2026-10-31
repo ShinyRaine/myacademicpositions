@@ -163,6 +163,11 @@ h1 { font-size: 20px; margin: 0; letter-spacing: -0.01em; }
 .badge.d-maybe { background: var(--maybe); border-color: var(--maybe); color: #fff; }
 .badge.d-skip  { background: var(--line); }
 .badge.d-new   { border-style: dashed; }
+/* Context flags: shown, filterable, worth nothing in the score. */
+.badge.flag { font-weight: 500; }
+.badge.f-good { color: var(--apply); border-color: var(--apply); }
+.badge.f-blocker { color: var(--urgent); border-color: var(--urgent); }
+.badge.f-note { color: var(--ink-3); border-style: dotted; }
 
 /* ---------- detail ---------- */
 .detail { display: none; border-top: 1px solid var(--line); background: var(--panel-2); padding: 14px 15px 16px; }

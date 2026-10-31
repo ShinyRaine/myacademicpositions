@@ -47,11 +47,13 @@
       <button class="chip" data-filter="flag" data-value="urgent">⏱ 快截止</button>
       <button class="chip" data-filter="flag" data-value="undecided">未决策</button>
       <button class="chip" data-filter="flag" data-value="sweden">🇸🇪 瑞典</button>
+      <button class="chip" data-filter="flag"
+        data-value="ctx:named-supervisor,named-group">⭐ 点名导师/组</button>
       <span class="sep"></span>
       <label class="sortbox">排序
         <select id="sort">
           <option value="tier">分档 → 匹配度</option>
-          <option value="score">规则分</option>
+          <option value="score">课题匹配分</option>
           <option value="fit">LLM 匹配度</option>
           <option value="deadline">截止日最近</option>
           <option value="new">最新发现</option>
@@ -67,6 +69,7 @@
   <p>
     数据源 <a href="https://en.academicpositions.se" rel="noreferrer">Academic Positions</a> 的
     jobs sitemap；打分规则在仓库 <code>profile.yaml</code>，研判由 Gemini 生成。
+    分数只算广告写的研究内容和我的重合度——学校、地区、导师、经费只作标签，一分不加。
     决策在 GitHub Issue 上打 label，站点几分钟后同步。
   </p>
   <p id="repolink"></p>

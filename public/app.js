@@ -104,6 +104,13 @@ function visible() {
     if (state.flags.has('urgent') && !job.urgent) return false;
     if (state.flags.has('undecided') && dec.decision !== 'new') return false;
     if (state.flags.has('sweden') && !/sweden/i.test(job.country || '')) return false;
+    // ctx:<label>[,<label>…] keeps only jobs carrying one of those context
+    // flags. They score nothing, so filtering is the only way they act.
+    for (const f of state.flags) {
+      if (!f.startsWith('ctx:')) continue;
+      const want = f.slice(4).split(',');
+      if (!(job.flags || []).some((g) => want.includes(g.label))) return false;
+    }
 
     if (!q) return true;
     const hay = [
@@ -111,6 +118,7 @@ function visible() {
       job.llm && job.llm.headline, job.llm && job.llm.group_or_supervisor,
       job.contact, job.department, job.source,
       ...(job.breakdown || []).flatMap((b) => b.hits || []),
+      ...(job.flags || []).flatMap((f) => [f.name, ...(f.hits || [])]),
     ].join(' ').toLowerCase();
     return hay.includes(q);
   });
@@ -149,6 +157,12 @@ function badges(job) {
   const out = [
     `<span class="badge deadline${job.urgent ? ' urgent' : ''}">${esc(deadlineText(job))}</span>`,
   ];
+  // Context flags carry no points — they are here to be seen and filtered on,
+  // which is the whole reason they were taken out of the score.
+  for (const f of job.flags || []) {
+    const why = esc(`${(f.hits || []).join(', ')}（不计分）`);
+    out.push(`<span class="badge flag f-${esc(f.severity || 'note')}" title="${why}">${esc(f.name)}</span>`);
+  }
   if (app) {
     const cls = app.status === 'failed' ? 'prep-bad'
       : app.total && app.done === app.total ? 'prep-done' : 'prep';
@@ -260,7 +274,7 @@ function detail(job) {
   const v = job.llm;
   const dec = decisionOf(job);
   const hits = (job.breakdown || []).filter((b) => (b.hits || []).length);
-  const gate = (job.breakdown || []).find((b) => b.kind === 'gate');
+  const flags = job.flags || [];
 
   const left = v ? list('匹配点', v.why_match) + list('保留意见', v.why_not) : '';
   const right = v ? list('硬性障碍', v.blockers, 'blockers') + list('投之前要准备', v.prep) : '';
@@ -272,14 +286,14 @@ function detail(job) {
          <p class="vmain"><b>${esc(VERDICT_LABEL[v.verdict] || v.verdict)}</b>
             <span class="vfit">与你的背景匹配 ${v.fit}/10</span></p>
          ${v.headline ? `<p class="vsay">“${esc(v.headline)}”</p>` : ''}
-         <p class="vnote">左边的「${tierName} ${job.score}」是另一回事：那是关键词命中加机构、
-            国家权重算出来的规则分，只用来决定这条值不值得花钱细读。两者不一致很正常，
-            以这里的理由为准——但理由本身也要自己核对。</p>
+         <p class="vnote">左边的「${tierName} ${job.score}」是另一回事：那是关键词算出来的
+            课题重合度，只看广告写的研究内容，不看学校、地区、导师和经费，只用来决定这条
+            值不值得花钱细读。两者不一致很正常，以这里的理由为准——但理由本身也要自己核对。</p>
        </div>`
     : `<div class="verdict v-none">
          <p class="vhead">没有 LLM 研判</p>
-         <p class="vnote">这条的规则分「${tierName} ${job.score}」没到研判阈值，
-            或者调用失败、免费额度用完了。下面的规则分构成是它得分的全部依据。</p>
+         <p class="vnote">这条的课题匹配分「${tierName} ${job.score}」没到研判阈值，
+            或者调用失败、免费额度用完了。下面的构成是它得分的全部依据。</p>
        </div>`;
 
   const issueBtn = dec.issue_url
@@ -313,15 +327,19 @@ function detail(job) {
       ${job.department ? `<p class="summary"><b>部门：</b>${esc(job.department)}</p>` : ''}
       ${verdict}
       ${left || right ? `<div class="cols"><div>${left}</div><div>${right}</div></div>` : ''}
-      ${hits.length ? `<h4>规则分构成</h4><div class="hits">${hits.map((b) => {
-        const applied = b.applied ?? b.weight;
-        const scaled = b.factor !== undefined && b.factor !== 1 && b.weight > 0;
-        return `${esc(b.label)} <code>${applied > 0 ? '+' : ''}${applied}</code>${
-          scaled ? ` <span title="主题闸门">(${b.weight > 0 ? '+' : ''}${b.weight}×${b.factor})</span>` : ''
-        } — ${esc((b.hits || []).join(', '))}`;
-      }).join('<br>')}${
-        gate && gate.note ? `<br><span title="机构分不能压过课题相关度">闸门 — ${esc(gate.note)}</span>` : ''
-      }</div>` : ''}
+      ${hits.length ? `<h4>课题匹配构成 <i>满分 100，只看研究内容</i></h4><div class="hits">${
+        hits.map((b) => {
+          const applied = b.applied ?? b.weight;
+          const scaled = b.factor !== undefined && b.factor !== 1 && b.weight > 0;
+          return `${esc(b.label)} <code>${applied > 0 ? '+' : ''}${applied}</code>${
+            scaled ? ` <span title="命中位置决定吃到几成权重">(${b.weight}×${b.factor}${
+              b.note ? `，${esc(b.note)}` : ''})</span>` : ''
+          } — ${esc((b.hits || []).join(', '))}`;
+        }).join('<br>')
+      }</div>` : '<h4>课题匹配构成</h4><p class="summary">一个课题关键词都没命中。</p>'}
+      ${flags.length ? `<h4>上下文 <i>不计分</i></h4><div class="hits">${flags.map((f) => (
+        `${esc(f.name)} <code>0</code> — ${esc((f.hits || []).join(', '))}`
+      )).join('<br>')}</div>` : ''}
       <div class="actions">
         <a class="btn primary" href="${esc(job.url)}" target="_blank" rel="noreferrer">打开招聘广告 ↗</a>
         ${issueBtn}

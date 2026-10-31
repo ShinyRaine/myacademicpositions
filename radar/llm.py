@@ -67,7 +67,13 @@ candidate has, and let the reader judge the distance.
 SCORING
 
 fit is 0-10 for how well the candidate's actual research background matches the
-advert's actual topic. Be strict, and let the match points carry the number: if
+advert's actual topic, and nothing else. The university's standing, the city,
+the country, whether the candidate already knows the supervisor, the funding
+and the contract length do not enter it: if one of those is the only reason a
+number would be higher, it is not a reason. Mention them in prep or blockers
+if they matter practically, never in fit.
+
+Be strict, and let the match points carry the number: if
 why_match is empty, fit is at most 3; with one concrete match point, at most 6;
 8 or more requires the advert's core topic to be something the candidate has
 already worked on. A generic "PhD in computer science" advert with no robotics
