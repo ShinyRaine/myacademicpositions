@@ -1,4 +1,12 @@
 {
- "decisions": {},
- "generated_at": "2026-10-31T18:00:14+00:00"
+ "decisions": {
+  "ap:252189": {
+   "decision": "apply",
+   "issue": 1,
+   "issue_url": "https://github.com/ShinyRaine/myacademicpositions/issues/1",
+   "state": "open",
+   "updated_at": "2026-10-31T18:34:00Z"
+  }
+ },
+ "generated_at": "2026-10-31T18:34:10+00:00"
 }
