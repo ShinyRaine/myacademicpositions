@@ -7,7 +7,7 @@
   "tier_D": 309,
   "urgent": 99
  },
- "generated_at": "2026-11-03T14:08:53+00:00",
+ "generated_at": "2026-11-03T20:58:03+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -6587,6 +6587,44 @@
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-position-evaluating-novel-mineral-sources-for-treatment-of-micronutrient-deficiencies-in-humans/244092"
   },
   {
+   "breakdown": [],
+   "city": "Zurich",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": 105,
+   "deadline": "2027-02-16T22:59:59+00:00",
+   "department": "",
+   "employer": "Life Science Zurich Graduate School",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-03T14:08:09+00:00",
+   "flags": [
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:244811",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-02T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Over 100 fully funded life sciences PhD positions in Zurich; 17 programs, English-taught (4 years). Master’s required. Cutting-edge research in ~500 groups with mentoring and SNSF salary.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "International Fully Funded PhD Positions in the Life Sciences in Switzerland",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/life-science-zurich-graduate-school-1/2026/international-fully-funded-phd-positions-in-the-life-sciences-in-switzerland/244811"
+  },
+  {
    "breakdown": [
     {
      "applied": 3.0,
@@ -9910,7 +9948,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 13,
+   "days_left": 12,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -11854,7 +11892,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 47,
+   "days_left": 46,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -13383,6 +13421,57 @@
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-magnetic-resonance-applications-in-porous-media/254622"
   },
   {
+   "breakdown": [
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "architecture"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Grenoble",
+   "contact": "",
+   "country": "France",
+   "days_left": 116,
+   "deadline": "2027-02-28T12:00:59+00:00",
+   "department": "",
+   "employer": "Université Grenoble Alpes",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-03T14:08:21+00:00",
+   "flags": [],
+   "id": "ap:254635",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-02T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD: study drying dynamics in hydrogel foams to program cellular architectures. Experimental soft-matter (microfluidics, rheology, imaging); Grenoble + Amsterdam secondment.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "MSCA COFUND PhD@Tec21 - PhD position in Soft Matter From Soft Cells to Solid Cellular Matter: Programming Structure via Drying Dynamics",
+   "topic_score": 1,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/universite-grenoble-alpes/2026/msca-cofund-phd-at-tec21-phd-position-in-soft-matter-from-soft-cells-to-solid-cellular-matter-programming-structure-via-drying-dynamics/254635"
+  },
+  {
    "also_posted_as": [
     {
      "id": "ap:254627",
@@ -13917,95 +14006,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-neuchatel/2026/assistant-e-doctorant-e-75/254715"
-  },
-  {
-   "breakdown": [],
-   "city": "Zurich",
-   "contact": "",
-   "country": "Switzerland",
-   "days_left": 105,
-   "deadline": "2027-02-16T22:59:59+00:00",
-   "department": "",
-   "employer": "Life Science Zurich Graduate School",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-03T14:08:09+00:00",
-   "flags": [
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:244811",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-02T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "Over 100 fully funded life sciences PhD positions in Zurich; 17 programs, English-taught (4 years). Master’s required. Cutting-edge research in ~500 groups with mentoring and SNSF salary.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "International Fully Funded PhD Positions in the Life Sciences in Switzerland",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/life-science-zurich-graduate-school-1/2026/international-fully-funded-phd-positions-in-the-life-sciences-in-switzerland/244811"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": 0.6,
-     "factor": 0.15,
-     "hits": [
-      "industrial"
-     ],
-     "kind": "topic",
-     "label": "weak",
-     "note": "正文仅 1 次",
-     "weight": 4,
-     "where": "body"
-    },
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "architecture"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Grenoble",
-   "contact": "",
-   "country": "France",
-   "days_left": 116,
-   "deadline": "2027-02-28T12:00:59+00:00",
-   "department": "",
-   "employer": "Université Grenoble Alpes",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-03T14:08:21+00:00",
-   "flags": [],
-   "id": "ap:254635",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-02T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "PhD: study drying dynamics in hydrogel foams to program cellular architectures. Experimental soft-matter (microfluidics, rheology, imaging); Grenoble + Amsterdam secondment.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "MSCA COFUND PhD@Tec21 - PhD position in Soft Matter From Soft Cells to Solid Cellular Matter: Programming Structure via Drying Dynamics",
-   "topic_score": 1,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/universite-grenoble-alpes/2026/msca-cofund-phd-at-tec21-phd-position-in-soft-matter-from-soft-cells-to-solid-cellular-matter-programming-structure-via-drying-dynamics/254635"
   },
   {
    "breakdown": [],
