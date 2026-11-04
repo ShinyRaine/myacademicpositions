@@ -6828,10 +6828,45 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/postdoctoral-researcher-photonics-for-tissue-characterisation-biomedical-engineer-in-pathology/254445"
  },
+ "ap:254446": {
+  "first_seen": "2026-11-04T14:28:22+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-mathematics-and-applications/254446"
+ },
  "ap:254447": {
   "first_seen": "2026-10-30T11:12:44+00:00",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/university-of-oulu/2026/doctoral-researcher-in-anthropology-marie-curie-doctoral-network-mitime/254447"
+ },
+ "ap:254448": {
+  "first_seen": "2026-11-04T14:28:24+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-social-and-political-science/254448"
+ },
+ "ap:254449": {
+  "first_seen": "2026-11-04T14:28:26+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-computing-sciences-and-artificial-intelligence/254449"
+ },
+ "ap:254450": {
+  "first_seen": "2026-11-04T14:28:28+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-economics-and-finance/254450"
+ },
+ "ap:254451": {
+  "first_seen": "2026-11-04T14:28:30+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-business-administration-and-management/254451"
+ },
+ "ap:254452": {
+  "first_seen": "2026-11-04T14:28:32+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-legal-studies/254452"
+ },
+ "ap:254453": {
+  "first_seen": "2026-11-04T14:28:34+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-statistics-and-machine-learning/254453"
  },
  "ap:254454": {
   "first_seen": "2026-10-30T09:51:10+00:00",
@@ -8395,6 +8430,208 @@
   "first_seen": "2026-11-03T14:08:40+00:00",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/helmut-schmidt-university/2026/wissenschaftliche-mitarbeiterin-wissenschaftlicher-mitarbeiter-m-w-d-fakult-t-f-r-maschinenbau-und-bauingenieurwesen-professur-f-r-baubetrieb-und-bauma-nagement-von-gro-projekten/254742"
+ },
+ "ap:254743": {
+  "first_seen": "2026-11-04T14:28:35+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-3d-scene-reconstruction-and-multi-modal-sensing-for-digital-twins-of-stone-built-heritage/254743"
+ },
+ "ap:254744": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/researcher-in-development-of-brain-inspired-artificial-intelligence/254744"
+ },
+ "ap:254745": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/forskare-i-utveckling-av-hjarninspirerad-artificiell-intelligens/254745"
+ },
+ "ap:254746": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/postdoc-position-in-post-training-of-diffusion-language-models-prof-i-bogunovic/254746"
+ },
+ "ap:254747": {
+  "first_seen": "2026-11-04T14:28:37+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/phd-position-in-post-training-of-diffusion-language-models-prof-i-bogunovic/254747"
+ },
+ "ap:254748": {
+  "first_seen": "2026-11-04T14:28:39+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/3-phd-candidates-in-dynamics-on-and-of-random-graphs/254748"
+ },
+ "ap:254749": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/3-postdoc-in-dynamics-on-and-of-random-graphs/254749"
+ },
+ "ap:254750": {
+  "first_seen": "2026-11-04T14:28:41+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/erasmus-university-rotterdam/2026/fully-funded-phd-positions-in-business-and-management-at-rotterdam-school-of-management-erasmus-university-rsm/254750"
+ },
+ "ap:254751": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-bath/2026/professor-in-artificial-intelligence/254751"
+ },
+ "ap:254752": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/professor-in-onderwijskundig-onderzoek-naar-professionele-competenties-voor-ingenieurs/254752"
+ },
+ "ap:254753": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/professor-in-educational-research-on-professional-compentencies-in-engineering/254753"
+ },
+ "ap:254754": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-oulu/2026/project-researcher-in-genomics-of-endangered-plant-species/254754"
+ },
+ "ap:254755": {
+  "first_seen": "2026-11-04T14:28:42+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/the-cyprus-institute/2026/faculty-position-with-specialization-in-applications-of-artificial-intelligence-ai-and-machine-learning-ml-in-computational-science-and-technology/254755"
+ },
+ "ap:254756": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/post-doc-researcher-transparent-nigeria-30471/254756"
+ },
+ "ap:254757": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/post-doc-researcher-transparent-belgium-30470/254757"
+ },
+ "ap:254758": {
+  "first_seen": "2026-11-04T14:28:44+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/ultrasound-technology-and-microsystems-specialist/254758"
+ },
+ "ap:254759": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-rostock/2026/professorship-w2-in-turbomachinery/254759"
+ },
+ "ap:254760": {
+  "first_seen": "2026-11-04T14:28:46+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/studentische-assistenz-fur-daten-und-literaturrecherche-mwd/254760"
+ },
+ "ap:254761": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:management",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/rmit-international-university-vietnam-rmit-vietnam/2026/senior-program-manager-bachelor-of-design-digital-media/254761"
+ },
+ "ap:254762": {
+  "first_seen": "2026-11-04T14:28:48+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-macchine-e-sistemi-per-lenergia-e-lambiente-prof-renzi-massimiliano/254762"
+ },
+ "ap:254763": {
+  "first_seen": "2026-11-04T14:28:50+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-fluidtechnik-energiesysteme-und-energieerzeugung-prof-renzi-massimiliano/254763"
+ },
+ "ap:254764": {
+  "first_seen": "2026-11-04T14:28:51+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-fluid-machinery-energy-systems-and-power-generation-prof-renzi-massimiliano/254764"
+ },
+ "ap:254765": {
+  "first_seen": "2026-11-04T14:28:53+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-elettrotecnica-prof-munzenrieder-niko/254765"
+ },
+ "ap:254766": {
+  "first_seen": "2026-11-04T14:28:55+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-elektrotechnik-und-elektronik-prof-munzenrieder-niko/254766"
+ },
+ "ap:254767": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-electrical-engineering-prof-munzenrieder-niko/254767"
+ },
+ "ap:254768": {
+  "first_seen": "2026-11-04T14:28:57+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-tecnologie-e-sistemi-di-lavorazione-profssa-kerschbaumer-walburga/254768"
+ },
+ "ap:254769": {
+  "first_seen": "2026-11-04T14:28:59+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-produktionssysteme-und-technologien-prof-kerschbaumer-walburga/254769"
+ },
+ "ap:254770": {
+  "first_seen": "2026-11-04T14:29:01+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-manufacturing-technology-and-systems-prof-kerschbaumer-walburga/254770"
+ },
+ "ap:254771": {
+  "first_seen": "2026-11-04T14:29:03+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-informatica-prof-gamper-johann/254771"
+ },
+ "ap:254772": {
+  "first_seen": "2026-11-04T14:29:05+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-informatik-prof-gamper-johann/254772"
+ },
+ "ap:254773": {
+  "first_seen": "2026-11-04T14:29:06+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-informatics-prof-gamper-johann/254773"
+ },
+ "ap:254774": {
+  "first_seen": "2026-11-04T14:29:08+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/programmasecretaris-05-fte/254774"
+ },
+ "ap:254775": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/postdoctoral-scientist-in-interdiscipliary-floodplain-research-fmx-institute-of-zoology-general-ecology-research-group/254775"
+ },
+ "ap:254776": {
+  "first_seen": "2026-11-04T14:29:10+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/mohamed-bin-zayed-university-of-artificial-intelligence-mbzuai/2026/computing-and-mathematical-sciences-division-open-rank-faculty-positions-in-computer-vision/254776"
+ },
+ "ap:254777": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/tampere-university/2026/tenure-track-position-urban-planning-and-transitions/254777"
+ },
+ "ap:254778": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/tampere-university/2026/tenure-track-teht-v-yhdyskuntasuunnittelu/254778"
+ },
+ "ap:254779": {
+  "first_seen": "2026-11-04T14:28:20+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-rostock/2026/w2-professur-f-r-str-mungsmaschinen/254779"
  },
  "chalmers:14972": {
   "first_seen": "2026-10-30T11:15:13+00:00",
