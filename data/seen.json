@@ -8689,6 +8689,11 @@
   "source": "chalmers",
   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15087"
  },
+ "chalmers:15092": {
+  "first_seen": "2026-11-04T21:18:24+00:00",
+  "source": "chalmers",
+  "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15092"
+ },
  "chalmers:15094": {
   "first_seen": "2026-10-30T11:15:03+00:00",
   "skipped": "listed-type:postdoc",
@@ -8795,6 +8800,12 @@
   "source": "chalmers",
   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15156"
  },
+ "chalmers:15161": {
+  "first_seen": "2026-11-04T21:18:22+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "chalmers",
+  "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15161"
+ },
  "chalmers:15163": {
   "first_seen": "2026-10-30T11:15:03+00:00",
   "skipped": "listed-type:postdoc",
@@ -8805,6 +8816,12 @@
   "first_seen": "2026-10-30T11:15:04+00:00",
   "source": "chalmers",
   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15165"
+ },
+ "chalmers:15166": {
+  "first_seen": "2026-11-04T21:18:22+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "chalmers",
+  "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15166"
  },
  "kth:925980": {
   "first_seen": "2026-10-30T11:15:32+00:00",

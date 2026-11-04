@@ -1,13 +1,13 @@
 {
  "counts": {
-  "on_board": 321,
+  "on_board": 322,
   "tier_A": 0,
   "tier_B": 2,
-  "tier_C": 4,
+  "tier_C": 5,
   "tier_D": 315,
   "urgent": 98
  },
- "generated_at": "2026-11-04T14:29:26+00:00",
+ "generated_at": "2026-11-04T21:18:37+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -518,6 +518,80 @@
    "topic_score": 17,
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/university-of-leipzig/2026/phd-position-control-capacity-of-active-matter-using-activity-landscapes/254186"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 10.0,
+     "factor": 0.5,
+     "hits": [
+      "robotic",
+      "autonomous system"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "正文 2 种说法/共 3 次",
+     "weight": 20,
+     "where": "body"
+    },
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": 4.0,
+     "factor": 1.0,
+     "hits": [
+      "estimation"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "标题",
+     "weight": 4,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 57,
+   "deadline": "2026-12-31T23:59:59+00:00",
+   "department": "Mechanics and Maritime Sciences",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-04T21:18:24+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    }
+   ],
+   "id": "chalmers:15092",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 16,
+   "source": "chalmers",
+   "summary": "Are you curious about how we can squeeze every bit of efficiency out of vehicles and make transport more sustainable? Do you enjoy turning equations, data and code into real-world impact? Chalmers University of Technology is recruiting two doctoral students in vehicle energy estimation to do cutting-edge research at the intersection of engineering, data science, and uncertainty quantification. One position is in mechatronics, at the Department of Electrical Engineering. The other is in vehicle dynamics, at the Department of Mechanical Engineering.  You will join a large, friendly academic comm",
+   "tier": "C",
+   "tier_name": "擦边",
+   "title": "Doctoral students in vehicle energy estimation",
+   "topic_score": 16,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15092"
   },
   {
    "breakdown": [
@@ -1472,55 +1546,6 @@
      "where": "title"
     }
    ],
-   "city": "Basel",
-   "contact": "",
-   "country": "Switzerland",
-   "days_left": 24,
-   "deadline": "2026-11-28T22:59:59+00:00",
-   "department": "",
-   "employer": "University of Basel",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-31T12:22:51+00:00",
-   "flags": [
-    {
-     "hits": [
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254669",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-10-30T04:18:06+00:00",
-   "score": 10,
-   "source": "ap",
-   "summary": "4-year PhD (start Nov 2026): develop multimodal ML in Python (PyTorch/sklearn) on longitudinal infant lung, biomarker & exposure data; external validation.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD Position in Machine Learning for Preterm Lung Health (100%)",
-   "topic_score": 10,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/university-of-basel/2026/phd-position-in-machine-learning-for-preterm-lung-health-100/254669"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": 10.0,
-     "factor": 1.0,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "标题",
-     "weight": 10,
-     "where": "title"
-    }
-   ],
    "city": "Milan",
    "contact": "",
    "country": "Italy",
@@ -1556,6 +1581,55 @@
    "topic_score": 10,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-statistics-and-machine-learning/254453"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 10.0,
+     "factor": 1.0,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "标题",
+     "weight": 10,
+     "where": "title"
+    }
+   ],
+   "city": "Basel",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": 24,
+   "deadline": "2026-11-28T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Basel",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-10-31T12:22:51+00:00",
+   "flags": [
+    {
+     "hits": [
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254669",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-10-30T04:18:06+00:00",
+   "score": 10,
+   "source": "ap",
+   "summary": "4-year PhD (start Nov 2026): develop multimodal ML in Python (PyTorch/sklearn) on longitudinal infant lung, biomarker & exposure data; external validation.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD Position in Machine Learning for Preterm Lung Health (100%)",
+   "topic_score": 10,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-basel/2026/phd-position-in-machine-learning-for-preterm-lung-health-100/254669"
   },
   {
    "breakdown": [
@@ -4636,6 +4710,69 @@
   {
    "breakdown": [
     {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "optimization"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Milan",
+   "contact": "",
+   "country": "Italy",
+   "days_left": 75,
+   "deadline": "2027-01-18T22:59:59+00:00",
+   "department": "",
+   "employer": "Bocconi University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-04T14:28:22+00:00",
+   "flags": [
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254446",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-03T07:00:00+00:00",
+   "score": 2,
+   "source": "ap",
+   "summary": "4-year English PhD: cutting-edge Mathematical Analysis + electives (econ/finance/ML). 4 fully funded fellowships €27k/yr for 4 years, no tuition. MSc + B2 English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Mathematics and Applications",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-mathematics-and-applications/254446"
+  },
+  {
+   "breakdown": [
+    {
      "applied": 2.0,
      "factor": 0.5,
      "hits": [
@@ -4769,69 +4906,6 @@
    "topic_score": 2,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/universite-grenoble-alpes/2026/msca-cofund-phd-at-tec21-phd-position-in-wood-science-max-wood-multiscale-analysis-by-x-ray-tomography-of-wood-densification/254623"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": 1.5,
-     "factor": 0.15,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "正文仅 1 次",
-     "weight": 10,
-     "where": "body"
-    },
-    {
-     "applied": 0.6,
-     "factor": 0.15,
-     "hits": [
-      "optimization"
-     ],
-     "kind": "topic",
-     "label": "weak",
-     "note": "正文仅 1 次",
-     "weight": 4,
-     "where": "body"
-    }
-   ],
-   "city": "Milan",
-   "contact": "",
-   "country": "Italy",
-   "days_left": 75,
-   "deadline": "2027-01-18T22:59:59+00:00",
-   "department": "",
-   "employer": "Bocconi University",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-04T14:28:22+00:00",
-   "flags": [
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254446",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-03T07:00:00+00:00",
-   "score": 2,
-   "source": "ap",
-   "summary": "4-year English PhD: cutting-edge Mathematical Analysis + electives (econ/finance/ML). 4 fully funded fellowships €27k/yr for 4 years, no tuition. MSc + B2 English.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD in Mathematics and Applications",
-   "topic_score": 2,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-mathematics-and-applications/254446"
   },
   {
    "breakdown": [
@@ -10109,7 +10183,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 12,
+   "days_left": 11,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -12053,7 +12127,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 46,
+   "days_left": 45,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -12768,6 +12842,191 @@
    "topic_score": 0,
    "urgent": true,
    "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/phd-position-in-development-and-implementation-of-advanced-hiv-1-reservoir-diagnostics-for-a-biomedical-laboratory-scientist/254442"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "sociolog",
+      "political science"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Milan",
+   "contact": "",
+   "country": "Italy",
+   "days_left": 75,
+   "deadline": "2027-01-18T22:59:59+00:00",
+   "department": "",
+   "employer": "Bocconi University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-04T14:28:24+00:00",
+   "flags": [
+    {
+     "hits": [
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254448",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-03T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "4-year full-time PhD: political economy, political science, demography, public management/administration or sociology. Up to 6 fellowships (€27k/yr). Grad degree + B2 English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Social and Political Science",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-social-and-political-science/254448"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "accounting"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Milan",
+   "contact": "",
+   "country": "Italy",
+   "days_left": 75,
+   "deadline": "2027-01-18T22:59:59+00:00",
+   "department": "",
+   "employer": "Bocconi University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-04T14:28:28+00:00",
+   "flags": [
+    {
+     "hits": [
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254450",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-03T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "4-year full-time PhD with tracks in Economics, Finance & Accounting; core+electives, research papers and thesis. Up to 17 fellowships (€27k/yr) + tuition waiver. B2 English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Economics and Finance",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-economics-and-finance/254450"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "marketing"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Milan",
+   "contact": "",
+   "country": "Italy",
+   "days_left": 75,
+   "deadline": "2027-01-18T22:59:59+00:00",
+   "department": "",
+   "employer": "Bocconi University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-04T14:28:30+00:00",
+   "flags": [
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254451",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-03T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "4-year full-time PhD in Management/Marketing; cutting-edge research training. Up to 10 funded fellowships (€27k/yr, tuition waived) + 2 fee-paying places. Requires grad degree & B2 English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Business Administration and Management",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-business-administration-and-management/254451"
+  },
+  {
+   "breakdown": [],
+   "city": "Milan",
+   "contact": "",
+   "country": "Italy",
+   "days_left": 75,
+   "deadline": "2027-01-18T22:59:59+00:00",
+   "department": "",
+   "employer": "Bocconi University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-04T14:28:32+00:00",
+   "flags": [
+    {
+     "hits": [
+      "fully funded"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254452",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-03T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "8 fully funded PhD fellowships in Legal Studies (€27k/yr for 3 years, no tuition). Research in Intl/European Law or Business/Social Law. B2 English required.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Legal Studies",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-legal-studies/254452"
   },
   {
    "breakdown": [
@@ -14325,191 +14584,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/helmut-schmidt-university/2026/wissenschaftliche-mitarbeiterin-wissenschaftlicher-mitarbeiter-m-w-d-fakult-t-f-r-maschinenbau-und-bauingenieurwesen-professur-f-r-baubetrieb-und-bauma-nagement-von-gro-projekten/254742"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "sociolog",
-      "political science"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Milan",
-   "contact": "",
-   "country": "Italy",
-   "days_left": 75,
-   "deadline": "2027-01-18T22:59:59+00:00",
-   "department": "",
-   "employer": "Bocconi University",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-04T14:28:24+00:00",
-   "flags": [
-    {
-     "hits": [
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254448",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-03T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "4-year full-time PhD: political economy, political science, demography, public management/administration or sociology. Up to 6 fellowships (€27k/yr). Grad degree + B2 English.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD in Social and Political Science",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-social-and-political-science/254448"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "accounting"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Milan",
-   "contact": "",
-   "country": "Italy",
-   "days_left": 75,
-   "deadline": "2027-01-18T22:59:59+00:00",
-   "department": "",
-   "employer": "Bocconi University",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-04T14:28:28+00:00",
-   "flags": [
-    {
-     "hits": [
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254450",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-03T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "4-year full-time PhD with tracks in Economics, Finance & Accounting; core+electives, research papers and thesis. Up to 17 fellowships (€27k/yr) + tuition waiver. B2 English.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD in Economics and Finance",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-economics-and-finance/254450"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "marketing"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Milan",
-   "contact": "",
-   "country": "Italy",
-   "days_left": 75,
-   "deadline": "2027-01-18T22:59:59+00:00",
-   "department": "",
-   "employer": "Bocconi University",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-04T14:28:30+00:00",
-   "flags": [
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254451",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-03T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "4-year full-time PhD in Management/Marketing; cutting-edge research training. Up to 10 funded fellowships (€27k/yr, tuition waived) + 2 fee-paying places. Requires grad degree & B2 English.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD in Business Administration and Management",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-business-administration-and-management/254451"
-  },
-  {
-   "breakdown": [],
-   "city": "Milan",
-   "contact": "",
-   "country": "Italy",
-   "days_left": 75,
-   "deadline": "2027-01-18T22:59:59+00:00",
-   "department": "",
-   "employer": "Bocconi University",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-04T14:28:32+00:00",
-   "flags": [
-    {
-     "hits": [
-      "fully funded"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254452",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-03T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "8 fully funded PhD fellowships in Legal Studies (€27k/yr for 3 years, no tuition). Research in Intl/European Law or Business/Social Law. B2 English required.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD in Legal Studies",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/bocconi-university/2026/phd-in-legal-studies/254452"
   },
   {
    "breakdown": [
