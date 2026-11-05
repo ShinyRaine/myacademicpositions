@@ -483,6 +483,11 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/cologne-graduate-school-ageing-research-cga/2026/12-fully-funded-phd-positions/250003"
  },
+ "ap:250004": {
+  "first_seen": "2026-11-05T14:36:04+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/cologne-graduate-school-ageing-research-cga/2026/upcoming-phd-positions-at-the-cga/250004"
+ },
  "ap:250015": {
   "first_seen": "2026-10-30T10:56:00+00:00",
   "source": "ap",
@@ -8633,6 +8638,370 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/university-of-rostock/2026/w2-professur-f-r-str-mungsmaschinen/254779"
  },
+ "ap:254780": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoctoral-researcher-in-environmental-and-energy-systems-specialised-in-systems-analysis-and-sustainable-development-of-fibre-based-products/254780"
+ },
+ "ap:254781": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoctoral-researcher-in-chemical-engineering-specialised-in-experimental-research-on-pulp-paper-and-cellulose-based-material/254781"
+ },
+ "ap:254782": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoctoral-researcher-in-environmental-and-energy-systems-specialised-in-modelling-and-material-characterisation-in-the-field-of-pulp-and-paper-technology/254782"
+ },
+ "ap:254783": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoctoral-researcher-in-chemistry-specialised-in-separation-and-process-modelling/254783"
+ },
+ "ap:254784": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoktor-i-miljo-och-energisystem-inriktning-pa-systemanalys-och-hallbar-utveckling-av-fiberbaserade-produkter/254784"
+ },
+ "ap:254785": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoktor-i-kemiteknik-inriktning-pa-experimentell-forskning-inom-massa-papper-och-cellulosabaserade-material/254785"
+ },
+ "ap:254786": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoktor-i-miljo-och-energisystem-inriktning-pa-modellering-och-materialkarakterisering-inom-massa-och-pappersteknik/254786"
+ },
+ "ap:254787": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karlstad-university/2026/postdoktor-i-kemi-med-inriktning-pa-separation-och-processmodellering/254787"
+ },
+ "ap:254788": {
+  "first_seen": "2026-11-05T14:36:07+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/adviseur-verzuim-en-inzetbaarheid/254788"
+ },
+ "ap:254789": {
+  "first_seen": "2026-11-05T14:36:09+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/2-wissenschaftliche-mitarbeiterinnen-wmd-wiss2610-09-institut-fur-mathematikdidaktik-mathematisch-naturwissenschaftliche-fakultat/254789"
+ },
+ "ap:254790": {
+  "first_seen": "2026-11-05T14:36:11+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/post-doctoral-position-in-machine-learning-for-engineering-design/254790"
+ },
+ "ap:254791": {
+  "first_seen": "2026-11-05T14:36:13+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-sistemi-di-elaborazione-delle-informazioni-prof-haller-michael/254791"
+ },
+ "ap:254792": {
+  "first_seen": "2026-11-05T14:36:15+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-datenverarbeitungssysteme-prof-haller-michael/254792"
+ },
+ "ap:254793": {
+  "first_seen": "2026-11-05T14:36:17+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-information-processing-systems-prof-haller-michael/254793"
+ },
+ "ap:254794": {
+  "first_seen": "2026-11-05T14:36:19+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/environmental-and-circularity-modelling-methods-for-sustainable-business-models/254794"
+ },
+ "ap:254795": {
+  "first_seen": "2026-11-05T14:36:21+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/praktijkassistent-10/254795"
+ },
+ "ap:254796": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/sron-netherlands-institute-for-space-research/2026/system-engineer-work-package-manager/254796"
+ },
+ "ap:254797": {
+  "first_seen": "2026-11-05T14:36:22+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ifremer-french-research-institute-for-exploitation-of-the-sea/2026/thesis-early-detection-of-toxic-microalgae-in-coastal-waters-validation-of-a-new-rt-ddlamp-biosensor-h-f/254797"
+ },
+ "ap:254798": {
+  "first_seen": "2026-11-05T14:36:24+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ifremer-french-research-institute-for-exploitation-of-the-sea/2026/th-se-validation-dun-nouveau-capteur-de-terrain-bas-sur-la-rt-ddlamp-pour-la-d-tection-pr-coce-des-microalgues-toxiques-en-milieu-c-tier-h-f/254798"
+ },
+ "ap:254799": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/senior-process-engineer-dry-etch/254799"
+ },
+ "ap:254800": {
+  "first_seen": "2026-11-05T14:36:26+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-contratto-di-ricerca-ingegneria-economico-gestionale-prof-orzes-guido/254800"
+ },
+ "ap:254801": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/research-contract-holders-business-and-management-engineering-prof-orzes-guido/254801"
+ },
+ "ap:254802": {
+  "first_seen": "2026-11-05T14:36:28+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-forschungsvertragen-wirtschaftsingenieurwesen-prof-orzes-guido/254802"
+ },
+ "ap:254803": {
+  "first_seen": "2026-11-05T14:36:30+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-contratto-di-ricerca-sistemi-di-elaborazione-delle-informazioni-prof-lanti-davide/254803"
+ },
+ "ap:254804": {
+  "first_seen": "2026-11-05T14:36:31+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-forschungsvertragen-datenverarbeitungssysteme-prof-lanti-davide/254804"
+ },
+ "ap:254805": {
+  "first_seen": "2026-11-05T14:36:33+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/research-contract-holders-information-processing-systems-prof-lanti-davide/254805"
+ },
+ "ap:254806": {
+  "first_seen": "2026-11-05T14:36:35+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-contratto-di-ricerca-scienze-e-tecnologie-alimentari-profssa-ferrentino-giovanna/254806"
+ },
+ "ap:254807": {
+  "first_seen": "2026-11-05T14:36:37+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-forschungsvertragen-lebensmittelwissenschaft-und-technologie-prof-ferrentino-giovanna/254807"
+ },
+ "ap:254808": {
+  "first_seen": "2026-11-05T14:36:39+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/research-contract-holders-food-science-and-technology-prof-ferrentino-giovanna/254808"
+ },
+ "ap:254809": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-incarico-post-doc-automatica-profssa-peer-angelika/254809"
+ },
+ "ap:254810": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-post-doc-auftragen-system-und-steuerungstechnik-prof-peer-angelika/254810"
+ },
+ "ap:254811": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/post-doc-assignment-holders-systems-and-control-engineering-prof-peer-angelika/254811"
+ },
+ "ap:254812": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-incarico-post-doc-analisi-numerica-prof-carpentieri-bruno/254812"
+ },
+ "ap:254813": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-post-doc-auftragen-numerische-analysis-prof-carpentieri-bruno/254813"
+ },
+ "ap:254814": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/post-doc-assignment-holders-numerical-analysis-prof-carpentieri-bruno/254814"
+ },
+ "ap:254815": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-incarico-post-doc-fisica-tecnica-e-ingegneria-nucleare-prof-patuzzi-francesco/254815"
+ },
+ "ap:254816": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-post-doc-auftragen-technische-physik-und-umweltphysik-nukleartechnik-prof-patuzzi-francesco/254816"
+ },
+ "ap:254817": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/post-doc-assignment-holders-thermal-sciences-energy-technology-building-physics-and-nuclear-engineering-prof-patuzzi-francesco/254817"
+ },
+ "ap:254818": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/titolari-di-incarico-post-doc-sistemi-di-elaborazione-delle-informazioni-prof-maggi-fabrizio-maria/254818"
+ },
+ "ap:254819": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/inhaber-und-inhaberinnen-von-post-doc-auftragen-datenverarbeitungssysteme-prof-maggi-fabrizio-maria/254819"
+ },
+ "ap:254820": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/post-doc-assignment-holders-information-processing-systems-prof-maggi-fabrizio-maria/254820"
+ },
+ "ap:254821": {
+  "first_seen": "2026-11-05T14:36:40+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ilmenau-university-of-technology/2026/wissenschaftliche-r-mitarbeiter-in-w-m-d/254821"
+ },
+ "ap:254822": {
+  "first_seen": "2026-11-05T14:36:42+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-turku/2026/doctoral-researcher-position-in-msca-doctoral-network/254822"
+ },
+ "ap:254823": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/swiss-federal-institute-for-forest-snow-and-landscape-research-wsl/2026/postdoc-in-optical-and-microwave-remote-sensing-of-forest-water-dynamics-80-100-fmd/254823"
+ },
+ "ap:254824": {
+  "first_seen": "2026-11-05T14:36:44+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ilmenau-university-of-technology/2026/doktorand-in-w-m-d/254824"
+ },
+ "ap:254825": {
+  "first_seen": "2026-11-05T14:36:45+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/principal-eda-software-architect/254825"
+ },
+ "ap:254826": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/swps-university/2026/post-doc-psychology/254826"
+ },
+ "ap:254827": {
+  "first_seen": "2026-11-05T14:36:47+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-liege/2026/full-time-academic-position-f-m-x-faculty-of-veterinary-medicine-field-microbiology-and-food-hygiene/254827"
+ },
+ "ap:254828": {
+  "first_seen": "2026-11-05T14:36:49+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-liege/2026/permanent-full-time-scientific-position-faculty-of-veterinary-medicine-field-ruminant-theriogenology/254828"
+ },
+ "ap:254829": {
+  "first_seen": "2026-11-05T14:36:50+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-liege/2026/full-time-academic-position-faculty-of-veterinary-medicine-field-chemical-and-physical-food-safety/254829"
+ },
+ "ap:254830": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/vtt/2026/research-scientist-finite-element-modelling/254830"
+ },
+ "ap:254831": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/researcher-biostatistics-data-analysis-30484/254831"
+ },
+ "ap:254832": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/staff-scientist-in-quantum-cryogenic-rf-measurements/254832"
+ },
+ "ap:254833": {
+  "first_seen": "2026-11-05T14:36:52+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/tutkimusinsinoori-kvantti-ja-kryogeeniset-rf-mittaukset/254833"
+ },
+ "ap:254835": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/commercial-manager-offshore-coastal-engineering-30469/254835"
+ },
+ "ap:254836": {
+  "first_seen": "2026-11-05T14:36:54+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/radboud-university/2026/phd-position-movement-ecology/254836"
+ },
+ "ap:254837": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/full-or-associate-professor-in-finance-private-assets/254837"
+ },
+ "ap:254838": {
+  "first_seen": "2026-11-05T14:36:56+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-neuroscience-systems-biology/254838"
+ },
+ "ap:254839": {
+  "first_seen": "2026-11-05T14:36:57+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universitat-hamburg/2026/research-associate-for-the-project-bass-sub-project-2-2-impact-of-surfactants-on-wave-fields-and-fluxes-under-varying-boundary-conditions-28-subsection-3-hmbhg/254839"
+ },
+ "ap:254840": {
+  "first_seen": "2026-11-05T14:36:59+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/swps-university/2026/research-and-technical-assistant-social-sciences/254840"
+ },
+ "ap:254842": {
+  "first_seen": "2026-11-05T14:37:01+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/wissenschaftliche-assistenz-lehre-entwurf-und-digitales-entwerfen-mwd/254842"
+ },
+ "ap:254849": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/assistant-professor-in-finance-sustainable-finance/254849"
+ },
+ "ap:254850": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/assistant-professor-in-finance-private-assets/254850"
+ },
+ "ap:254855": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-in-metasurfaces-and-optical-manipulation/254855"
+ },
+ "ap:254856": {
+  "first_seen": "2026-11-05T14:36:02+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-in-quantum-information-theory/254856"
+ },
+ "ap:254857": {
+  "first_seen": "2026-11-05T14:37:02+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-students-in-vehicle-energy-estimation/254857"
+ },
  "chalmers:14972": {
   "first_seen": "2026-10-30T11:15:13+00:00",
   "source": "chalmers",
@@ -8851,6 +9220,12 @@
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/967857?l=en"
  },
+ "kth:969098": {
+  "first_seen": "2026-11-05T14:37:07+00:00",
+  "skipped": "listed-type:professor",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/969098?l=en"
+ },
  "kth:970092": {
   "first_seen": "2026-10-30T11:15:36+00:00",
   "source": "kth",
@@ -8902,11 +9277,51 @@
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/978110?l=en"
  },
+ "kth:978622": {
+  "first_seen": "2026-11-05T14:37:25+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/978622?l=en"
+ },
+ "kth:978857": {
+  "first_seen": "2026-11-05T14:37:23+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/978857?l=en"
+ },
+ "kth:979760": {
+  "first_seen": "2026-11-05T14:37:13+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/979760?l=en"
+ },
+ "kth:979786": {
+  "first_seen": "2026-11-05T14:37:15+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/979786?l=en"
+ },
+ "kth:980203": {
+  "first_seen": "2026-11-05T14:37:11+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/980203?l=en"
+ },
+ "kth:980433": {
+  "first_seen": "2026-11-05T14:37:17+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/980433?l=en"
+ },
  "kth:980986": {
   "first_seen": "2026-10-30T11:15:32+00:00",
   "skipped": "listed-type:postdoc",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/980986?l=en"
+ },
+ "kth:981025": {
+  "first_seen": "2026-11-05T14:37:19+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/981025?l=en"
+ },
+ "kth:981104": {
+  "first_seen": "2026-11-05T14:37:08+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/981104?l=en"
  },
  "kth:981265": {
   "first_seen": "2026-10-30T11:15:32+00:00",
@@ -8924,6 +9339,16 @@
   "first_seen": "2026-10-30T11:15:33+00:00",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/981782?l=en"
+ },
+ "kth:982854": {
+  "first_seen": "2026-11-05T14:37:31+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/982854?l=en"
+ },
+ "kth:982870": {
+  "first_seen": "2026-11-05T14:37:27+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/982870?l=en"
  },
  "kth:982960": {
   "first_seen": "2026-10-30T11:15:32+00:00",
@@ -8955,6 +9380,11 @@
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/984227?l=en"
  },
+ "kth:984498": {
+  "first_seen": "2026-11-05T14:37:21+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/984498?l=en"
+ },
  "kth:984656": {
   "first_seen": "2026-10-30T11:15:32+00:00",
   "skipped": "listed-type:postdoc",
@@ -8971,5 +9401,16 @@
   "first_seen": "2026-10-30T11:15:39+00:00",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/985017?l=en"
+ },
+ "kth:985374": {
+  "first_seen": "2026-11-05T14:37:29+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/985374?l=en"
+ },
+ "kth:987236": {
+  "first_seen": "2026-11-05T14:37:07+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/987236?l=en"
  }
 }
