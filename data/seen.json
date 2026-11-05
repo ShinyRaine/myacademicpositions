@@ -9412,5 +9412,11 @@
   "skipped": "listed-type:researcher",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/987236?l=en"
+ },
+ "kth:987716": {
+  "first_seen": "2026-11-05T21:28:08+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/987716?l=en"
  }
 }

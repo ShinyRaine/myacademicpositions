@@ -7,7 +7,7 @@
   "tier_D": 328,
   "urgent": 98
  },
- "generated_at": "2026-11-05T14:37:42+00:00",
+ "generated_at": "2026-11-05T21:28:18+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -7690,6 +7690,33 @@
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-economics/249756"
   },
   {
+   "breakdown": [],
+   "city": "Cologne",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 223,
+   "deadline": "2027-06-16T21:59:59+00:00",
+   "department": "",
+   "employer": "Cologne Graduate School of Ageing Research (CGA)",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-05T14:36:04+00:00",
+   "flags": [],
+   "id": "ap:250004",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-04T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD opportunities in ageing research in Cologne: 3+ year funded contract (TV-L E13 65%), English programme, mentoring/courses, travel grants. MSc in life sciences + C1 English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Upcoming PhD positions at the CGA",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/cologne-graduate-school-ageing-research-cga/2026/upcoming-phd-positions-at-the-cga/250004"
+  },
+  {
    "also_listed_on": [
     {
      "id": "ap:250348",
@@ -10507,7 +10534,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 11,
+   "days_left": 10,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -12400,7 +12427,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 45,
+   "days_left": 44,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -14925,33 +14952,6 @@
    "city": "Cologne",
    "contact": "",
    "country": "Germany",
-   "days_left": 223,
-   "deadline": "2027-06-16T21:59:59+00:00",
-   "department": "",
-   "employer": "Cologne Graduate School of Ageing Research (CGA)",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-05T14:36:04+00:00",
-   "flags": [],
-   "id": "ap:250004",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-04T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "PhD opportunities in ageing research in Cologne: 3+ year funded contract (TV-L E13 65%), English programme, mentoring/courses, travel grants. MSc in life sciences + C1 English.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Upcoming PhD positions at the CGA",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/cologne-graduate-school-ageing-research-cga/2026/upcoming-phd-positions-at-the-cga/250004"
-  },
-  {
-   "breakdown": [],
-   "city": "Cologne",
-   "contact": "",
-   "country": "Germany",
    "days_left": 17,
    "deadline": "2026-11-22T22:59:59+00:00",
    "department": "",
@@ -15126,52 +15126,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/wissenschaftliche-assistenz-lehre-entwurf-und-digitales-entwerfen-mwd/254842"
-  },
-  {
-   "breakdown": [],
-   "city": "Stockholm",
-   "contact": "Carlota Canalias Gomez ccg@kth.se Michael Fokine fokine@kth.se Cecilia Williams cwil@kth.se",
-   "country": "Sweden",
-   "days_left": 14,
-   "deadline": "2026-11-19T23:59:59+00:00",
-   "department": "PA-2026-3677",
-   "employer": "KTH Royal Institute of Technology",
-   "employment_type": "Temporary position",
-   "expired": false,
-   "first_seen": "2026-11-05T14:37:08+00:00",
-   "flags": [
-    {
-     "hits": [
-      "kth",
-      "royal institute of technology"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "four-year",
-      "employed as a doctoral student"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "kth:981104",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-05T23:59:59+00:00",
-   "score": 0,
-   "source": "kth",
-   "summary": "Project description Third-cycle subject: Applied Physics or Biotechnology Hormones shape metabolism, fertility, mood and sleep, yet they are rarely measured, and then mostly by blood tests in a clinic. In the Hormones Project, funded by KTH InspireLab, we are developing an affordable optical system that measures six hormones in urine, at home, every day. As a doctoral student you will work at the border between biophysics and biotechnology: you will prepare and characterise urine samples, validate against established laboratory methods, and design and test the detection system.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in hormone sensing between biophysics and biotechnology",
-   "topic_score": 0,
-   "urgent": true,
-   "url": "https://www.kth.se/lediga-jobb/981104?l=en"
   },
   {
    "breakdown": [],
@@ -15364,6 +15318,52 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://www.kth.se/lediga-jobb/981025?l=en"
+  },
+  {
+   "breakdown": [],
+   "city": "Stockholm",
+   "contact": "Carlota Canalias Gomez ccg@kth.se Michael Fokine fokine@kth.se Cecilia Williams cwil@kth.se",
+   "country": "Sweden",
+   "days_left": 14,
+   "deadline": "2026-11-19T23:59:59+00:00",
+   "department": "PA-2026-3677",
+   "employer": "KTH Royal Institute of Technology",
+   "employment_type": "Temporary position",
+   "expired": false,
+   "first_seen": "2026-11-05T14:37:08+00:00",
+   "flags": [
+    {
+     "hits": [
+      "kth",
+      "royal institute of technology"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "four-year",
+      "employed as a doctoral student"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "kth:981104",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-05T23:59:59+00:00",
+   "score": 0,
+   "source": "kth",
+   "summary": "Project description Third-cycle subject: Applied Physics or Biotechnology Hormones shape metabolism, fertility, mood and sleep, yet they are rarely measured, and then mostly by blood tests in a clinic. In the Hormones Project, funded by KTH InspireLab, we are developing an affordable optical system that measures six hormones in urine, at home, every day. As a doctoral student you will work at the border between biophysics and biotechnology: you will prepare and characterise urine samples, validate against established laboratory methods, and design and test the detection system.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in hormone sensing between biophysics and biotechnology",
+   "topic_score": 0,
+   "urgent": true,
+   "url": "https://www.kth.se/lediga-jobb/981104?l=en"
   },
   {
    "breakdown": [],
