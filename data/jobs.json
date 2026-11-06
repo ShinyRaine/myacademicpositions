@@ -7,7 +7,7 @@
   "tier_D": 338,
   "urgent": 98
  },
- "generated_at": "2026-11-06T14:15:50+00:00",
+ "generated_at": "2026-11-06T20:52:39+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -8051,6 +8051,33 @@
    "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-positions-in-finance/243620"
   },
   {
+   "breakdown": [],
+   "city": "Kristiansand",
+   "contact": "",
+   "country": "Norway",
+   "days_left": 3,
+   "deadline": "2026-11-09T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Agder (UiA)",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-06T14:13:32+00:00",
+   "flags": [],
+   "id": "ap:243743",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-01-23T16:01:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD fellowship researching Norwegian professional language use in the workplace. Requires relevant master's, B2-level Norwegian/Scandinavian, and English skills. Project proposal required.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD Research Fellow in Norwegian professional language use in the workplace",
+   "topic_score": 0,
+   "urgent": true,
+   "url": "https://en.academicpositions.se/ad/university-of-agder-uia/2026/phd-research-fellow-in-norwegian-professional-language-use-in-the-workplace/243743"
+  },
+  {
    "breakdown": [
     {
      "applied": -30,
@@ -11213,7 +11240,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 10,
+   "days_left": 9,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -13070,7 +13097,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 44,
+   "days_left": 43,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -15737,112 +15764,6 @@
   {
    "also_listed_on": [
     {
-     "id": "ap:254867",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-on-calculations-of-flow-through-hydro-dam-bottom-outlets/254867"
-    }
-   ],
-   "breakdown": [],
-   "city": "Stockholm",
-   "contact": "Anders Ansell anders.ansell@byv.kth.se",
-   "country": "Sweden",
-   "days_left": 20,
-   "deadline": "2026-11-26T23:59:59+00:00",
-   "department": "PA-2026-3532",
-   "employer": "KTH Royal Institute of Technology",
-   "employment_type": "Temporary position",
-   "expired": false,
-   "first_seen": "2026-11-05T14:37:13+00:00",
-   "flags": [
-    {
-     "hits": [
-      "kth",
-      "royal institute of technology"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "four-year",
-      "employed as a doctoral student"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "kth:979760",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-05T23:59:59+00:00",
-   "score": 0,
-   "source": "kth",
-   "summary": "Project description Third-cycle subject: Civil and Architectural Engineering The division for Concrete Structures at KTH Civil and Architectural Engineering is in search for a doctoral student to be assigned a project on hydraulic design of structures within hydropower. Many dam facilities have been rebuilt or are to be upgraded to achieve a higher level of safety. A bottom outlet is a critical structure from both a dam safety and operational point of view. Emergency lowering of a reservoir's water level is entirely dependent on it and the outlet can also be used in the event of a spillway ove",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student on calculations of flow through hydro dam bottom outlets",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://www.kth.se/lediga-jobb/979760?l=en"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:254866",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-on-structural-rehabilitation-of-concrete-hydro-dams/254866"
-    }
-   ],
-   "breakdown": [],
-   "city": "Stockholm",
-   "contact": "Anders Ansell anders.ansell@byv.kth.se",
-   "country": "Sweden",
-   "days_left": 20,
-   "deadline": "2026-11-26T23:59:59+00:00",
-   "department": "PA-2026-3533",
-   "employer": "KTH Royal Institute of Technology",
-   "employment_type": "Temporary position",
-   "expired": false,
-   "first_seen": "2026-11-05T14:37:15+00:00",
-   "flags": [
-    {
-     "hits": [
-      "kth",
-      "royal institute of technology"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "four-year",
-      "employed as a doctoral student"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "kth:979786",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-05T23:59:59+00:00",
-   "score": 0,
-   "source": "kth",
-   "summary": "Project description Third-cycle subject: Civil and Architectural Engineering The division for Concrete Structures at KTH Civil and Architectural Engineering is in search for a doctoral student to be assigned a project on reinforced concrete structures within hydropower. Dams in Sweden and many other countries are aging and have an average age of over 50 years. Spillways and associated concrete structures play a crucial role in reducing the risk of dam overflow and serious damage. However, over the years, these have been exposed to varying flows, including extreme high flows, which in many case",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student on structural rehabilitation of concrete hydro dams",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://www.kth.se/lediga-jobb/979786?l=en"
-  },
-  {
-   "also_listed_on": [
-    {
      "id": "ap:254859",
      "source": "ap",
      "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-on-structural-health-monitoring-of-concrete-hydro-dams/254859"
@@ -15957,22 +15878,22 @@
   {
    "also_listed_on": [
     {
-     "id": "ap:254864",
+     "id": "ap:254866",
      "source": "ap",
-     "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-in-hormone-sensing-between-biophysics-and-biotechnology/254864"
+     "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-on-structural-rehabilitation-of-concrete-hydro-dams/254866"
     }
    ],
    "breakdown": [],
    "city": "Stockholm",
-   "contact": "Carlota Canalias Gomez ccg@kth.se Michael Fokine fokine@kth.se Cecilia Williams cwil@kth.se",
+   "contact": "Anders Ansell anders.ansell@byv.kth.se",
    "country": "Sweden",
-   "days_left": 13,
-   "deadline": "2026-11-19T23:59:59+00:00",
-   "department": "PA-2026-3677",
+   "days_left": 20,
+   "deadline": "2026-11-26T23:59:59+00:00",
+   "department": "PA-2026-3533",
    "employer": "KTH Royal Institute of Technology",
    "employment_type": "Temporary position",
    "expired": false,
-   "first_seen": "2026-11-05T14:37:08+00:00",
+   "first_seen": "2026-11-05T14:37:15+00:00",
    "flags": [
     {
      "hits": [
@@ -15993,19 +15914,72 @@
      "severity": "good"
     }
    ],
-   "id": "kth:981104",
+   "id": "kth:979786",
    "language": "en",
    "position_type": "phd",
    "posted": "2026-11-05T23:59:59+00:00",
    "score": 0,
    "source": "kth",
-   "summary": "Project description Third-cycle subject: Applied Physics or Biotechnology Hormones shape metabolism, fertility, mood and sleep, yet they are rarely measured, and then mostly by blood tests in a clinic. In the Hormones Project, funded by KTH InspireLab, we are developing an affordable optical system that measures six hormones in urine, at home, every day. As a doctoral student you will work at the border between biophysics and biotechnology: you will prepare and characterise urine samples, validate against established laboratory methods, and design and test the detection system.",
+   "summary": "Project description Third-cycle subject: Civil and Architectural Engineering The division for Concrete Structures at KTH Civil and Architectural Engineering is in search for a doctoral student to be assigned a project on reinforced concrete structures within hydropower. Dams in Sweden and many other countries are aging and have an average age of over 50 years. Spillways and associated concrete structures play a crucial role in reducing the risk of dam overflow and serious damage. However, over the years, these have been exposed to varying flows, including extreme high flows, which in many case",
    "tier": "D",
    "tier_name": "不相关",
-   "title": "Doctoral student in hormone sensing between biophysics and biotechnology",
+   "title": "Doctoral student on structural rehabilitation of concrete hydro dams",
    "topic_score": 0,
-   "urgent": true,
-   "url": "https://www.kth.se/lediga-jobb/981104?l=en"
+   "urgent": false,
+   "url": "https://www.kth.se/lediga-jobb/979786?l=en"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:254867",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-on-calculations-of-flow-through-hydro-dam-bottom-outlets/254867"
+    }
+   ],
+   "breakdown": [],
+   "city": "Stockholm",
+   "contact": "Anders Ansell anders.ansell@byv.kth.se",
+   "country": "Sweden",
+   "days_left": 20,
+   "deadline": "2026-11-26T23:59:59+00:00",
+   "department": "PA-2026-3532",
+   "employer": "KTH Royal Institute of Technology",
+   "employment_type": "Temporary position",
+   "expired": false,
+   "first_seen": "2026-11-05T14:37:13+00:00",
+   "flags": [
+    {
+     "hits": [
+      "kth",
+      "royal institute of technology"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "four-year",
+      "employed as a doctoral student"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "kth:979760",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-05T23:59:59+00:00",
+   "score": 0,
+   "source": "kth",
+   "summary": "Project description Third-cycle subject: Civil and Architectural Engineering The division for Concrete Structures at KTH Civil and Architectural Engineering is in search for a doctoral student to be assigned a project on hydraulic design of structures within hydropower. Many dam facilities have been rebuilt or are to be upgraded to achieve a higher level of safety. A bottom outlet is a critical structure from both a dam safety and operational point of view. Emergency lowering of a reservoir's water level is entirely dependent on it and the outlet can also be used in the event of a spillway ove",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student on calculations of flow through hydro dam bottom outlets",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://www.kth.se/lediga-jobb/979760?l=en"
   },
   {
    "also_listed_on": [
@@ -16061,31 +16035,57 @@
    "url": "https://www.kth.se/lediga-jobb/985374?l=en"
   },
   {
+   "also_listed_on": [
+    {
+     "id": "ap:254864",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/doctoral-student-in-hormone-sensing-between-biophysics-and-biotechnology/254864"
+    }
+   ],
    "breakdown": [],
-   "city": "Kristiansand",
-   "contact": "",
-   "country": "Norway",
-   "days_left": 3,
-   "deadline": "2026-11-09T22:59:59+00:00",
-   "department": "",
-   "employer": "University of Agder (UiA)",
-   "employment_type": "",
+   "city": "Stockholm",
+   "contact": "Carlota Canalias Gomez ccg@kth.se Michael Fokine fokine@kth.se Cecilia Williams cwil@kth.se",
+   "country": "Sweden",
+   "days_left": 13,
+   "deadline": "2026-11-19T23:59:59+00:00",
+   "department": "PA-2026-3677",
+   "employer": "KTH Royal Institute of Technology",
+   "employment_type": "Temporary position",
    "expired": false,
-   "first_seen": "2026-11-06T14:13:32+00:00",
-   "flags": [],
-   "id": "ap:243743",
+   "first_seen": "2026-11-05T14:37:08+00:00",
+   "flags": [
+    {
+     "hits": [
+      "kth",
+      "royal institute of technology"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "four-year",
+      "employed as a doctoral student"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "kth:981104",
    "language": "en",
    "position_type": "phd",
-   "posted": "2026-01-23T16:01:00+00:00",
+   "posted": "2026-11-05T23:59:59+00:00",
    "score": 0,
-   "source": "ap",
-   "summary": "PhD fellowship researching Norwegian professional language use in the workplace. Requires relevant master's, B2-level Norwegian/Scandinavian, and English skills. Project proposal required.",
+   "source": "kth",
+   "summary": "Project description Third-cycle subject: Applied Physics or Biotechnology Hormones shape metabolism, fertility, mood and sleep, yet they are rarely measured, and then mostly by blood tests in a clinic. In the Hormones Project, funded by KTH InspireLab, we are developing an affordable optical system that measures six hormones in urine, at home, every day. As a doctoral student you will work at the border between biophysics and biotechnology: you will prepare and characterise urine samples, validate against established laboratory methods, and design and test the detection system.",
    "tier": "D",
    "tier_name": "不相关",
-   "title": "PhD Research Fellow in Norwegian professional language use in the workplace",
+   "title": "Doctoral student in hormone sensing between biophysics and biotechnology",
    "topic_score": 0,
    "urgent": true,
-   "url": "https://en.academicpositions.se/ad/university-of-agder-uia/2026/phd-research-fellow-in-norwegian-professional-language-use-in-the-workplace/243743"
+   "url": "https://www.kth.se/lediga-jobb/981104?l=en"
   },
   {
    "breakdown": [],
