@@ -1,13 +1,13 @@
 {
  "counts": {
-  "on_board": 334,
+  "on_board": 340,
   "tier_A": 0,
   "tier_B": 2,
-  "tier_C": 10,
-  "tier_D": 322,
+  "tier_C": 12,
+  "tier_D": 326,
   "urgent": 92
  },
- "generated_at": "2026-11-09T23:46:35+00:00",
+ "generated_at": "2026-11-10T14:50:23+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -471,7 +471,7 @@
    "city": "Stockholm",
    "contact": "Xi Wang wangxi@kth.se Magnus Wiktorsson magwik@kth.se",
    "country": "Sweden",
-   "days_left": 24,
+   "days_left": 23,
    "deadline": "2026-12-03T23:59:59+00:00",
    "department": "PA-2026-3497",
    "employer": "KTH Royal Institute of Technology",
@@ -763,6 +763,55 @@
   {
    "breakdown": [
     {
+     "applied": 20.0,
+     "factor": 1.0,
+     "hits": [
+      "robotic"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "标题",
+     "weight": 20,
+     "where": "title"
+    }
+   ],
+   "city": "Zurich",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": null,
+   "deadline": null,
+   "department": "",
+   "employer": "ETH Zürich",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:29+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eth zurich"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:254975",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-06T14:05:09+00:00",
+   "score": 20,
+   "source": "ap",
+   "summary": "PhD: develop robotic deposition/MICP biocementation for architectural components; build/modify hardware & computational workflow; assess footprint; publish & collaborate cross-discipline.",
+   "tier": "C",
+   "tier_name": "擦边",
+   "title": "Doctoral position in robotic spraying for biocementation",
+   "topic_score": 20,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-robotic-spraying-for-biocementation/254975"
+  },
+  {
+   "breakdown": [
+    {
      "applied": 10.0,
      "factor": 0.5,
      "hits": [
@@ -827,6 +876,76 @@
    "url": "https://en.academicpositions.se/ad/university-of-leipzig/2026/phd-position-control-capacity-of-active-matter-using-activity-landscapes/254186"
   },
   {
+   "breakdown": [
+    {
+     "applied": 15.0,
+     "factor": 0.75,
+     "hits": [
+      "robotic"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "摘要",
+     "weight": 20,
+     "where": "summary"
+    },
+    {
+     "applied": 2.0,
+     "factor": 0.5,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文 1 种说法/共 3 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Eindhoven",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 27,
+   "deadline": "2026-12-07T22:59:59+00:00",
+   "department": "",
+   "employer": "Eindhoven University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:39+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eindhoven university"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254990",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-07T08:30:24+00:00",
+   "score": 17,
+   "source": "ap",
+   "summary": "4-year PhD researching worker-centred AI/robotics implementation. Fieldwork with organisations, lab simulations, longitudinal studies; publish papers. Full-time in Eindhoven.",
+   "tier": "C",
+   "tier_name": "擦边",
+   "title": "PhD on worker-augmenting technology implementation",
+   "topic_score": 17,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-on-worker-augmenting-technology-implementation/254990"
+  },
+  {
    "also_listed_on": [
     {
      "id": "ap:254857",
@@ -876,7 +995,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 52,
+   "days_left": 51,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Mechanics and Maritime Sciences",
    "employer": "Chalmers University of Technology",
@@ -956,7 +1075,7 @@
    "city": "Stockholm",
    "contact": "Emrah Karakaya emrahka@kth.se Mats Engwall matseng@kth.se",
    "country": "Sweden",
-   "days_left": 56,
+   "days_left": 55,
    "deadline": "2027-01-04T23:59:59+00:00",
    "department": "PA-2026-3645",
    "employer": "KTH Royal Institute of Technology",
@@ -1414,57 +1533,6 @@
      "where": "title"
     },
     {
-     "applied": 0.6,
-     "factor": 0.15,
-     "hits": [
-      "industrial"
-     ],
-     "kind": "topic",
-     "label": "weak",
-     "note": "正文仅 1 次",
-     "weight": 4,
-     "where": "body"
-    }
-   ],
-   "city": "Luxembourg",
-   "country": "Luxembourg",
-   "days_left": 228,
-   "deadline": "2027-06-26T21:59:59+00:00",
-   "employer": "University of Luxembourg",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-30T10:06:59+00:00",
-   "flags": [],
-   "id": "ap:250501",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-06-27T03:35:11+00:00",
-   "score": 11,
-   "slug": "doctoral-researcher-in-machine-learning-security-testing",
-   "source": "ap",
-   "summary": "PhD research on secure, trustworthy ML: define quality/security principles, build testing & benchmarking tools for AI/agents with industry partners. MSc CS, strong coding, English.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral researcher in Machine Learning Security & Testing",
-   "topic_score": 11,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-machine-learning-security-testing/250501"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": 10.0,
-     "factor": 1.0,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "标题",
-     "weight": 10,
-     "where": "title"
-    },
-    {
      "applied": 1.2,
      "factor": 0.3,
      "hits": [
@@ -1689,7 +1757,7 @@
    "city": "Stockholm",
    "contact": "Shervin Bagheri sherwinb@kth.se",
    "country": "Sweden",
-   "days_left": 28,
+   "days_left": 27,
    "deadline": "2026-12-07T23:59:59+00:00",
    "department": "PA-2026-3646",
    "employer": "KTH Royal Institute of Technology",
@@ -2148,7 +2216,7 @@
    "city": "Stockholm",
    "contact": "Seraina Anne Dual seraina@kth.se Aurora Rosato rosato@kth.se",
    "country": "Sweden",
-   "days_left": 17,
+   "days_left": 16,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3731",
    "employer": "KTH Royal Institute of Technology",
@@ -3522,7 +3590,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 36,
+   "days_left": 35,
    "deadline": "2026-12-16T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -3919,7 +3987,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 24,
+   "days_left": 23,
    "deadline": "2026-12-04T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -5773,7 +5841,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -5894,6 +5962,75 @@
    "topic_score": 2,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/tallinn-university-of-technology/2026/resource-efficient-cryptographic-mitigation-methods-in-power-systems/254900"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Eindhoven",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 27,
+   "deadline": "2026-12-07T22:59:59+00:00",
+   "department": "",
+   "employer": "Eindhoven University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:37+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eindhoven university"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "four-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254988",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-07T08:30:24+00:00",
+   "score": 2,
+   "source": "ap",
+   "summary": "PhD: develop models, simulations & experiments for photon‑efficient, high‑throughput hybrid FSO–RF–fiber links for 6G tropospheric/NTN networks; secondment in Portugal.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Free-Space Optical and Radio Communications for Tropospheric Future Networks (ANCHOR)",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-in-free-space-optical-and-radio-communications-for-tropospheric-future-networks-anchor/254988"
   },
   {
    "breakdown": [
@@ -7112,7 +7249,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7152,7 +7289,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7192,7 +7329,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7232,7 +7369,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7272,7 +7409,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7410,7 +7547,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 20,
+   "days_left": 19,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -7457,7 +7594,7 @@
    "city": "Stockholm",
    "contact": "Adnan Ploskic ploskic@kth.se Amirmohamad Behzadi abehzadi@kth.se Annika Gram agram@kth.se",
    "country": "Sweden",
-   "days_left": 25,
+   "days_left": 24,
    "deadline": "2026-12-04T23:59:59+00:00",
    "department": "PA-2026-3482",
    "employer": "KTH Royal Institute of Technology",
@@ -8108,7 +8245,7 @@
    "city": "Stockholm",
    "contact": "Panagiotis Papadimitratos",
    "country": "Sweden",
-   "days_left": 14,
+   "days_left": 13,
    "deadline": "2026-11-23T23:59:59+00:00",
    "department": "PA-2026-1902",
    "employer": "KTH Royal Institute of Technology",
@@ -9930,7 +10067,7 @@
    "city": "Florence",
    "contact": "",
    "country": "Italy",
-   "days_left": 66,
+   "days_left": 65,
    "deadline": "2027-01-15T13:00:59+00:00",
    "department": "",
    "employer": "European University Institute (EUI)",
@@ -10200,42 +10337,6 @@
   },
   {
    "breakdown": [],
-   "city": "Zurich",
-   "contact": "",
-   "country": "Switzerland",
-   "days_left": null,
-   "deadline": null,
-   "department": "",
-   "employer": "ETH Zürich",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-30T11:04:30+00:00",
-   "flags": [
-    {
-     "hits": [
-      "eth zurich"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    }
-   ],
-   "id": "ap:253812",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-10-06T03:05:08+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "PhD: uncover new determinants of running performance via lab/field and longitudinal training studies. Publish, collaborate, present. Need MSc, biomechanics, exercise physiology, stats + R/Python.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD Position in Determinants of Human Performance in Running",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/phd-position-in-determinants-of-human-performance-in-running/253812"
-  },
-  {
-   "breakdown": [],
    "city": "Darmstadt",
    "contact": "",
    "country": "Germany",
@@ -10305,7 +10406,7 @@
    "city": "Klosterneuburg",
    "contact": "",
    "country": "Austria",
-   "days_left": 59,
+   "days_left": 58,
    "deadline": "2027-01-08T14:00:59+00:00",
    "department": "",
    "employer": "Institute of Science and Technology Austria (ISTA)",
@@ -10897,7 +10998,7 @@
    "city": "Saffron Walden",
    "contact": "",
    "country": "United Kingdom",
-   "days_left": 14,
+   "days_left": 13,
    "deadline": "2026-11-24T09:00:59+00:00",
    "department": "",
    "employer": "Wellcome Sanger Institute",
@@ -13925,7 +14026,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 110,
+   "days_left": 109,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -14802,7 +14903,7 @@
    "city": "Stockholm",
    "contact": "Anders Ansell ansell@kth.se Annika Gram agram@kth.se",
    "country": "Sweden",
-   "days_left": 17,
+   "days_left": 16,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3554",
    "employer": "KTH Royal Institute of Technology",
@@ -14855,7 +14956,7 @@
    "city": "Stockholm",
    "contact": "Sofia Lingegård sofilin@kth.se",
    "country": "Sweden",
-   "days_left": 17,
+   "days_left": 16,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3577",
    "employer": "KTH Royal Institute of Technology",
@@ -14916,7 +15017,7 @@
    "city": "Stockholm",
    "contact": "Anders Ansell anders.ansell@byv.kth.se",
    "country": "Sweden",
-   "days_left": 17,
+   "days_left": 16,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3533",
    "employer": "KTH Royal Institute of Technology",
@@ -14969,7 +15070,7 @@
    "city": "Stockholm",
    "contact": "Anders Ansell anders.ansell@byv.kth.se",
    "country": "Sweden",
-   "days_left": 17,
+   "days_left": 16,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3532",
    "employer": "KTH Royal Institute of Technology",
@@ -15022,7 +15123,7 @@
    "city": "Stockholm",
    "contact": "Svetlana Ratynskaia svetlana.ratynskaia@ee.kth.se",
    "country": "Sweden",
-   "days_left": 45,
+   "days_left": 44,
    "deadline": "2026-12-24T23:59:59+00:00",
    "department": "PA-2026-3761",
    "employer": "KTH Royal Institute of Technology",
@@ -15075,7 +15176,7 @@
    "city": "Stockholm",
    "contact": "Carlota Canalias Gomez ccg@kth.se Michael Fokine fokine@kth.se Cecilia Williams cwil@kth.se",
    "country": "Sweden",
-   "days_left": 10,
+   "days_left": 9,
    "deadline": "2026-11-19T23:59:59+00:00",
    "department": "PA-2026-3677",
    "employer": "KTH Royal Institute of Technology",
@@ -15550,6 +15651,187 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/project-assistant-in-electrochemical-sensing-for-neurotransmitter-detection/254983"
+  },
+  {
+   "breakdown": [],
+   "city": "Zurich",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": null,
+   "deadline": null,
+   "department": "",
+   "employer": "ETH Zürich",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:27+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eth zurich"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254961",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-06T11:05:08+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "2 fully funded PhD posts (100%, 4 yrs) on Swiss housing cooperatives & socio-ecological transition; mapping + qualitative case studies/fieldwork. MA; English, CH languages a plus.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Two Doctoral Positions in the SNSF Research Project \"From Homes to Habitat – Swiss Housing Cooperatives as Agents of Socio-Ecological Transition\"",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/two-doctoral-positions-in-the-snsf-research-project-from-homes-to-habitat-swiss-housing-cooperatives-as-agents-of-socio-ecological-transition/254961"
+  },
+  {
+   "breakdown": [],
+   "city": "Cologne",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 30,
+   "deadline": "2026-12-10T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Cologne",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:44+00:00",
+   "flags": [],
+   "id": "ap:254994",
+   "language": "de",
+   "position_type": "research_assistant",
+   "posted": "2026-11-09T08:31:09+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Forschung zu digitaler Selbstbestimmung: Begriffe/Modelle rekonstruieren, Diskurse analysieren, Glossar & Publikationen redigieren, Workshops/Kommunikation koordinieren. E13, flexibel & mobil.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Research Associate (f/m/d) for Research and Transdisciplinary Coordination in the Project “Digitale Selbstbestimmung\" Wiss2611-04 | Faculty of Arts and Humanities, Institute of Media Culture and Theatre",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/research-associate-fmd-for-research-and-transdisciplinary-coordination-in-the-project-digitale-selbstbestimmung-wiss2611-04-faculty-of-arts-and-humanities-institute-of-media-culture-and-theatre/254994"
+  },
+  {
+   "breakdown": [],
+   "city": "Eindhoven",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 40,
+   "deadline": "2026-12-20T22:59:59+00:00",
+   "department": "",
+   "employer": "Eindhoven University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:57+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eindhoven university"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:255018",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-09T14:30:37+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "4-year funded PhD researching information-theoretic foundations of sensing systems (robustness & security). MSc EE, strong probability/stats; some teaching. Salary €3.2–4.1k/mo.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in information theory",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eindhoven-university-of-technology/2026/phd-in-information-theory/255018"
+  },
+  {
+   "breakdown": [],
+   "city": "Leuven",
+   "contact": "",
+   "country": "Belgium",
+   "days_left": 27,
+   "deadline": "2026-12-07T22:59:59+00:00",
+   "department": "",
+   "employer": "KU Leuven",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:59+00:00",
+   "flags": [
+    {
+     "hits": [
+      "ku leuven"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:255020",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-09T14:32:09+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD project: build spatial multi-omics workflow (RNA/protein/epigenome) for melanoma; wet lab + AI analysis; secondments US (3m) & Spain (4m); ~€3,120/mo.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral Candidate Position in Spatial Multi-Omics",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/ku-leuven/2026/doctoral-candidate-position-in-spatial-multi-omics/255020"
+  },
+  {
+   "breakdown": [],
+   "city": "Warsaw",
+   "contact": "",
+   "country": "Poland",
+   "days_left": 29,
+   "deadline": "2026-12-09T22:59:59+00:00",
+   "department": "",
+   "employer": "SWPS University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:50:01+00:00",
+   "flags": [],
+   "id": "ap:255022",
+   "language": "en",
+   "position_type": "research_assistant",
+   "posted": "2026-11-09T15:14:17+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Warsaw; umowa zlecenie. Analyze quantitative data and help write papers/presentations. For psychology (or stats-proficient) students/PhD; research exp; English B2+. Up to PLN50/h.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Research assistant (Psychology)",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/swps-university/2026/research-assistant-psychology/255022"
   }
  ],
  "repo": "ShinyRaine/myacademicpositions",
