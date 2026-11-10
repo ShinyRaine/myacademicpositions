@@ -7,7 +7,7 @@
   "tier_D": 326,
   "urgent": 92
  },
- "generated_at": "2026-11-10T14:50:23+00:00",
+ "generated_at": "2026-11-10T21:17:35+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -10783,7 +10783,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 6,
+   "days_left": 5,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -12356,7 +12356,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 40,
+   "days_left": 39,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -15512,6 +15512,52 @@
   },
   {
    "breakdown": [],
+   "city": "Zurich",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": null,
+   "deadline": null,
+   "department": "",
+   "employer": "ETH Zürich",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-10T14:49:27+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eth zurich"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:254961",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-06T11:05:08+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "2 fully funded PhD posts (100%, 4 yrs) on Swiss housing cooperatives & socio-ecological transition; mapping + qualitative case studies/fieldwork. MA; English, CH languages a plus.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Two Doctoral Positions in the SNSF Research Project \"From Homes to Habitat – Swiss Housing Cooperatives as Agents of Socio-Ecological Transition\"",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/two-doctoral-positions-in-the-snsf-research-project-from-homes-to-habitat-swiss-housing-cooperatives-as-agents-of-socio-ecological-transition/254961"
+  },
+  {
+   "breakdown": [],
    "city": "Malmo",
    "contact": "",
    "country": "Sweden",
@@ -15651,52 +15697,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/project-assistant-in-electrochemical-sensing-for-neurotransmitter-detection/254983"
-  },
-  {
-   "breakdown": [],
-   "city": "Zurich",
-   "contact": "",
-   "country": "Switzerland",
-   "days_left": null,
-   "deadline": null,
-   "department": "",
-   "employer": "ETH Zürich",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-10T14:49:27+00:00",
-   "flags": [
-    {
-     "hits": [
-      "eth zurich"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254961",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-06T11:05:08+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "2 fully funded PhD posts (100%, 4 yrs) on Swiss housing cooperatives & socio-ecological transition; mapping + qualitative case studies/fieldwork. MA; English, CH languages a plus.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Two Doctoral Positions in the SNSF Research Project \"From Homes to Habitat – Swiss Housing Cooperatives as Agents of Socio-Ecological Transition\"",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/two-doctoral-positions-in-the-snsf-research-project-from-homes-to-habitat-swiss-housing-cooperatives-as-agents-of-socio-ecological-transition/254961"
   },
   {
    "breakdown": [],
