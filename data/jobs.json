@@ -7,7 +7,7 @@
   "tier_D": 325,
   "urgent": 89
  },
- "generated_at": "2026-11-11T14:17:16+00:00",
+ "generated_at": "2026-11-11T21:55:14+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -10775,7 +10775,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 5,
+   "days_left": 4,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -12193,7 +12193,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 39,
+   "days_left": 38,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -15656,6 +15656,42 @@
    "city": "Leuven",
    "contact": "",
    "country": "Belgium",
+   "days_left": 8,
+   "deadline": "2026-11-19T22:59:59+00:00",
+   "department": "",
+   "employer": "KU Leuven",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-11T14:16:19+00:00",
+   "flags": [
+    {
+     "hits": [
+      "ku leuven"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:255019",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-09T14:32:09+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Final-stage PhD researcher to complete project on labour market integrity in professional football; 6‑month full-time bursary, international DAiSI network with partner exchanges.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Institute for Labour Law - doctoral researcher (100%) -  sports law",
+   "topic_score": 0,
+   "urgent": true,
+   "url": "https://en.academicpositions.se/ad/ku-leuven/2026/institute-for-labour-law-doctoral-researcher-100-sports-law/255019"
+  },
+  {
+   "breakdown": [],
+   "city": "Leuven",
+   "contact": "",
+   "country": "Belgium",
    "days_left": 26,
    "deadline": "2026-12-07T22:59:59+00:00",
    "department": "",
@@ -15713,42 +15749,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/swps-university/2026/research-assistant-psychology/255022"
-  },
-  {
-   "breakdown": [],
-   "city": "Leuven",
-   "contact": "",
-   "country": "Belgium",
-   "days_left": 8,
-   "deadline": "2026-11-19T22:59:59+00:00",
-   "department": "",
-   "employer": "KU Leuven",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-11T14:16:19+00:00",
-   "flags": [
-    {
-     "hits": [
-      "ku leuven"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    }
-   ],
-   "id": "ap:255019",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-09T14:32:09+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "Final-stage PhD researcher to complete project on labour market integrity in professional football; 6‑month full-time bursary, international DAiSI network with partner exchanges.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Institute for Labour Law - doctoral researcher (100%) -  sports law",
-   "topic_score": 0,
-   "urgent": true,
-   "url": "https://en.academicpositions.se/ad/ku-leuven/2026/institute-for-labour-law-doctoral-researcher-100-sports-law/255019"
   },
   {
    "breakdown": [],

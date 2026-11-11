@@ -10648,5 +10648,11 @@
   "skipped": "listed-type:postdoc",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/989170?l=en"
+ },
+ "kth:989781": {
+  "first_seen": "2026-11-11T21:55:02+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/989781?l=en"
  }
 }
