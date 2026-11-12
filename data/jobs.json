@@ -7,7 +7,7 @@
   "tier_D": 331,
   "urgent": 93
  },
- "generated_at": "2026-11-12T15:09:46+00:00",
+ "generated_at": "2026-11-12T21:50:31+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -8688,6 +8688,50 @@
   },
   {
    "breakdown": [],
+   "city": "Martinsried",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 270,
+   "deadline": "2027-08-09T21:59:59+00:00",
+   "department": "",
+   "employer": "International Max Planck Research School – Biological Intelligence (IMPRS-BI)",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-12T15:08:39+00:00",
+   "flags": [
+    {
+     "hits": [
+      "max planck"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:251810",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-11T07:00:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Fully funded PhD positions in behavior, neurobiology, connectomics, ecology & evolutionary genetics near Munich. English structured program, cutting-edge facilities, mentoring, no tuition.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Upcoming doctoral (PhD) positions at the International Max Planck Research School - Biological Intelligence",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/international-max-planck-research-school-biological-intelligence-imprs-bi/2026/upcoming-doctoral-phd-positions-at-the-international-max-planck-research-school-biological-intelligence/251810"
+  },
+  {
+   "breakdown": [],
    "city": "Grenoble",
    "contact": "",
    "country": "France",
@@ -10865,7 +10909,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 4,
+   "days_left": 3,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -15652,77 +15696,6 @@
   },
   {
    "breakdown": [],
-   "city": "Kassel",
-   "contact": "",
-   "country": "Germany",
-   "days_left": 21,
-   "deadline": "2026-12-03T22:59:59+00:00",
-   "department": "",
-   "employer": "University of Kassel",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-11T14:17:01+00:00",
-   "flags": [],
-   "id": "ap:255074",
-   "language": "de",
-   "position_type": "research_assistant",
-   "posted": "2026-11-10T15:44:37+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "3+2 Jahre mit Promotionsoption: Forschung zu taskbasierter paralleler Programmierung/Laufzeitsystemen, Mitarbeit in Lehre. Master Informatik/Mathe, Deutsch & Englisch.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Wissenschaftliche:r Mitarbeiter:in (m/w/d), EG 13 TV-H, befristet, Vollzeit (derzeit 40 Wochenstunden)",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/university-kassel/2026/wissenschaftliche-r-mitarbeiter-in-m-w-d-eg-13-tv-h-befristet-vollzeit-derzeit-40-wochenstunden/255074"
-  },
-  {
-   "breakdown": [],
-   "city": "Martinsried",
-   "contact": "",
-   "country": "Germany",
-   "days_left": 270,
-   "deadline": "2027-08-09T21:59:59+00:00",
-   "department": "",
-   "employer": "International Max Planck Research School – Biological Intelligence (IMPRS-BI)",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-12T15:08:39+00:00",
-   "flags": [
-    {
-     "hits": [
-      "max planck"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:251810",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-11T07:00:00+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "Fully funded PhD positions in behavior, neurobiology, connectomics, ecology & evolutionary genetics near Munich. English structured program, cutting-edge facilities, mentoring, no tuition.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Upcoming doctoral (PhD) positions at the International Max Planck Research School - Biological Intelligence",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/international-max-planck-research-school-biological-intelligence-imprs-bi/2026/upcoming-doctoral-phd-positions-at-the-international-max-planck-research-school-biological-intelligence/251810"
-  },
-  {
-   "breakdown": [],
    "city": "Turku",
    "contact": "",
    "country": "Finland",
@@ -15801,6 +15774,33 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/phd-position-in-biogeochemistrysoil-biology-fmx-soil-microbial-nutrient-stoichiometry-and-soil-atmosphere-exchange-in-river-floodplains-wiss2611-05-institute-of-geophysics-and-meteorology/255061"
+  },
+  {
+   "breakdown": [],
+   "city": "Kassel",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 21,
+   "deadline": "2026-12-03T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Kassel",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-11T14:17:01+00:00",
+   "flags": [],
+   "id": "ap:255074",
+   "language": "de",
+   "position_type": "research_assistant",
+   "posted": "2026-11-10T15:44:37+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "3+2 Jahre mit Promotionsoption: Forschung zu taskbasierter paralleler Programmierung/Laufzeitsystemen, Mitarbeit in Lehre. Master Informatik/Mathe, Deutsch & Englisch.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Wissenschaftliche:r Mitarbeiter:in (m/w/d), EG 13 TV-H, befristet, Vollzeit (derzeit 40 Wochenstunden)",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-kassel/2026/wissenschaftliche-r-mitarbeiter-in-m-w-d-eg-13-tv-h-befristet-vollzeit-derzeit-40-wochenstunden/255074"
   },
   {
    "breakdown": [],
