@@ -7,7 +7,7 @@
   "tier_D": 333,
   "urgent": 92
  },
- "generated_at": "2026-11-13T14:32:08+00:00",
+ "generated_at": "2026-11-13T21:25:44+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -10747,7 +10747,7 @@
    "city": "Louvain-la-Neuve",
    "contact": "",
    "country": "Belgium",
-   "days_left": 3,
+   "days_left": 2,
    "deadline": "2026-11-16T16:00:59+00:00",
    "department": "",
    "employer": "Université catholique de Louvain",
@@ -11884,7 +11884,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 37,
+   "days_left": 36,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -15641,113 +15641,6 @@
    "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/research-associate-institute-of-japanese-studies-wiss2611-07-institute-of-japanese-studies/255090"
   },
   {
-   "also_listed_on": [
-    {
-     "id": "ap:255160",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-multiphase-flow/255160"
-    }
-   ],
-   "breakdown": [],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 30,
-   "deadline": "2026-12-13T23:59:59+00:00",
-   "department": "Mechanical engineering (ME)",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-12T15:09:35+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15182",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-12T13:36:16+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "Curious about how the world works? So are we. Join the Multiphase Group at Chalmers and help us push the boundaries of fluid dynamics through curiosity-driven, cutting-edge research!  About us",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in multiphase flow",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15182"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255131",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-advanced-manufacturing-of-permanent-magnets/255131"
-    }
-   ],
-   "breakdown": [],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 28,
-   "deadline": "2026-12-11T23:59:59+00:00",
-   "department": "Mechanical engineering (ME)",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-12T15:09:37+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "4-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15187",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-12T07:28:41+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "From electric vehicles to wind turbines, permanent magnets are at the heart of modern technologies. Join us as a doctoral student at Chalmers University of Technology to develop the next generation of high-performance permanent magnets through advanced manufacturing and materials engineering, contributing to more sustainable and resource-efficient magnet technologies.  About us",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in advanced manufacturing of permanent magnets",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15187"
-  },
-  {
    "breakdown": [],
    "city": "Basel",
    "contact": "",
@@ -15859,6 +15752,59 @@
    "url": "https://en.academicpositions.se/ad/leiden-university/2026/phd-position-in-organisational-science-and-cybersecurity/255123"
   },
   {
+   "also_listed_on": [
+    {
+     "id": "ap:255131",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-advanced-manufacturing-of-permanent-magnets/255131"
+    }
+   ],
+   "breakdown": [],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 28,
+   "deadline": "2026-12-11T23:59:59+00:00",
+   "department": "Mechanical engineering (ME)",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-12T15:09:37+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15187",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-12T07:28:41+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "From electric vehicles to wind turbines, permanent magnets are at the heart of modern technologies. Join us as a doctoral student at Chalmers University of Technology to develop the next generation of high-performance permanent magnets through advanced manufacturing and materials engineering, contributing to more sustainable and resource-efficient magnet technologies.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in advanced manufacturing of permanent magnets",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15187"
+  },
+  {
    "breakdown": [],
    "city": "Brussels",
    "contact": "",
@@ -15911,6 +15857,60 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/anhalt-university-of-applied-sciences/2026/wissenschaftlicher-mitarbeiter-m-w-d-im-bereich-der-effektgerichteten-naturstoffanalytik-nr-484/255148"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255160",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-multiphase-flow/255160"
+    }
+   ],
+   "breakdown": [],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 30,
+   "deadline": "2026-12-13T23:59:59+00:00",
+   "department": "Mechanical engineering (ME)",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-12T15:09:35+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15182",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-12T13:36:16+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Curious about how the world works? So are we. Join the Multiphase Group at Chalmers and help us push the boundaries of fluid dynamics through curiosity-driven, cutting-edge research!  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in multiphase flow",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15182"
   },
   {
    "also_posted_as": [
