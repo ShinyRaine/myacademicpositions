@@ -4763,6 +4763,12 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/sodertorn-university/2026/postdoctoral-fellow-in-police-science/254028"
  },
+ "ap:254030": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/team-leader-tissue-engineering-structuur-en-herstel-van-de-mens-30382/254030"
+ },
  "ap:254031": {
   "first_seen": "2026-10-30T09:51:10+00:00",
   "skipped": "slug-type:professor",
@@ -10799,6 +10805,270 @@
   "skipped": "listed-type:postdoc",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/vrije-universiteit-brussel/2026/senior-researcher-post-doc-assistant-professorship-physical-ai-human-centered-robotics/255177"
+ },
+ "ap:255178": {
+  "first_seen": "2026-11-14T13:27:53+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/amolf/2026/correlative-electron-microscopy-and-optics-of-perovskite-thin-films/255178"
+ },
+ "ap:255179": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/postdoctoral-researcher-in-machine-learning-and-health-economics-for-alzheimers-disease-and-related-dementias/255179"
+ },
+ "ap:255180": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/postdoktor-inom-maskininlarning-och-halsoekonomi-for-alzheimers-sjukdom-och-relaterade-demenssjukdomar/255180"
+ },
+ "ap:255181": {
+  "first_seen": "2026-11-14T13:27:55+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/two-doctoral-researchers-applied-language-studies/255181"
+ },
+ "ap:255182": {
+  "first_seen": "2026-11-14T13:27:57+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/kaksi-vaitoskirjatutkijaa-soveltava-kielentutkimus/255182"
+ },
+ "ap:255183": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/two-postdoctoral-researchers-applied-language-studies/255183"
+ },
+ "ap:255184": {
+  "first_seen": "2026-11-14T13:27:59+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-jyvaskyla/2026/kaksi-tutkijatohtoria-soveltava-kielentutkimus/255184"
+ },
+ "ap:255185": {
+  "first_seen": "2026-11-14T13:28:01+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/msca-phd-vacancy-at-ku-leuven-for-intellase-dc14-development-of-multi-sensor-fusion-methodologies-for-femtosecond-laser-machining/255185"
+ },
+ "ap:255186": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/postdoctoral-researcher-in-non-target-screening-parc-project/255186"
+ },
+ "ap:255187": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-position-in-secure-distributed-ai-systems/255187"
+ },
+ "ap:255188": {
+  "first_seen": "2026-11-14T13:28:04+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/masters-degree-project-supervisor-in-computer-science/255188"
+ },
+ "ap:255189": {
+  "first_seen": "2026-11-14T13:28:06+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/administrativ-amanuens-till-flyg-och-rymdteknik/255189"
+ },
+ "ap:255190": {
+  "first_seen": "2026-11-14T13:28:08+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/handledare-for-examensarbeten-i-datalogi/255190"
+ },
+ "ap:255191": {
+  "first_seen": "2026-11-14T13:28:10+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/friedrich-schiller-university-jena/2026/a-junior-research-group-leader-position-within-the-cluster-of-excellence-balance-of-the-microverse/255191"
+ },
+ "ap:255192": {
+  "first_seen": "2026-11-14T13:28:12+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-oulu/2026/doctoral-researcher-in-peatland-restoration-hydrology-and-biogeochemistry/255192"
+ },
+ "ap:255193": {
+  "first_seen": "2026-11-14T13:28:13+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-oulu/2026/elsa-palvelupaallikko-oulun-yliopisto-laaketieteellinen-tiedekunta-koulutuksen-kehittamis-ja-palveluyksikko/255193"
+ },
+ "ap:255194": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/danube-university-krems/2026/senior-lecturer-praedoc-m-w-d/255194"
+ },
+ "ap:255195": {
+  "first_seen": "2026-11-14T13:28:15+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imprs-for-molecular-organ-biology/2026/10-fully-funded-phd-positions-at-the-imprs-for-molecular-organ-biology/255195"
+ },
+ "ap:255196": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/danube-university-krems/2026/senior-lecturer-praedoc-m-f-d/255196"
+ },
+ "ap:255197": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/research-scientist-in-scientific-ai-and-geotechnical-engineering/255197"
+ },
+ "ap:255198": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-oulu/2026/postdoctoral-researcher-in-hydrological-and-ecosystem-modelling/255198"
+ },
+ "ap:255199": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-in-permanent-magnet-materials-and-microstructure-engineering/255199"
+ },
+ "ap:255200": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-applied-sciences-and-arts-of-southern-switzerland-supsi/2026/lecturer-researcher-in-wall-paintings-conservation/255200"
+ },
+ "ap:255201": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-applied-sciences-and-arts-of-southern-switzerland-supsi/2026/supsi-open-rank-professor-full-or-associate-professor-at-the-institute-of-systems-and-applied-electronics/255201"
+ },
+ "ap:255202": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/r-d-engineer-advanced-photomasks/255202"
+ },
+ "ap:255203": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/postdoc-position-in-molecular-biology-biophysics/255203"
+ },
+ "ap:255204": {
+  "first_seen": "2026-11-14T13:28:17+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoralpostdoctoral-positions-in-analog-design-automation/255204"
+ },
+ "ap:255205": {
+  "first_seen": "2026-11-14T13:28:19+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/vice-president-for-research-and-sustainable-development/255205"
+ },
+ "ap:255206": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoc-in-advanced-solar-pvt-systems-and-experimental-modelling/255206"
+ },
+ "ap:255207": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoc-in-high-performance-data-management-and-ai/255207"
+ },
+ "ap:255208": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoktor-inom-avancerade-solhybridsystem-och-experimentell/255208"
+ },
+ "ap:255209": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/postdoktor-inom-hogpresterande-datahantering-och-ai/255209"
+ },
+ "ap:255210": {
+  "first_seen": "2026-11-14T13:28:20+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/doctoral-phd-position-in-human-evolution-and-developmental-gene-regulation/255210"
+ },
+ "ap:255211": {
+  "first_seen": "2026-11-14T13:28:22+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/doktorantjanst-phd-i-mansklig-evolution-och-utvecklingsrelaterad-genreglering/255211"
+ },
+ "ap:255212": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/postdoc-in-self-assembled-optical-microcavities/255212"
+ },
+ "ap:255213": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/postdoctoral-scholarship-holder-co-design-methodologies-for-inclusive-urban-spaces/255213"
+ },
+ "ap:255214": {
+  "first_seen": "2026-11-14T13:28:24+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-botanica-ambientale-e-applicata-profssa-wellstein-camilla-pos-1/255214"
+ },
+ "ap:255215": {
+  "first_seen": "2026-11-14T13:28:26+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-vegetationsokologie-und-angewandte-botanik-profssa-wellstein-camilla-pos-1/255215"
+ },
+ "ap:255216": {
+  "first_seen": "2026-11-14T13:28:28+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-environmental-and-applied-botany-profssa-wellstein-camilla-pos-1/255216"
+ },
+ "ap:255217": {
+  "first_seen": "2026-11-14T13:28:30+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-di-primo-livello-a-botanica-ambientale-e-applicata-profssa-wellstein-camilla-pos-2/255217"
+ },
+ "ap:255218": {
+  "first_seen": "2026-11-14T13:28:32+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/tecnologo-o-tecnologa-1-ebene-a-vegetationsokologie-und-angewandte-botanik-profssa-wellstein-camilla-pos-2/255218"
+ },
+ "ap:255219": {
+  "first_seen": "2026-11-14T13:28:34+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/free-university-of-bozen-bolzano/2026/first-level-technologist-a-environmental-and-applied-botany-profssa-wellstein-camilla-pos-2/255219"
+ },
+ "ap:255220": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/professorship-in-dutch-literature-w2-f-m-x/255220"
+ },
+ "ap:255221": {
+  "first_seen": "2026-11-14T13:28:35+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-research-fellowship-in-conflict-prediction-and-early-warning-100/255221"
+ },
+ "ap:255222": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/assistant-professor-tenure-track-of-ai-for-cybersecurity/255222"
+ },
+ "ap:255223": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/assistant-professor-tenure-track-of-learning-for-robotic-systems-in-computer-science/255223"
+ },
+ "ap:255224": {
+  "first_seen": "2026-11-14T13:27:50+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/assistant-professor-tenure-track-of-scalable-and-agentic-ai-systems/255224"
+ },
+ "ap:255225": {
+  "first_seen": "2026-11-14T13:28:37+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/vid-specialized-university/2026/inntil-tre-stillinger-som-h-gskolelektor-i-sosialt-arbeid/255225"
  },
  "chalmers:14972": {
   "first_seen": "2026-10-30T11:15:13+00:00",
