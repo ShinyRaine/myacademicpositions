@@ -11293,6 +11293,11 @@
   "source": "chalmers",
   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15009"
  },
+ "chalmers:15017": {
+  "first_seen": "2026-11-18T22:35:16+00:00",
+  "source": "chalmers",
+  "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15017"
+ },
  "chalmers:15037": {
   "first_seen": "2026-10-30T11:15:03+00:00",
   "skipped": "listed-type:professor",
