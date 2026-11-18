@@ -11575,6 +11575,12 @@
   "source": "chalmers",
   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15202"
  },
+ "chalmers:15204": {
+  "first_seen": "2026-11-18T15:36:13+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "chalmers",
+  "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15204"
+ },
  "kth:925980": {
   "first_seen": "2026-10-30T11:15:32+00:00",
   "skipped": "listed-type:professor",
@@ -11906,6 +11912,12 @@
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/990343?l=en"
  },
+ "kth:990799": {
+  "first_seen": "2026-11-18T15:36:15+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/990799?l=en"
+ },
  "kth:990858": {
   "first_seen": "2026-11-17T15:57:53+00:00",
   "source": "kth",
@@ -11916,5 +11928,10 @@
   "skipped": "listed-type:researcher",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/990985?l=en"
+ },
+ "kth:991415": {
+  "first_seen": "2026-11-18T15:36:17+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/991415?l=en"
  }
 }
