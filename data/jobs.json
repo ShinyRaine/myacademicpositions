@@ -5,9 +5,9 @@
   "tier_B": 2,
   "tier_C": 12,
   "tier_D": 327,
-  "urgent": 104
+  "urgent": 106
  },
- "generated_at": "2026-11-19T15:43:45+00:00",
+ "generated_at": "2026-11-19T22:39:47+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -390,7 +390,7 @@
    "city": "Tallinn",
    "contact": "",
    "country": "Estonia",
-   "days_left": 16,
+   "days_left": 15,
    "deadline": "2026-12-05T21:59:59+00:00",
    "department": "",
    "employer": "Tallinn University of Technology",
@@ -631,7 +631,7 @@
    "city": "Tampere",
    "contact": "",
    "country": "Finland",
-   "days_left": 26,
+   "days_left": 25,
    "deadline": "2026-12-15T21:59:59+00:00",
    "department": "",
    "employer": "Tampere University",
@@ -1838,7 +1838,7 @@
    ],
    "city": "Luxembourg",
    "country": "Luxembourg",
-   "days_left": 219,
+   "days_left": 218,
    "deadline": "2027-06-26T21:59:59+00:00",
    "employer": "University of Luxembourg",
    "employment_type": "",
@@ -1889,7 +1889,7 @@
    ],
    "city": "Luxembourg",
    "country": "Luxembourg",
-   "days_left": 274,
+   "days_left": 273,
    "deadline": "2027-08-20T21:59:59+00:00",
    "employer": "University of Luxembourg",
    "employment_type": "",
@@ -2259,7 +2259,7 @@
    "city": "Tallinn",
    "contact": "",
    "country": "Estonia",
-   "days_left": 15,
+   "days_left": 14,
    "deadline": "2026-12-04T21:59:59+00:00",
    "department": "",
    "employer": "Tallinn University of Technology",
@@ -2278,7 +2278,7 @@
    "tier_name": "不相关",
    "title": "Cyberattack Detection Methods in Power Systems",
    "topic_score": 10,
-   "urgent": false,
+   "urgent": true,
    "url": "https://en.academicpositions.se/ad/tallinn-university-of-technology/2026/cyberattack-detection-methods-in-power-systems/254901"
   },
   {
@@ -2566,7 +2566,7 @@
    ],
    "city": "Esch-sur-Alzette",
    "country": "Luxembourg",
-   "days_left": 334,
+   "days_left": 333,
    "deadline": "2027-10-19T21:59:59+00:00",
    "employer": "University of Luxembourg",
    "employment_type": "",
@@ -2694,7 +2694,7 @@
    "city": "Tampere",
    "contact": "",
    "country": "Finland",
-   "days_left": 11,
+   "days_left": 10,
    "deadline": "2026-11-30T21:59:59+00:00",
    "department": "",
    "employer": "Tampere University",
@@ -2799,7 +2799,7 @@
    ],
    "city": "Luxembourg",
    "country": "Luxembourg",
-   "days_left": 275,
+   "days_left": 274,
    "deadline": "2027-08-21T21:59:59+00:00",
    "employer": "University of Luxembourg",
    "employment_type": "",
@@ -2913,7 +2913,7 @@
    "city": "Tallinn",
    "contact": "",
    "country": "Estonia",
-   "days_left": 16,
+   "days_left": 15,
    "deadline": "2026-12-05T21:59:59+00:00",
    "department": "",
    "employer": "Tallinn University of Technology",
@@ -2978,7 +2978,7 @@
    "city": "Tallinn",
    "contact": "",
    "country": "Estonia",
-   "days_left": 16,
+   "days_left": 15,
    "deadline": "2026-12-05T21:59:59+00:00",
    "department": "",
    "employer": "Tallinn University of Technology",
@@ -3043,7 +3043,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 247,
+   "days_left": 246,
    "deadline": "2027-07-24T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -3219,7 +3219,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 320,
+   "days_left": 319,
    "deadline": "2027-10-05T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -3663,7 +3663,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 219,
+   "days_left": 218,
    "deadline": "2027-06-26T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -3715,7 +3715,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 219,
+   "days_left": 218,
    "deadline": "2027-06-26T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -4028,7 +4028,7 @@
    "city": "Joensuu",
    "contact": "",
    "country": "Finland",
-   "days_left": 11,
+   "days_left": 10,
    "deadline": "2026-11-30T21:59:59+00:00",
    "department": "",
    "employer": "University of Eastern Finland",
@@ -4524,7 +4524,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 320,
+   "days_left": 319,
    "deadline": "2027-10-05T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -4900,7 +4900,7 @@
    ],
    "city": "Jerusalem",
    "country": "Israel",
-   "days_left": 60,
+   "days_left": 59,
    "deadline": "2027-01-18T21:59:59+00:00",
    "employer": "The Hebrew University of Jerusalem",
    "employment_type": "",
@@ -5090,7 +5090,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 209,
+   "days_left": 208,
    "deadline": "2027-06-16T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -5130,7 +5130,7 @@
    "city": "Versailles",
    "contact": "",
    "country": "France",
-   "days_left": 152,
+   "days_left": 151,
    "deadline": "2027-04-20T21:59:59+00:00",
    "department": "",
    "employer": "HEC Paris",
@@ -5329,7 +5329,7 @@
    ],
    "city": "Luxembourg",
    "country": "Luxembourg",
-   "days_left": 313,
+   "days_left": 312,
    "deadline": "2027-09-28T21:59:59+00:00",
    "employer": "University of Luxembourg",
    "employment_type": "",
@@ -5937,7 +5937,7 @@
    "city": "Tallinn",
    "contact": "",
    "country": "Estonia",
-   "days_left": 15,
+   "days_left": 14,
    "deadline": "2026-12-04T21:59:59+00:00",
    "department": "",
    "employer": "Tallinn University of Technology",
@@ -5956,7 +5956,7 @@
    "tier_name": "不相关",
    "title": "Resource-Efficient Cryptographic Mitigation Methods in Power Systems",
    "topic_score": 2,
-   "urgent": false,
+   "urgent": true,
    "url": "https://en.academicpositions.se/ad/tallinn-university-of-technology/2026/resource-efficient-cryptographic-mitigation-methods-in-power-systems/254900"
   },
   {
@@ -6460,7 +6460,7 @@
    "city": "Vaasa",
    "contact": "",
    "country": "Finland",
-   "days_left": 14,
+   "days_left": 13,
    "deadline": "2026-12-03T21:59:59+00:00",
    "department": "",
    "employer": "University of Vaasa",
@@ -6558,7 +6558,7 @@
    ],
    "city": "Enschede",
    "country": "The Netherlands",
-   "days_left": 223,
+   "days_left": 222,
    "deadline": "2027-06-30T21:59:59+00:00",
    "employer": "University of Twente",
    "employment_type": "",
@@ -6714,7 +6714,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 266,
+   "days_left": 265,
    "deadline": "2027-08-12T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -6754,7 +6754,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 273,
+   "days_left": 272,
    "deadline": "2027-08-19T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -7099,7 +7099,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 334,
+   "days_left": 333,
    "deadline": "2027-10-19T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -8101,7 +8101,7 @@
    "breakdown": [],
    "city": "Jerusalem",
    "country": "Israel",
-   "days_left": 60,
+   "days_left": 59,
    "deadline": "2027-01-18T21:59:59+00:00",
    "employer": "The Hebrew University of Jerusalem",
    "employment_type": "",
@@ -8136,7 +8136,7 @@
    "breakdown": [],
    "city": "Jerusalem",
    "country": "Israel",
-   "days_left": 60,
+   "days_left": 59,
    "deadline": "2027-01-18T21:59:59+00:00",
    "employer": "The Hebrew University of Jerusalem",
    "employment_type": "",
@@ -8457,7 +8457,7 @@
    ],
    "city": "Esch-sur-Alzette",
    "country": "Luxembourg",
-   "days_left": 145,
+   "days_left": 144,
    "deadline": "2027-04-13T21:59:59+00:00",
    "employer": "University of Luxembourg",
    "employment_type": "",
@@ -8483,7 +8483,7 @@
    "breakdown": [],
    "city": "Munich",
    "country": "Germany",
-   "days_left": 223,
+   "days_left": 222,
    "deadline": "2027-06-30T21:59:59+00:00",
    "employer": "International Max Planck Research School for Molecules of Life (IMPRS-ML)",
    "employment_type": "",
@@ -8540,7 +8540,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 169,
+   "days_left": 168,
    "deadline": "2027-05-07T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -8621,7 +8621,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 202,
+   "days_left": 201,
    "deadline": "2027-06-09T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -8648,7 +8648,7 @@
    "city": "Cologne",
    "contact": "",
    "country": "Germany",
-   "days_left": 209,
+   "days_left": 208,
    "deadline": "2027-06-16T21:59:59+00:00",
    "department": "",
    "employer": "Cologne Graduate School of Ageing Research (CGA)",
@@ -8675,7 +8675,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 253,
+   "days_left": 252,
    "deadline": "2027-07-30T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -8702,7 +8702,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 253,
+   "days_left": 252,
    "deadline": "2027-07-30T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -8729,7 +8729,7 @@
    "city": "Martinsried",
    "contact": "",
    "country": "Germany",
-   "days_left": 263,
+   "days_left": 262,
    "deadline": "2027-08-09T21:59:59+00:00",
    "department": "",
    "employer": "International Max Planck Research School – Biological Intelligence (IMPRS-BI)",
@@ -8961,7 +8961,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 288,
+   "days_left": 287,
    "deadline": "2027-09-03T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -9438,7 +9438,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 313,
+   "days_left": 312,
    "deadline": "2027-09-28T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -9465,7 +9465,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 313,
+   "days_left": 312,
    "deadline": "2027-09-28T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -9492,7 +9492,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 313,
+   "days_left": 312,
    "deadline": "2027-09-28T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -9708,7 +9708,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 316,
+   "days_left": 315,
    "deadline": "2027-10-01T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -9971,7 +9971,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 322,
+   "days_left": 321,
    "deadline": "2027-10-07T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -9998,7 +9998,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 322,
+   "days_left": 321,
    "deadline": "2027-10-07T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -10176,7 +10176,7 @@
    "city": "Rovaniemi",
    "contact": "",
    "country": "Finland",
-   "days_left": 12,
+   "days_left": 11,
    "deadline": "2026-12-01T21:59:59+00:00",
    "department": "",
    "employer": "University of Lapland",
@@ -10416,7 +10416,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 328,
+   "days_left": 327,
    "deadline": "2027-10-13T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -10492,7 +10492,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 329,
+   "days_left": 328,
    "deadline": "2027-10-14T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -11674,7 +11674,7 @@
    "city": "Oulu",
    "contact": "",
    "country": "Finland",
-   "days_left": 8,
+   "days_left": 7,
    "deadline": "2026-11-27T21:59:59+00:00",
    "department": "",
    "employer": "University of Oulu",
@@ -11794,7 +11794,7 @@
    "city": "Oulu",
    "contact": "",
    "country": "Finland",
-   "days_left": 11,
+   "days_left": 10,
    "deadline": "2026-11-30T21:59:59+00:00",
    "department": "",
    "employer": "University of Oulu",
@@ -12033,7 +12033,7 @@
    "city": "Luxembourg",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 343,
+   "days_left": 342,
    "deadline": "2027-10-28T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -12481,7 +12481,7 @@
    "city": "Esch-sur-Alzette",
    "contact": "",
    "country": "Luxembourg",
-   "days_left": 344,
+   "days_left": 343,
    "deadline": "2027-10-29T21:59:59+00:00",
    "department": "",
    "employer": "University of Luxembourg",
@@ -13702,7 +13702,7 @@
    "city": "Tampere",
    "contact": "",
    "country": "Finland",
-   "days_left": 88,
+   "days_left": 87,
    "deadline": "2027-02-15T21:59:59+00:00",
    "department": "",
    "employer": "Tampere University",
@@ -14759,7 +14759,7 @@
    "city": "Jyväskylä",
    "contact": "",
    "country": "Finland",
-   "days_left": 19,
+   "days_left": 18,
    "deadline": "2026-12-08T21:59:59+00:00",
    "department": "",
    "employer": "University of Jyväskylä",
@@ -14798,7 +14798,7 @@
    "city": "Oulu",
    "contact": "",
    "country": "Finland",
-   "days_left": 24,
+   "days_left": 23,
    "deadline": "2026-12-13T21:59:59+00:00",
    "department": "",
    "employer": "University of Oulu",
@@ -14942,7 +14942,7 @@
    "city": "Oulu",
    "contact": "",
    "country": "Finland",
-   "days_left": 11,
+   "days_left": 10,
    "deadline": "2026-11-30T21:59:59+00:00",
    "department": "",
    "employer": "University of Oulu",
@@ -15045,424 +15045,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-pore-scale-modelling-of-multiphase-flow-and-reactive-transport/255255"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255323",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-machine-learning-and-multiscale-materials-modeling/255323"
-    }
-   ],
-   "breakdown": [
-    {
-     "applied": 10.0,
-     "factor": 1.0,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "标题",
-     "weight": 10,
-     "where": "title"
-    },
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "astronom"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 42,
-   "deadline": "2026-12-31T23:59:59+00:00",
-   "department": "Fysik och Astronomi",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-17T15:57:44+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15201",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-17T15:27:25+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "How do you predict the behaviour of a material, such as creep in copper, thousands of years into the future? Join us as a doctoral student at the Division of Chemical Physics, Department of Physics and Astronomy, where we combine first-principles simulation with machine learning to predict how materials behave and to discover new ones.  About us",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in Machine Learning and Multiscale Materials Modeling",
-   "topic_score": 10,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15201"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255321",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-computational-physics-of-magnetic-materials-and-surfaces/255321"
-    }
-   ],
-   "breakdown": [],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 46,
-   "deadline": "2027-01-04T23:59:59+00:00",
-   "department": "Fysik och Astronomi",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-17T15:57:49+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15184",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-17T14:40:49+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "Are you interested in using fundamental physics and computational methods to understand and design new functionalities in quantum materials? We are looking for a motivated doctoral student to join our research on how surface-induced magnetic and electronic signals can be used to detect otherwise hidden antiferromagnetic states.  You will join a young theoretical materials physics group at Chalmers and work at the interface of condensed matter physics, materials modelling, symmetry and spintronics.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in computational physics of magnetic materials and surfaces",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15184"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255326",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-self-assembled-optical-microcavities/255326"
-    }
-   ],
-   "breakdown": [
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "astronom"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 27,
-   "deadline": "2026-12-16T23:59:59+00:00",
-   "department": "Fysik och Astronomi",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-17T15:57:47+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15197",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-17T15:49:29+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "Welcome to the doctoral programme at the Department of Physics and Astronomy at Chalmers University of Technology.  We look forward to working with you!",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in self-assembled optical microcavities",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15197"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255322",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-students-in-evolved-star-research/255322"
-    }
-   ],
-   "breakdown": [
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "astronom"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 50,
-   "deadline": "2027-01-08T23:59:59+00:00",
-   "department": "Fysik och Astronomi",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-17T15:57:46+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15198",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-17T15:22:23+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "We are looking for Doctoral students to become part of our Evolved Stars research group at the Division of Astronomy and Plasma Physics (AoP) at the Department of Physics and Astronomy . Join our team and contribute to exciting research on evolved stars on the asymptotic giant branch (AGB) and/or in the red supergiant (RSG) phase in a collaborative and dynamic environment.  About us",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral students in Evolved Star Research",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15198"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255325",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/6-doctoral-students-at-the-department-of-physics-and-astronomy/255325"
-    }
-   ],
-   "breakdown": [
-    {
-     "applied": 1.5,
-     "factor": 0.15,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "正文仅 1 次",
-     "weight": 10,
-     "where": "body"
-    },
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "astronom"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 50,
-   "deadline": "2027-01-08T23:59:59+00:00",
-   "department": "Fysik och Astronomi",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-17T15:57:40+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15200",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-17T15:44:56+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "Would you like to expand your knowledge and develop your skills to meet today’s needs and tomorrow’s challenges?  The Department of Physics and Astronomy at Chalmers is recruiting Doctoral students to several research projects across the department. As a Doctoral student, you will join one of our research groups and conduct research as part of your doctoral education. You will develop your ability to plan and carry out research, critically analyse results, and communicate your work in scientific, professional and public contexts.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "6 Doctoral students at the Department of Physics and Astronomy",
-   "topic_score": 2,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15200"
-  },
-  {
-   "also_listed_on": [
-    {
-     "id": "ap:255327",
-     "source": "ap",
-     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-multiscale-studies-of-mrna-delivery-and-function/255327"
-    }
-   ],
-   "breakdown": [
-    {
-     "applied": 1.5,
-     "factor": 0.15,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "正文仅 1 次",
-     "weight": 10,
-     "where": "body"
-    },
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "astronom"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Gothenburg",
-   "contact": "",
-   "country": "Sweden",
-   "days_left": 29,
-   "deadline": "2026-12-18T23:59:59+00:00",
-   "department": "Fysik och Astronomi",
-   "employer": "Chalmers University of Technology",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-11-17T15:57:42+00:00",
-   "flags": [
-    {
-     "hits": [
-      "chalmers"
-     ],
-     "label": "home",
-     "name": "本校",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year",
-      "doctoral student position"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "chalmers:15202",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-11-17T15:53:01+00:00",
-   "score": 0,
-   "source": "chalmers",
-   "summary": "Are you interested in using physics and chemistry to understand how lipid nanoparticles deliver mRNA into cells, and how they can be targeted to specific cell types? We are looking for one or two motivated Doctoral student to join our research on how these nanoparticles interact with cell membranes, using neutron reflectometry and advanced optical microscopy. You will join the Biophysics group at the Division of Nano and Biophysics, Department of Physics and Astronomy, and work at the interface of physics, chemistry and life science.  About us",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral student in Multiscale Studies of mRNA Delivery and Function",
-   "topic_score": 2,
-   "urgent": false,
-   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15202"
   },
   {
    "breakdown": [],
@@ -15650,6 +15232,424 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/research-assistant-position-in-mechano-immunology/255313"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255321",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-computational-physics-of-magnetic-materials-and-surfaces/255321"
+    }
+   ],
+   "breakdown": [],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 46,
+   "deadline": "2027-01-04T23:59:59+00:00",
+   "department": "Fysik och Astronomi",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-17T15:57:49+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15184",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-17T14:40:49+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Are you interested in using fundamental physics and computational methods to understand and design new functionalities in quantum materials? We are looking for a motivated doctoral student to join our research on how surface-induced magnetic and electronic signals can be used to detect otherwise hidden antiferromagnetic states.  You will join a young theoretical materials physics group at Chalmers and work at the interface of condensed matter physics, materials modelling, symmetry and spintronics.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in computational physics of magnetic materials and surfaces",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15184"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255322",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-students-in-evolved-star-research/255322"
+    }
+   ],
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "astronom"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 50,
+   "deadline": "2027-01-08T23:59:59+00:00",
+   "department": "Fysik och Astronomi",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-17T15:57:46+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15198",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-17T15:22:23+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "We are looking for Doctoral students to become part of our Evolved Stars research group at the Division of Astronomy and Plasma Physics (AoP) at the Department of Physics and Astronomy . Join our team and contribute to exciting research on evolved stars on the asymptotic giant branch (AGB) and/or in the red supergiant (RSG) phase in a collaborative and dynamic environment.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral students in Evolved Star Research",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15198"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255323",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-machine-learning-and-multiscale-materials-modeling/255323"
+    }
+   ],
+   "breakdown": [
+    {
+     "applied": 10.0,
+     "factor": 1.0,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "标题",
+     "weight": 10,
+     "where": "title"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "astronom"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 42,
+   "deadline": "2026-12-31T23:59:59+00:00",
+   "department": "Fysik och Astronomi",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-17T15:57:44+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15201",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-17T15:27:25+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "How do you predict the behaviour of a material, such as creep in copper, thousands of years into the future? Join us as a doctoral student at the Division of Chemical Physics, Department of Physics and Astronomy, where we combine first-principles simulation with machine learning to predict how materials behave and to discover new ones.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in Machine Learning and Multiscale Materials Modeling",
+   "topic_score": 10,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15201"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255325",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/6-doctoral-students-at-the-department-of-physics-and-astronomy/255325"
+    }
+   ],
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "astronom"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 50,
+   "deadline": "2027-01-08T23:59:59+00:00",
+   "department": "Fysik och Astronomi",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-17T15:57:40+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15200",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-17T15:44:56+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Would you like to expand your knowledge and develop your skills to meet today’s needs and tomorrow’s challenges?  The Department of Physics and Astronomy at Chalmers is recruiting Doctoral students to several research projects across the department. As a Doctoral student, you will join one of our research groups and conduct research as part of your doctoral education. You will develop your ability to plan and carry out research, critically analyse results, and communicate your work in scientific, professional and public contexts.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "6 Doctoral students at the Department of Physics and Astronomy",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15200"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255326",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-self-assembled-optical-microcavities/255326"
+    }
+   ],
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "astronom"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 27,
+   "deadline": "2026-12-16T23:59:59+00:00",
+   "department": "Fysik och Astronomi",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-17T15:57:47+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15197",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-17T15:49:29+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Welcome to the doctoral programme at the Department of Physics and Astronomy at Chalmers University of Technology.  We look forward to working with you!",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in self-assembled optical microcavities",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15197"
+  },
+  {
+   "also_listed_on": [
+    {
+     "id": "ap:255327",
+     "source": "ap",
+     "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-multiscale-studies-of-mrna-delivery-and-function/255327"
+    }
+   ],
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "astronom"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 29,
+   "deadline": "2026-12-18T23:59:59+00:00",
+   "department": "Fysik och Astronomi",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-17T15:57:42+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15202",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-17T15:53:01+00:00",
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Are you interested in using physics and chemistry to understand how lipid nanoparticles deliver mRNA into cells, and how they can be targeted to specific cell types? We are looking for one or two motivated Doctoral student to join our research on how these nanoparticles interact with cell membranes, using neutron reflectometry and advanced optical microscopy. You will join the Biophysics group at the Division of Nano and Biophysics, Department of Physics and Astronomy, and work at the interface of physics, chemistry and life science.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in Multiscale Studies of mRNA Delivery and Function",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15202"
   },
   {
    "breakdown": [
