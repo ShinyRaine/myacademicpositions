@@ -705,6 +705,11 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/ku-leuven/2026/postdoc-in-combinatorial-search-optimization-sat-cp-smt-mip/251260"
  },
+ "ap:251315": {
+  "first_seen": "2026-11-20T15:23:46+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/chalmers-university-of-technology/2026/doctoral-student-in-the-foundations-of-cryptography/251315"
+ },
  "ap:251392": {
   "first_seen": "2026-10-30T09:51:10+00:00",
   "skipped": "slug-type:engineer",
@@ -11740,6 +11745,11 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/european-synchrotron-radiation-facility-esrf/2026/ph-d-thesis-student-on-operando-tem-analysis-of-ionotronic-materials/255360"
  },
+ "ap:255361": {
+  "first_seen": "2026-11-20T15:23:47+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/open-university-cyprus-ouc/2026/academic-personnel-in-the-faculty-of-economics-and-management/255361"
+ },
  "ap:255362": {
   "first_seen": "2026-11-19T15:41:42+00:00",
   "skipped": "listed-type:professor",
@@ -11761,6 +11771,40 @@
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/universitatsklinikum-erlangen/2026/position-for-doctoral-candidate-dr-rer-nat-phd-in-infectious-disease-immunology-m-f-x-for-3-years/255365"
  },
+ "ap:255366": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/researcher-in-power-electronics/255366"
+ },
+ "ap:255367": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/kth-royal-institute-of-technology/2026/forskare-i-kraftelektronik/255367"
+ },
+ "ap:255368": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/research-technician-in-molecular-aging-and-somatic-mutations/255368"
+ },
+ "ap:255369": {
+  "first_seen": "2026-11-20T15:23:49+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/forskningstekniker-inom-molekylart-aldrande-och-somatiska-mutationer/255369"
+ },
+ "ap:255370": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/postdoctoral-scholarship-holder-natural-products-research/255370"
+ },
+ "ap:255371": {
+  "first_seen": "2026-11-20T15:23:51+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/mitarbeiterin-wmd-fur-projektkoordination-und-systembetrieb-im-bereich-mvz-tuv2611-12-it-center-university-of-cologne-itcc/255371"
+ },
  "ap:255372": {
   "first_seen": "2026-11-19T15:41:42+00:00",
   "skipped": "listed-type:postdoc",
@@ -11771,6 +11815,284 @@
   "first_seen": "2026-11-19T15:43:33+00:00",
   "source": "ap",
   "url": "https://en.academicpositions.se/ad/helmut-schmidt-university/2026/angular-entwicklerin-angular-entwicklers-mit-ux-ui-fokus-m-w-d/255373"
+ },
+ "ap:255374": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/postdoctoral-position-in-experimental-quantum-engineering-eqe-group/255374"
+ },
+ "ap:255375": {
+  "first_seen": "2026-11-20T15:23:53+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-researcher-in-energy-systems-modelling-artificial-intelligence-and-digitalization/255375"
+ },
+ "ap:255376": {
+  "first_seen": "2026-11-20T15:23:55+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/doctoral-phd-student-position-in-brain-circuits-in-health-and-disease/255376"
+ },
+ "ap:255377": {
+  "first_seen": "2026-11-20T15:23:57+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/doktorandplats-inom-hjarnkretsar-vid-halsa-och-sjukdom/255377"
+ },
+ "ap:255378": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/postdoc-position-in-recursive-self-improvement-prof-i-bogunovic/255378"
+ },
+ "ap:255379": {
+  "first_seen": "2026-11-20T15:23:59+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-basel/2026/phd-position-in-recursive-self-improvement-prof-i-bogunovic/255379"
+ },
+ "ap:255380": {
+  "first_seen": "2026-11-20T15:24:01+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-graz/2026/projektassistentin-ohne-doktorat-wdm-projekt-elementar/255380"
+ },
+ "ap:255381": {
+  "first_seen": "2026-11-20T15:24:03+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-graz/2026/universitatsassistentin-ohne-doktorat-mwd/255381"
+ },
+ "ap:255382": {
+  "first_seen": "2026-11-20T15:24:04+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-graz/2026/project-assistant-without-a-phd-fmd-project-elementar/255382"
+ },
+ "ap:255383": {
+  "first_seen": "2026-11-20T15:24:06+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-graz/2026/university-assistant-without-doctorate-mfd/255383"
+ },
+ "ap:255384": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/universitair-docent-ondernemingsrecht-10-fte/255384"
+ },
+ "ap:255385": {
+  "first_seen": "2026-11-20T15:24:09+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/senior-scrum-master-infra-workspace-services/255385"
+ },
+ "ap:255386": {
+  "first_seen": "2026-11-20T15:24:11+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/collectiespecialist-cariben-en-latijns-amerika-08-fte/255386"
+ },
+ "ap:255387": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/postdoctoral-researcher-language-and-argumentation-of-russian-propaganda/255387"
+ },
+ "ap:255388": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:management",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/adviseur-subsidies-coordinator-projecten/255388"
+ },
+ "ap:255389": {
+  "first_seen": "2026-11-20T15:24:14+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/onderwijskundig-adviseur-toetsing/255389"
+ },
+ "ap:255390": {
+  "first_seen": "2026-11-20T15:24:16+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/phd-candidate-reconstructing-environmental-intermittency-in-early-bronze-age-southeast-arabia-10/255390"
+ },
+ "ap:255391": {
+  "first_seen": "2026-11-20T15:24:18+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/senior-hr-adviseur-06-tot-08-fte/255391"
+ },
+ "ap:255392": {
+  "first_seen": "2026-11-20T15:24:20+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/phd-candidate-in-philosophy-of-physics/255392"
+ },
+ "ap:255393": {
+  "first_seen": "2026-11-20T15:24:24+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/managementassistent-directeur-hrm/255393"
+ },
+ "ap:255394": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/unflappable-laboratory-technician/255394"
+ },
+ "ap:255395": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/assistant-professor-in-moral-philosophy/255395"
+ },
+ "ap:255396": {
+  "first_seen": "2026-11-20T15:24:26+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/senior-financieel-medewerker-crediteuren-08-10-fte-op-projectbasis-2027/255396"
+ },
+ "ap:255397": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/assistant-professor-in-the-violence-and-violence-prevention-group/255397"
+ },
+ "ap:255398": {
+  "first_seen": "2026-11-20T15:24:28+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/senior-financieel-administrateur-liquide-middelen-tijdelijke-functie/255398"
+ },
+ "ap:255399": {
+  "first_seen": "2026-11-20T15:24:31+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/financieel-medewerker-crediteuren-08-10-fte-op-projectbasis-2027/255399"
+ },
+ "ap:255400": {
+  "first_seen": "2026-11-20T15:24:33+00:00",
+  "skipped": "unparseable",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/beleidsadviseur-institutional-research/255400"
+ },
+ "ap:255401": {
+  "first_seen": "2026-11-20T15:24:35+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/leiden-university/2026/afdelingshoofd-studieadvisering-08-fte/255401"
+ },
+ "ap:255402": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/louisiana-state-university/2026/assistant-professors-tenure-track-in-the-department-of-mechanical-and-industrial-engineering-at-louisiana-state-university/255402"
+ },
+ "ap:255403": {
+  "first_seen": "2026-11-20T15:24:37+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/national-institute-subatomic-physics-nikhef/2026/phd-position-in-tracking-with-the-alice-detector-and-heavy-flavour-physics/255403"
+ },
+ "ap:255404": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/tu-wien/2026/universitatsassistent-in-post-doc-teilzeit-20-wochenstunden-befristet-auf-2-jahre-e163-institut-fur-angewandte-synthesechemie/255404"
+ },
+ "ap:255405": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/postdoc-in-urban-climate-modelling-and-climate-adaptation-fmx-wiss2611-11-insitute-of-geography-mnf/255405"
+ },
+ "ap:255406": {
+  "first_seen": "2026-11-20T15:24:38+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-agder-uia/2026/konomimedarbeider/255406"
+ },
+ "ap:255407": {
+  "first_seen": "2026-11-20T15:24:40+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-agder-uia/2026/driftstekniker/255407"
+ },
+ "ap:255408": {
+  "first_seen": "2026-11-20T15:24:42+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-agder-uia/2026/doktorgradsstipendiat-i-sosiologi/255408"
+ },
+ "ap:255409": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:engineer",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/r-d-engineer-advanced-photomasks/255409"
+ },
+ "ap:255410": {
+  "first_seen": "2026-11-20T15:24:44+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/innovation-specialist-r-d-ai-use-cases/255410"
+ },
+ "ap:255411": {
+  "first_seen": "2026-11-20T15:24:45+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-agder-uia/2026/r-dgiver-karriere-alumni-og-internasjonalt-samarbeid/255411"
+ },
+ "ap:255412": {
+  "first_seen": "2026-11-20T15:24:47+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/ghent-university/2026/scientific-collaborator-30521/255412"
+ },
+ "ap:255413": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/imec/2026/hardware-security-researcher/255413"
+ },
+ "ap:255414": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-vienna/2026/13-professorships-at-the-university-of-vienna/255414"
+ },
+ "ap:255415": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-vienna/2026/13-professuren-an-der-universit-t-wien/255415"
+ },
+ "ap:255416": {
+  "first_seen": "2026-11-20T15:24:49+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/international-baccalaureate-ib/2026/become-an-ib-examiner-for-dp-history-in-french/255416"
+ },
+ "ap:255417": {
+  "first_seen": "2026-11-20T15:24:51+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/international-baccalaureate-ib/2026/become-an-ib-examiner-for-dp-history-in-spanish/255417"
+ },
+ "ap:255430": {
+  "first_seen": "2026-11-20T15:24:53+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-liege/2026/permanent-full-time-scientific-position-faculty-of-sciences-field-ftir-atmospheric-surveillance-platform/255430"
+ },
+ "ap:255431": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/mykolas-romeris-university/2026/senior-researcher-in-cyber-physical-systems-and-intelligent-automation/255431"
+ },
+ "ap:255437": {
+  "first_seen": "2026-11-20T15:24:54+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/university-of-liege/2026/permanent-full-time-scientific-position-faculty-of-sciences-field-cart-platform/255437"
+ },
+ "ap:255443": {
+  "first_seen": "2026-11-20T15:24:57+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/international-baccalaureate-ib/2026/become-an-ib-examiner-for-dp-history/255443"
+ },
+ "ap:255444": {
+  "first_seen": "2026-11-20T15:23:44+00:00",
+  "skipped": "listed-type:professor",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-de-sherbrooke/2026/professor-canada-impact-emerging-leaders-program/255444"
+ },
+ "ap:255445": {
+  "first_seen": "2026-11-20T15:24:58+00:00",
+  "source": "ap",
+  "url": "https://en.academicpositions.se/ad/universite-de-sherbrooke/2026/professeure-ou-professeur-leaders-mergents-impact-canada-en-g-nie-ou-sciences-de-la-sant/255445"
  },
  "chalmers:14972": {
   "first_seen": "2026-10-30T11:15:13+00:00",
@@ -12081,6 +12403,11 @@
   "skipped": "listed-type:postdoc",
   "source": "chalmers",
   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15207"
+ },
+ "chalmers:15213": {
+  "first_seen": "2026-11-20T15:25:02+00:00",
+  "source": "chalmers",
+  "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15213"
  },
  "kth:925980": {
   "first_seen": "2026-10-30T11:15:32+00:00",
@@ -12451,5 +12778,28 @@
   "skipped": "listed-type:researcher",
   "source": "kth",
   "url": "https://www.kth.se/lediga-jobb/992411?l=en"
+ },
+ "kth:992663": {
+  "first_seen": "2026-11-20T15:25:04+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/992663?l=en"
+ },
+ "kth:992882": {
+  "first_seen": "2026-11-20T15:25:06+00:00",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/992882?l=en"
+ },
+ "kth:993076": {
+  "first_seen": "2026-11-20T15:25:04+00:00",
+  "skipped": "listed-type:researcher",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/993076?l=en"
+ },
+ "kth:993180": {
+  "first_seen": "2026-11-20T15:25:04+00:00",
+  "skipped": "listed-type:postdoc",
+  "source": "kth",
+  "url": "https://www.kth.se/lediga-jobb/993180?l=en"
  }
 }
