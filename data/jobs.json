@@ -5,9 +5,9 @@
   "tier_B": 2,
   "tier_C": 11,
   "tier_D": 319,
-  "urgent": 97
+  "urgent": 96
  },
- "generated_at": "2026-11-24T02:12:02+00:00",
+ "generated_at": "2026-11-24T17:38:58+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -3351,7 +3351,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 22,
+   "days_left": 21,
    "deadline": "2026-12-16T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -3849,7 +3849,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 10,
+   "days_left": 9,
    "deadline": "2026-12-04T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -5522,7 +5522,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7149,7 +7149,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7189,7 +7189,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7229,7 +7229,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7269,7 +7269,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7309,7 +7309,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7447,7 +7447,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 6,
+   "days_left": 5,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -9550,7 +9550,7 @@
    "city": "Florence",
    "contact": "",
    "country": "Italy",
-   "days_left": 52,
+   "days_left": 51,
    "deadline": "2027-01-15T13:00:59+00:00",
    "department": "",
    "employer": "European University Institute (EUI)",
@@ -9789,7 +9789,7 @@
    "city": "Klosterneuburg",
    "contact": "",
    "country": "Austria",
-   "days_left": 45,
+   "days_left": 44,
    "deadline": "2027-01-08T14:00:59+00:00",
    "department": "",
    "employer": "Institute of Science and Technology Austria (ISTA)",
@@ -10161,55 +10161,6 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-on-line-1-with-application-of-fwo-fellowship/253971"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": -30,
-     "factor": 1.0,
-     "hits": [
-      "genomic"
-     ],
-     "kind": "exclusion",
-     "label": "off-field",
-     "weight": -30,
-     "where": "title"
-    }
-   ],
-   "city": "Saffron Walden",
-   "contact": "",
-   "country": "United Kingdom",
-   "days_left": 0,
-   "deadline": "2026-11-24T09:00:59+00:00",
-   "department": "",
-   "employer": "Wellcome Sanger Institute",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-30T11:06:41+00:00",
-   "flags": [
-    {
-     "hits": [
-      "fully funded",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:253996",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-10-12T09:19:13+00:00",
-   "score": 0,
-   "source": "ap",
-   "summary": "4-year PhD with 3 research rotations in genomics (computational + lab). Fully funded studentships incl tuition; tax-free stipend £25.6–27.4k; Cambridge PhD.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "4-Year PhD Programme",
-   "topic_score": 0,
-   "urgent": true,
-   "url": "https://en.academicpositions.se/ad/wellcome-sanger-institute/2026/4-year-phd-programme/253996"
   },
   {
    "breakdown": [],
@@ -10627,7 +10578,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 26,
+   "days_left": 25,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -11614,7 +11565,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 96,
+   "days_left": 95,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -13147,7 +13098,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 6,
+   "days_left": 5,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -14722,7 +14673,7 @@
    "city": "L’Aquila",
    "contact": "",
    "country": "Italy",
-   "days_left": 49,
+   "days_left": 48,
    "deadline": "2027-01-12T14:00:59+00:00",
    "department": "",
    "employer": "Gran Sasso Science Institute",
@@ -15442,43 +15393,6 @@
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-statistical-network-modeling/255467"
   },
   {
-   "breakdown": [],
-   "city": "Stockholm",
-   "contact": "Jonas Mårtensson jonas1@kth.se",
-   "country": "Sweden",
-   "days_left": 16,
-   "deadline": "2026-12-10T23:59:59+00:00",
-   "department": "PA-2026-3979",
-   "employer": "KTH Royal Institute of Technology",
-   "employment_type": "Special fixed-term employment",
-   "expired": false,
-   "first_seen": "2026-11-19T15:43:39+00:00",
-   "flags": [
-    {
-     "hits": [
-      "kth",
-      "royal institute of technology"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    }
-   ],
-   "id": "kth:992343",
-   "language": "en",
-   "position_type": "research_assistant",
-   "posted": "2026-11-19T23:59:59+00:00",
-   "score": 0,
-   "source": "kth",
-   "summary": "Job description We are now seeking a research assistant for a paid, fixed-term position lasting 6 months at KTH’s Department of Decision and Control Systems. We welcome applications from people in the beginning of their career who wish to contribute to research projects, for example through laboratory work, compilation of experimental data, and other related tasks. Qualifications",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Research assistant in decision and control systems",
-   "topic_score": 0,
-   "urgent": false,
-   "url": "https://www.kth.se/lediga-jobb/992343?l=en"
-  },
-  {
    "breakdown": [
     {
      "applied": -30,
@@ -15805,6 +15719,90 @@
    "topic_score": 0,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/karolinska-institutet/2026/research-assistant-in-protein-biochemistry-and-neurodegeneration/255540"
+  },
+  {
+   "breakdown": [],
+   "city": "Stockholm",
+   "contact": "Jonas Mårtensson jonas1@kth.se",
+   "country": "Sweden",
+   "days_left": 16,
+   "deadline": "2026-12-10T23:59:59+00:00",
+   "department": "PA-2026-3979",
+   "employer": "KTH Royal Institute of Technology",
+   "employment_type": "Special fixed-term employment",
+   "expired": false,
+   "first_seen": "2026-11-19T15:43:39+00:00",
+   "flags": [
+    {
+     "hits": [
+      "kth",
+      "royal institute of technology"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "kth:992343",
+   "language": "en",
+   "position_type": "research_assistant",
+   "posted": "2026-11-19T23:59:59+00:00",
+   "score": 0,
+   "source": "kth",
+   "summary": "Job description We are now seeking a research assistant for a paid, fixed-term position lasting 6 months at KTH’s Department of Decision and Control Systems. We welcome applications from people in the beginning of their career who wish to contribute to research projects, for example through laboratory work, compilation of experimental data, and other related tasks. Qualifications",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Research assistant in decision and control systems",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://www.kth.se/lediga-jobb/992343?l=en"
+  },
+  {
+   "breakdown": [],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 29,
+   "deadline": "2026-12-23T23:59:59+00:00",
+   "department": "Life sciences",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-24T17:38:48+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15216",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Join our team at the Division of Food and Nutrition Science, Department of Life Sciences, and contribute to impactful research in the field of precision nutrition and metabolism.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in Glycemic Variability, Cardiometabolic Health and Personalized Nutrition",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15216"
   }
  ],
  "repo": "ShinyRaine/myacademicpositions",
