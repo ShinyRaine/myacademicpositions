@@ -1,13 +1,13 @@
 {
  "counts": {
-  "on_board": 332,
+  "on_board": 344,
   "tier_A": 0,
   "tier_B": 2,
-  "tier_C": 11,
-  "tier_D": 319,
-  "urgent": 102
+  "tier_C": 12,
+  "tier_D": 330,
+  "urgent": 103
  },
- "generated_at": "2026-11-25T23:36:46+00:00",
+ "generated_at": "2026-11-26T16:51:15+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -471,7 +471,7 @@
    "city": "Stockholm",
    "contact": "Xi Wang wangxi@kth.se Magnus Wiktorsson magwik@kth.se",
    "country": "Sweden",
-   "days_left": 8,
+   "days_left": 7,
    "deadline": "2026-12-03T23:59:59+00:00",
    "department": "PA-2026-3497",
    "employer": "KTH Royal Institute of Technology",
@@ -953,7 +953,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 36,
+   "days_left": 35,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Mechanics and Maritime Sciences",
    "employer": "Chalmers University of Technology",
@@ -1033,7 +1033,7 @@
    "city": "Stockholm",
    "contact": "Emrah Karakaya emrahka@kth.se Mats Engwall matseng@kth.se",
    "country": "Sweden",
-   "days_left": 40,
+   "days_left": 39,
    "deadline": "2027-01-04T23:59:59+00:00",
    "department": "PA-2026-3645",
    "employer": "KTH Royal Institute of Technology",
@@ -1082,6 +1082,75 @@
    "topic_score": 16,
    "urgent": false,
    "url": "https://www.kth.se/lediga-jobb/982854?l=en"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 15.0,
+     "factor": 0.75,
+     "hits": [
+      "robotic"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "摘要",
+     "weight": 20,
+     "where": "summary"
+    },
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "estimation"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Delft",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 35,
+   "deadline": "2026-12-31T22:59:59+00:00",
+   "department": "",
+   "employer": "Technische Universiteit Delft (TU Delft)",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:27+00:00",
+   "flags": [
+    {
+     "hits": [
+      "tu delft"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "4-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:255597",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T08:55:11+00:00",
+   "score": 16,
+   "source": "ap",
+   "summary": "15 MSCA-funded PhD spots on Internet resilience: satellite & wireless comms, networks, undersea cables/robotics, cybersecurity, governance. Open worldwide; MSCA mobility rule.",
+   "tier": "C",
+   "tier_name": "擦边",
+   "title": "PhD Positions Wireless Comms, Computer Networks, Satellite Systems and Cybersecurity",
+   "topic_score": 16,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/technische-universiteit-delft-tu-delft/2026/phd-positions-wireless-comms-computer-networks-satellite-systems-and-cybersecurity/255597"
   },
   {
    "breakdown": [
@@ -1647,7 +1716,7 @@
    "city": "Stockholm",
    "contact": "Shervin Bagheri sherwinb@kth.se",
    "country": "Sweden",
-   "days_left": 12,
+   "days_left": 11,
    "deadline": "2026-12-07T23:59:59+00:00",
    "department": "PA-2026-3646",
    "employer": "KTH Royal Institute of Technology",
@@ -2088,7 +2157,7 @@
    "city": "Stockholm",
    "contact": "Seraina Anne Dual seraina@kth.se Aurora Rosato rosato@kth.se",
    "country": "Sweden",
-   "days_left": 1,
+   "days_left": 0,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3731",
    "employer": "KTH Royal Institute of Technology",
@@ -3460,7 +3529,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 20,
+   "days_left": 19,
    "deadline": "2026-12-16T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -3692,6 +3761,87 @@
    "topic_score": 5,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-research-fellowship-in-conflict-prediction-and-early-warning-100/255221"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 2.0,
+     "factor": 0.06,
+     "hits": [
+      "neuro-symbolic"
+     ],
+     "kind": "topic",
+     "label": "core-tamp",
+     "note": "正文仅 1 次；robotics 语境 ×0.4",
+     "weight": 34,
+     "where": "body"
+    },
+    {
+     "applied": 3.0,
+     "factor": 0.15,
+     "hits": [
+      "autonomous system"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "正文仅 1 次",
+     "weight": 20,
+     "where": "body"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 73,
+   "deadline": "2027-02-07T23:59:59+00:00",
+   "department": "Chemistry and chemical engineering",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:51:05+00:00",
+   "flags": [
+    {
+     "hits": [
+      "wasp",
+      "wallenberg ai"
+     ],
+     "label": "named-group",
+     "name": "目标组",
+     "severity": "good"
+    },
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15212",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 5,
+   "source": "chalmers",
+   "summary": "Can organic materials activated by light help tackle one of today’s most persistent environmental challenges? As a doctoral student in END-PFAS, you will design, synthesize and investigate new organic photocatalysts to break down PFAS “forever chemicals”, working at the intersection of chemistry, materials science and artificial intelligence.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in organic photocatalysis for PFAS destruction",
+   "topic_score": 5,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15212"
   },
   {
    "breakdown": [
@@ -3958,7 +4108,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 8,
+   "days_left": 7,
    "deadline": "2026-12-04T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -4386,7 +4536,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 25,
+   "days_left": 24,
    "deadline": "2026-12-20T23:59:59+00:00",
    "department": "Computer Science and Engineering",
    "employer": "Chalmers University of Technology",
@@ -5693,7 +5843,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -6570,6 +6720,163 @@
   {
    "breakdown": [
     {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    }
+   ],
+   "city": "Jülich",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 39,
+   "deadline": "2027-01-04T22:59:59+00:00",
+   "department": "",
+   "employer": "Forschungszentrum Jülich GmbH",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:29+00:00",
+   "flags": [],
+   "id": "ap:255598",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T11:07:00+00:00",
+   "score": 2,
+   "source": "ap",
+   "summary": "3-year funded PhD fellowships in HITEC energy & climate research (batteries, hydrogen, PV, ML/HPC, modeling). Master’s required; very good English; travel funds.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "8 PhD Fellowships",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/forschungszentrum-julich/2026/8-phd-fellowships/255598"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    }
+   ],
+   "city": "Freiburg im Breisgau",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 21,
+   "deadline": "2026-12-17T22:59:59+00:00",
+   "department": "",
+   "employer": "International Max Planck Research School for Epigenetics, Biophysics and Metabolism (IMPRS-EBM)",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:45+00:00",
+   "flags": [
+    {
+     "hits": [
+      "max planck"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:255613",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T13:56:37+00:00",
+   "score": 2,
+   "source": "ap",
+   "summary": "Fully funded PhD in epigenetics, biophysics & metabolism. Interdisciplinary wet-lab and computational (AI/ML) projects, structured training, mentoring, no tuition.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Fully funded doctoral positions at the International Max Planck Research School for Epigenetics, Biophysics and Metabolism (IMPRS-EBM)",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/international-max-planck-research-school-for-epigenetics-biophysics-and-metabolism-imprs-ebm/2026/fully-funded-doctoral-positions-at-the-international-max-planck-research-school-for-epigenetics-biophysics-and-metabolism-imprs-ebm/255613"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 88,
+   "deadline": "2027-02-22T23:59:59+00:00",
+   "department": "Mathematical Sciences",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:51:07+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15190",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 2,
+   "source": "chalmers",
+   "summary": "Do you want to dive into modern differential geometry and computational mathematics and learn more about modeling of atmospheric or oceanic flows, or the motion of charged fluids such as plasmas? We are looking for a Doctoral student to become part of Klas Modin's group at the Division of Applied Mathematics and Statistics at the Department of Mathematical Sciences.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in geometric hydrodynamics",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15190"
+  },
+  {
+   "breakdown": [
+    {
      "applied": 1.2,
      "factor": 0.3,
      "hits": [
@@ -7320,7 +7627,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7360,7 +7667,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7400,7 +7707,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7440,7 +7747,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7480,7 +7787,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7618,7 +7925,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 4,
+   "days_left": 3,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -7665,7 +7972,7 @@
    "city": "Stockholm",
    "contact": "Adnan Ploskic ploskic@kth.se Amirmohamad Behzadi abehzadi@kth.se Annika Gram agram@kth.se",
    "country": "Sweden",
-   "days_left": 9,
+   "days_left": 8,
    "deadline": "2026-12-04T23:59:59+00:00",
    "department": "PA-2026-3482",
    "employer": "KTH Royal Institute of Technology",
@@ -8002,7 +8309,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 55,
+   "days_left": 54,
    "deadline": "2027-01-19T23:59:59+00:00",
    "department": "Mechanical engineering (ME)",
    "employer": "Chalmers University of Technology",
@@ -8201,6 +8508,126 @@
    "topic_score": 1,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-position-in-operations-management/255529"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 35,
+   "deadline": "2026-12-31T23:59:59+00:00",
+   "department": "Electrical Engineering",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:51:01+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15218",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 1,
+   "source": "chalmers",
+   "summary": "Join us for an exciting and excellent Doctoral student journey to contribute to the future electric power systems!  We are looking for a Doctoral student to join our team at the Division of Electric Power Engineering, Department of Electrical Engineering. Become part of our innovative group and contribute to exciting research in integration of power-electronic converters in power systems, within a collaborative and dynamic environment.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in Grid-Forming Converter Control for Distribution-Grid Applications",
+   "topic_score": 1,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15218"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 35,
+   "deadline": "2026-12-31T23:59:59+00:00",
+   "department": "Electrical Engineering",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:51:03+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "4-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15219",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 1,
+   "source": "chalmers",
+   "summary": "Join us for an exciting and excellent Doctoral student journey to contribute to the future electric power systems!  We are looking for a Doctoral student to join our team at the Division of Electric Power Engineering, Department of Electrical Engineering. Become part of our innovative group and contribute to exciting research in integration of power-electronic converters in power systems, within a collaborative and dynamic environment.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in Adaptive real-time operation of transmission and distribution systems",
+   "topic_score": 1,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15219"
   },
   {
    "breakdown": [],
@@ -9618,7 +10045,7 @@
    "city": "Florence",
    "contact": "",
    "country": "Italy",
-   "days_left": 50,
+   "days_left": 49,
    "deadline": "2027-01-15T13:00:59+00:00",
    "department": "",
    "employer": "European University Institute (EUI)",
@@ -9857,7 +10284,7 @@
    "city": "Klosterneuburg",
    "contact": "",
    "country": "Austria",
-   "days_left": 43,
+   "days_left": 42,
    "deadline": "2027-01-08T14:00:59+00:00",
    "department": "",
    "employer": "Institute of Science and Technology Austria (ISTA)",
@@ -10646,7 +11073,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 24,
+   "days_left": 23,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -11633,7 +12060,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 94,
+   "days_left": 93,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -12299,7 +12726,7 @@
    "city": "Stockholm",
    "contact": "Anders Ansell ansell@kth.se Annika Gram agram@kth.se",
    "country": "Sweden",
-   "days_left": 1,
+   "days_left": 0,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3554",
    "employer": "KTH Royal Institute of Technology",
@@ -12352,7 +12779,7 @@
    "city": "Stockholm",
    "contact": "Sofia Lingegård sofilin@kth.se",
    "country": "Sweden",
-   "days_left": 1,
+   "days_left": 0,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3577",
    "employer": "KTH Royal Institute of Technology",
@@ -12413,7 +12840,7 @@
    "city": "Stockholm",
    "contact": "Anders Ansell anders.ansell@byv.kth.se",
    "country": "Sweden",
-   "days_left": 1,
+   "days_left": 0,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3533",
    "employer": "KTH Royal Institute of Technology",
@@ -12466,7 +12893,7 @@
    "city": "Stockholm",
    "contact": "Anders Ansell anders.ansell@byv.kth.se",
    "country": "Sweden",
-   "days_left": 1,
+   "days_left": 0,
    "deadline": "2026-11-26T23:59:59+00:00",
    "department": "PA-2026-3532",
    "employer": "KTH Royal Institute of Technology",
@@ -12519,7 +12946,7 @@
    "city": "Stockholm",
    "contact": "Svetlana Ratynskaia svetlana.ratynskaia@ee.kth.se",
    "country": "Sweden",
-   "days_left": 29,
+   "days_left": 28,
    "deadline": "2026-12-24T23:59:59+00:00",
    "department": "PA-2026-3761",
    "employer": "KTH Royal Institute of Technology",
@@ -13092,7 +13519,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 4,
+   "days_left": 3,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -13369,7 +13796,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 16,
+   "days_left": 15,
    "deadline": "2026-12-11T23:59:59+00:00",
    "department": "Mechanical engineering (ME)",
    "employer": "Chalmers University of Technology",
@@ -13476,7 +13903,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 18,
+   "days_left": 17,
    "deadline": "2026-12-13T23:59:59+00:00",
    "department": "Mechanical engineering (ME)",
    "employer": "Chalmers University of Technology",
@@ -14169,7 +14596,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 40,
+   "days_left": 39,
    "deadline": "2027-01-04T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14235,7 +14662,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 44,
+   "days_left": 43,
    "deadline": "2027-01-08T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14313,7 +14740,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 36,
+   "days_left": 35,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14390,7 +14817,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 44,
+   "days_left": 43,
    "deadline": "2027-01-08T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14455,7 +14882,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 21,
+   "days_left": 20,
    "deadline": "2026-12-16T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14533,7 +14960,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 23,
+   "days_left": 22,
    "deadline": "2026-12-18T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14667,7 +15094,7 @@
    "city": "L’Aquila",
    "contact": "",
    "country": "Italy",
-   "days_left": 47,
+   "days_left": 46,
    "deadline": "2027-01-12T14:00:59+00:00",
    "department": "",
    "employer": "Gran Sasso Science Institute",
@@ -15864,7 +16291,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 28,
+   "days_left": 27,
    "deadline": "2026-12-23T23:59:59+00:00",
    "department": "Life sciences",
    "employer": "Chalmers University of Technology",
@@ -15911,7 +16338,7 @@
    "city": "Stockholm",
    "contact": "Jonas Mårtensson jonas1@kth.se",
    "country": "Sweden",
-   "days_left": 15,
+   "days_left": 14,
    "deadline": "2026-12-10T23:59:59+00:00",
    "department": "PA-2026-3979",
    "employer": "KTH Royal Institute of Technology",
@@ -15940,8 +16367,160 @@
    "tier_name": "不相关",
    "title": "Research assistant in decision and control systems",
    "topic_score": 0,
-   "urgent": false,
+   "urgent": true,
    "url": "https://www.kth.se/lediga-jobb/992343?l=en"
+  },
+  {
+   "breakdown": [],
+   "city": "Leuven",
+   "contact": "",
+   "country": "Belgium",
+   "days_left": 64,
+   "deadline": "2027-01-29T22:59:59+00:00",
+   "department": "",
+   "employer": "KU Leuven",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:17+00:00",
+   "flags": [
+    {
+     "hits": [
+      "ku leuven"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:255588",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T04:30:25+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Fully funded PhD in neuroimmunology studying B‑cell dysfunction and B cell–microglia interactions in Alzheimer’s. Train in spectral flow cytometry, human cell culture, microglia assays & data integration.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD position: B cell dysfunction and the B cell–microglia axis in Alzheimer’s disease",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/ku-leuven/2026/phd-position-b-cell-dysfunction-and-the-b-cell-microglia-axis-in-alzheimers-disease/255588"
+  },
+  {
+   "breakdown": [],
+   "city": "Esch-sur-Alzette",
+   "contact": "",
+   "country": "Luxembourg",
+   "days_left": 363,
+   "deadline": "2027-11-24T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Luxembourg",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:19+00:00",
+   "flags": [],
+   "id": "ap:255590",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T04:34:10+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "2 PhD openings: develop/characterise CIGS(e) thin-film absorbers for tandem solar cells (co-evaporation, photoluminescence, device fab). MSc Physics; 36-month, Belval.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral researcher in Tandem Solar Cells",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-tandem-solar-cells/255590"
+  },
+  {
+   "breakdown": [],
+   "city": "Esch-sur-Alzette",
+   "contact": "",
+   "country": "Luxembourg",
+   "days_left": 363,
+   "deadline": "2027-11-24T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Luxembourg",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:22+00:00",
+   "flags": [],
+   "id": "ap:255592",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T04:34:11+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD research on differentiated instruction in Luxembourg primary schools (DILUX): observations, interviews, surveys; mixed-methods analysis; travel for fieldwork. German & English required.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral researcher in Educational Sciences - DILUX Project",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-educational-sciences-dilux-project/255592"
+  },
+  {
+   "breakdown": [],
+   "city": "Joensuu",
+   "contact": "",
+   "country": "Finland",
+   "days_left": 25,
+   "deadline": "2026-12-21T21:59:59+00:00",
+   "department": "",
+   "employer": "University of Eastern Finland",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:23+00:00",
+   "flags": [],
+   "id": "ap:255593",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T06:51:21+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "3-year PhD on fire impacts on BVOC emissions & gene expression in boreal trees. Fieldwork at prescribed burns near Kuopio + lab molecular analyses, data analysis & publishing.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral Researcher (PhD Student), Plant Molecular Physiology in Forest Ecosystems",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-eastern-finland/2026/doctoral-researcher-phd-student-plant-molecular-physiology-in-forest-ecosystems/255593"
+  },
+  {
+   "breakdown": [],
+   "city": "Sant Cugat",
+   "contact": "",
+   "country": "Spain",
+   "days_left": 57,
+   "deadline": "2027-01-22T22:59:59+00:00",
+   "department": "",
+   "employer": "Esade Business School",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-26T16:50:25+00:00",
+   "flags": [],
+   "id": "ap:255594",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T09:51:00+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "2-year MRes + 3-year PhD in Management Sciences: advanced methods training, close faculty supervision, research community. Up to 12 funded places (tuition waiver + stipend).",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "MRes & PhD in Management Sciences – Call for Applications 2027",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/esade-business-school/2026/mres-phd-in-management-sciences-call-for-applications-2027/255594"
   }
  ],
  "repo": "ShinyRaine/myacademicpositions",
