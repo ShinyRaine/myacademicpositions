@@ -1,13 +1,13 @@
 {
  "counts": {
-  "on_board": 335,
+  "on_board": 347,
   "tier_A": 0,
   "tier_B": 2,
   "tier_C": 12,
-  "tier_D": 321,
-  "urgent": 97
+  "tier_D": 333,
+  "urgent": 98
  },
- "generated_at": "2026-11-26T23:49:17+00:00",
+ "generated_at": "2026-11-27T16:37:11+00:00",
  "jobs": [
   {
    "breakdown": [
@@ -471,7 +471,7 @@
    "city": "Stockholm",
    "contact": "Xi Wang wangxi@kth.se Magnus Wiktorsson magwik@kth.se",
    "country": "Sweden",
-   "days_left": 7,
+   "days_left": 6,
    "deadline": "2026-12-03T23:59:59+00:00",
    "department": "PA-2026-3497",
    "employer": "KTH Royal Institute of Technology",
@@ -953,7 +953,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 35,
+   "days_left": 34,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Mechanics and Maritime Sciences",
    "employer": "Chalmers University of Technology",
@@ -1033,7 +1033,7 @@
    "city": "Stockholm",
    "contact": "Emrah Karakaya emrahka@kth.se Mats Engwall matseng@kth.se",
    "country": "Sweden",
-   "days_left": 39,
+   "days_left": 38,
    "deadline": "2027-01-04T23:59:59+00:00",
    "department": "PA-2026-3645",
    "employer": "KTH Royal Institute of Technology",
@@ -1716,7 +1716,7 @@
    "city": "Stockholm",
    "contact": "Shervin Bagheri sherwinb@kth.se",
    "country": "Sweden",
-   "days_left": 11,
+   "days_left": 10,
    "deadline": "2026-12-07T23:59:59+00:00",
    "department": "PA-2026-3646",
    "employer": "KTH Royal Institute of Technology",
@@ -2314,6 +2314,46 @@
   {
    "breakdown": [
     {
+     "applied": 10.0,
+     "factor": 1.0,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "标题",
+     "weight": 10,
+     "where": "title"
+    }
+   ],
+   "city": "Leiden",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 21,
+   "deadline": "2026-12-18T22:59:59+00:00",
+   "department": "",
+   "employer": "Leiden University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:34+00:00",
+   "flags": [],
+   "id": "ap:255657",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-26T04:31:15+00:00",
+   "score": 10,
+   "source": "ap",
+   "summary": "Research PhD on wildlife audio ML for low-tech devices (old smartphones/Nintendo DS). Build on-device models, run field/user trials, publish; Python required.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD in Audio Machine Learning for Low-Tech Hardware (Bioacoustic Permacomputing)",
+   "topic_score": 10,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/leiden-university/2026/phd-in-audio-machine-learning-for-low-tech-hardware-bioacoustic-permacomputing/255657"
+  },
+  {
+   "breakdown": [
+    {
      "applied": 5.0,
      "factor": 0.5,
      "hits": [
@@ -2711,6 +2751,55 @@
    "topic_score": 8,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-researcher-in-energy-systems-modelling-artificial-intelligence-and-digitalization/255375"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 7.5,
+     "factor": 0.75,
+     "hits": [
+      "foundation model"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "摘要",
+     "weight": 10,
+     "where": "summary"
+    }
+   ],
+   "city": "Leuven",
+   "contact": "",
+   "country": "Belgium",
+   "days_left": 35,
+   "deadline": "2027-01-01T22:59:59+00:00",
+   "department": "",
+   "employer": "KU Leuven",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:11+00:00",
+   "flags": [
+    {
+     "hits": [
+      "ku leuven"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:255623",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T14:30:32+00:00",
+   "score": 8,
+   "source": "ap",
+   "summary": "PhD: build trustworthy multimodal AI for colorectal pathology (WSI+omics+clinical). Benchmark/fuse foundation models, improve robustness/interpretability. Python, ML/CV.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "AI for multimodal colon pathology",
+   "topic_score": 8,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/ku-leuven/2026/ai-for-multimodal-colon-pathology/255623"
   },
   {
    "breakdown": [
@@ -3376,65 +3465,6 @@
   {
    "breakdown": [
     {
-     "applied": 5.0,
-     "factor": 0.5,
-     "hits": [
-      "machine learning"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "正文 1 种说法/共 3 次",
-     "weight": 10,
-     "where": "body"
-    }
-   ],
-   "city": "Zurich",
-   "contact": "",
-   "country": "Switzerland",
-   "days_left": null,
-   "deadline": null,
-   "department": "",
-   "employer": "ETH Zürich",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-30T11:14:04+00:00",
-   "flags": [
-    {
-     "hits": [
-      "eth zurich"
-     ],
-     "label": "target-institution",
-     "name": "目标机构",
-     "severity": "note"
-    },
-    {
-     "hits": [
-      "fully funded",
-      "four-year",
-      "4-year"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:254541",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-10-28T04:05:07+00:00",
-   "score": 5,
-   "source": "ap",
-   "summary": "Fully funded 4-year PhD on temperate terrestrial exoplanet atmospheres & biosignatures for the LIFE mission; develop retrieval/modeling methods, optionally ML/AI. MSc in related field; strong Python.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "Doctoral Positions in Exoplanet Atmosphere Characterisation and the Search for Life",
-   "topic_score": 5,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-positions-in-exoplanet-atmosphere-characterisation-and-the-search-for-life/254541"
-  },
-  {
-   "breakdown": [
-    {
      "applied": 3.0,
      "factor": 0.3,
      "hits": [
@@ -3462,7 +3492,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 19,
+   "days_left": 18,
    "deadline": "2026-12-16T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -3725,7 +3755,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 73,
+   "days_left": 72,
    "deadline": "2027-02-07T23:59:59+00:00",
    "department": "Chemistry and chemical engineering",
    "employer": "Chalmers University of Technology",
@@ -4041,7 +4071,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 7,
+   "days_left": 6,
    "deadline": "2026-12-04T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -4445,6 +4475,56 @@
    "url": "https://en.academicpositions.se/ad/university-of-gothenburg/2026/doctoral-student-in-algorithms-for-efficient-large-language-model-inference/255583"
   },
   {
+   "breakdown": [
+    {
+     "applied": 4.0,
+     "factor": 1.0,
+     "hits": [
+      "optimization",
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "标题",
+     "weight": 4,
+     "where": "title"
+    }
+   ],
+   "city": "Zurich",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": null,
+   "deadline": null,
+   "department": "",
+   "employer": "ETH Zürich",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:17+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eth zurich"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:255638",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-26T04:05:07+00:00",
+   "score": 4,
+   "source": "ap",
+   "summary": "PhD: develop superstructure-based optimization to design transcritical high‑temp industrial heat pump cycles & working fluids. Requires excellent MSc in process/mech/chem/energy.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral Position in model-based optimization of industrial heat pumps",
+   "topic_score": 4,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-position-in-model-based-optimization-of-industrial-heat-pumps/255638"
+  },
+  {
    "also_listed_on": [
     {
      "id": "ap:251315",
@@ -4469,7 +4549,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 24,
+   "days_left": 23,
    "deadline": "2026-12-20T23:59:59+00:00",
    "department": "Computer Science and Engineering",
    "employer": "Chalmers University of Technology",
@@ -5028,6 +5108,55 @@
   {
    "breakdown": [
     {
+     "applied": 3.0,
+     "factor": 0.15,
+     "hits": [
+      "robotic"
+     ],
+     "kind": "topic",
+     "label": "robotics",
+     "note": "正文仅 1 次",
+     "weight": 20,
+     "where": "body"
+    }
+   ],
+   "city": "Zurich",
+   "contact": "",
+   "country": "Switzerland",
+   "days_left": null,
+   "deadline": null,
+   "department": "",
+   "employer": "ETH Zürich",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:19+00:00",
+   "flags": [
+    {
+     "hits": [
+      "eth zurich"
+     ],
+     "label": "target-institution",
+     "name": "目标机构",
+     "severity": "note"
+    }
+   ],
+   "id": "ap:255639",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-26T04:05:08+00:00",
+   "score": 3,
+   "source": "ap",
+   "summary": "PhD: engineer next-gen medical materials, diagnostics or minimally invasive devices. Interdisciplinary, clinical translation; Master’s in physics/ME/chem, creative, fluent English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral Student at Ingenuity Lab",
+   "topic_score": 3,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-at-ingenuity-lab/255639"
+  },
+  {
+   "breakdown": [
+    {
      "applied": 1.6,
      "factor": 0.06,
      "hits": [
@@ -5352,55 +5481,6 @@
    "topic_score": 2,
    "urgent": false,
    "url": "https://en.academicpositions.se/ad/eth-zurich/2026/doctoral-student-in-operational-decision-making-with-data-science/251819"
-  },
-  {
-   "breakdown": [
-    {
-     "applied": 1.5,
-     "factor": 0.15,
-     "hits": [
-      "digital twin"
-     ],
-     "kind": "topic",
-     "label": "adjacent-ai",
-     "note": "正文仅 1 次",
-     "weight": 10,
-     "where": "body"
-    }
-   ],
-   "city": "Dübendorf",
-   "contact": "",
-   "country": "Switzerland",
-   "days_left": null,
-   "deadline": null,
-   "department": "",
-   "employer": "Empa",
-   "employment_type": "",
-   "expired": false,
-   "first_seen": "2026-10-30T11:00:38+00:00",
-   "flags": [
-    {
-     "hits": [
-      "fully funded"
-     ],
-     "label": "funding",
-     "name": "全奖/四年",
-     "severity": "good"
-    }
-   ],
-   "id": "ap:253170",
-   "language": "en",
-   "position_type": "phd",
-   "posted": "2026-09-18T07:06:06+00:00",
-   "score": 2,
-   "source": "ap",
-   "summary": "Fully funded 48‑month PhD on Fe‑SMA fibre prestressed cast/3D‑printed concrete: multi‑scale FE modelling and large‑scale tests. MSc structural eng; strong nonlinear FE.",
-   "tier": "D",
-   "tier_name": "不相关",
-   "title": "PhD position: Multi-scale Modelling and Experimental Assessment of Volumetrically Prestressed Concrete",
-   "topic_score": 2,
-   "urgent": false,
-   "url": "https://en.academicpositions.se/ad/empa/2026/phd-position-multi-scale-modelling-and-experimental-assessment-of-volumetrically-prestressed-concrete/253170"
   },
   {
    "breakdown": [
@@ -5768,7 +5848,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -6757,7 +6837,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 88,
+   "days_left": 87,
    "deadline": "2027-02-22T23:59:59+00:00",
    "department": "Mathematical Sciences",
    "employer": "Chalmers University of Technology",
@@ -6798,6 +6878,46 @@
    "topic_score": 2,
    "urgent": false,
    "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15190"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    }
+   ],
+   "city": "Cologne",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 38,
+   "deadline": "2027-01-04T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Cologne",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:41+00:00",
+   "flags": [],
+   "id": "ap:255669",
+   "language": "de",
+   "position_type": "research_assistant",
+   "posted": "2026-11-26T08:29:09+00:00",
+   "score": 2,
+   "source": "ap",
+   "summary": "Supply-Chain-Forschung mit Generative AI/Analytics/Optimierung, Industrieprojekte & Publikationen; Lehre. Sehr guter Master, Programmierung, Deutsch/Englisch. Promotion, E13, Teilzeit.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Wissenschaftliche*r Mitarbeiter*in (w/m/d) Wiss2611-16 | Department of Operations Management",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/wissenschaftlicher-mitarbeiterin-wmd-wiss2611-16-department-of-operations-management/255669"
   },
   {
    "breakdown": [
@@ -7503,7 +7623,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7543,7 +7663,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7583,7 +7703,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7623,7 +7743,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7663,7 +7783,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -7801,7 +7921,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 3,
+   "days_left": 2,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -7848,7 +7968,7 @@
    "city": "Stockholm",
    "contact": "Adnan Ploskic ploskic@kth.se Amirmohamad Behzadi abehzadi@kth.se Annika Gram agram@kth.se",
    "country": "Sweden",
-   "days_left": 8,
+   "days_left": 7,
    "deadline": "2026-12-04T23:59:59+00:00",
    "department": "PA-2026-3482",
    "employer": "KTH Royal Institute of Technology",
@@ -8185,7 +8305,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 54,
+   "days_left": 53,
    "deadline": "2027-01-19T23:59:59+00:00",
    "department": "Mechanical engineering (ME)",
    "employer": "Chalmers University of Technology",
@@ -8403,7 +8523,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 35,
+   "days_left": 34,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Electrical Engineering",
    "employer": "Chalmers University of Technology",
@@ -8463,7 +8583,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 35,
+   "days_left": 34,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Electrical Engineering",
    "employer": "Chalmers University of Technology",
@@ -8504,6 +8624,105 @@
    "topic_score": 1,
    "urgent": false,
    "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15219"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "optimization"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Luxembourg",
+   "contact": "",
+   "country": "Luxembourg",
+   "days_left": 363,
+   "deadline": "2027-11-25T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Luxembourg",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:15+00:00",
+   "flags": [],
+   "id": "ap:255626",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T14:34:09+00:00",
+   "score": 1,
+   "source": "ap",
+   "summary": "FNR-funded 36‑month PhD in quantum measurement theory, control & metrology. MSc Physics + strong theoretical skills/English. Gross €44,531/yr.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral researcher in Quantum Measurements Theory and Control",
+   "topic_score": 1,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-luxembourg/2026/doctoral-researcher-in-quantum-measurements-theory-and-control/255626"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 44,
+   "deadline": "2027-01-10T23:59:59+00:00",
+   "department": "Microtechnology and Nanoscience",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:56+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15167",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 1,
+   "source": "chalmers",
+   "summary": "Contribute to future wireless communication systems while pursuing your doctoral degree. You will develop high-speed CMOS circuits for electro-optical signal transmission in an international research project.  Future 6G networks are expected to use the FR3 spectrum above 7 GHz, where radio front-ends must combine wide bandwidth, high linearity, frequency agility, and substantially improved energy efficiency.  In this doctoral project, you will develop new solutions for electro-optical signal transmission.  The research combines integrated-circuit theory, design, and implementation, and include",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in high-performance circuit design",
+   "topic_score": 1,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15167"
   },
   {
    "breakdown": [],
@@ -9921,7 +10140,7 @@
    "city": "Florence",
    "contact": "",
    "country": "Italy",
-   "days_left": 49,
+   "days_left": 48,
    "deadline": "2027-01-15T13:00:59+00:00",
    "department": "",
    "employer": "European University Institute (EUI)",
@@ -10160,7 +10379,7 @@
    "city": "Klosterneuburg",
    "contact": "",
    "country": "Austria",
-   "days_left": 42,
+   "days_left": 41,
    "deadline": "2027-01-08T14:00:59+00:00",
    "department": "",
    "employer": "Institute of Science and Technology Austria (ISTA)",
@@ -10949,7 +11168,7 @@
    "city": "Incheon",
    "contact": "",
    "country": "South Korea",
-   "days_left": 23,
+   "days_left": 22,
    "deadline": "2026-12-20T14:59:59+00:00",
    "department": "",
    "employer": "Ghent University Global Campus",
@@ -11909,7 +12128,7 @@
    "city": "Grenoble",
    "contact": "",
    "country": "France",
-   "days_left": 93,
+   "days_left": 92,
    "deadline": "2027-02-28T12:00:59+00:00",
    "department": "",
    "employer": "Université Grenoble Alpes",
@@ -12509,7 +12728,7 @@
    "city": "Stockholm",
    "contact": "Svetlana Ratynskaia svetlana.ratynskaia@ee.kth.se",
    "country": "Sweden",
-   "days_left": 28,
+   "days_left": 27,
    "deadline": "2026-12-24T23:59:59+00:00",
    "department": "PA-2026-3761",
    "employer": "KTH Royal Institute of Technology",
@@ -13082,7 +13301,7 @@
    "city": "Turku",
    "contact": "",
    "country": "Finland",
-   "days_left": 3,
+   "days_left": 2,
    "deadline": "2026-11-30T14:00:59+00:00",
    "department": "",
    "employer": "University of Turku",
@@ -13359,7 +13578,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 15,
+   "days_left": 14,
    "deadline": "2026-12-11T23:59:59+00:00",
    "department": "Mechanical engineering (ME)",
    "employer": "Chalmers University of Technology",
@@ -13397,7 +13616,7 @@
    "tier_name": "不相关",
    "title": "Doctoral student in advanced manufacturing of permanent magnets",
    "topic_score": 0,
-   "urgent": false,
+   "urgent": true,
    "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15187"
   },
   {
@@ -13466,7 +13685,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 17,
+   "days_left": 16,
    "deadline": "2026-12-13T23:59:59+00:00",
    "department": "Mechanical engineering (ME)",
    "employer": "Chalmers University of Technology",
@@ -14159,7 +14378,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 39,
+   "days_left": 38,
    "deadline": "2027-01-04T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14225,7 +14444,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 43,
+   "days_left": 42,
    "deadline": "2027-01-08T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14303,7 +14522,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 35,
+   "days_left": 34,
    "deadline": "2026-12-31T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14380,7 +14599,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 43,
+   "days_left": 42,
    "deadline": "2027-01-08T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14445,7 +14664,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 20,
+   "days_left": 19,
    "deadline": "2026-12-16T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14523,7 +14742,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 22,
+   "days_left": 21,
    "deadline": "2026-12-18T23:59:59+00:00",
    "department": "Fysik och Astronomi",
    "employer": "Chalmers University of Technology",
@@ -14657,7 +14876,7 @@
    "city": "L’Aquila",
    "contact": "",
    "country": "Italy",
-   "days_left": 46,
+   "days_left": 45,
    "deadline": "2027-01-12T14:00:59+00:00",
    "department": "",
    "employer": "Gran Sasso Science Institute",
@@ -15854,7 +16073,7 @@
    "city": "Gothenburg",
    "contact": "",
    "country": "Sweden",
-   "days_left": 27,
+   "days_left": 26,
    "deadline": "2026-12-23T23:59:59+00:00",
    "department": "Life sciences",
    "employer": "Chalmers University of Technology",
@@ -16053,7 +16272,7 @@
    "city": "Stockholm",
    "contact": "Jonas Mårtensson jonas1@kth.se",
    "country": "Sweden",
-   "days_left": 14,
+   "days_left": 13,
    "deadline": "2026-12-10T23:59:59+00:00",
    "department": "PA-2026-3979",
    "employer": "KTH Royal Institute of Technology",
@@ -16084,6 +16303,352 @@
    "topic_score": 0,
    "urgent": true,
    "url": "https://www.kth.se/lediga-jobb/992343?l=en"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "oncolog"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Antwerp",
+   "contact": "",
+   "country": "Belgium",
+   "days_left": 51,
+   "deadline": "2027-01-17T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Antwerp",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:07+00:00",
+   "flags": [],
+   "id": "ap:255620",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T14:15:22+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Funded PhD in oncology: develop CAR‑NK cell therapy for neuroendocrine tumours. Cell culture/flow/in vivo skills; MSCA training + 7–10 months secondments.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral scholarship holder oncology - CAR-NK cell therapy for neuroendocrine tumours",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/doctoral-scholarship-holder-oncology-car-nk-cell-therapy-for-neuroendocrine-tumours/255620"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "oncolog"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Antwerp",
+   "contact": "",
+   "country": "Belgium",
+   "days_left": 51,
+   "deadline": "2027-01-17T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Antwerp",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:09+00:00",
+   "flags": [
+    {
+     "hits": [
+      "fully funded"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:255621",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-25T14:15:22+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Fully funded PhD (100%) on immune surveillance in neuroendocrine tumours within MSCA dIscOverNET. Omics/bioinformatics (Python/R). 2 international secondments (7–10 mo).",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral scholarship holder oncology - immune surveillance against neuroendocrine tumours",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-antwerp/2026/doctoral-scholarship-holder-oncology-immune-surveillance-against-neuroendocrine-tumours/255621"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "anthropolog"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Leiden",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 38,
+   "deadline": "2027-01-04T22:59:59+00:00",
+   "department": "",
+   "employer": "Leiden University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:28+00:00",
+   "flags": [
+    {
+     "hits": [
+      "four-year"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "ap:255653",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-26T04:31:14+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD in cultural anthropology: ethnographic study of “new craft” in Dutch Randstad or Lombardy. Team-based, multimodal methods, article-based thesis; €3204–4051/mo.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Two PhD candidate positions in Cultural Anthropology on the research project 'New Craft'",
+   "topic_score": 1,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/leiden-university/2026/two-phd-candidate-positions-in-cultural-anthropology-on-the-research-project-new-craft/255653"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "polymer chemistry"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Leiden",
+   "contact": "",
+   "country": "The Netherlands",
+   "days_left": 34,
+   "deadline": "2026-12-31T22:59:59+00:00",
+   "department": "",
+   "employer": "Leiden University",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:30+00:00",
+   "flags": [],
+   "id": "ap:255654",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-26T04:31:14+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Vici SyntiBody PhD: synthesize & characterize antibody-mimicking copolypept(o)ides, design ligands, perform in vitro/in vivo tests. MSc chem/polymer; microscopy a plus.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "PhD candidate in synthetic polymer chemistry",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/leiden-university/2026/phd-candidate-in-synthetic-polymer-chemistry/255654"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "accounting"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Vallendar",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 89,
+   "deadline": "2027-02-24T22:59:59+00:00",
+   "department": "",
+   "employer": "WHU – Otto Beisheim School of Management",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:39+00:00",
+   "flags": [],
+   "id": "ap:255666",
+   "language": "en",
+   "position_type": "phd",
+   "posted": "2026-11-26T07:45:50+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "PhD role in behavioral accounting: run experiments on reporting/controls/AI, publish and present research, support teaching. Requires strong Master’s, R/Stata/Python, analytical skills, fluent English.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Research Assistant/Doctoral Student (f/m/d) - Chair of Behavioral Accounting",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/whu/2026/research-assistant-doctoral-student-f-m-d-chair-of-behavioral-accounting/255666"
+  },
+  {
+   "breakdown": [],
+   "city": "Cologne",
+   "contact": "",
+   "country": "Germany",
+   "days_left": 24,
+   "deadline": "2026-12-21T22:59:59+00:00",
+   "department": "",
+   "employer": "University of Cologne",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:43+00:00",
+   "flags": [],
+   "id": "ap:255670",
+   "language": "de",
+   "position_type": "research_assistant",
+   "posted": "2026-11-26T08:29:09+00:00",
+   "score": 0,
+   "source": "ap",
+   "summary": "Mitarbeit im Projekt RAIN-USE: Analyse sommerlicher Extremereignisse in Köln, Ensemble-Niederschlagsprognosen (DWD), Algorithmen/Python für Regenwasserspeicher; Promotion möglich.",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Research Associate in Precipitation Forecasting and Climate Adaptation (f/m/x) Wiss2611-15 | Institute of Geophysics and Meteorology",
+   "topic_score": 0,
+   "urgent": false,
+   "url": "https://en.academicpositions.se/ad/university-of-cologne/2026/research-associate-in-precipitation-forecasting-and-climate-adaptation-fmx-wiss2611-15-institute-of-geophysics-and-meteorology/255670"
+  },
+  {
+   "breakdown": [
+    {
+     "applied": 1.5,
+     "factor": 0.15,
+     "hits": [
+      "machine learning"
+     ],
+     "kind": "topic",
+     "label": "adjacent-ai",
+     "note": "正文仅 1 次",
+     "weight": 10,
+     "where": "body"
+    },
+    {
+     "applied": 0.6,
+     "factor": 0.15,
+     "hits": [
+      "industrial"
+     ],
+     "kind": "topic",
+     "label": "weak",
+     "note": "正文仅 1 次",
+     "weight": 4,
+     "where": "body"
+    },
+    {
+     "applied": -30,
+     "factor": 1.0,
+     "hits": [
+      "architecture"
+     ],
+     "kind": "exclusion",
+     "label": "off-field",
+     "weight": -30,
+     "where": "title"
+    }
+   ],
+   "city": "Gothenburg",
+   "contact": "",
+   "country": "Sweden",
+   "days_left": 44,
+   "deadline": "2027-01-10T23:59:59+00:00",
+   "department": "Microtechnology and Nanoscience",
+   "employer": "Chalmers University of Technology",
+   "employment_type": "",
+   "expired": false,
+   "first_seen": "2026-11-27T16:36:58+00:00",
+   "flags": [
+    {
+     "hits": [
+      "chalmers"
+     ],
+     "label": "home",
+     "name": "本校",
+     "severity": "note"
+    },
+    {
+     "hits": [
+      "fully funded",
+      "four-year",
+      "doctoral student position"
+     ],
+     "label": "funding",
+     "name": "全奖/四年",
+     "severity": "good"
+    }
+   ],
+   "id": "chalmers:15178",
+   "language": "en",
+   "position_type": "phd",
+   "posted": null,
+   "score": 0,
+   "source": "chalmers",
+   "summary": "Future 6G networks are expected to use the FR3 spectrum above 7 GHz, where radio front-ends must combine wide bandwidth, high linearity, frequency agility, and substantially improved energy efficiency. In this doctoral project, you will develop new gallium nitride (GaN) monolithic microwave integrated circuit (MMIC) front-end amplifier architectures for flexible and energy-efficient transmitters. The research combines microwave circuit theory, AI-assisted design, integrated-circuit implementation, and experimental validation in distributed MIMO testbeds.  About us",
+   "tier": "D",
+   "tier_name": "不相关",
+   "title": "Doctoral student in Wideband Energy-Efficient FR3 Front-End Amplifiers for 6G",
+   "topic_score": 2,
+   "urgent": false,
+   "url": "https://web103.reachmee.com/ext/I003/304/job?site=5&validator=a72aeedd63ec10de71e46f8d91d0d57c&lang=UK&job_id=15178"
   }
  ],
  "repo": "ShinyRaine/myacademicpositions",
